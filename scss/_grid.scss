@@ -1,0 +1,68 @@
+/////////////////////////////////////////////
+// ROW
+/////////////////////////////////////////////
+@mixin row($width) {
+ width: $width;
+ &:before, &:after {
+   clear: both;
+   content: "";
+   display: block;
+ }
+}
+
+////////////////////////////////
+//  NORMAL-COLUMNS
+///////////////////////////////
+@mixin col($width) {
+float: left;
+width: $width;
+}
+
+////////////////////////////////
+//  GUTTER-COLUMNS
+// (Number of columns, gutter)
+///////////////////////////////
+@mixin gtr-col($columns, $gutter) {
+$percentage: percentage(1/$columns);
+$width: (($columns - 1)*$gutter)/$columns;
+float: left;
+width: calc(#{$percentage} - #{$width});
+margin-top: $gutter;
+margin-left: $gutter/2;
+margin-right: $gutter/2;
+&:nth-of-type(#{$columns}n+1) {
+  margin-right: $gutter/2;
+  margin-left: 0;
+};
+&:nth-of-type(#{$columns}n+#{$columns}) {
+  margin-left: $gutter/2;
+  margin-right: 0;
+};
+}
+
+/////////////////////////////////////////////
+// FLEX ROW
+/////////////////////////////////////////////
+@mixin flex-row() {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+@mixin flex-gtr-col ($columns, $gutter) {
+  $percentage: percentage(1/$columns);
+  $width: (($columns - 1)*$gutter)/$columns;
+  flex-basis: calc(#{$percentage} - #{$width});
+  margin: $gutter;
+  margin-top: $gutter;
+  margin-left: $gutter/2;
+  margin-right: $gutter/2;
+  &:nth-of-type(#{$columns}n+1) {
+    margin-right: $gutter/2;
+    margin-left: 0;
+  };
+  &:nth-of-type(#{$columns}n+#{$columns}) {
+    margin-left: $gutter/2;
+    margin-right: 0;
+  };
+}

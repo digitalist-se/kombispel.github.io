@@ -1,0 +1,118 @@
+.Footer {
+  width: 100%;
+  @include breakpoint(1px, 890px) {
+    width: 100%;
+  }
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  margin: 0 auto;
+}
+
+.Footer-inner {
+  @extend .Inner-container;
+  @include breakpoint(1px, 890px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
+
+.Footer-box {
+  @include breakpoint(1px, 890px) {
+    margin-top: 35px;
+  }
+  @include breakpoint(891px) {
+    @include gtr-col(3, 35px);
+  }
+}
+
+.Footer-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: $base-margin;
+}
+
+/////////////////////////////////////////////
+// FOOTER FIRST
+/////////////////////////////////////////////
+.Footer-box--first {
+  order: 1;
+  .Footer-box-col {
+    float: left;
+
+  }
+  .Footer-box-col--image {
+    @extend .Flex-center;
+    @include breakpoint(1px, 890px) {
+      float: right;
+    }
+  }
+  .Footer-menu {
+    @include breakpoint(1px, 890px) {
+      padding-left: 0px;
+    }
+    margin: 0;
+    list-style: none;
+    li{
+      margin-bottom: 20px;
+    }
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $red;
+      font-size: 16px;
+    }
+  }
+}
+
+/////////////////////////////////////////////
+// FOOTER SECOND
+/////////////////////////////////////////////
+.Footer-box--second {
+  order: 3;
+  .Footer-link {
+    margin-top: 10px;
+    color: $red;
+    font-weight: bold;
+    &:before {
+      content: ">> ";
+    }
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      color: $red;
+    }
+  }
+}
+
+/////////////////////////////////////////////
+// FOOTER THIRD
+/////////////////////////////////////////////
+.Footer-box--third {
+  order: 2;
+  .Footer-follow {
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+  .Footer-follow-item {
+    float: left;
+    margin-right: 20px;
+    width: 60px;
+    padding: 15px 35px 15px 60px;
+    margin-top: 10px;
+  }
+  .Footer-follow-item--facebook {
+    background: $facebook-blue url("../images/footer/facebook.svg") no-repeat 15% 50%;
+    background-size: 25px;
+  }
+  .Footer-follow-item--youtube {
+    background: $youtube-red url("../images/footer/youtube.svg") no-repeat 15% 50%;
+    background-size: 25px;
+  }
+}

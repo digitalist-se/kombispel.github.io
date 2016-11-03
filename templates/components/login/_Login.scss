@@ -1,0 +1,289 @@
+.Login-overlay-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-color: $transparent-grey;
+  display: none;
+}
+//  CLICKAREA
+.Login-clickarea--js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.Login-form-container {
+  background-color: white;
+  max-height: calc(100vh - 70px);
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  position: relative;
+  overflow: auto;
+
+  @include respond-to("medium") {
+    margin-top: 100px;
+    max-height: calc(100vh - 150px);
+
+  }
+}
+.Login-close-form--js {
+position: absolute;
+right: 10px;
+top: 10px;
+height: 25px;
+width: 25px;
+border: 2px solid $light-grey;
+border-radius: 50%;
+transform: rotate(45deg);
+cursor: pointer;
+transition: all 0.3s ease;
+&:before, &:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 19px;
+  height: 2px;
+  background-color: $light-grey;
+  top: 12px;
+  border-radius: 4px;
+}
+&:after {
+  transform: rotate(90deg);
+}
+&:hover {
+  transform: rotate(225deg);
+}
+}
+.Login-header--js {
+  color: $red;
+  margin: 0;
+  text-align: center;
+  padding: 50px 0 10px 0;
+}
+.Login-form {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  label {
+    margin: 25px 0 7.5px 0;
+    font-size: 14px;
+  }
+  .Login-label--block {
+    display: block;
+  }
+
+  .Login-input {
+    position: relative;
+    padding-left: 5px;
+    height: 40px;
+    outline: 0;
+    background-color: $lighter-grey;
+    box-sizing: border-box;
+    border: 1px solid $grey;
+
+    width: 100%;
+    transition: all 0.2s ease;
+    &:focus {
+      height: 50px;
+      border: 1px solid $orange;
+      background-color: white;
+      & + .Login-toggle--js {
+        top: 37px;
+      }
+    }
+  }
+
+
+  .Login-input-error--js {
+    border: 1px solid red;
+    color: red;
+  }
+  .Login-username-message,  .Login-password-message  {
+  display: none;
+  margin: 0;
+  padding: 10px 0 1px 0;
+  color: red;
+  }
+
+/////////////////////////////////////////////
+// TOGGLE HELP SECTION
+/////////////////////////////////////////////
+.Login-input-section {
+  position: relative;
+}
+
+// ICONS IN THE INPUT FIELD
+.Login-username-toggle--js,.Login-password-toggle--js {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 5px;
+  top: 31px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.Login-question-icon--js {
+  background: url("../images/svg/login-question.svg") no-repeat center center;
+}
+.Login-error-icon--js {
+  background: url("../images/svg/login-error.svg") no-repeat center center;
+}
+
+.Login-check-icon--js {
+  background: url("../images/svg/login-valid.svg") no-repeat center center;
+}
+
+  .Login-reset-password-btn--js {
+    @include rounded-btn($orange, white, 100%);
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  .Login-user-email {
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+// THE ORANGE SLIDE DOWN HELP-BOXES
+.Login-username-help-box--js,.Login-password-help-box--js {
+  display: none;
+}
+.Login-help-box {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  border: 2px solid $orange;
+  box-sizing: border-box;
+  &:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-right:2px solid $orange;
+  border-bottom:2px solid $orange;
+  transform:rotate(-135deg);
+  }
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+
+      a {
+        color: $red;
+        text-decoration: none;
+      }
+
+  }
+}
+
+.Login-contact-phone, .Login-contact-mail {
+  padding: 7.5px 0 7.5px 30px;
+  position: relative;
+  &:before {
+    content:"";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 0;
+  }
+}
+.Login-contact-phone:before {
+  background: url("../images/svg/phone.svg") no-repeat center center;
+}
+.Login-contact-mail:before {
+  background: url("../images/svg/mail.svg") no-repeat center center;
+}
+
+.Login-help-box-inner {
+  padding: $base-margin;
+}
+
+/////////////////////////////////////////////
+// LOGIN ROW
+/////////////////////////////////////////////
+.Login-row {
+  margin-top: 25px;
+  @extend .Row;
+}
+.Login-checkbox {
+  @include col(50%);
+}
+.Login-forgot-password {
+  @include col(50%);
+}
+
+  input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    outline: 0;
+    position: relative;
+    &:after {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 0;
+    top: 0;
+    background-color: white;
+    border: 1px solid $grey;
+    }
+    &:checked {
+      &:after {
+        background: $green url("../images/svg/check.svg") center center no-repeat;
+        background-size: 90%;
+      }
+    }
+  }
+
+  .Login-forgot-password {
+    color: $red;
+    font-size: 10px;
+    text-align: right;
+    display: block;
+    padding: 10px 0;
+  }
+  .Login-form-submit-btn--js {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    @include gradient-btn($red, $dark-red);
+    color: white;
+    margin-bottom: 40px;
+  }
+}
+
+/////////////////////////////////////////////
+// ERROR DISPLAY
+/////////////////////////////////////////////
+
+.Login-header--error {
+  color: red;
+}
+
+
+/////////////////////////////////////////////
+// LOGIN PASSWORD BOXES
+/////////////////////////////////////////////
+.Login-password-reset-box--js, .Login-password-sent-box--js {
+display: none;
+}
+.Login-reset-email--js {
+  font-family: $gill-bold;
+  font-style: italic;
+}

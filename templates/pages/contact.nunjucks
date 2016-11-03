@@ -1,0 +1,6 @@
+{% set pageName = "Kontakt" %}
+
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>DET HÄR ÄR KONTAKTSIDAN</h1>
+{% endblock %}

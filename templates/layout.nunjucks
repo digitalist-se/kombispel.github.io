@@ -1,0 +1,41 @@
+<!-- layout.nunjucks -->
+<!DOCTYPE html>
+<html lang="se">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ pageName }}</title>
+  <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MTHCKR');</script>
+<!-- End Google Tag Manager -->
+  {# <meta name="og:image" content="images/screenshot.png"> #}
+  {# <link rel="shortcut icon" href="images/icogreen.ico"> #}
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTHCKR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  {% include "components/menu/menu.nunjucks" %}
+
+  <div class="Site-container">
+  {% include "components/header/header.nunjucks" %}
+  <main>
+    {% include "components/logo-row/logo-row.nunjucks" %}
+
+
+
+  {% block content %} {% endblock %}
+  </main>
+  {% include "components/footer/footer.nunjucks" %}
+  </div>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

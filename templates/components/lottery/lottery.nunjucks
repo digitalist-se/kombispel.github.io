@@ -1,0 +1,65 @@
+<!-- DRAGNING 1 -->
+<div class="Lottery-container">
+  <h2>1 000 000 kr</h2>
+
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <h3 className="Lottery-message--js">DRAGNING PÅGÅR</h3>
+</div>
+{# <!-- DRAGNING 2 -->
+<div class="Lottery-container">
+  <h2>500 000 kr</h2>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <h3 className="Lottery-message--js">DRAGNING PÅGÅR</h3>
+</div>
+<!-- DRAGNING 3 -->
+<div class="Lottery-container">
+  <h2>250 000 kr</h2>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <div class="Lottery-column">
+    <div class="Lottery-number"></div>
+  </div>
+  <h3 className="Lottery-message--js">DRAGNING PÅGÅR</h3>
+</div>
+
+ #}
+
+<button class="Button Start-lottery--js">Starta dragning</button>

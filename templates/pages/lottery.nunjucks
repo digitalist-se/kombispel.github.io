@@ -1,0 +1,6 @@
+{% set pageName = "Lotteri" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>DET HÄR ÄR RUBRIKEN TILL LOTTERISIDAN!</h1>
+{% include "components/lottery/lottery.nunjucks" %}
+{% endblock %}

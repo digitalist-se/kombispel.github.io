@@ -1,0 +1,25 @@
+/////////////////////////////////////////////
+//////// BASE CSS
+/////////////////////////////////////////////
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "breakpoints";
+@import "extends";
+@import "grid";
+@import "base";
+
+
+/////////////////////////////////////////////
+//////// COMPONENTS
+/////////////////////////////////////////////
+@import "../templates/components/lottery/Lottery";
+@import "../templates/components/header/Header";
+@import "../templates/components/menu/Menu";
+@import "../templates/components/menu-row/Menu-row";
+// @import "../templates/components/menu-product/Menu-product";
+@import "../templates/components/logo-row/Logo-row";
+@import "../templates/components/hero/Hero";
+@import "../templates/components/promo/Promo";
+@import "../templates/components/login/Login";
+@import "../templates/components/footer/Footer";

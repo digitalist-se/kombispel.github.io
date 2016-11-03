@@ -1,0 +1,43 @@
+/////////////////////////////////////////////
+// Inner-container
+/////////////////////////////////////////////
+.Inner-container {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  @include respond-to(medium) {
+    width: 80%;
+    max-width: 1280px;
+  }
+}
+
+/////////////////////////////////////////////
+// .Row
+/////////////////////////////////////////////
+.Row {
+  width: 100%;
+  &:before, &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// Justify content vertically and horizontally
+.Flex-center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+// Justify content center vertically left horizontally
+.Flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+// Justify content center vertically right horizontally
+.Flex-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+}

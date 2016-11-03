@@ -1,0 +1,98 @@
+/////////////////////////////////////////////
+// HERO FROM INDEX PAGE
+/////////////////////////////////////////////
+
+
+.Hero {
+  background: no-repeat center center;
+  background-size: cover;
+  width: 100%;
+}
+.Hero-inner {
+  @extend .Inner-container;
+
+  height: 300px;
+  display: flex;
+
+  @include breakpoint(1px,767px) {
+    height: 450px;
+    justify-content:center;
+    align-items:center;
+  }
+  @include breakpoint(768px) {
+    height: 450px;
+    justify-content: flex-end;
+    align-items:center;
+
+    .Hero-box {
+      margin-top: 100px;
+    }
+
+
+  }
+  @include breakpoint(1300px) {
+    height: 650px;
+    .Hero-box {
+      margin-top: 200px;
+
+    }
+  }
+
+}
+
+.Hero-box {
+  max-width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+
+  @include respond-to(medium) {
+    margin-top: 100px;
+  }
+  @include respond-to(large) {
+    margin-top: 200px;
+  }
+}
+
+.Hero-box-title {
+  color: $green;
+  margin-bottom: 15px;
+  span {
+    border-bottom: solid 1px gray;
+    padding-bottom: 3px;
+  }
+}
+
+.Hero-box-quote {
+  font-size: 22px;
+  margin-bottom: 25px;
+  &:before {
+    content: "“";
+  }
+  &:after {
+    content: "”";
+  }
+}
+
+.Hero-box-button {
+  @include gradient-btn($green, $dark-green);
+  color: white;
+  margin: 0 auto;
+}
+
+.Hero-box-button-text {
+  font-size: 20px;
+}
+
+.Hero-caption {
+  background-color: rgb(55,99,158);
+  color: white;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  font-size: 18px;
+
+  @include breakpoint(1px, 767px) {
+    padding: 15px 50px 15px 50px;
+  }
+}

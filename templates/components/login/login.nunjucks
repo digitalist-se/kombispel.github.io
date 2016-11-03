@@ -1,0 +1,107 @@
+<div class="Login-overlay-container">
+  <div class="Login-clickarea--js"></div>
+
+  <div class="Login-form-container">
+    <div class="Login-close-form--js"></div>
+    <h2 class="Login-header--js"></h2>
+    <form name="Login-form" class="Login-form">
+
+      <!-- INPUT SECTION -->
+      <div class="Login-input-section">
+        <label class="Login-label--block" for="username">Kundnummer eller e-postadress</label>
+        <input class="Login-input Login-input-username--js" type="text" name="username" />
+        <div class="Login-username-toggle--js Login-question-icon--js"></div>
+        <p class="Login-username-message"></p>
+        <div class="Login-username-help-box--js">
+        <div class="Login-help-box">
+          <div class="Login-help-box-inner">
+            <p>Du hittar information om ditt kundnummer på ditt månadsbrev från oss. Om du tidigare har
+              kopplat ditt kundnummer till en e-postadress kan du skriva in den.</p>
+            <h4>Behöver du hjälp?</h4>
+            <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+      </div>
+      <!-- END -->
+
+      <!-- INPUT SECTION -->
+      <div class="Login-input-section">
+      <label class="Login-label--block" for="password">Lösenord</label>
+      <input class="Login-input Login-input-password--js" type="password" name="password" />
+
+      <div class="Login-password-toggle--js Login-question-icon--js"></div>
+      <p class="Login-password-message"></p>
+
+      <div class="Login-password-help-box--js">
+      <div class="Login-help-box">
+        <div class="Login-help-box-inner">
+
+          <!-- DEFAULT BOX -->
+          <div class="Login-password-default-box--js">
+            <h4>Glömt ditt lösenord?</h4>
+            <p>Lösenordet står på ditt månadsbrev från oss.</p>
+            <h4>Behöver du hjälp?</h4>
+            <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+
+          <!-- RESET PASSWORDBOX -->
+          <div class="Login-password-reset-box--js">
+            <h4>Glömt ditt lösenord?</h4>
+            <p>Klicka på återställ så skickar vi ett nytt lösenord till</p>
+            <p class="Login-reset-email--js"></p>
+            <button class="Login-reset-password-btn--js">Återställ</button>
+            <h4>Behöver du hjälp?</h4>
+            <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+
+          <!-- PASSWORD SENT BOX -->
+          <div class="Login-password-sent-box--js">
+            <h4>Toppen!</h4>
+            <p>Vi har nu skickat ett mail till:</p>
+            <p class="Login-reset-email--js"></p>
+            <p>Om du inte har fått något mail inom ett par minuter kan det bero på att den e-postadress du angivet inte är kopplad till något konto.</p>
+            <p>Kontakta isåfall Kundtjänst</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- END -->
+
+      <div class="Login-row">
+        <div class="Login-checkbox">
+          <input type="checkbox" name="remember"/>
+          <label for="remember">Kom ihåg mig</label>
+        </div>
+        <div class="Login-forgot-password">
+          <span >Glömt ditt lösenord? </span>
+
+        </div>
+      </div>
+      {# <a class="Login-form-submit-btn--js" href="account.html">Logga in</a> #}
+      <button class="Login-form-submit-btn--js" type="submit">Logga in</button>
+
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,61 @@
+/////////////////////////////////////////////
+// ALL THE GENERAL CSS SHOULD BE IN THIS FILE
+/////////////////////////////////////////////
+body {
+  font-family: $gill-regular, "sans-serif";
+  overflow-x: hidden;
+}
+h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
+  font-family: $gill-bold, "sans-serif";
+}
+
+main {
+  transition: all .2s ease;
+}
+
+.Site-container {
+  width: 100%;
+  &.locked {
+    position: fixed;
+    height: 100%;
+    &:after {
+      background-color: $transparent-grey;
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: "";
+    }
+    main {
+      transform: translateX(100px);
+    }
+
+  }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $red;
+}
+
+
+
+/////////////////////////////////////////////
+//  TEMPORARY MY PAGE
+/////////////////////////////////////////////
+.Account-container {
+  @extend .Inner-container;
+
+  a {
+    color: $red;
+  }
+
+}

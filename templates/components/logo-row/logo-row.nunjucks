@@ -1,0 +1,36 @@
+<div class="Logo-row-container">
+  <div class="Logo-row-inner">
+<!-- KOMBI LOGO -->
+  <div class="Logo-row-logo-container">
+    <div class="Logo-row-main-logo"></div>
+  </div>
+  <!-- BUTTON -->
+  <div class="Logo-row-button-container">
+    <button class="Correct-lottery-btn--js">Rätta din lott!</button>
+  </div>
+  <!-- LOTTERY LOGOS -->
+  <div class="Logo-row-logos-container">
+
+    <div class="Logo-row-logo">
+      <div class="Logo-row-logo--kombi"></div>
+      {# <h4>Kombi Lotteriet</h4> #}
+    </div>
+
+    <div class="Logo-row-logo">
+      <div class="Logo-row-logo--dromrese"></div>
+      {# <h4>Drömrese Lotteriet</h4> #}
+    </div>
+
+    <div class="Logo-row-logo">
+      <div class="Logo-row-logo--motor"></div>
+      {# <h4>Motor Lotteriet</h4> #}
+    </div>
+
+    <div class="Logo-row-logo">
+      <div class="Logo-row-logo--skrap"></div>
+      {# <h4>Skrap Lotter</h4> #}
+    </div>
+  </div>
+  <!-- END LOTTERY LOGOS -->
+  </div>
+</div>

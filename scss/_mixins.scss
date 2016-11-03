@@ -1,0 +1,36 @@
+////////////////////////////////
+// BUTTONS
+///////////////////////////////
+@mixin rounded-btn($background,$color,$width) {
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $background;
+  outline: 0;
+  color: $color;
+  border-radius: 8px;
+  border: 0;
+  font-size: 16px;
+  padding: 20px 25px;
+  max-width: $width;
+  transition: all 0.2s ease;
+  border: 2px solid $background;
+  &:hover {
+    background: $color;
+    color: $background;
+  }
+}
+@mixin gradient-btn($color1, $color2) {
+  border-radius: 10px;
+  font-size: 20px;
+  border: solid 5px white;
+  padding: 15px;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: $gill-light;
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
+  background: linear-gradient($color1 45%, $color2 54%);
+  outline: 0;
+  cursor: pointer;
+}

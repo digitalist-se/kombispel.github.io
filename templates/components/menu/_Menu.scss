@@ -1,0 +1,154 @@
+$menu-width: 320px;
+$menu-margin: 15px;
+
+menu {
+  margin: 0;
+  padding: 0;
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.Menu-container {
+  height: 100%;
+  width: 320px;
+  top: 60px;
+  bottom: 0;
+  z-index: 9999;
+  background-color: $red;
+  position: fixed;
+  transform: translateX(-$menu-width);
+  transition: all .3s ease;
+  nav {
+    position: absolute;
+    bottom: 60px;
+    top: 0;
+    overflow-y: auto;
+  }
+}
+.Menu--open {
+  transform: translateX(0);
+  box-shadow: 4px 0px 7px -2px $transparent-grey;
+}
+
+//  ICONS
+[class*='Menu-icon'] {
+transition: all .2s ease;
+margin-right: 10px;
+display: inline-block;
+background-repeat: no-repeat;
+background-position: center center;
+}
+/////////////////////////////////////////////
+// LEVEL ONE
+/////////////////////////////////////////////
+.Menu-level-one {
+  > li {
+    // padding-left: $menu-margin;
+    color: white;
+    border-bottom: 1px solid $darker-red;
+  }
+}
+.Menu-icon--lock {
+  background-image: url("../images/svg/lock.svg");
+  width: 25px;
+  height: 25px;
+}
+.Menu-item-header {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+/////////////////////////////////////////////
+// MENU PROMOS
+/////////////////////////////////////////////
+.Menu-promos-row {
+  @extend .Row;
+  width: calc(100% - #{$menu-margin});
+  margin-right: $menu-margin;
+}
+.Menu-promos-item {
+  background-color: white;
+  height: 90px;
+  @include gtr-col(2,$menu-margin);
+  @extend .Flex-center;
+}
+$promo-size: 75px;
+
+div[class*='Menu-promos-item--'] {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: $promo-size;
+  width: $promo-size;
+}
+.Menu-promos-item--kombi {
+  background-image: url("../images/svg/kombi.svg");
+}
+.Menu-promos-item--dromrese {
+  background-image: url("../images/svg/dromrese.svg");
+
+}
+.Menu-promos-item--motor {
+  background-image: url("../images/svg/motor.svg");
+}
+.Menu-promos-item--skrap {
+  background-image: url("../images/svg/skrap.svg");
+}
+/////////////////////////////////////////////
+// MENU ITEMS WITH CHILDREN
+/////////////////////////////////////////////
+.Menu-item-has-children {
+  .Menu-item-header {
+    margin-top: 2px;
+  }
+}
+.Menu-level-one-header,.Menu-level-one-header--js  {
+  padding: $menu-margin 0 $menu-margin $menu-margin;
+  cursor: pointer;
+  transition: all .2s ease;
+  &:hover {
+    background-color: $dark-red;
+  }
+}
+.Menu-level-one-header--js.children-open {
+  background-color: $darker-red;
+  .Menu-icon--arrow {
+    transform: rotate(90deg);
+  }
+}
+.Menu-icon--arrow {
+  background-image: url("../images/svg/menu-arrow.svg");
+  width: 20px;
+  height: 20px;
+}
+/////////////////////////////////////////////
+// LEVEL TWO MENU ITEMS
+/////////////////////////////////////////////
+
+.Menu-level-two {
+  display: none;
+  li a { 
+    transition: all .2s ease;
+    color: white;
+    display: block;
+    background-color: $orange;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    padding: $menu-margin 0 $menu-margin 50px;
+    &:hover {
+      background-color: $dark-orange;
+    }
+  }
+  li:last-of-type {
+    a {
+      border-bottom: none;
+    }
+  }
+
+
+}
