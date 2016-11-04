@@ -1,70 +1,73 @@
-<menu class="Menu-container">
-  <nav>
-    <ul class="Menu-level-one">
-        <!-- LOGIN -->
-      <li class="Menu-item-no-children">
-        <div class="Menu-level-one-header Open-login--js">
-          <span class="Menu-icon--lock"></span>
-          <span class="Menu-item-header">Logga in på din sida</span>
-        </div>
-      </li>
-        <!-- PROMOS -->
-      <li class="Menu-item-no-children">
-        <div class="Menu-level-one-header">
-        <span class="Menu-item-header">Våra spel</span>
-          <div class="Menu-promos-row">
-              <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--kombi"></div></a>
-              <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--dromrese"></div></a>
-              <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--motor"></div></a>
-              <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--skrap"></div></a>
-          </div>
-        </div>
-      </li>
-      <!-- ITEM -->
-      <li class="Menu-item-has-children">
-        <div class="Menu-level-one-header--js">
-          <span class="Menu-icon--arrow"></span>
-          <span class="Menu-item-header">Tävlingar och nöjen</span>
-        </div>
-        <ul class="Menu-level-two">
-          <li><a href="#">Månadens tävling</a></li>
-          <li><a href="#">Tävlingsvinnare</a></li>
-          <li><a href="#">Tävlingsvillkor</a></li>
-          <li><a href="#">Tidningen kombi</a></li>
-          <li><a href="#">Resereportage</a></li>
-        </ul>
-      </li>
-      <!-- ITEM -->
-      <li class="Menu-item-has-children">
-        <div class="Menu-level-one-header--js">
-          <span class="Menu-icon--arrow"></span>
-          <span class="Menu-item-header">Ombud</span>
-        </div>
-        <ul class="Menu-level-two">
-          <li><a href="#">Sak 1</a></li>
-          <li><a href="#">Sak 2</a></li>
-          <li><a href="#">Sak 3</a></li>
-          <li><a href="#">Sak 4</a></li>
-          <li><a href="#">Sak 5</a></li>
-        </ul>
-      </li>
-      <!-- ITEM -->
-      <li class="Menu-item-has-children">
-        <div class="Menu-level-one-header--js">
-          <span class="Menu-icon--arrow"></span>
-          <span class="Menu-item-header">Spelansvar</span>
-        </div>
-        <ul class="Menu-level-two">
-          <li><a href="#">Sak 1</a></li>
-          <li><a href="#">Sak 2</a></li>
-          <li><a href="#">Sak 3</a></li>
-          <li><a href="#">Sak 4</a></li>
-          <li><a href="#">Sak 5</a></li>
-          <li><a href="#">Sak 6</a></li>
-          <li><a href="#">Sak 7</a></li>
-        </ul>
-      </li>
+<div class="Menu-container">
+    <menu class="Menu-inner-container">
+      <nav>
+        <ul class="Menu-level-one">
+            <!-- LOGIN -->
+          <li class="Menu-item-no-children">
+            <div class="Menu-level-one-header Open-login--js">
+              <span class="Menu-icon--lock"></span>
+              <span class="Menu-item-header">Logga in på din sida</span>
+            </div>
+          </li>
+            <!-- PROMOS -->
+          <li class="Menu-item-no-children">
+            <div class="Menu-level-one-header">
+            <span class="Menu-item-header">Våra spel</span>
+              <div class="Menu-promos-row">
+                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--kombi"></div></a>
+                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--dromrese"></div></a>
+                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--motor"></div></a>
+                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--skrap"></div></a>
+              </div>
+            </div>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="Menu-level-one-header--js">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Tävlingar och nöjen</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="#">Månadens tävling</a></li>
+              <li><a href="#">Tävlingsvinnare</a></li>
+              <li><a href="#">Tävlingsvillkor</a></li>
+              <li><a href="#">Tidningen kombi</a></li>
+              <li><a href="#">Resereportage</a></li>
+            </ul>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="Menu-level-one-header--js">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Ombud</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="#">Sak 1</a></li>
+              <li><a href="#">Sak 2</a></li>
+              <li><a href="#">Sak 3</a></li>
+              <li><a href="#">Sak 4</a></li>
+              <li><a href="#">Sak 5</a></li>
+            </ul>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="Menu-level-one-header--js">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Spelansvar</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="#">Sak 1</a></li>
+              <li><a href="#">Sak 2</a></li>
+              <li><a href="#">Sak 3</a></li>
+              <li><a href="#">Sak 4</a></li>
+              <li><a href="#">Sak 5</a></li>
+              <li><a href="#">Sak 6</a></li>
+              <li><a href="#">Sak 7</a></li>
+            </ul>
+          </li>
 
-    </ul>
-  </nav>
-</menu>
+        </ul>
+      </nav>
+    </menu>
+    <div class="Menu-overlay--js"></div>
+</div>

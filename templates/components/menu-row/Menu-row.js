@@ -9,11 +9,8 @@ $(".Correct-lottery-btn--js").click(function() {
 
 $(".Menu-row-profile--js, .Open-login--js").click(function() {
   $(".Login-header--js").html("Logga in på Min Sida")
-
     $(".Login-overlay-container").fadeIn("fast");
-
     if($(".Menu-container").hasClass("Menu--open")) {
         toggleMenu();
     }
-
 })

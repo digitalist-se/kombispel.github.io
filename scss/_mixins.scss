@@ -33,4 +33,10 @@
   background: linear-gradient($color1 45%, $color2 54%);
   outline: 0;
   cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(darken($color1,5%) 45%, darken($color2,5%) 54%);
+  }
+
+
 }

@@ -2,7 +2,7 @@
   <div class="Footer-inner">
     <div class="Footer-box Footer-box--first">
       <div class="Footer-box-col Footer-box-col--image">
-        <img class="Footer-image" src="images/footer/stamp.png"></img>
+        
       </div>
       <div class="Footer-box-col">
         <ul class="Footer-menu">

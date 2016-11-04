@@ -49,6 +49,9 @@
     @include breakpoint(1px, 890px) {
       float: right;
     }
+      background: url("../images/svg/stamp.svg") no-repeat;
+      height: 50px;
+      width: 50px;
   }
   .Footer-menu {
     @include breakpoint(1px, 890px) {
@@ -61,8 +64,6 @@
     }
     a {
       text-transform: uppercase;
-      text-decoration: none;
-      color: $red;
       font-size: 16px;
     }
   }
@@ -108,11 +109,11 @@
     margin-top: 10px;
   }
   .Footer-follow-item--facebook {
-    background: $facebook-blue url("../images/footer/facebook.svg") no-repeat 15% 50%;
+    background: $facebook-blue url("../images/svg/facebook.svg") no-repeat 15% 50%;
     background-size: 25px;
   }
   .Footer-follow-item--youtube {
-    background: $youtube-red url("../images/footer/youtube.svg") no-repeat 15% 50%;
+    background: $youtube-red url("../images/svg/youtube.svg") no-repeat 15% 50%;
     background-size: 25px;
   }
 }

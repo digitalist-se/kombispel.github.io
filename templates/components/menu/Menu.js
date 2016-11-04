@@ -13,6 +13,11 @@ $(".Menu-level-one-header--js").click(function() {
   $(this).toggleClass("children-open");
 })
 
+$(".Menu-overlay--js").click(function() {
+  toggleMenu()
+})
+
+
 
 function toggleMenu() {
   $(".Menu-container").toggleClass("Menu--open")

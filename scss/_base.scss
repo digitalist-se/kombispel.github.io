@@ -18,15 +18,15 @@ main {
   &.locked {
     position: fixed;
     height: 100%;
-    &:after {
-      background-color: $transparent-grey;
-      position: absolute;
-      top: 60px;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      content: "";
-    }
+    // &:after {
+    //   background-color: $transparent-grey;
+    //   position: absolute;
+    //   top: 60px;
+    //   bottom: 0;
+    //   right: 0;
+    //   left: 0;
+    //   content: "";
+    // }
     main {
       transform: translateX(100px);
     }
@@ -46,6 +46,14 @@ main {
     background-color: $red;
 }
 
+a {
+  text-decoration: none;
+  color: $red;
+  transition: all .2s ease;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 
 /////////////////////////////////////////////

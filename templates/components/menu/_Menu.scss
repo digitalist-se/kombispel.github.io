@@ -13,7 +13,7 @@ menu {
   }
 }
 
-.Menu-container {
+.Menu-inner-container {
   height: 100%;
   width: 320px;
   top: 60px;
@@ -30,10 +30,32 @@ menu {
     overflow-y: auto;
   }
 }
-.Menu--open {
-  transform: translateX(0);
-  box-shadow: 4px 0px 7px -2px $transparent-grey;
+
+.Menu-overlay--js {
+  background-color: transparent;
+  transition: all .2s ease;
 }
+.Menu--open {
+  .Menu-inner-container {
+    transform: translateX(0);
+    box-shadow: 4px 0px 7px -2px $transparent-grey;
+  }
+  //  OVERLAY
+  .Menu-overlay--js {
+    z-index: 1;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    background-color: $transparent-grey;
+  }
+}
+
+
+
+
+
+
 
 //  ICONS
 [class*='Menu-icon'] {
@@ -132,7 +154,7 @@ div[class*='Menu-promos-item--'] {
 
 .Menu-level-two {
   display: none;
-  li a { 
+  li a {
     transition: all .2s ease;
     color: white;
     display: block;
