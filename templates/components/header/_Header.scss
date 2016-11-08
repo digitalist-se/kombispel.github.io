@@ -133,7 +133,10 @@ border-bottom: 15px solid $orange;
     }
     &:after {
       bottom: -15px;
-
+      @include breakpoint(1024px) {
+        height: 20px;
+        bottom: -20px;
+      }
     }
   }
 }

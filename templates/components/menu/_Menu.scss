@@ -1,6 +1,12 @@
-$menu-width: 320px;
+$full-large: calc(100% - 1280px);
+$half-large: $full-large/2;
+$menu-width-small: 300px;
+$menu-width-medium: calc(10% + 372px);
+$menu-width-large: calc(#{$half-large} + 372px);
+
 $menu-margin: 15px;
 $menu-height: 90px;
+
 
 menu {
   margin: 0;
@@ -16,23 +22,39 @@ menu {
 
 .Menu-inner-container {
   height: 100%;
-  width: $menu-width;
-  // width: $menuLargeWidth;
-  top: 115px;
+  top: 120px;
   bottom: 0;
   z-index: 9999;
   background-color: $red;
   position: fixed;
-  transform: translateX(-$menu-width);
+  transform: translateX(-100%);
   transition: all .3s ease;
+  width: 300px;
+  @include breakpoint(768px, 1023px) {
+    top: 105px;
+  }
+  @include breakpoint(1024px) {
+  top: 115px;
+    width: $menu-width-medium;
+  }
+  @include breakpoint(1600px) {
+    width: $menu-width-large;
+    transform: translateX(-$menu-width-large);
+  }
   nav {
     position: absolute;
     top: 0;
     bottom: 120px;
+    width: 100%;
+    @include breakpoint(768px, 1023px) {
+      bottom: 105px;
+    }
+    @include breakpoint(1024px) {
+      bottom: 115px;
+    }
     overflow-y: auto;
   }
 }
-
 .Menu-overlay--js {
   background-color: transparent;
   transition: all .2s ease;
@@ -40,7 +62,7 @@ menu {
 .Menu--open {
   .Menu-inner-container {
     transform: translateX(0);
-    box-shadow: 4px 0px 7px -2px $transparent-grey;
+    box-shadow: 3px 2px 3px -1px $transparent-grey;
   }
   //  OVERLAY
   .Menu-overlay--js {
@@ -49,15 +71,8 @@ menu {
     top: 115px;
     width: 100%;
     height: 100%;
-    // background-color: $transparent-grey;
   }
 }
-
-
-
-
-
-
 
 //  ICONS
 [class*='Menu-icon'] {
@@ -72,7 +87,6 @@ background-position: center center;
 /////////////////////////////////////////////
 .Menu-level-one {
   > li {
-    // padding-left: $menu-margin;
     color: white;
     border-bottom: 1px solid $darker-red;
   }
