@@ -1,4 +1,4 @@
-<div class="Login-overlay-container">
+<section class="Login-overlay-container">
   <div class="Login-clickarea--js"></div>
   <div class="Login-form-container">
     <div class="Login-close-form--js"></div>
@@ -91,14 +91,10 @@
           <label for="remember">Kom ihåg mig</label>
         </div>
         <div class="Login-forgot-password">
-          <span >Glömt ditt lösenord? </span>
-
+          <a href="#" >Glömt ditt lösenord?</a>
         </div>
       </div>
-      {# <a class="Login-form-submit-btn--js" href="account.html">Logga in</a> #}
       <button class="Login-form-submit-btn--js" type="submit">Logga in</button>
-
     </form>
   </div>
-
-</div>
+</section>

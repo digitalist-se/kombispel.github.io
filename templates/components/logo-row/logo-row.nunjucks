@@ -1,9 +1,9 @@
-<div class="Logo-row-container">
+<section class="Logo-row-container">
   <div class="Logo-row-inner">
 <!-- KOMBI LOGO -->
-  <div class="Logo-row-logo-container">
+  <a href="index.html" class="Logo-row-logo-container">
     <div class="Logo-row-main-logo"></div>
-  </div>
+  </a>
   <!-- BUTTON -->
   <div class="Logo-row-button-container">
     <button class="Correct-lottery-btn--js">Rätta din lott!</button>
@@ -33,4 +33,4 @@
   </div>
   <!-- END LOTTERY LOGOS -->
   </div>
-</div>
+</section>

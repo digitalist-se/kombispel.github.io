@@ -1,4 +1,4 @@
-<div class="Hero" style="background-image: url('images/heroes/start_hero.png')">
+<section class="Hero" style="background-image: url('images/heroes/start_hero.png')">
   <div class="Hero-inner">
         <div class="Hero-box">
             <div class="Hero-box-title"><span>VECKANS VINNARE<span></div>
@@ -10,4 +10,4 @@
         </div>
     </div>
     <div class="Hero-caption">Det svenska lotteriet med störst chans att bli miljönar!</div>
-</div>
+</section>

@@ -1,4 +1,4 @@
-<div class="Menu-container">
+<section class="Menu-container">
     <menu class="Menu-inner-container">
       <nav>
         <ul class="Menu-level-one">
@@ -28,7 +28,7 @@
               <span class="Menu-item-header">Tävlingar och nöjen</span>
             </div>
             <ul class="Menu-level-two">
-              <li><a href="#">Månadens tävling</a></li>
+              <li><a href="lottery.html">Månadens tävling</a></li>
               <li><a href="#">Tävlingsvinnare</a></li>
               <li><a href="#">Tävlingsvillkor</a></li>
               <li><a href="#">Tidningen kombi</a></li>
@@ -70,4 +70,4 @@
       </nav>
     </menu>
     <div class="Menu-overlay--js"></div>
-</div>
+</section>

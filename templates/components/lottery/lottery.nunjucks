@@ -1,65 +1,57 @@
-<!-- DRAGNING 1 -->
-<div class="Lottery-container">
-  <h2>1 000 000 kr</h2>
+<section class="Lottery-container">
+    <div class="Lottery-inner-container">
+      <div class="Lottery-mynumber-container">
+        <h3 class="Lottery-mynumber-title">Kombilott</h3>
+        <div class="Lottery-mynumber-number-container">
+          <div >
+            <div class="Lottery-mynumber-logo"></div>
+            <div class="Lottery-mynumber-number">
+                <h4><span class="Lottery-mynumber--js"></span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- DRAGNING 1 -->
+    <div class="Lottery-row">
+      <h3><span class="Lottery-price-header"></span> kr</h3>
+      <div class="Lottery-column">
+        <div class="Lottery-number">
+          <div>0</div>
+        </div>
+      </div>
+      <div class="Lottery-column">
+        <div class="Lottery-number">
+          <div>0</div>
+        </div>
+      </div>
+      <div class="Lottery-column">
+        <div class="Lottery-number">
+          <div>0</div>
+        </div>
+      </div>
+      <div class="Lottery-column">
+        <div class="Lottery-number">
+          <div>0</div>
+        </div>
+      </div>
+      <div class="Lottery-column">
+        <div class="Lottery-number">
+          <div>0</div>
+        </div>
+      </div>
+      <div class="Lottery-column">
+        <div class="Lottery-number">
+          <div>0</div>
+        </div>
+      </div>
+    </div>
+    <div class="Lottery-message-container">
+      <p class="Lottery-message--js"></p>
+    </div>
+    <div class="Start-lottery-btn-container">
+      <button class="Start-lottery-btn--js">Starta dragning</button>
+    </div>
 
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
   </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <h3 className="Lottery-message--js">DRAGNING PÅGÅR</h3>
-</div>
-{# <!-- DRAGNING 2 -->
-<div class="Lottery-container">
-  <h2>500 000 kr</h2>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <h3 className="Lottery-message--js">DRAGNING PÅGÅR</h3>
-</div>
-<!-- DRAGNING 3 -->
-<div class="Lottery-container">
-  <h2>250 000 kr</h2>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <div class="Lottery-column">
-    <div class="Lottery-number"></div>
-  </div>
-  <h3 className="Lottery-message--js">DRAGNING PÅGÅR</h3>
-</div>
 
- #}
-
-<button class="Button Start-lottery--js">Starta dragning</button>
+</section>

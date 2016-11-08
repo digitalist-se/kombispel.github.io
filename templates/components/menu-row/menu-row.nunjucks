@@ -1,4 +1,4 @@
-<div class="Menu-row-container">
+<section class="Menu-row-container">
   <div class="Menu-row-inner-container">
     <div class="Menu-row-menu--js">
       <div class="Menu-row-circle">
@@ -22,4 +22,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
