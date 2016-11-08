@@ -1,4 +1,4 @@
-<section class="Menu-container">
+<section class="Menu-container--js">
     <menu class="Menu-inner-container">
       <nav>
         <ul class="Menu-level-one">

@@ -1,10 +1,47 @@
 {% import 'macros/header-navigation.nunjucks' as nav %}
-<header class="Header">
-  {# {% include "components/login/login.nunjucks" %}
-  {% include "components/logo-row/logo-row.nunjucks" %} #}
-  {% include "components/login/login.nunjucks" %}
+<header class="Header-container">
+  {# <section class="Menu-row-container"> #}
+    <div class="Header-inner-container">
 
-  {% include "components/menu-row/menu-row.nunjucks" %}
-  {# {% include "components/menu-product/menu-product.nunjucks" %} #}
+      <!-- MENU -->
+      <div class="Header-menu-container--js Header-flex--one">
+        <div class="Header-inner-grid">
+          <div class="Header-menu-circle">
+            <div class="Header-menu-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="Header-title">
+            <h3 class="Header-title--menu">meny</h3>
+          </div>
+        </div>
+      </div>
+      <!-- LOGO -->
+      <div class="Header-flex--two">
+        <a href="index.html" class="Header-kombo-logo "></a>
+      </div>
+
+      <!-- MIN SIDA -->
+      <div class="Header-profile--js Header-flex--three">
+        <div class="Header-inner-grid">
+          <div class="Header-profile-image"></div>
+          <div class="Header-title">
+            <h3>min sida</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- RÄTTA DIN LOTT -->
+      <div class="Header-flex--four">
+        <button class="Header-correct-btn--js">Rätta din lott!</button>
+      </div>
+
+    </div>
+
+
 
 </header>

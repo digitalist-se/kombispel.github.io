@@ -1,5 +1,5 @@
-$logo-margin-small: 20px;
-$logo-margin-large: 10px;
+$logoBorder: 2px solid rgb(214,214,214);
+
 .Logo-row-container {
 border-bottom: 8px solid $green;
 @extend .Row;
@@ -11,93 +11,85 @@ border-bottom: 8px solid $green;
   flex-wrap: wrap;
 }
 /////////////////////////////////////////////
- // LEFT SECTION
- /////////////////////////////////////////////
-
-.Logo-row-logo-container {
-  @extend .Flex-left;
-  flex-basis: 60%;
-  order: 1;
-  margin-top: $logo-margin-small;
-  @include respond-to(large) {
-    flex-basis: 25%;
-    margin: $logo-margin-large 0;
-  }
-  .Logo-row-main-logo {
-    background: url("../images/svg/logo.svg") no-repeat ;
-    height: 70px;
-    width: 90%;
-  }
-
-}
-/////////////////////////////////////////////
-// RIGHT SECTION
-/////////////////////////////////////////////
-.Logo-row-button-container {
-  flex-basis: 40%;
-  @extend .Flex-right;
-  order: 2;
-  margin-top: $logo-margin-small;
-  position: relative;
-  @include respond-to(large) {
-    margin: $logo-margin-large 0;
-    flex-basis: 25%;
-    order: 3;
-  }
-  button {
-    display: block;
-  }
-}
-.Correct-lottery-btn--js {
-  @include rounded-btn($orange,white, 220px);
-}
-/////////////////////////////////////////////
 // LOTTERY LOGOS
 /////////////////////////////////////////////
-.Logo-row-logos-container {
-  flex-basis: 100%;
-  display: flex;
-  order: 3;
-  margin: $logo-margin-small 0;
-  @include respond-to(large) {
-    flex-basis: 50%;
-    order: 2;
-  }
-  @include breakpoint(1px,1024px) {
-    margin-top: 30px;
-    &:before {
-      position: absolute;
-      left: 0;
-      right: 0;
-      background-color: $light-grey;
-      content: "";
-      height: 2px;
-    }
-  }
-}
 
 .Logo-row-logo {
-  @include gtr-col(4,10px);
-  margin-top: 15px;
-  @include respond-to(large) {
-    margin-top: 0;
-    border-left: 1px solid $grey;
-    &:last-of-type {
-      border-right: 1px solid $grey;
+  @include breakpoint(1px, 1023px) {
+    position: relative;
+    padding: 20px 0;
+    margin: 15px 0;
+    flex-basis: calc(50% - 6px);
+    h4,p,.Logo-row-links {
+      display: none;
+    }
+    [class*="Logo-row-logo--"] {
+      width: 80px;
+    }
+    &:nth-of-type(1),&:nth-of-type(3) {
+      border-left: $logoBorder;
+
+    }
+    &:nth-of-type(2),&:nth-of-type(4) {
+      border-left: $logoBorder;
+      border-right: $logoBorder;
+    }
+    &:nth-of-type(3),&:nth-of-type(4) {
+      &:after {
+        position: absolute;
+        content: "";
+        width: 102%;
+        height: 2px;
+        background-color: rgb(214,214,214);
+        top: -15px;
+      }
     }
   }
-  > div { // THE DIV THAT HOLDS THE LOGO
-    height: 70px;
+  @include flex-position(center);
+  @include respond-to(large) {
+    margin: 40px 0;
+    flex-basis: calc(25% - 2.5px);
+    border-left: $logoBorder;
+    &:last-of-type {
+      border-right: $logoBorder;
+    }
   }
   h4 {
-    margin: 5px 0 0 0;
+    margin: 15px 0 0 0;
     text-align: center;
      @include respond-to(large) {
        word-spacing: 9999em;
      }
   }
+  p {
+    text-align: center;
+    color: rgb(128,128,128);
+    margin: 10px 0;
+  }
+}
+.Logo-row-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  a {
+    @extend .Arrow-link;
+    &:first-of-type {
+      margin-left: 18px;
+    }
+    &:last-of-type {
+      margin-left: 25px;
+    }
+  }
 }
 
+/////////////////////////////////////////////
+// THE ACTUAL LOGOS
+/////////////////////////////////////////////
+[class*="Logo-row-logo--"] {
+  height: 70px;
+  display: block;
+  cursor: pointer;
+}
 .Logo-row-logo--kombi {
   background: url("../images/svg/kombi.svg") no-repeat center center;
 }

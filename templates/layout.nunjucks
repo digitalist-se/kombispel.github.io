@@ -23,14 +23,10 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   {% include "components/menu/menu.nunjucks" %}
-
+  {% include "components/login/login.nunjucks" %}
   <div class="Site-container">
   {% include "components/header/header.nunjucks" %}
   <main>
-    {% include "components/logo-row/logo-row.nunjucks" %}
-
-
-
   {% block content %} {% endblock %}
   </main>
   {% include "components/footer/footer.nunjucks" %}

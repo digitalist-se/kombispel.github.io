@@ -1,9 +1,7 @@
 {% set pageName = "Hem" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
-{# <h1>DET HÄR ÄR ÄR STARTSIDAN</h1> #}
-<div class="index-content">
 {% include "components/hero/hero.nunjucks" %}
+{% include "components/logo-row/logo-row.nunjucks" %}
 {% include "components/promo/promo.nunjucks" %}
-</div>
 {% endblock %}

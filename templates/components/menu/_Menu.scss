@@ -1,5 +1,6 @@
 $menu-width: 320px;
 $menu-margin: 15px;
+$menu-height: 90px;
 
 menu {
   margin: 0;
@@ -15,8 +16,9 @@ menu {
 
 .Menu-inner-container {
   height: 100%;
-  width: 320px;
-  top: 60px;
+  width: $menu-width;
+  // width: $menuLargeWidth;
+  top: 115px;
   bottom: 0;
   z-index: 9999;
   background-color: $red;
@@ -25,8 +27,8 @@ menu {
   transition: all .3s ease;
   nav {
     position: absolute;
-    bottom: 60px;
     top: 0;
+    bottom: 120px;
     overflow-y: auto;
   }
 }
@@ -44,10 +46,10 @@ menu {
   .Menu-overlay--js {
     z-index: 1;
     position: fixed;
-    top: 60px;
+    top: 115px;
     width: 100%;
     height: 100%;
-    background-color: $transparent-grey;
+    // background-color: $transparent-grey;
   }
 }
 

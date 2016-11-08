@@ -1,0 +1,254 @@
+$menuSize: 30px;
+$menuBorder: 2px solid rgb(214,214,214);
+
+.Header-container {
+width: 100%;
+background-color: white;
+border-top: 10px solid $red;
+border-bottom: 15px solid $orange;
+@include respond-to(large) {
+  border-top: 20px solid $red;
+  border-bottom: 5px solid $orange;
+}
+}
+.Header-inner-container {
+  position: relative;
+  padding: 15px 0;
+  @extend .Inner-container;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/////////////////////////////////////////////
+// HEADER FLEX GRID
+/////////////////////////////////////////////
+  .Header-flex--one {
+    flex-basis: 25%;
+    order: 1;
+    @extend .Flex-center;
+  }
+  .Header-flex--two {
+    flex-basis: 50%;
+    order: 2;
+    @extend .Flex-center;
+  }
+  .Header-flex--three {
+    flex-basis: 25%;
+    order: 3;
+    @extend .Flex-center;
+  }
+  .Header-flex--four {
+    flex-basis: 100%;
+    order: 4;
+  }
+// TABLET AND LARGER
+@include respond-to(large) {
+
+    //  MENU
+  .Header-flex--one {
+    flex-basis: 120px;
+    order: 2;
+    border-right: $menuBorder;
+    border-left: $menuBorder;
+  }
+  //  LOGO
+  .Header-flex--two {
+    flex-basis: 250px;
+    order: 1;
+  }
+  //  MIN SIDA
+  .Header-flex--three {
+    flex-basis: 150px;
+    //  flex-basis: 150px;
+    border-right: $menuBorder;
+  }
+  .Header-flex--four {
+    flex-basis: calc(100% - 526px);
+    @include flex-position(flex-end);
+  }
+}
+
+/////////////////////////////////////////////
+// Menu and Profile burger, image, text grid.
+/////////////////////////////////////////////
+.Header-title {
+  @include breakpoint(768px) {
+    margin-left: 10px;
+    @include flex-position(center);
+  }
+  h3 {
+    text-transform: uppercase;
+    font-family: $gill-regular;
+    color: $red;
+    font-size: 18px;
+    @include breakpoint(1px, 767px) {
+      margin: 10px 0 0 0;
+    }
+    @include breakpoint(768px) {
+      margin: 0;
+    }
+  }
+}
+@include breakpoint(768px) {
+  .Header-inner-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+/////////////////////////////////////////////
+ //  MENU
+ /////////////////////////////////////////////
+.Header-menu-container--js {
+  cursor: pointer;
+  left: 0;
+  position: relative;
+
+  transition: all .2s ease;
+  &:after, &:before {
+    transition: all .2s ease;
+
+    clear: both;
+    content: "";
+    display: block;
+  }
+  &.Burger--open {
+    background-color: $red;
+
+    @include breakpoint(1024px) {
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+    }
+    &:before,&:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 15px;
+      background-color: $red;
+    }
+    &:before {
+      box-shadow: -1px -4px 11px -5px rgba(0,0,0,0.65);
+      top: -15px;
+    }
+    &:after {
+      bottom: -15px;
+
+    }
+  }
+}
+
+.Header-menu-circle {
+  width: $menuSize;
+  height: $menuSize;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 3px solid $red;
+  @extend .Flex-center;
+}
+.Header-menu-burger {
+  width: 60%;
+  height: 21px;
+  position: relative;
+  span {
+    position: absolute;
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+    opacity: 1;
+    height: 3px;
+    left: 0;
+    background-color: $red;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:nth-of-type(1) {
+    top: 2px;
+    }
+    &:nth-of-type(2), &:nth-of-type(3) {
+      top: 9px;
+    }
+    &:nth-of-type(4) {
+      bottom: 2px;
+    }
+  }
+}
+//  STATE OPEN
+.Burger--open {
+.Header-menu-circle {
+  border: 3px solid white;
+  }
+span {
+  background-color: white;
+  &:nth-of-type(1), &:nth-of-type(4) {
+    top: 9px;
+    width: 0;
+    left: 50%;
+  }
+  &:nth-of-type(2) {
+    transform: rotate(45deg);
+  }
+  &:nth-of-type(3) {
+    transform: rotate(-45deg);
+  }
+}
+.Header-title--menu {
+  color: white;
+}
+
+
+}
+
+/////////////////////////////////////////////
+// LOGO
+/////////////////////////////////////////////
+.Header-kombo-logo {
+  background: url("../images/svg/logo.svg") no-repeat center center;
+  height: 50px;
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+
+/////////////////////////////////////////////
+// PROFILE
+/////////////////////////////////////////////
+.Header-profile--js {
+  cursor: pointer;
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.Header-profile-image {
+margin: 0 auto;
+margin-top: 0px;
+background: url("../images/svg/profile-icon-red.svg") no-repeat center center;
+height: $menuSize+3px; //  Compensate for the menus 3+3px border
+width: 25px;
+// width: 100%;
+}
+/////////////////////////////////////////////
+// RÄTTA DIN LOTT
+/////////////////////////////////////////////
+@include breakpoint(1px, 1023px) {
+  .Header-flex--four {
+    position: absolute;
+    bottom: -45px;
+    width: 100%;
+    button {
+      @include rounded-btn($orange,white,300px);
+      margin: 0 auto;
+      display: block;
+      padding: 8px 15px;
+    }
+  }
+}
+@include breakpoint(1024px) {
+  .Header-flex--four {
+    button {
+      @include rounded-btn($orange,white,100%);
+      padding: 20px 50px;
+    }
+  }
+}

@@ -4,15 +4,14 @@
 body {
   font-family: $gill-regular, "sans-serif";
   overflow-x: hidden;
+  color: $text;
 }
 h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
   font-family: $gill-bold, "sans-serif";
 }
-
 main {
   transition: all .2s ease;
 }
-
 .Site-container {
   width: 100%;
   &.locked {
@@ -44,7 +43,6 @@ a {
     text-decoration: underline;
   }
 }
-
 
 /////////////////////////////////////////////
 //  TEMPORARY MY PAGE

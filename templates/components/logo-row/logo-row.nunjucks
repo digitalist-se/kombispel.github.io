@@ -1,36 +1,60 @@
 <section class="Logo-row-container">
   <div class="Logo-row-inner">
-<!-- KOMBI LOGO -->
-  <a href="index.html" class="Logo-row-logo-container">
-    <div class="Logo-row-main-logo"></div>
-  </a>
-  <!-- BUTTON -->
-  <div class="Logo-row-button-container">
-    <button class="Correct-lottery-btn--js">Rätta din lott!</button>
-  </div>
   <!-- LOTTERY LOGOS -->
-  <div class="Logo-row-logos-container">
-
     <div class="Logo-row-logo">
-      <div class="Logo-row-logo--kombi"></div>
-      {# <h4>Kombi Lotteriet</h4> #}
+      <div class="Logo-row-logo-inner">
+
+      <a  href="#" class="Logo-row-logo--kombi"></a>
+      <h4>Kombilotteriet</h4>
+      <p>Störst chans att bli miljonär</p>
+      <div class="Logo-row-links">
+        <a href="#">Köp en lott</a>
+        <a href="#">Läs mer</a>
+      </div>
+      </div>
+
     </div>
 
     <div class="Logo-row-logo">
-      <div class="Logo-row-logo--dromrese"></div>
-      {# <h4>Drömrese Lotteriet</h4> #}
+      <div class="Logo-row-logo-inner">
+
+      <a  href="#" class="Logo-row-logo--dromrese"></a>
+      <h4>Drömreselotteriet</h4>
+      <p>Motorer och miljoner!</p>
+      <div class="Logo-row-links">
+        <a href="#">Köp en lott</a>
+        <a href="#">Läs mer</a>
+      </div>
+      </div>
+
     </div>
 
     <div class="Logo-row-logo">
-      <div class="Logo-row-logo--motor"></div>
-      {# <h4>Motor Lotteriet</h4> #}
+      <div class="Logo-row-logo-inner">
+
+      <a  href="#" class="Logo-row-logo--motor"></a>
+      <h4>Motorlotteriet</h4>
+      <p>Vinn resan och reskassan!</p>
+      <div class="Logo-row-links">
+        <a href="#">Köp en lott</a>
+        <a href="#">Läs mer</a>
+      </div>
+      </div>
+
     </div>
 
     <div class="Logo-row-logo">
-      <div class="Logo-row-logo--skrap"></div>
-      {# <h4>Skrap Lotter</h4> #}
+      <div class="Logo-row-logo-inner">
+
+      <a href="#" class="Logo-row-logo--skrap"></a>
+      <h4>Skraplotter</h4>
+      <p>Störst chans att bli miljonär</p>
+      <div class="Logo-row-links">
+        <a href="#">Köp en lott</a>
+        <a href="#">Läs mer</a>
+      </div>
+      </div>
     </div>
-  </div>
   <!-- END LOTTERY LOGOS -->
   </div>
 </section>

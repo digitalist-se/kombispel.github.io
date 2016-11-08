@@ -109,7 +109,10 @@ function passwordBox(box) {
 /////////////////////////////////////////////
 
 $(".Login-input-password--js").on('input', function() {
-  if($(this).val() == "kombi") {
+
+  var passWord = $(this).val();
+
+  if(passWord == "kombi" || passWord== "lotter" || passWord == "spel") {
     state.passWord = true
   } else {
     state.passWord = false

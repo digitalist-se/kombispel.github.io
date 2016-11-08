@@ -75,17 +75,8 @@
 .Footer-box--second {
   order: 3;
   .Footer-link {
-    margin-top: 10px;
-    color: $red;
-    font-weight: bold;
-    &:before {
-      content: ">> ";
-    }
-    a {
-      font-size: 18px;
-      text-decoration: none;
-      color: $red;
-    }
+    @extend .Arrow-link;
+    margin: 10px 0 0 18px;
   }
 }
 

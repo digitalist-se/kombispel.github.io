@@ -66,3 +66,11 @@ margin-right: $gutter/2;
     margin-right: 0;
   };
 }
+/////////////////////////////////////////////
+// FLEX POSITION
+/////////////////////////////////////////////
+@mixin flex-position($position) {
+  display:flex;
+  justify-content: $position;
+  align-items: center;
+}
