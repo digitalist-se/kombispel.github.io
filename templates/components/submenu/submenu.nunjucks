@@ -1,0 +1,8 @@
+<nav class="Submenu">
+  <div class="Submenu-container">
+    <a class="Submenu-link is-active" href="tickets.html">Mina lotter</a>
+    <a class="Submenu-link" href="information.html">Mina uppgifter</a>
+    <a class="Submenu-link" href="winnings.html">Vinsthistorik</a>
+    <a class="Submenu-link" href="bonus.html">Mina Andelar</a>
+  </div>
+</nav>

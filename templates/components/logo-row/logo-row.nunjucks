@@ -4,7 +4,7 @@
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
 
-      <a  href="#" class="Logo-row-logo--kombi"></a>
+        <a href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
       <h4>Kombilotteriet</h4>
       <p>Störst chans att bli miljonär</p>
       <div class="Logo-row-links">
@@ -17,8 +17,7 @@
 
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
-
-      <a  href="#" class="Logo-row-logo--dromrese"></a>
+      <a  href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
       <h4>Drömreselotteriet</h4>
       <p>Motorer och miljoner!</p>
       <div class="Logo-row-links">
@@ -31,8 +30,7 @@
 
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
-
-      <a  href="#" class="Logo-row-logo--motor"></a>
+      <a  href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/motor.svg')">Motorlotteriet</a>
       <h4>Motorlotteriet</h4>
       <p>Vinn resan och reskassan!</p>
       <div class="Logo-row-links">
@@ -45,8 +43,7 @@
 
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
-
-      <a href="#" class="Logo-row-logo--skrap"></a>
+      <a href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/skrap.svg')">Skraplotter</a>
       <h4>Skraplotter</h4>
       <p>Störst chans att bli miljonär</p>
       <div class="Logo-row-links">

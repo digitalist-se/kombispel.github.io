@@ -1,19 +1,19 @@
 /////////////////////////////////////////////
  // CLOSE MODAL
  ////////////////////////////////////////////
-$(".Login-clickarea--js, .Login-close-form--js").click(function() {
-  $(".Login-overlay-container").fadeOut("fast")
+$(".js-Login-clickarea, .js-Login-close-form").click(function() {
+  $(".js-Login-overlay-container").fadeOut("fast")
 })
 
 /////////////////////////////////////////////
  // SLIDETOGGLE THE HELPBOXES
  ////////////////////////////////////////////
-$(".Login-username-toggle--js").click(function() {
-  $(".Login-username-help-box--js").slideToggle();
+$(".js-Login-username-toggle").click(function() {
+  $(".js-Login-username-help-box").slideToggle();
 });
 
-$(".Login-password-toggle--js").click(function() {
-  $(".Login-password-help-box--js").slideToggle();
+$(".js-Login-password-toggle, .js-Login-forgot-password").click(function() {
+  $(".js-Login-password-help-box").slideToggle();
 });
 
 /////////////////////////////////////////////
@@ -24,7 +24,7 @@ var state = {
   passWord: false,
   emailReg: false,
   numberReg: false
-}
+} 
 
 /////////////////////////////////////////////
 // USERNAME CHECK
@@ -38,8 +38,7 @@ var userNameMessage = "Du har inte angivet ett korrekt kundnummer eller e-postad
 var passwordMessage = "Felaktigt lösenord.";
 
 // INPUT FIELD CHANGE
-$('.Login-input-username--js').on('input', function() {
-
+$('.js-Login-input-username').on('input', function() {
     if(emailReg.test($(this).val()) ) {
       state.emailReg = true;
       state.numberReg = false;
@@ -50,7 +49,6 @@ $('.Login-input-username--js').on('input', function() {
       state.numberReg = false;
       state.emailReg = false;
     }
-
     validUser = state.numberReg || state.emailReg;
       if (validUser) {
         state.userName = true;
@@ -61,29 +59,29 @@ $('.Login-input-username--js').on('input', function() {
 });
 
 // WHEN INPUT IS DONE WITH THE FIELD
-$('.Login-input-username--js').focusout(function() {
+$('.js-Login-input-username').focusout(function() {
   // console.log("INPUT NOT IN FOCUS ANY MORE");
   if(state.userName == false) {
-    $(".Login-username-toggle--js").removeClass("Login-question-icon--js").removeClass("Login-check-icon--js").addClass("Login-error-icon--js")
-    $(this).addClass("Login-input-error--js")
-    $(".Login-username-message").show().html(userNameMessage)
+    $(".js-Login-username-toggle").removeClass("js-Login-question-icon").removeClass("js-Login-check-icon").addClass("js-Login-error-icon")
+    $(this).addClass("js-Login-input-error")
+    $(".js-Login-username-message").show().html(userNameMessage)
 
   } else {
-    $(".Login-username-toggle--js").removeClass("Login-question-icon--js").removeClass("Login-error-icon--js").addClass("Login-check-icon--js")
-    $(this).removeClass("Login-input-error--js")
-    $(".Login-username-message").hide().html("")
+    $(".js-Login-username-toggle").removeClass("js-Login-question-icon").removeClass("js-Login-error-icon").addClass("js-Login-check-icon")
+    $(this).removeClass("js-Login-input-error")
+    $(".js-Login-username-message").hide().html("")
   }
 
   // WHICH BOX SHOULD SHOW
   if(state.emailReg) {
     passwordBox("reset")
-    $(".Login-reset-email--js").html($('.Login-input-username--js').val()) // SET THE EMAIL IN THE MESSAGE TO WHATEVER IT IS IN THE INPUT IF IT IS VALID
+    $(".js-Login-reset-email").html($('.js-Login-input-username').val()) // SET THE EMAIL IN THE MESSAGE TO WHATEVER IT IS IN THE INPUT IF IT IS VALID
   } else {
     passwordBox("default")
   }
 })
 
-$(".Login-reset-password-btn--js").click(function(e) {
+$(".js-Login-reset-password-btn").click(function(e) {
    e.preventDefault();
   passwordBox("sent")
 })
@@ -93,14 +91,14 @@ $(".Login-reset-password-btn--js").click(function(e) {
 /////////////////////////////////////////////
 function passwordBox(box) {
   if(box == "reset") {
-    $(".Login-password-reset-box--js").show();
-    $(".Login-password-sent-box--js, .Login-password-default-box--js").hide();
+    $(".js-Login-password-reset-box").show();
+    $(".js-Login-password-sent-box, .js-Login-password-default-box").hide();
   } else if(box == "sent") {
-    $(".Login-password-reset-box--js, .Login-password-default-box--js").hide();
-    $(".Login-password-sent-box--js").show();
+    $(".js-Login-password-reset-box, .js-Login-password-default-box").hide();
+    $(".js-Login-password-sent-box").show();
   } else if(box == "default") {
-    $(".Login-password-sent-box--js, .Login-password-reset-box--js").hide();
-    $(".Login-password-default-box--js").show();
+    $(".js-Login-password-sent-box, .js-Login-password-reset-box").hide();
+    $(".js-Login-password-default-box").show();
   }
 }
 
@@ -108,7 +106,7 @@ function passwordBox(box) {
 // PASSWORD INPUT FIELD
 /////////////////////////////////////////////
 
-$(".Login-input-password--js").on('input', function() {
+$(".js-Login-input-password").on('input', function() {
 
   var passWord = $(this).val();
 
@@ -118,34 +116,34 @@ $(".Login-input-password--js").on('input', function() {
     state.passWord = false
   }
     if(state.passWord != true) {
-      $(".Login-password-message").hide();
+      $(".js-Login-password-message").hide();
     }
-    if($(this).hasClass("Login-input-error--js")) {
-      $(this).removeClass("Login-input-error--js")
-      $(".Login-password-toggle--js").removeClass("Login-error-icon--js").addClass("Login-question-icon--js")
+    if($(this).hasClass("js-Login-input-error")) {
+      $(this).removeClass("js-Login-input-error")
+      $(".js-Login-password-toggle").removeClass("js-Login-error-icon").addClass("js-Login-question-icon")
     }
  });
 
 ///////////////////////////////////////////////////////
 // CHECK IF LOGIN PASSED (JUST FOR PROTOTYPE TESTING)
 //////////////////////////////////////////////////////
-$(".Login-form-submit-btn--js").click(function(e) {
+$(".js-Login-form-submit-btn").click(function(e) {
   e.preventDefault(e)
   if(validUser && state.passWord) {
     window.location.replace("account.html");
   }
   else if(validUser == true && state.passWord != true) {
-    $(".Login-password-toggle--js").removeClass("Login-question-icon--js").addClass("Login-error-icon--js")
-    $(".Login-header--js").addClass("Login-header--error").html("Inloggningen misslyckades")
-    $(".Login-input-password--js").addClass("Login-input-error--js")
-    $(".Login-password-message").show().html(passwordMessage)
+    $(".js-Login-password-toggle").removeClass("js-Login-question-icon").addClass("js-Login-error-icon")
+    $(".js-Login-header").addClass("Login-header--error").html("Inloggningen misslyckades")
+    $(".js-Login-input-password").addClass("js-Login-input-error")
+    $(".js-Login-password-message").show().html(passwordMessage)
   }
   else {
-    $(".Login-header--js").addClass("Login-header--error").html("Inloggningen misslyckades")
-    $(".Login-input-password--js").addClass("Login-input-error--js")
-    $(".Login-username-toggle--js").removeClass("Login-question-icon--js").removeClass("Login-check-icon--js").addClass("Login-error-icon--js")
-    $(".Login-password-toggle--js").removeClass("Login-question-icon--js").addClass("Login-error-icon--js")
-    $(".Login-username-message").show().html(userNameMessage)
-    $(".Login-password-message").show().html(passwordMessage)
+    $(".js-Login-header").addClass("Login-header--error").html("Inloggningen misslyckades")
+    $(".js-Login-input-password").addClass("js-Login-input-error")
+    $(".js-Login-username-toggle").removeClass("js-Login-question-icon").removeClass("js-Login-check-icon").addClass("js-Login-error-icon")
+    $(".js-Login-password-toggle").removeClass("js-Login-question-icon").addClass("js-Login-error-icon")
+    $(".js-Login-username-message").show().html(userNameMessage)
+    $(".js-Login-password-message").show().html(passwordMessage)
   }
 });

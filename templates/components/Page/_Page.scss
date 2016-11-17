@@ -1,0 +1,34 @@
+.Page {
+  @extend .Inner-container;
+  padding-top: 15px;
+
+  p {
+    font-size: 14px;
+    @include margin-y(30px);
+  }
+}
+
+.Page-image {
+  margin-bottom: 30px;
+}
+
+.Page-lead {
+  background-color: $lighter-grey;
+  font-size: 16px;
+  padding: 30px;
+}
+
+.Page-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

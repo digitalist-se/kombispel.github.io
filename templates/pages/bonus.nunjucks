@@ -1,0 +1,5 @@
+{% set pageName = "Bonusspel" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Bonus/bonus.nunjucks" %}
+{% endblock %}

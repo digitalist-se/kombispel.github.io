@@ -1,31 +1,13 @@
-.Footer {
-  width: 100%;
-  @include breakpoint(1px, 890px) {
-    width: 100%;
-  }
-  &:after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-  margin: 0 auto;
-}
-
 .Footer-inner {
   @extend .Inner-container;
-  @include breakpoint(1px, 890px) {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
 .Footer-box {
-  @include breakpoint(1px, 890px) {
-    margin-top: 35px;
-  }
-  @include breakpoint(891px) {
-    @include gtr-col(3, 35px);
+  @include flex-gtr-col(1,15px);
+  @include breakpoint(1180px) {
+    @include flex-gtr-col(3,15px);
   }
 }
 
@@ -40,23 +22,20 @@
 /////////////////////////////////////////////
 .Footer-box--first {
   order: 1;
-  .Footer-box-col {
-    float: left;
-
+  .Footer-box-col-container {
+    @include flex-row();
   }
   .Footer-box-col--image {
-    @extend .Flex-center;
-    @include breakpoint(1px, 890px) {
-      float: right;
-    }
-      background: url("../images/svg/stamp.svg") no-repeat;
-      height: 50px;
-      width: 50px;
+      span {
+        color: transparent;
+        background: url("../images/svg/stamp.svg") no-repeat;
+        height: 50px;
+        width: 50px;
+        display: block;
+      }
   }
   .Footer-menu {
-    @include breakpoint(1px, 890px) {
-      padding-left: 0px;
-    }
+    padding: 0;
     margin: 0;
     list-style: none;
     li{
@@ -67,8 +46,29 @@
       font-size: 16px;
     }
   }
+  //  BLOCK LAYOUT
+  .Footer-box-col--image {
+    order: 2;
+    display:flex;
+    justify-content: flex-end;
+    align-items: top;
+    flex-basis: 50%;
+  }
+  .Footer-box-col--list {
+    order: 1;
+    flex-basis: 50%;
+  }
+  @include breakpoint(1180px) {
+    .Footer-box-col--image {
+      order: 1;
+      justify-content: flex-start;
+      flex-basis: 90px;
+    }
+    .Footer-box-col--list {
+      order: 2;
+    }
+  }
 }
-
 /////////////////////////////////////////////
 // FOOTER SECOND
 /////////////////////////////////////////////
@@ -79,32 +79,45 @@
     margin: 10px 0 0 18px;
   }
 }
-
 /////////////////////////////////////////////
 // FOOTER THIRD
 /////////////////////////////////////////////
+@mixin media-btn($image,$color) {
+  background: $color url($image) no-repeat 10% 50%;
+  background-size: 25px;
+  &:hover {
+    background-color: darken($color,10%);
+  }
+}
 .Footer-box--third {
   order: 2;
   .Footer-follow {
-    a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
+    @include flex-row();
   }
   .Footer-follow-item {
-    float: left;
-    margin-right: 20px;
-    width: 60px;
-    padding: 15px 35px 15px 60px;
-    margin-top: 10px;
+    @include flex-gtr-col(2,$base-margin);
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all .2s ease;
   }
   .Footer-follow-item--facebook {
-    background: $facebook-blue url("../images/svg/facebook.svg") no-repeat 15% 50%;
-    background-size: 25px;
+    @include media-btn("../images/svg/facebook.svg",$facebook-blue);
   }
   .Footer-follow-item--youtube {
-    background: $youtube-red url("../images/svg/youtube.svg") no-repeat 15% 50%;
-    background-size: 25px;
+    @include media-btn("../images/svg/youtube.svg",$youtube-red);
+  }
+}
+/////////////////////////////////////////////
+// BLOCK ORDER SECOND AND THIRD
+/////////////////////////////////////////////
+@include breakpoint(1180px) {
+  .Footer-box--second  {
+    order: 2;
+  }
+  .Footer-box--third  {
+    order: 3;
   }
 }

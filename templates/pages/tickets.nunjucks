@@ -1,0 +1,5 @@
+{% set pageName = "Mina lotter" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/tickets/tickets.nunjucks" %}
+{% endblock %}

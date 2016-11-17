@@ -1,4 +1,4 @@
-$menuSize: 30px;
+$menuSize: 36px;
 $menuBorder: 2px solid rgb(214,214,214);
 
 .Header-container {
@@ -15,9 +15,13 @@ border-bottom: 15px solid $orange;
   position: relative;
   padding: 15px 0;
   @extend .Inner-container;
+  @include breakpoint(1px,767px) {
+    width: 100%;
+  }
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  min-height: 95px;
 }
 
 /////////////////////////////////////////////
@@ -44,7 +48,6 @@ border-bottom: 15px solid $orange;
   }
 // TABLET AND LARGER
 @include respond-to(large) {
-
     //  MENU
   .Header-flex--one {
     flex-basis: 120px;
@@ -60,7 +63,6 @@ border-bottom: 15px solid $orange;
   //  MIN SIDA
   .Header-flex--three {
     flex-basis: 150px;
-    //  flex-basis: 150px;
     border-right: $menuBorder;
   }
   .Header-flex--four {
@@ -73,6 +75,8 @@ border-bottom: 15px solid $orange;
 // Menu and Profile burger, image, text grid.
 /////////////////////////////////////////////
 .Header-title {
+  min-width: 35px;
+
   @include breakpoint(768px) {
     margin-left: 10px;
     @include flex-position(center);
@@ -100,47 +104,56 @@ border-bottom: 15px solid $orange;
 /////////////////////////////////////////////
  //  MENU
  /////////////////////////////////////////////
-.Header-menu-container--js {
-  cursor: pointer;
-  left: 0;
+
+@mixin headerBorders($color, $shadow:null) {
   position: relative;
-
-  transition: all .2s ease;
-  &:after, &:before {
+  @include breakpoint(1024px) {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+  &:before,&:after {
+    content: "";
+    width: 100%;
+    height: 15px;
+    background-color: $color;
     transition: all .2s ease;
-
+    position: absolute;
     clear: both;
     content: "";
     display: block;
+    left: 0;
+    right: 0;
   }
-  &.Burger--open {
-    background-color: $red;
-
-    @include breakpoint(1024px) {
-      border-left: 2px solid white;
-      border-right: 2px solid white;
-    }
-    &:before,&:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 15px;
-      background-color: $red;
-    }
-    &:before {
+  &:before {
+    @if $shadow {
       box-shadow: -1px -4px 11px -5px rgba(0,0,0,0.65);
-      top: -15px;
     }
-    &:after {
+    @else {
+      box-shadow:none;
+    }
+    top: -15px;
+  }
+  &:after {
+    bottom: -15px;
+    @include breakpoint(1024px) {
+      height: 20px;
       bottom: -15px;
-      @include breakpoint(1024px) {
-        height: 20px;
-        bottom: -20px;
-      }
     }
   }
 }
 
+.js-Header-menu-container {
+  cursor: pointer;
+  left: 0;
+  position: relative;
+  transition: all .2s ease;
+
+  &.Burger--open {
+    background-color: $red;
+    @include headerBorders($red, true);
+
+  }
+}
 .Header-menu-circle {
   width: $menuSize;
   height: $menuSize;
@@ -149,29 +162,79 @@ border-bottom: 15px solid $orange;
   border: 3px solid $red;
   @extend .Flex-center;
 }
-.Header-menu-burger {
-  width: 60%;
-  height: 21px;
+/////////////////////////////////////////////
+// MENU BURGER
+/////////////////////////////////////////////
+$hamburger-layer-height                    : 3px !default;
+$hamburger-layer-spacing                   : 4px !default;
+$hamburger-layer-color                     : #000 !default;
+$hamburger-layer-border-radius             : 4px !default;
+$cubic-bezier:        cubic-bezier(0.215, 0.61, 0.355, 1);
+$cubic-bezier2:        cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+.Header-hamburger-outer {
+  width: 65%;
+  transition-property: opacity, filter;
+  transition-duration: .15s;
+  transition-timing-function: linear;
   position: relative;
-  span {
-    position: absolute;
+  .Header-hamburger-inner{
+    transition-duration: 0.1s;
+    transition-timing-function: $cubic-bezier2;
+  }
+}
+.Header-hamburger-inner {
+  top: -1.5px;
+  &,
+  &::before,
+  &::after {
     width: 100%;
-    border-radius: 3px;
-    display: block;
-    opacity: 1;
-    height: 3px;
-    left: 0;
+    height: $hamburger-layer-height;
     background-color: $red;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-    &:nth-of-type(1) {
-    top: 2px;
+    border-radius: $hamburger-layer-border-radius;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+  &::before {
+    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+    transition: top 0.1s 0.14s ease,
+    opacity 0.1s ease;
+  }
+  &::after {
+    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+    transition: bottom 0.1s 0.14s ease,
+    transform 0.1s $cubic-bezier2;
+  }
+}
+/*********** OPEN BURGER ************/
+.Burger--open {
+  .Header-hamburger-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.14s;
+    transition-timing-function: $cubic-bezier;
+    background-color: white;
+    &::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease,
+      opacity 0.1s 0.14s ease;
+      background-color: white;
+
     }
-    &:nth-of-type(2), &:nth-of-type(3) {
-      top: 9px;
-    }
-    &:nth-of-type(4) {
-      bottom: 2px;
+    &::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease,
+      transform 0.1s 0.14s $cubic-bezier;
+      background-color: white;
+
     }
   }
 }
@@ -180,27 +243,10 @@ border-bottom: 15px solid $orange;
 .Header-menu-circle {
   border: 3px solid white;
   }
-span {
-  background-color: white;
-  &:nth-of-type(1), &:nth-of-type(4) {
-    top: 9px;
-    width: 0;
-    left: 50%;
-  }
-  &:nth-of-type(2) {
-    transform: rotate(45deg);
-  }
-  &:nth-of-type(3) {
-    transform: rotate(-45deg);
-  }
-}
-.Header-title--menu {
+.js-Header-title--menu {
   color: white;
 }
-
-
 }
-
 /////////////////////////////////////////////
 // LOGO
 /////////////////////////////////////////////
@@ -211,11 +257,10 @@ span {
   margin: 0 auto;
   display: block;
 }
-
 /////////////////////////////////////////////
 // PROFILE
 /////////////////////////////////////////////
-.Header-profile--js {
+.js-Header-profile {
   cursor: pointer;
   &:after {
     clear: both;
@@ -236,14 +281,11 @@ width: 25px;
 /////////////////////////////////////////////
 @include breakpoint(1px, 1023px) {
   .Header-flex--four {
-    position: absolute;
-    bottom: -45px;
-    width: 100%;
+    padding-top: 1.5*$base-margin;
     button {
       @include rounded-btn($orange,white,300px);
       margin: 0 auto;
       display: block;
-      padding: 8px 15px;
     }
   }
 }
@@ -253,5 +295,28 @@ width: 25px;
       @include rounded-btn($orange,white,100%);
       padding: 20px 50px;
     }
+  }
+}
+/////////////////////////////////////////////
+// STATE LOGGED IN
+/////////////////////////////////////////////
+.Header-container.Logged-in {
+  border-bottom: none;
+  .Header-flex--one {
+    border: none;
+  }
+  .Header-flex--three {
+  background-color: $dark-red;
+  position: relative;
+  @include headerBorders($dark-red, null);
+  .Header-profile-image {
+    background-image: url("../images/svg/profile-icon-white.svg");
+  }
+  .Header-title h3 {
+    color: white;
+  }
+  }
+  .Header-flex--four {
+    display: none; // The button
   }
 }

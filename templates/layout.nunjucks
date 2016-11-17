@@ -6,6 +6,7 @@
   <title>{{ pageName }}</title>
   <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -14,8 +15,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MTHCKR');</script>
 <!-- End Google Tag Manager -->
-  {# <meta name="og:image" content="images/screenshot.png"> #}
-  {# <link rel="shortcut icon" href="images/icogreen.ico"> #}
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -24,7 +23,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   {% include "components/menu/menu.nunjucks" %}
   {% include "components/login/login.nunjucks" %}
-  <div class="Site-container">
+  <div class="js-Site-container">
   {% include "components/header/header.nunjucks" %}
   <main>
   {% block content %} {% endblock %}

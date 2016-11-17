@@ -1,20 +1,20 @@
-<div class="Promo-container">
+<section class="Promo-container">
     <div class="Promo-container-inner">
         <div class="Promo-item">
-            <div class="Promo-box Promo-box--first">
+            <div class="Promo-box Promo-box--correct-ticket">
                 <div class="Promo-box-title">Är du en vinnare?</div>
                 <img class="Promo-box-image" src="images/promo/promo1.png"></img>
                 <button class="Promo-box-button">RÄTTA DIN LOTT</button>
 
                 <div class="Promo-box-product">
-                    <span class="Promo-box-product-item Promo-box-product-item--kombi"></span>
-                    <span class="Promo-box-product-item Promo-box-product-item--dromrese"></span>
-                    <span class="Promo-box-product-item Promo-box-product-item--motor"></span>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/skrap.svg')">Skraplotten</a>
                 </div>
             </div>
         </div>
         <div class="Promo-item">
-            <div class="Promo-box Promo-box--second">
+            <div class="Promo-box Promo-box--campaign">
                 <div class="Promo-box-title">Månadens kampanj!</div>
                 <div class="Promo-box-text">Prenie: Vettenkaraff och skraplottpaket på köpet när du skaffar en Kombilott.</div>
                 <img class="Promo-box-image" src="images/promo/promo2.png"></img>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="Promo-item">
-            <div class="Promo-box Promo-box--third">
+            <div class="Promo-box Promo-box--winner">
                 <div class="Promo-box-image-big" style="background-image: url('images/promo/promo3.png')"></div>
                 <div class="Promo-box-band">
                     <div class="Promo-box-band-text">KOMBISPELS TUSENDE MILJONVINNARE</div>
@@ -32,4 +32,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

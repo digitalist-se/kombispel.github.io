@@ -7,17 +7,27 @@
 @import "breakpoints";
 @import "extends";
 @import "grid";
+@import "utils";
+@import "forms";
 @import "base";
 
 
 /////////////////////////////////////////////
 //////// COMPONENTS
 /////////////////////////////////////////////
-@import "../templates/components/lottery/Lottery";
-@import "../templates/components/header/Header";
-@import "../templates/components/menu/Menu";
-@import "../templates/components/logo-row/Logo-row";
-@import "../templates/components/hero/Hero";
-@import "../templates/components/promo/Promo";
-@import "../templates/components/login/Login";
-@import "../templates/components/footer/Footer";
+@import "../templates/components/Lottery/Lottery";
+@import "../templates/components/Header/Header";
+@import "../templates/components/Menu/Menu";
+@import "../templates/components/Logo-row/Logo-row";
+@import "../templates/components/Hero/Hero";
+@import "../templates/components/Promo/Promo";
+@import "../templates/components/Login/Login";
+@import "../templates/components/Tickets/Tickets";
+@import "../templates/components/Footer/Footer";
+@import "../templates/components/Submenu/Submenu";
+@import "../templates/components/Winnings/Winnings";
+@import "../templates/components/List/List";
+@import "../templates/components/MyPages/MyPages";
+@import "../templates/components/Icon/Icon";
+@import "../templates/components/Page/Page";
+@import "../templates/components/Columns/Columns";

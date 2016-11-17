@@ -1,15 +1,15 @@
 <footer class="Footer">
   <div class="Footer-inner">
     <div class="Footer-box Footer-box--first">
-      <div class="Footer-box-col Footer-box-col--image">
-        
-      </div>
-      <div class="Footer-box-col">
-        <ul class="Footer-menu">
-          <li><a href="/">Spelansvar</a></li>
-          <li><a href="/">Pressreleaser</a></li>
-          <li><a href="/">För ombud</a></li>
-        </ul>
+      <div class="Footer-box-col-container">
+        <div class="Footer-box-col Footer-box-col--image"><span>Spel för dig över 18</span></div>
+        <div class="Footer-box-col Footer-box-col--list">
+          <ul class="Footer-menu">
+            <li><a href="/">Spelansvar</a></li>
+            <li><a href="/">Pressreleaser</a></li>
+            <li><a href="/">För ombud</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="Footer-box Footer-box--second">
@@ -21,8 +21,8 @@
     <div class="Footer-box Footer-box--third">
       <div class="Footer-title">Följ oss:</div>
       <div class="Footer-follow">
-        <a href="/"><div class="Footer-follow-item Footer-follow-item--facebook">Facebook</div></a>
-        <a href="/"><div class="Footer-follow-item Footer-follow-item--youtube">Youtube</div></a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--facebook">Facebook</a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--youtube">Youtube</a>
       </div>
     </div>
   </div>

@@ -46,7 +46,6 @@ margin-right: $gutter/2;
 @mixin flex-row() {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
   flex-direction: row;
 }
 @mixin flex-gtr-col ($columns, $gutter) {
@@ -57,14 +56,16 @@ margin-right: $gutter/2;
   margin-top: $gutter;
   margin-left: $gutter/2;
   margin-right: $gutter/2;
-  &:nth-of-type(#{$columns}n+1) {
-    margin-right: $gutter/2;
-    margin-left: 0;
-  };
-  &:nth-of-type(#{$columns}n+#{$columns}) {
-    margin-left: $gutter/2;
-    margin-right: 0;
-  };
+  @if $columns != 1 {
+    &:nth-of-type(#{$columns}n+1) {
+      margin-right: $gutter/2;
+      margin-left: 0;
+    };
+    &:nth-of-type(#{$columns}n+#{$columns}) {
+      margin-left: $gutter/2;
+      margin-right: 0;
+    };
+  }
 }
 /////////////////////////////////////////////
 // FLEX POSITION

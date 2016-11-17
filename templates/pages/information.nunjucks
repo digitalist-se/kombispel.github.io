@@ -1,0 +1,5 @@
+{% set pageName = "Mina uppgifter" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Information/information.nunjucks" %}
+{% endblock %}

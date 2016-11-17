@@ -1,6 +1,9 @@
 /////////////////////////////////////////////
 // ALL THE GENERAL CSS SHOULD BE IN THIS FILE
 /////////////////////////////////////////////
+html {
+  line-height: 1.5;
+}
 body {
   font-family: $gill-regular, "sans-serif";
   overflow-x: hidden;
@@ -12,7 +15,12 @@ h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([clas
 main {
   transition: all .2s ease;
 }
-.Site-container {
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.js-Site-container {
   width: 100%;
   &.locked {
     position: fixed;
@@ -42,6 +50,34 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+blockquote {
+  background-color: #ff9d2b;
+  color: #fff;
+  font-family: $gill-bookItalic;
+  font-size: 22px;
+  margin: 0;
+  padding: 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/////////////////////////////////////////////
+//  Headings
+/////////////////////////////////////////////
+.Heading-1 {
+  color: $red;
+  padding: 1*$base-margin 0;
+  font-family: $gill-regular;
+  text-align: center;
+}
+
+.Heading-3 {
+  font-size: 24px;
+  font-family: $gill-regular;
 }
 
 /////////////////////////////////////////////

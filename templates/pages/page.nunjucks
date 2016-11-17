@@ -1,0 +1,5 @@
+{% set pageName = "Här är en klassisk rubrik på två fina rader" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Page/page.nunjucks" %}
+{% endblock %}

@@ -1,4 +1,4 @@
-.Login-overlay-container {
+.js-Login-overlay-container {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -7,14 +7,13 @@
   display: none;
 }
 //  CLICKAREA
-.Login-clickarea--js {
+.js-Login-clickarea {
   position: fixed;
   width: 100%;
   height: 100%;
 }
 
 .Login-form-container {
-  // background: linear-gradient( white 75%, $lighter-grey, $light-grey );
   background: white;
   max-height: calc(100vh - 70px);
   width: 90%;
@@ -30,7 +29,7 @@
     max-height: calc(100vh - 150px);
   }
 }
-.Login-close-form--js {
+.js-Login-close-form {
 position: absolute;
 right: 10px;
 top: 10px;
@@ -43,7 +42,7 @@ transition: all 0.3s ease;
   transform: rotate(180deg);
 }
 }
-.Login-header--js {
+.js-Login-header {
   color: $red;
   margin: 0;
   text-align: center;
@@ -54,41 +53,28 @@ transition: all 0.3s ease;
   max-width: 400px;
   margin: 0 auto;
   position: relative;
-  label {
-    margin: 25px 0 7.5px 0;
-    font-size: 14px;
-  }
+
   .Login-label--block {
     display: block;
+
+    margin-top: 25px;
   }
-
   .Login-input {
-    position: relative;
-    padding-left: 5px;
-    height: 40px;
-    outline: 0;
-    background-color: $lighter-grey;
-    box-sizing: border-box;
-    border: 1px solid $grey;
-
-    width: 100%;
-    transition: all 0.2s ease;
     &:focus {
-      height: 50px;
-      border: 1px solid $orange;
-      background-color: white;
-      & + .Login-username-toggle--js, & + .Login-password-toggle--js {
+      & + .js-Login-username-toggle, & + .js-Login-password-toggle {
         top: 37px;
       }
     }
   }
 
 
-  .Login-input-error--js {
+
+
+  .js-Login-input-error {
     border: 1px solid red;
     color: red;
   }
-  .Login-username-message,  .Login-password-message  {
+  .js-Login-username-message,  .js-Login-password-message  {
   display: none;
   margin: 0;
   padding: 10px 0 1px 0;
@@ -103,7 +89,7 @@ transition: all 0.3s ease;
 }
 
 // ICONS IN THE INPUT FIELD
-.Login-username-toggle--js,.Login-password-toggle--js {
+.js-Login-username-toggle,.js-Login-password-toggle {
   width: 25px;
   height: 25px;
   position: absolute;
@@ -112,18 +98,18 @@ transition: all 0.3s ease;
   cursor: pointer;
   transition: all .2s ease;
 }
-.Login-question-icon--js {
+.js-Login-question-icon {
   background: url("../images/svg/login-question.svg") no-repeat center center;
 }
-.Login-error-icon--js {
+.js-Login-error-icon {
   background: url("../images/svg/login-error.svg") no-repeat center center;
 }
 
-.Login-check-icon--js {
+.js-Login-check-icon {
   background: url("../images/svg/login-valid.svg") no-repeat center center;
 }
 
-  .Login-reset-password-btn--js {
+  .js-Login-reset-password-btn {
     @include rounded-btn($orange, white, 100%);
     width: 80%;
     margin: 0 auto;
@@ -136,7 +122,7 @@ transition: all 0.3s ease;
   }
 
 // THE ORANGE SLIDE DOWN HELP-BOXES
-.Login-username-help-box--js,.Login-password-help-box--js {
+.js-Login-username-help-box,.js-Login-password-help-box {
   display: none;
 }
 .Login-help-box {
@@ -144,7 +130,6 @@ transition: all 0.3s ease;
   margin-top: 15px;
   width: 100%;
   border: 2px solid $orange;
-  box-sizing: border-box;
   &:after {
   content: '';
   display: block;
@@ -190,52 +175,32 @@ transition: all 0.3s ease;
 // LOGIN ROW
 /////////////////////////////////////////////
 .Login-row {
-  margin-top: 25px;
-  @extend .Row;
+  @include flex-row();
+
 }
 .Login-checkbox {
-  @include col(50%);
-}
-.Login-forgot-password {
-  @include col(50%);
-}
-
-  input[type="checkbox"] {
-    height: 15px;
-    width: 15px;
-    margin-right: 5px;
-    box-sizing: border-box;
-    outline: 0;
-    position: relative;
-    &:after {
-    box-sizing: border-box;
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 0;
-    top: 0;
-    background-color: white;
-    border: 1px solid $grey;
-    }
-    &:checked {
-      &:after {
-        background: $green url("../images/svg/check.svg") center center no-repeat;
-        background-size: 90%;
-      }
-    }
+  @include flex-gtr-col(2,15px);
+  @include flex-position(flex-start);
+  label {
+    margin-top: $base-margin/2;
   }
 
-  .Login-forgot-password {
+
+}
+.js-Login-forgot-password {
+  @include flex-gtr-col(2,15px);
+  @include flex-position(flex-end);
+}
+
+
+
+  .js-Login-forgot-password {
     color: $red;
-    font-size: 10px;
+    font-size: 12px;
     text-align: right;
-    display: block;
     padding: 10px 0;
   }
-  .Login-form-submit-btn--js {
+  .js-Login-form-submit-btn {
     display: block;
     margin-top: 30px;
     text-align: center;
@@ -258,10 +223,10 @@ transition: all 0.3s ease;
 /////////////////////////////////////////////
 // LOGIN PASSWORD BOXES
 /////////////////////////////////////////////
-.Login-password-reset-box--js, .Login-password-sent-box--js {
+.js-Login-password-reset-box, .js-Login-password-sent-box {
 display: none;
 }
-.Login-reset-email--js {
+.js-Login-reset-email {
   font-family: $gill-bold;
   font-style: italic;
 }

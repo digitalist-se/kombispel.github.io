@@ -1,7 +1,7 @@
 /////////////////////////////////////////////
 // TOGGLE MENU OPEN
 /////////////////////////////////////////////
-$(".Menu-level-one-header--js").click(function() {
+$(".js-Menu-level-one-header").click(function() {
   $(this).next().slideToggle();
   $(this).toggleClass("children-open");
 })

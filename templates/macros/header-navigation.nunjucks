@@ -1,3 +1,3 @@
-{% macro active(page, link, title) %}
+{# {% macro active(page, link, title) %}
     <li> <a href="{{ link }}" class="{%if page == title %}active{% endif %}">{{ title }}</a></li>
-{% endmacro %}
+{% endmacro %} #}

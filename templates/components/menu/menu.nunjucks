@@ -1,10 +1,10 @@
-<section class="Menu-container--js">
+<section class="js-Menu-container">
     <menu class="Menu-inner-container">
       <nav>
         <ul class="Menu-level-one">
             <!-- LOGIN -->
           <li class="Menu-item-no-children">
-            <div class="Menu-level-one-header Open-login--js">
+            <div class="Menu-level-one-header js-Open-login">
               <span class="Menu-icon--lock"></span>
               <span class="Menu-item-header">Logga in på din sida</span>
             </div>
@@ -14,30 +14,45 @@
             <div class="Menu-level-one-header">
             <span class="Menu-item-header">Våra spel</span>
               <div class="Menu-promos-row">
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--kombi"></div></a>
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--dromrese"></div></a>
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--motor"></div></a>
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--skrap"></div></a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/motor.svg')">Motorlotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/skrap.svg')">Skraplotteriet</a>
               </div>
             </div>
           </li>
           <!-- ITEM -->
           <li class="Menu-item-has-children">
-            <div class="Menu-level-one-header--js">
+            <div class="js-Menu-level-one-header">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Färdiga sidor</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="index.html">Startsida</a></li>
+              <li><a href="tickets.html">Mina lotter</a></li>
+              <li><a href="information.html">Mina uppgifter</a></li>
+              <li><a href="winnings.html">Vinsthistorik</a></li>
+              <li><a href="lottery.html">Rätta lotten</a></li>
+              <li><a href="lottery.html">Innehållssida</a></li>
+            </ul>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="js-Menu-level-one-header">
               <span class="Menu-icon--arrow"></span>
               <span class="Menu-item-header">Tävlingar och nöjen</span>
             </div>
             <ul class="Menu-level-two">
               <li><a href="lottery.html">Månadens tävling</a></li>
               <li><a href="#">Tävlingsvinnare</a></li>
-              <li><a href="#">Tävlingsvillkor</a></li>
+              <li><a href="page.html">Tävlingsvillkor</a></li>
               <li><a href="#">Tidningen kombi</a></li>
               <li><a href="#">Resereportage</a></li>
             </ul>
           </li>
           <!-- ITEM -->
           <li class="Menu-item-has-children">
-            <div class="Menu-level-one-header--js">
+            <div class="js-Menu-level-one-header">
               <span class="Menu-icon--arrow"></span>
               <span class="Menu-item-header">Ombud</span>
             </div>
@@ -51,7 +66,7 @@
           </li>
           <!-- ITEM -->
           <li class="Menu-item-has-children">
-            <div class="Menu-level-one-header--js">
+            <div class="js-Menu-level-one-header">
               <span class="Menu-icon--arrow"></span>
               <span class="Menu-item-header">Spelansvar</span>
             </div>
@@ -69,5 +84,5 @@
         </ul>
       </nav>
     </menu>
-    <div class="Menu-overlay--js"></div>
+    <div class="js-Menu-overlay"></div>
 </section>

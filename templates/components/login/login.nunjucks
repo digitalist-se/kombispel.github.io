@@ -1,17 +1,17 @@
-<section class="Login-overlay-container">
-  <div class="Login-clickarea--js"></div>
+<section class="js-Login-overlay-container">
+  <div class="js-Login-clickarea"></div>
   <div class="Login-form-container">
-    <div class="Login-close-form--js"></div>
-    <h2 class="Login-header--js"></h2>
+    <div class="js-Login-close-form"></div>
+    <h2 class="js-Login-header"></h2>
     <form name="Login-form" class="Login-form">
 
       <!-- INPUT SECTION -->
       <div class="Login-input-section">
         <label class="Login-label--block" for="username">Kundnummer eller e-postadress</label>
-        <input class="Login-input Login-input-username--js" type="text" name="username" required/>
-        <div class="Login-username-toggle--js Login-question-icon--js"></div>
-        <p class="Login-username-message"></p>
-        <div class="Login-username-help-box--js">
+        <input class="Login-input js-Login-input-username" type="text" name="username" required/>
+        <div class="js-Login-username-toggle js-Login-question-icon"></div>
+        <p class="js-Login-username-message"></p>
+        <div class="js-Login-username-help-box">
         <div class="Login-help-box">
           <div class="Login-help-box-inner">
             <p>Du hittar information om ditt kundnummer på ditt månadsbrev från oss. Om du tidigare har
@@ -32,17 +32,17 @@
       <!-- INPUT SECTION -->
       <div class="Login-input-section">
       <label class="Login-label--block" for="password">Lösenord</label>
-      <input class="Login-input Login-input-password--js" type="password" name="password" required/>
+      <input class="Login-input js-Login-input-password" type="password" name="password" required/>
 
-      <div class="Login-password-toggle--js Login-question-icon--js"></div>
-      <p class="Login-password-message"></p>
+      <div class="js-Login-password-toggle js-Login-question-icon"></div>
+      <p class="js-Login-password-message"></p>
 
-      <div class="Login-password-help-box--js">
+      <div class="js-Login-password-help-box">
       <div class="Login-help-box">
         <div class="Login-help-box-inner">
 
           <!-- DEFAULT BOX -->
-          <div class="Login-password-default-box--js">
+          <div class="js-Login-password-default-box">
             <h4>Glömt ditt lösenord?</h4>
             <p>Lösenordet står på ditt månadsbrev från oss.</p>
             <h4>Behöver du hjälp?</h4>
@@ -54,11 +54,11 @@
           </div>
 
           <!-- RESET PASSWORDBOX -->
-          <div class="Login-password-reset-box--js">
+          <div class="js-Login-password-reset-box">
             <h4>Glömt ditt lösenord?</h4>
             <p>Klicka på återställ så skickar vi ett nytt lösenord till</p>
-            <p class="Login-reset-email--js"></p>
-            <button class="Login-reset-password-btn--js">Återställ</button>
+            <p class="js-Login-reset-email"></p>
+            <button class="js-Login-reset-password-btn">Återställ</button>
             <h4>Behöver du hjälp?</h4>
             <p>Kontakta kundtjänst så hjälper vi dig igång</p>
             <ul class="Login-contact-list">
@@ -68,10 +68,10 @@
           </div>
 
           <!-- PASSWORD SENT BOX -->
-          <div class="Login-password-sent-box--js">
+          <div class="js-Login-password-sent-box">
             <h4>Toppen!</h4>
             <p>Vi har nu skickat ett mail till:</p>
-            <p class="Login-reset-email--js"></p>
+            <p class="js-Login-reset-email"></p>
             <p>Om du inte har fått något mail inom ett par minuter kan det bero på att den e-postadress du angivet inte är kopplad till något konto.</p>
             <p>Kontakta isåfall Kundtjänst</p>
             <ul class="Login-contact-list">
@@ -90,11 +90,11 @@
           <input type="checkbox" name="remember" checked/>
           <label for="remember">Kom ihåg mig</label>
         </div>
-        <div class="Login-forgot-password">
+        <div class="js-Login-forgot-password">
           <a href="#" >Glömt ditt lösenord?</a>
         </div>
       </div>
-      <button class="Login-form-submit-btn--js" type="submit">Logga in</button>
+      <button class="js-Login-form-submit-btn" type="submit">Logga in</button>
     </form>
   </div>
 </section>

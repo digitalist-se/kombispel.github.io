@@ -1,0 +1,137 @@
+.MyPages {
+  background-color: $lighter-grey;
+  padding-bottom: 100px;
+}
+
+.MyPages-container {
+  @extend .Inner-container;
+}
+
+/////////////////////////////////////////////
+// HEADER
+/////////////////////////////////////////////
+.MyPages-header {
+  text-align: center;
+  padding-top: $base-margin;
+
+  p {
+    margin: $base-margin/2 0;
+    color: $dark-grey;
+    font-family: $gill-regular;
+  }
+}
+
+.MyPages-information {
+  @include flex-row();
+}
+
+.MyPages-information-column {
+  @include flex-gtr-col (1, 10px);
+
+  @include breakpoint(1024px) {
+    @include flex-gtr-col (2, 30px);
+  }
+}
+
+.MyPages-block {
+  background-color: #fff;
+  padding: 20px;
+
+  button {
+    padding: 10px 40px;
+    font-family: $gill-regular;
+    @include rounded-btn($orange,white,100%);
+  }
+}
+
+.MyPages-block--basic {
+  margin-bottom: 30px;
+  text-align: center;
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+.MyPages-settingsForm {
+  input[type="text"],
+  input[type="email"] {
+    margin-bottom: 10px;
+  }
+}
+
+.MyPages-input-section {
+  margin-bottom: 30px;
+
+  &:first-child {
+    border-bottom: 1px solid $dark-grey;
+    padding-bottom: 30px;
+  }
+}
+
+.MyPages-block-title {
+  display: inline-block;
+  border-bottom: 1px solid $dark-grey;
+  padding-bottom: 10px;
+}
+
+.MyPages-checkbox {
+  position: relative;
+}
+
+.MyPages-block-section {
+  &:first-child {
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.MyPages-block-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  a {
+    @extend .Arrow-link;
+  }
+}
+
+/////////////////////////////////////////////
+// LINKS
+/////////////////////////////////////////////
+.MyPages-show-list-link {
+  display: block;
+  text-align: center;
+  margin: 40px auto;
+  width: 210px;
+  @extend .Arrow-link;
+  &:before {
+    left: -5px;
+  }
+}
+
+.MyPages-buy-link-container {
+  background-color: white;
+  padding: 30px 0;
+  @include flex-position(center);
+}
+
+.MyPages-buy-link {
+  @include gradient-btn($red,$dark-red);
+  color: white;
+  span {
+    display: block;
+    text-align: center;
+    &:first-of-type {
+      margin-bottom: 5px;
+      font-size: 15px;
+      font-family: $gill-light;
+    }
+    &:last-of-type {
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<section class="Page">
+
+  <h1 class="Heading-1">Här är en klassisk rubrik på två fina rader.</h1>
+
+  <div class="Columns">
+    <div class="Columns-main">
+      <img class="Page-image" src="../images/content/beach.jpg" alt="Strand" />
+
+      <div class="Page-lead">Ända sedan starten 1956 har vår målsättning varit densamma – spännande underhållning för alla. Nu har vi samlat alla våra varumärken på ett ställe och fortsätter vår vision att roa och ge spänning.</div>
+
+      <h2>En underrubrik</h2>
+
+      <p>
+        Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
+      </p>
+
+      <blockquote>
+        Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
+      </blockquote>
+
+      <p>
+        Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
+      </p>
+
+      <button type="button">Köp en lott!</button>
+
+      <h2>Se på en video!</h2>
+
+      <div class="Page-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LdLrzViQWGk" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <h2>Glöm aldrig dessa tre punkter.</h2>
+
+      <p>Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam:</p>
+
+      <ul>
+        <li>Aliquam varius odio a</li>
+        <li>Condimentum lobortis.</li>
+        <li>Duis id sem a neque viverra</li>
+      </ul>
+
+      <p>
+        Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
+      </p>
+
+    </div>
+
+    <div class="Columns-side">
+      Kontakt
+    </div>
+  </div>
+
+</section>

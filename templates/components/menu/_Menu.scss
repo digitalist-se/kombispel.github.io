@@ -1,13 +1,10 @@
 $full-large: calc(100% - 1280px);
 $half-large: $full-large/2;
 $menu-width-small: 300px;
-$menu-width-medium: calc(10% + 372px);
-$menu-width-large: calc(#{$half-large} + 372px);
-
+$menu-width-medium: calc(10% + 368px);
+$menu-width-large: calc(#{$half-large} + 368px);
 $menu-margin: 15px;
 $menu-height: 90px;
-
-
 menu {
   margin: 0;
   padding: 0;
@@ -19,10 +16,9 @@ menu {
     text-transform: uppercase;
   }
 }
-
 .Menu-inner-container {
   height: 100%;
-  top: 120px;
+  top: 108px;
   bottom: 0;
   z-index: 9999;
   background-color: $red;
@@ -31,10 +27,10 @@ menu {
   transition: all .3s ease;
   width: 300px;
   @include breakpoint(768px, 1023px) {
-    top: 105px;
+    top: 90px;
   }
   @include breakpoint(1024px) {
-  top: 115px;
+  top: 110px;
     width: $menu-width-medium;
   }
   @include breakpoint(1600px) {
@@ -55,7 +51,7 @@ menu {
     overflow-y: auto;
   }
 }
-.Menu-overlay--js {
+.js-Menu-overlay {
   background-color: transparent;
   transition: all .2s ease;
 }
@@ -65,7 +61,7 @@ menu {
     box-shadow: 3px 2px 3px -1px $transparent-grey;
   }
   //  OVERLAY
-  .Menu-overlay--js {
+  .js-Menu-overlay {
     z-index: 1;
     position: fixed;
     top: 115px;
@@ -113,30 +109,17 @@ background-position: center center;
 .Menu-promos-item {
   background-color: white;
   height: 90px;
+  color: transparent;
   @include gtr-col(2,$menu-margin);
-  @extend .Flex-center;
-}
-$promo-size: 75px;
-
-div[class*='Menu-promos-item--'] {
   background-repeat: no-repeat;
   background-position: center center;
-  height: $promo-size;
-  width: $promo-size;
+  background-size: 85px;
+  &:hover {
+    background-color: $light-grey;
+  }
 }
-.Menu-promos-item--kombi {
-  background-image: url("../images/svg/kombi.svg");
-}
-.Menu-promos-item--dromrese {
-  background-image: url("../images/svg/dromrese.svg");
 
-}
-.Menu-promos-item--motor {
-  background-image: url("../images/svg/motor.svg");
-}
-.Menu-promos-item--skrap {
-  background-image: url("../images/svg/skrap.svg");
-}
+
 /////////////////////////////////////////////
 // MENU ITEMS WITH CHILDREN
 /////////////////////////////////////////////
@@ -145,7 +128,7 @@ div[class*='Menu-promos-item--'] {
     margin-top: 2px;
   }
 }
-.Menu-level-one-header,.Menu-level-one-header--js  {
+.Menu-level-one-header,.js-Menu-level-one-header  {
   padding: $menu-margin 0 $menu-margin $menu-margin;
   cursor: pointer;
   transition: all .2s ease;
@@ -153,7 +136,7 @@ div[class*='Menu-promos-item--'] {
     background-color: $dark-red;
   }
 }
-.Menu-level-one-header--js.children-open {
+.js-Menu-level-one-header.children-open {
   background-color: $darker-red;
   .Menu-icon--arrow {
     transform: rotate(90deg);
@@ -167,7 +150,6 @@ div[class*='Menu-promos-item--'] {
 /////////////////////////////////////////////
 // LEVEL TWO MENU ITEMS
 /////////////////////////////////////////////
-
 .Menu-level-two {
   display: none;
   li a {
@@ -187,6 +169,4 @@ div[class*='Menu-promos-item--'] {
       border-bottom: none;
     }
   }
-
-
 }

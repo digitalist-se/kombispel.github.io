@@ -6,6 +6,7 @@
   <title>Om oss</title>
   <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -14,21 +15,19 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MTHCKR');</script>
 <!-- End Google Tag Manager -->
-  
-  
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTHCKR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <section class="Menu-container--js">
+  <section class="js-Menu-container">
     <menu class="Menu-inner-container">
       <nav>
         <ul class="Menu-level-one">
             <!-- LOGIN -->
           <li class="Menu-item-no-children">
-            <div class="Menu-level-one-header Open-login--js">
+            <div class="Menu-level-one-header js-Open-login">
               <span class="Menu-icon--lock"></span>
               <span class="Menu-item-header">Logga in på din sida</span>
             </div>
@@ -38,30 +37,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="Menu-level-one-header">
             <span class="Menu-item-header">Våra spel</span>
               <div class="Menu-promos-row">
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--kombi"></div></a>
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--dromrese"></div></a>
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--motor"></div></a>
-                  <a class="Menu-promos-item" href="#"><div class="Menu-promos-item--skrap"></div></a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/motor.svg')">Motorlotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/skrap.svg')">Skraplotteriet</a>
               </div>
             </div>
           </li>
           <!-- ITEM -->
           <li class="Menu-item-has-children">
-            <div class="Menu-level-one-header--js">
+            <div class="js-Menu-level-one-header">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Färdiga sidor</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="index.html">Startsida</a></li>
+              <li><a href="tickets.html">Mina lotter</a></li>
+              <li><a href="information.html">Mina uppgifter</a></li>
+              <li><a href="winnings.html">Vinsthistorik</a></li>
+              <li><a href="lottery.html">Rätta lotten</a></li>
+              <li><a href="lottery.html">Innehållssida</a></li>
+            </ul>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="js-Menu-level-one-header">
               <span class="Menu-icon--arrow"></span>
               <span class="Menu-item-header">Tävlingar och nöjen</span>
             </div>
             <ul class="Menu-level-two">
               <li><a href="lottery.html">Månadens tävling</a></li>
               <li><a href="#">Tävlingsvinnare</a></li>
-              <li><a href="#">Tävlingsvillkor</a></li>
+              <li><a href="page.html">Tävlingsvillkor</a></li>
               <li><a href="#">Tidningen kombi</a></li>
               <li><a href="#">Resereportage</a></li>
             </ul>
           </li>
           <!-- ITEM -->
           <li class="Menu-item-has-children">
-            <div class="Menu-level-one-header--js">
+            <div class="js-Menu-level-one-header">
               <span class="Menu-icon--arrow"></span>
               <span class="Menu-item-header">Ombud</span>
             </div>
@@ -75,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </li>
           <!-- ITEM -->
           <li class="Menu-item-has-children">
-            <div class="Menu-level-one-header--js">
+            <div class="js-Menu-level-one-header">
               <span class="Menu-icon--arrow"></span>
               <span class="Menu-item-header">Spelansvar</span>
             </div>
@@ -93,23 +107,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
       </nav>
     </menu>
-    <div class="Menu-overlay--js"></div>
+    <div class="js-Menu-overlay"></div>
 </section>
 
-  <section class="Login-overlay-container">
-  <div class="Login-clickarea--js"></div>
+  <section class="js-Login-overlay-container">
+  <div class="js-Login-clickarea"></div>
   <div class="Login-form-container">
-    <div class="Login-close-form--js"></div>
-    <h2 class="Login-header--js"></h2>
+    <div class="js-Login-close-form"></div>
+    <h2 class="js-Login-header"></h2>
     <form name="Login-form" class="Login-form">
 
       <!-- INPUT SECTION -->
       <div class="Login-input-section">
         <label class="Login-label--block" for="username">Kundnummer eller e-postadress</label>
-        <input class="Login-input Login-input-username--js" type="text" name="username" required/>
-        <div class="Login-username-toggle--js Login-question-icon--js"></div>
-        <p class="Login-username-message"></p>
-        <div class="Login-username-help-box--js">
+        <input class="Login-input js-Login-input-username" type="text" name="username" required/>
+        <div class="js-Login-username-toggle js-Login-question-icon"></div>
+        <p class="js-Login-username-message"></p>
+        <div class="js-Login-username-help-box">
         <div class="Login-help-box">
           <div class="Login-help-box-inner">
             <p>Du hittar information om ditt kundnummer på ditt månadsbrev från oss. Om du tidigare har
@@ -130,17 +144,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- INPUT SECTION -->
       <div class="Login-input-section">
       <label class="Login-label--block" for="password">Lösenord</label>
-      <input class="Login-input Login-input-password--js" type="password" name="password" required/>
+      <input class="Login-input js-Login-input-password" type="password" name="password" required/>
 
-      <div class="Login-password-toggle--js Login-question-icon--js"></div>
-      <p class="Login-password-message"></p>
+      <div class="js-Login-password-toggle js-Login-question-icon"></div>
+      <p class="js-Login-password-message"></p>
 
-      <div class="Login-password-help-box--js">
+      <div class="js-Login-password-help-box">
       <div class="Login-help-box">
         <div class="Login-help-box-inner">
 
           <!-- DEFAULT BOX -->
-          <div class="Login-password-default-box--js">
+          <div class="js-Login-password-default-box">
             <h4>Glömt ditt lösenord?</h4>
             <p>Lösenordet står på ditt månadsbrev från oss.</p>
             <h4>Behöver du hjälp?</h4>
@@ -152,11 +166,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <!-- RESET PASSWORDBOX -->
-          <div class="Login-password-reset-box--js">
+          <div class="js-Login-password-reset-box">
             <h4>Glömt ditt lösenord?</h4>
             <p>Klicka på återställ så skickar vi ett nytt lösenord till</p>
-            <p class="Login-reset-email--js"></p>
-            <button class="Login-reset-password-btn--js">Återställ</button>
+            <p class="js-Login-reset-email"></p>
+            <button class="js-Login-reset-password-btn">Återställ</button>
             <h4>Behöver du hjälp?</h4>
             <p>Kontakta kundtjänst så hjälper vi dig igång</p>
             <ul class="Login-contact-list">
@@ -166,10 +180,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <!-- PASSWORD SENT BOX -->
-          <div class="Login-password-sent-box--js">
+          <div class="js-Login-password-sent-box">
             <h4>Toppen!</h4>
             <p>Vi har nu skickat ett mail till:</p>
-            <p class="Login-reset-email--js"></p>
+            <p class="js-Login-reset-email"></p>
             <p>Om du inte har fått något mail inom ett par minuter kan det bero på att den e-postadress du angivet inte är kopplad till något konto.</p>
             <p>Kontakta isåfall Kundtjänst</p>
             <ul class="Login-contact-list">
@@ -188,34 +202,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="checkbox" name="remember" checked/>
           <label for="remember">Kom ihåg mig</label>
         </div>
-        <div class="Login-forgot-password">
+        <div class="js-Login-forgot-password">
           <a href="#" >Glömt ditt lösenord?</a>
         </div>
       </div>
-      <button class="Login-form-submit-btn--js" type="submit">Logga in</button>
+      <button class="js-Login-form-submit-btn" type="submit">Logga in</button>
     </form>
   </div>
 </section>
 
-  <div class="Site-container">
+  <div class="js-Site-container">
   
 <header class="Header-container">
-  
-    <div class="Header-inner-container">
 
+    <div class="Header-inner-container">
       <!-- MENU -->
-      <div class="Header-menu-container--js Header-flex--one">
+      <div class="js-Header-menu-container Header-flex--one">
         <div class="Header-inner-grid">
           <div class="Header-menu-circle">
-            <div class="Header-menu-burger">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+
+            <!-- START BURGER -->
+            <div class="Header-hamburger-outer">
+                  <div class="Header-hamburger-inner"></div>
             </div>
+            <!-- END BURGER -->
+
           </div>
           <div class="Header-title">
-            <h3 class="Header-title--menu">meny</h3>
+            <h3 class="js-Header-title--menu">meny</h3>
           </div>
         </div>
       </div>
@@ -225,7 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- MIN SIDA -->
-      <div class="Header-profile--js Header-flex--three">
+      <div class="js-Header-profile Header-flex--three">
         <div class="Header-inner-grid">
           <div class="Header-profile-image"></div>
           <div class="Header-title">
@@ -233,17 +247,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-
-
       <!-- RÄTTA DIN LOTT -->
       <div class="Header-flex--four">
-        <button class="Header-correct-btn--js">Rätta din lott!</button>
+        <button class="js-Header-correct-btn">Rätta din lott!</button>
       </div>
-
     </div>
-
-
-
 </header>
 
   <main>
@@ -257,15 +265,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="Footer">
   <div class="Footer-inner">
     <div class="Footer-box Footer-box--first">
-      <div class="Footer-box-col Footer-box-col--image">
-        
-      </div>
-      <div class="Footer-box-col">
-        <ul class="Footer-menu">
-          <li><a href="/">Spelansvar</a></li>
-          <li><a href="/">Pressreleaser</a></li>
-          <li><a href="/">För ombud</a></li>
-        </ul>
+      <div class="Footer-box-col-container">
+        <div class="Footer-box-col Footer-box-col--image"><span>Spel för dig över 18</span></div>
+        <div class="Footer-box-col Footer-box-col--list">
+          <ul class="Footer-menu">
+            <li><a href="/">Spelansvar</a></li>
+            <li><a href="/">Pressreleaser</a></li>
+            <li><a href="/">För ombud</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="Footer-box Footer-box--second">
@@ -277,8 +285,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="Footer-box Footer-box--third">
       <div class="Footer-title">Följ oss:</div>
       <div class="Footer-follow">
-        <a href="/"><div class="Footer-follow-item Footer-follow-item--facebook">Facebook</div></a>
-        <a href="/"><div class="Footer-follow-item Footer-follow-item--youtube">Youtube</div></a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--facebook">Facebook</a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--youtube">Youtube</a>
       </div>
     </div>
   </div>

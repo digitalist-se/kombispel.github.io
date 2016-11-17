@@ -2,17 +2,14 @@
   background-color: rgb(242, 242, 242);
 }
 .Promo-container-inner {
-  margin: 0 auto;
   @extend .Inner-container;
   @include flex-row();
 }
 .Promo-item {
-
   background-color: white;
   background-color: white;
   text-align: center;
   box-shadow: 0px 5px 1px rgba(51, 51, 51, 0.08);
-
   @include breakpoint(1px, 999px) {
     @include flex-gtr-col(1, 10px);
   }
@@ -25,25 +22,20 @@
 .Promo-box {
   position: relative;
 }
-
-
 .Promo-box-title {
   color: $red;
   font-size: 22px;
 }
-
-.Promo-box--first, .Promo-box--second {
+.Promo-box--correct-ticket, .Promo-box--campaign {
   padding: 25px 15px;
 }
-
 .Promo-box-button {
   color: white;
 }
-
 /////////////////////////////////////////////
-// PROMO FIRST
+// PROMO CORRECT TICKET
 /////////////////////////////////////////////
-.Promo-box--first {
+.Promo-box--correct-ticket {
   .Promo-box-title {
     margin-bottom: 25px;
   }
@@ -56,41 +48,31 @@
     max-height:100%;
   }
   .Promo-box-product {
-    // position: absolute;
     bottom: 0;
     margin: 0 auto;
     @extend .Row;
 
-
-    // @extend .Flex-center;
   }
   .Promo-box-product-item {
     @include gtr-col(3, 30px);
     height: 60px;
-    // width: 53px;
-  }
-  .Promo-box-product-item--kombi {
-    background: url("../images/svg/kombi.svg") no-repeat center center;
-  }
-  .Promo-box-product-item--dromrese {
-    background: url("../images/svg/dromrese.svg") no-repeat center center;
-  }
-  .Promo-box-product-item--motor {
-    background: url("../images/svg/skrap.svg") no-repeat center center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: transparent;
   }
 }
 
 /////////////////////////////////////////////
-// PROMO SECOND
+// PROMO CAMPAIGN
 /////////////////////////////////////////////
-.Promo-box--second {
+.Promo-box--campaign {
   background: url("../images/promo/promo_background.png") no-repeat center center;
   background-color: white;
   .Promo-box-title {
     margin-bottom: 5px;
   }
   .Promo-box-text {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
   }
   .Promo-box-button {
     @include gradient-btn($orange, $dark-orange);
@@ -102,9 +84,9 @@
 }
 
 /////////////////////////////////////////////
-// PROMO THIRD
+// PROMO WINNER
 /////////////////////////////////////////////
-.Promo-box--third {
+.Promo-box--winner {
   .Promo-box-image-big {
     background: no-repeat center center;
     background-size: cover;
@@ -124,12 +106,7 @@
   .Promo-box-link {
     padding: 30px 0 25px 0;
     a {
-      color: $red;
-      text-decoration: none;
-      text-transform: uppercase;
-      &:before {
-        content: ">> ";
-      }
+      @extend .Arrow-link ;
     }
   }
 }

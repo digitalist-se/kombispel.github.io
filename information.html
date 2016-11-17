@@ -1,0 +1,385 @@
+<!-- layout.nunjucks -->
+<!DOCTYPE html>
+<html lang="se">
+<head>
+  <meta charset="UTF-8">
+  <title>Mina uppgifter</title>
+  <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MTHCKR');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTHCKR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <section class="js-Menu-container">
+    <menu class="Menu-inner-container">
+      <nav>
+        <ul class="Menu-level-one">
+            <!-- LOGIN -->
+          <li class="Menu-item-no-children">
+            <div class="Menu-level-one-header js-Open-login">
+              <span class="Menu-icon--lock"></span>
+              <span class="Menu-item-header">Logga in på din sida</span>
+            </div>
+          </li>
+            <!-- PROMOS -->
+          <li class="Menu-item-no-children">
+            <div class="Menu-level-one-header">
+            <span class="Menu-item-header">Våra spel</span>
+              <div class="Menu-promos-row">
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/motor.svg')">Motorlotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/skrap.svg')">Skraplotteriet</a>
+              </div>
+            </div>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="js-Menu-level-one-header">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Färdiga sidor</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="index.html">Startsida</a></li>
+              <li><a href="tickets.html">Mina lotter</a></li>
+              <li><a href="information.html">Mina uppgifter</a></li>
+              <li><a href="winnings.html">Vinsthistorik</a></li>
+              <li><a href="lottery.html">Rätta lotten</a></li>
+              <li><a href="lottery.html">Innehållssida</a></li>
+            </ul>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="js-Menu-level-one-header">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Tävlingar och nöjen</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="lottery.html">Månadens tävling</a></li>
+              <li><a href="#">Tävlingsvinnare</a></li>
+              <li><a href="page.html">Tävlingsvillkor</a></li>
+              <li><a href="#">Tidningen kombi</a></li>
+              <li><a href="#">Resereportage</a></li>
+            </ul>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="js-Menu-level-one-header">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Ombud</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="#">Sak 1</a></li>
+              <li><a href="#">Sak 2</a></li>
+              <li><a href="#">Sak 3</a></li>
+              <li><a href="#">Sak 4</a></li>
+              <li><a href="#">Sak 5</a></li>
+            </ul>
+          </li>
+          <!-- ITEM -->
+          <li class="Menu-item-has-children">
+            <div class="js-Menu-level-one-header">
+              <span class="Menu-icon--arrow"></span>
+              <span class="Menu-item-header">Spelansvar</span>
+            </div>
+            <ul class="Menu-level-two">
+              <li><a href="#">Sak 1</a></li>
+              <li><a href="#">Sak 2</a></li>
+              <li><a href="#">Sak 3</a></li>
+              <li><a href="#">Sak 4</a></li>
+              <li><a href="#">Sak 5</a></li>
+              <li><a href="#">Sak 6</a></li>
+              <li><a href="#">Sak 7</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+    </menu>
+    <div class="js-Menu-overlay"></div>
+</section>
+
+  <section class="js-Login-overlay-container">
+  <div class="js-Login-clickarea"></div>
+  <div class="Login-form-container">
+    <div class="js-Login-close-form"></div>
+    <h2 class="js-Login-header"></h2>
+    <form name="Login-form" class="Login-form">
+
+      <!-- INPUT SECTION -->
+      <div class="Login-input-section">
+        <label class="Login-label--block" for="username">Kundnummer eller e-postadress</label>
+        <input class="Login-input js-Login-input-username" type="text" name="username" required/>
+        <div class="js-Login-username-toggle js-Login-question-icon"></div>
+        <p class="js-Login-username-message"></p>
+        <div class="js-Login-username-help-box">
+        <div class="Login-help-box">
+          <div class="Login-help-box-inner">
+            <p>Du hittar information om ditt kundnummer på ditt månadsbrev från oss. Om du tidigare har
+              kopplat ditt kundnummer till en e-postadress kan du skriva in den.</p>
+            <h4>Behöver du hjälp?</h4>
+            <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+      </div>
+      <!-- END -->
+
+      <!-- INPUT SECTION -->
+      <div class="Login-input-section">
+      <label class="Login-label--block" for="password">Lösenord</label>
+      <input class="Login-input js-Login-input-password" type="password" name="password" required/>
+
+      <div class="js-Login-password-toggle js-Login-question-icon"></div>
+      <p class="js-Login-password-message"></p>
+
+      <div class="js-Login-password-help-box">
+      <div class="Login-help-box">
+        <div class="Login-help-box-inner">
+
+          <!-- DEFAULT BOX -->
+          <div class="js-Login-password-default-box">
+            <h4>Glömt ditt lösenord?</h4>
+            <p>Lösenordet står på ditt månadsbrev från oss.</p>
+            <h4>Behöver du hjälp?</h4>
+            <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+
+          <!-- RESET PASSWORDBOX -->
+          <div class="js-Login-password-reset-box">
+            <h4>Glömt ditt lösenord?</h4>
+            <p>Klicka på återställ så skickar vi ett nytt lösenord till</p>
+            <p class="js-Login-reset-email"></p>
+            <button class="js-Login-reset-password-btn">Återställ</button>
+            <h4>Behöver du hjälp?</h4>
+            <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+
+          <!-- PASSWORD SENT BOX -->
+          <div class="js-Login-password-sent-box">
+            <h4>Toppen!</h4>
+            <p>Vi har nu skickat ett mail till:</p>
+            <p class="js-Login-reset-email"></p>
+            <p>Om du inte har fått något mail inom ett par minuter kan det bero på att den e-postadress du angivet inte är kopplad till något konto.</p>
+            <p>Kontakta isåfall Kundtjänst</p>
+            <ul class="Login-contact-list">
+              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- END -->
+
+      <div class="Login-row">
+        <div class="Login-checkbox">
+          <input type="checkbox" name="remember" checked/>
+          <label for="remember">Kom ihåg mig</label>
+        </div>
+        <div class="js-Login-forgot-password">
+          <a href="#" >Glömt ditt lösenord?</a>
+        </div>
+      </div>
+      <button class="js-Login-form-submit-btn" type="submit">Logga in</button>
+    </form>
+  </div>
+</section>
+
+  <div class="js-Site-container">
+  
+<header class="Header-container">
+
+    <div class="Header-inner-container">
+      <!-- MENU -->
+      <div class="js-Header-menu-container Header-flex--one">
+        <div class="Header-inner-grid">
+          <div class="Header-menu-circle">
+
+            <!-- START BURGER -->
+            <div class="Header-hamburger-outer">
+                  <div class="Header-hamburger-inner"></div>
+            </div>
+            <!-- END BURGER -->
+
+          </div>
+          <div class="Header-title">
+            <h3 class="js-Header-title--menu">meny</h3>
+          </div>
+        </div>
+      </div>
+      <!-- LOGO -->
+      <div class="Header-flex--two">
+        <a href="index.html" class="Header-kombo-logo "></a>
+      </div>
+
+      <!-- MIN SIDA -->
+      <div class="js-Header-profile Header-flex--three">
+        <div class="Header-inner-grid">
+          <div class="Header-profile-image"></div>
+          <div class="Header-title">
+            <h3>min sida</h3>
+          </div>
+        </div>
+      </div>
+      <!-- RÄTTA DIN LOTT -->
+      <div class="Header-flex--four">
+        <button class="js-Header-correct-btn">Rätta din lott!</button>
+      </div>
+    </div>
+</header>
+
+  <main>
+  
+<nav class="Submenu">
+  <div class="Submenu-container">
+    <a class="Submenu-link is-active" href="tickets.html">Mina lotter</a>
+    <a class="Submenu-link" href="information.html">Mina uppgifter</a>
+    <a class="Submenu-link" href="winnings.html">Vinsthistorik</a>
+    <a class="Submenu-link" href="bonus.html">Mina Andelar</a>
+  </div>
+</nav>
+
+
+<section class="MyPages">
+  <div class="MyPages-container">
+
+    <div class="MyPages-information">
+      <div class="MyPages-information-column">
+        <div class="MyPages-header">
+          <h1 class="Heading-1">Mina uppgifter</h1>
+        </div>
+
+        <div class="MyPages-block MyPages-block--basic">
+          <p><span class="MyPages-block-title u-uppercase">Grunduppgifter</span></p>
+          <p><span>Namn: </span><span class="u-bold">Tommy Nilsson</span></p>
+          <p><span>Personnummer: </span><span class="u-bold">700702-1458</span></p>
+          <p><span>Kundnummer: </span><span class="u-bold">AB17268763</span></p>
+          <button class="" type="submit">Ändra ditt lösenord</button>
+        </div>
+
+        <div class="MyPages-block MyPages-block--settings">
+          <h3 class="Heading-3">Dessa uppgifter kan du ändra:</h3>
+
+          <form name="MyPages-settingsForm" class="MyPages-settingsForm">
+            <div class="MyPages-input-section">
+              <label class="u-block" for="phone">Mobiltelefon:</label>
+              <input class="" type="text" name="phone" required/>
+              <div class="MyPages-checkbox">
+                <input type="checkbox" name="remember" checked/>
+                <label for="remember">Ja tack, vinstbevakning via SMS</label>
+                <span class="Icon Icon--question Icon--topRight"></span>
+              </div>
+            </div>
+            <div class="MyPages-input-section">
+              <label class="u-block" for="email">E-postadress:</label>
+              <input class="" type="email" name="email" required/>
+              <div class="MyPages-checkbox">
+                <input type="checkbox" name="remember" checked/>
+                <label for="remember">Ja tack, vinstbevakning via e-post</label>
+                <span class="Icon Icon--question Icon--topRight"></span>
+              </div>
+            </div>
+            <div class="u-center">
+              <button class="" type="submit">Spara dina ändringar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="MyPages-information-column">
+        <div class="MyPages-header">
+          <h1 class="Heading-1">Betalningar</h1>
+        </div>
+
+        <div class="MyPages-block MyPages-block--payments">
+          <div class="MyPages-block-section">
+            <label>Obetalda fakturor</label>
+            <div class="MyPages-block-row">
+              <span>2016-01-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+            <div class="MyPages-block-row">
+              <span>2016-01-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+          </div>
+
+          <div class="MyPages-block-section">
+            <label>Betalda fakturor</label>
+            <div class="MyPages-block-row">
+              <span>2015-12-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+            <div class="MyPages-block-row">
+              <span>2015-12-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+
+  </main>
+  <footer class="Footer">
+  <div class="Footer-inner">
+    <div class="Footer-box Footer-box--first">
+      <div class="Footer-box-col-container">
+        <div class="Footer-box-col Footer-box-col--image"><span>Spel för dig över 18</span></div>
+        <div class="Footer-box-col Footer-box-col--list">
+          <ul class="Footer-menu">
+            <li><a href="/">Spelansvar</a></li>
+            <li><a href="/">Pressreleaser</a></li>
+            <li><a href="/">För ombud</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Footer-box Footer-box--second">
+      <div class="Footer-title">Kombispel Kunderservice</div>
+      <div class="Footer-location">113 94 Stockholm</div>
+      <div class="Footer-phone">Telefon: 08-453 54 00 (08:00 - 18:00)</div>
+      <div class="Footer-link"><a href="/">Kontakt via e-post</a></div>
+    </div>
+    <div class="Footer-box Footer-box--third">
+      <div class="Footer-title">Följ oss:</div>
+      <div class="Footer-follow">
+        <a href="#" class="Footer-follow-item Footer-follow-item--facebook">Facebook</a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--youtube">Youtube</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

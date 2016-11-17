@@ -1,0 +1,219 @@
+/////////////////////////////////////////////
+// General for lottery-tickets
+/////////////////////////////////////////////
+.Tickets-ticket-container {
+  @include flex-row();
+}
+.Tickets-ticket-col {
+  @include flex-gtr-col (1, 10px);
+  @include breakpoint(1024px) {
+    @include flex-gtr-col (2, 15px);
+  }
+}
+[class*="Tickets-ticket"] {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.Tickets-ticket {
+  height: 150px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  &:after {
+    background: url("../images/svg/shadow-border.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 10px;
+    bottom: -10px;
+    content: "";
+    left:10%;
+    right: 10%;
+  }
+  .Tickets-ticket-title {
+    padding: 20px 0 10px 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+  }
+  .Tickets-ticket-number {
+    font-family: $gill-bold;
+    position: absolute;
+    margin: 0;
+    right: 20%;
+    font-size: 32px;
+    top: calc(50% - 22px);
+  }
+  .Tickets-ticket-link {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid white;
+    width: 140px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: -2px 11px 22px -13px rgba(0,0,0,0.75);
+  }
+  @include breakpoint(420px) {
+    width: 350px;
+    height: 175px;
+    .Tickets-ticket-title {
+      padding-top: 22px;
+      font-size: 22px;
+    }
+    .Tickets-ticket-link {
+      bottom: 18px;
+      font-size: 16px;
+    }
+  }
+  @include breakpoint(600px) {
+    width: 415px;
+    height: 210px;
+    .Tickets-ticket-title {
+      padding-top: 30px;
+    }
+    .Tickets-ticket-number {
+      right: 70px;
+      font-size: 50px;
+      top: calc(50% - 30px);
+    }
+    .Tickets-ticket-link {
+      bottom: 20px;
+      font-size: 16px;
+      width: 160px;
+    }
+  }
+}
+/////////////////////////////////////////////
+// VANLIGA LOTTER
+/////////////////////////////////////////////
+@mixin lottery-btn($color) {
+  background-color: $color;
+  &:hover {
+    color: $color;
+    background-color: white;
+  }
+}
+.Tickets-ticket--kombi {
+  background-image: url("../images/svg/tickets/ticket-kombi.svg");
+  .Tickets-ticket-number {
+    color: $lottery-blue;
+  }
+  .Tickets-ticket-link {
+    @include lottery-btn($orange);
+  }
+}
+.Tickets-ticket--motor {
+  background-image: url("../images/svg/tickets/ticket-motor.svg") ;
+  .Tickets-ticket-number {
+    color: black;
+  }
+  .Tickets-ticket-link {
+    @include lottery-btn(rgb(196,37,46));
+  }
+}
+.Tickets-ticket--dream {
+  background-image: url("../images/svg/tickets/ticket-dream.svg");
+  .Tickets-ticket-number {
+    color: $lottery-blue;
+  }
+  .Tickets-ticket-link {
+    @include lottery-btn($green);
+  }
+}
+/////////////////////////////////////////////
+// EXTRALOTTER RIBBON
+/////////////////////////////////////////////
+.Tickets-ticket-ribbon {
+  position: absolute;
+  top: -8px;
+  left: -12px;
+  height: 95px;
+  width: 150px;
+  @include breakpoint(420px) {
+    top: 5px;
+    left: -10px;
+    height: 120px;
+    width: 170px;
+  }
+  @include breakpoint(600px) {
+    top: -12px;
+    left: -12px;
+    height: 140px;
+    width: 200px;
+  }
+}
+.Tickets-ticket--kombi,.Tickets-ticket--dream  {
+  .Tickets-ticket-ribbon {
+    background-image: url("../images/svg/tickets/ribbon-blue.svg");
+  }
+}
+.Tickets-ticket--motor {
+  .Tickets-ticket-ribbon {
+    background-image: url("../images/svg/tickets/ribbon-black.svg");
+  }
+}
+/////////////////////////////////////////////
+// VINSTLOTTER
+/////////////////////////////////////////////
+.Tickets-ticket--kombi-win {
+  background-image: url("../images/svg/tickets/winning-ticket-kombi.svg");
+  .Tickets-ticket-number {
+    color: $lottery-blue;
+  }
+}
+.Tickets-ticket--dream-win {
+  background-image: url("../images/svg/tickets/winning-ticket-dream.svg");
+  .Tickets-ticket-number {
+    color: $lottery-blue;
+  }
+}
+.Tickets-ticket--motor-win {
+  background-image: url("../images/svg/tickets/winning-ticket-motor.svg");
+}
+
+.Tickets-winning-ticket-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+.Tickets-winning-ticket-link--kombi {
+  @include gradient-btn($orange, darken($orange,5%));
+}
+.Tickets-winning-ticket-link--motor {
+  @include gradient-btn($red, darken($red,5%));
+}
+.Tickets-winning-ticket-link--dream {
+  @include gradient-btn($green, darken($green,5%));
+}
+
+
+
+
+
+/////////////////////////////////////////////
+// NITLOTTER
+/////////////////////////////////////////////
+.Tickets-ticket--kombi-lose {
+  background-image: url("../images/svg/tickets/lose-ticket-kombi.svg");
+  .Tickets-ticket-number {
+    color: white;
+  }
+}
+.Tickets-ticket--dream-lose {
+  background-image: url("../images/svg/tickets/lose-ticket-dream.svg");
+  .Tickets-ticket-number {
+    color: white;
+  }
+}
+.Tickets-ticket--motor-lose {
+  background-image: url("../images/svg/tickets/lose-ticket-motor.svg");
+  .Tickets-ticket-number {
+    color: white;
+  }
+}

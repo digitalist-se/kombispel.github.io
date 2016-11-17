@@ -1,0 +1,61 @@
+label {
+  margin-bottom: 7.5px;
+  font-size: 14px;
+}
+
+/////////////////////////////////////////////
+// Input
+/////////////////////////////////////////////
+input[type="text"],
+input[type="textarea"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  position: relative;
+  padding-left: 5px;
+  height: 40px;
+  outline: 0;
+  background-color: $lighter-grey;
+  border: 1px solid $grey;
+  width: 100%;
+  transition: all 0.2s ease;
+
+  &:focus {
+    height: 50px;
+    border: 1px solid $orange;
+    background-color: white;
+  }
+}
+
+/////////////////////////////////////////////
+// Checkbox
+/////////////////////////////////////////////
+input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+  outline: 0;
+  position: relative;
+
+  &:after {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 0;
+    top: 0;
+    background-color: white;
+    border: 1px solid $grey;
+  }
+
+  &:checked {
+    &:after {
+      background: $green url("../images/svg/check.svg") center center no-repeat;
+      background-size: 90%;
+    }
+  }
+}

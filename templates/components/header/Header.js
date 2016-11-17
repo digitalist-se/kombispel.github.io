@@ -1,34 +1,34 @@
-$(".Header-correct-btn--js").click(function() {
-  $(".Login-header--js").html("Logga in för att rätta din lott")
-  $(".Login-overlay-container").fadeIn("fast");
-  if($(".Menu-container--js").hasClass("Menu--open")) {
+$(".js-Header-correct-btn").click(function() {
+  $(".js-Login-header").html("Logga in för att rätta din lott")
+  $(".js-Login-overlay-container").fadeIn("fast");
+  if($(".js-Menu-container").hasClass("Menu--open")) {
       toggleMenu();
   }
 })
 //
-$(".Header-profile--js, .Open-login--js").click(function() {
-  $(".Login-header--js").html("Logga in på Min Sida")
-    $(".Login-overlay-container").fadeIn("fast");
-    if($(".Menu-container--js").hasClass("Menu--open")) {
+$(".js-Header-profile, .js-Open-login").click(function() {
+  $(".js-Login-header").html("Logga in på Min Sida")
+    $(".js-Login-overlay-container").fadeIn("fast");
+    if($(".js-Menu-container").hasClass("Menu--open")) {
         toggleMenu();
     }
 })
 
-$(".Header-menu-container--js").click(function() {
+$(".js-Header-menu-container").click(function() {
   toggleMenu()
 });
 
 
-$(".Menu-overlay--js").click(function() {
+$(".js-Menu-overlay").click(function() {
   toggleMenu()
 })
 
-var menuText = $(".Header-title--menu");
+var menuText = $(".js-Header-title--menu");
 
 function toggleMenu() {
-  $(".Menu-container--js").toggleClass("Menu--open")
-  $(".Site-container").toggleClass("locked")
-  $(".Header-menu-container--js").toggleClass("Burger--open");
+  $(".js-Menu-container").toggleClass("Menu--open")
+  $(".js-Site-container").toggleClass("locked")
+  $(".js-Header-menu-container").toggleClass("Burger--open");
 
   if(menuText.text() == "meny") {
       menuText.text("stäng")

@@ -1,0 +1,81 @@
+{% include "components/submenu/submenu.nunjucks" %}
+
+<section class="MyPages">
+  <div class="MyPages-container">
+
+    <div class="MyPages-information">
+      <div class="MyPages-information-column">
+        <div class="MyPages-header">
+          <h1 class="Heading-1">Mina uppgifter</h1>
+        </div>
+
+        <div class="MyPages-block MyPages-block--basic">
+          <p><span class="MyPages-block-title u-uppercase">Grunduppgifter</span></p>
+          <p><span>Namn: </span><span class="u-bold">Tommy Nilsson</span></p>
+          <p><span>Personnummer: </span><span class="u-bold">700702-1458</span></p>
+          <p><span>Kundnummer: </span><span class="u-bold">AB17268763</span></p>
+          <button class="" type="submit">Ändra ditt lösenord</button>
+        </div>
+
+        <div class="MyPages-block MyPages-block--settings">
+          <h3 class="Heading-3">Dessa uppgifter kan du ändra:</h3>
+
+          <form name="MyPages-settingsForm" class="MyPages-settingsForm">
+            <div class="MyPages-input-section">
+              <label class="u-block" for="phone">Mobiltelefon:</label>
+              <input class="" type="text" name="phone" required/>
+              <div class="MyPages-checkbox">
+                <input type="checkbox" name="remember" checked/>
+                <label for="remember">Ja tack, vinstbevakning via SMS</label>
+                <span class="Icon Icon--question Icon--topRight"></span>
+              </div>
+            </div>
+            <div class="MyPages-input-section">
+              <label class="u-block" for="email">E-postadress:</label>
+              <input class="" type="email" name="email" required/>
+              <div class="MyPages-checkbox">
+                <input type="checkbox" name="remember" checked/>
+                <label for="remember">Ja tack, vinstbevakning via e-post</label>
+                <span class="Icon Icon--question Icon--topRight"></span>
+              </div>
+            </div>
+            <div class="u-center">
+              <button class="" type="submit">Spara dina ändringar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="MyPages-information-column">
+        <div class="MyPages-header">
+          <h1 class="Heading-1">Betalningar</h1>
+        </div>
+
+        <div class="MyPages-block MyPages-block--payments">
+          <div class="MyPages-block-section">
+            <label>Obetalda fakturor</label>
+            <div class="MyPages-block-row">
+              <span>2016-01-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+            <div class="MyPages-block-row">
+              <span>2016-01-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+          </div>
+
+          <div class="MyPages-block-section">
+            <label>Betalda fakturor</label>
+            <div class="MyPages-block-row">
+              <span>2015-12-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+            <div class="MyPages-block-row">
+              <span>2015-12-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
