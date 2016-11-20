@@ -1,0 +1,47 @@
+
+/////////////////////////////////////////////
+// HELP BOX. Used in loginform and mypages
+/////////////////////////////////////////////
+ .Help-box {
+   position: relative;
+   margin-top: 15px;
+   width: 100%;
+   border: 2px solid $orange;
+   &:after {
+   content: '';
+   display: block;
+   position: absolute;
+   top: -10px;
+   right: 15px;
+   width: 15px;
+   height: 15px;
+   background: white;
+   border-right:2px solid $orange;
+   border-bottom:2px solid $orange;
+   transform:rotate(-135deg);
+   }
+   ul {
+     padding-left: 0;
+     list-style-type: none;
+   }
+ }
+ .Help-box-inner {
+   padding: $base-margin;
+ }
+ .Help-box-contact-phone, .Help-box-contact-mail {
+   padding: 7.5px 0 7.5px 30px;
+   position: relative;
+   &:before {
+     content:"";
+     position: absolute;
+     height: 20px;
+     width: 20px;
+     left: 0;
+   }
+ }
+ .Help-box-contact-phone:before {
+   background: url("../images/svg/phone.svg") no-repeat center center;
+ }
+ .Help-box-contact-mail:before {
+   background: url("../images/svg/mail.svg") no-repeat center center;
+ }

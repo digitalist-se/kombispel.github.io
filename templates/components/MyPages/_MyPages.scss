@@ -99,6 +99,13 @@
     @extend .Arrow-link;
   }
 }
+/////////////////////////////////////////////
+// PRODUCT IMAGE
+/////////////////////////////////////////////
+.MyPages-container .List-item-image {
+  // max-width: 50%;
+}
+
 
 /////////////////////////////////////////////
 // LINKS
@@ -117,11 +124,10 @@
 .MyPages-buy-link-container {
   background-color: white;
   padding: 30px 0;
-  @include flex-position(center);
 }
 
 .MyPages-buy-link {
-  @include gradient-btn($red,$dark-red);
+  @include gradient-btn($red);
   color: white;
   span {
     display: block;
@@ -131,7 +137,15 @@
       font-size: 15px;
       font-family: $gill-light;
     }
-    &:last-of-type {
-    }
   }
+}
+/////////////////////////////////////////////
+// HELP BOXES
+/////////////////////////////////////////////
+.js-MyPages-toggle-mail,.js-MyPages-toggle-phone {
+  top: 0 !important;
+  right: 10px !important;
+}
+.js-MyPages-help-box--mail, .js-MyPages-help-box--phone {
+  display: none;
 }

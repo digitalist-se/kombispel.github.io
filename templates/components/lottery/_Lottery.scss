@@ -262,7 +262,7 @@ position: relative;
   opacity: 1;
   visibility: visible;
   transition: all .2s ease;
-  @include gradient-btn($green,darken($green,10%));
+  @include gradient-btn($green);
 }
 .Hide-element {
 
@@ -284,7 +284,7 @@ position: relative;
   display: none;
 
   a {
-    @include gradient-btn($red,darken($red,10%));
+    @include gradient-btn($red);
     margin: 15px auto;
   }
 }

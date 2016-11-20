@@ -3,6 +3,7 @@ $half-large: $full-large/2;
 $menu-width-small: 300px;
 $menu-width-medium: calc(10% + 368px);
 $menu-width-large: calc(#{$half-large} + 368px);
+// $menu-width-large: 300px;
 $menu-margin: 15px;
 $menu-height: 90px;
 menu {
@@ -49,6 +50,7 @@ menu {
       bottom: 115px;
     }
     overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 .js-Menu-overlay {
@@ -91,6 +93,7 @@ background-position: center center;
   background-image: url("../images/svg/lock.svg");
   width: 25px;
   height: 25px;
+  margin-top: 3px;
 }
 .Menu-item-header {
   display: inline-block;

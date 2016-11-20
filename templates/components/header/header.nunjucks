@@ -1,4 +1,3 @@
-{% import 'macros/header-navigation.nunjucks' as nav %}
 <header class="Header-container">
 {# <header class="Header-container Logged-in"> #}
     <div class="Header-inner-container">

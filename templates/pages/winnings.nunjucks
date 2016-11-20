@@ -1,4 +1,4 @@
-{% set pageName = "Mina vinster" %}
+{% set pageName = "Vinsthistorik" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
 {% include "components/winnings/winnings.nunjucks" %}

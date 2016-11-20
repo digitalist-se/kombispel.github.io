@@ -27,22 +27,68 @@
               <div class="MyPages-checkbox">
                 <input type="checkbox" name="remember" checked/>
                 <label for="remember">Ja tack, vinstbevakning via SMS</label>
-                <span class="Icon Icon--question Icon--topRight"></span>
+                <span class="Icon Icon--question js-MyPages-toggle-phone"></span>
               </div>
+              <!-- HELP BOX -->
+              <div class="js-MyPages-help-box--phone">
+              <div class="Help-box">
+                <div class="Help-box-inner">
+                  <p>
+                    Nam non purus volutpat, semper augue eget, sodales nisl.
+                    Fusce quis sagittis elit, sit amet commodo mi. Duis venenatis vitae ligula nec pellentesque.
+                    Vivamus at ligula aliquam sapien dapibus tempus a eget dui. Donec sed feugiat justo.
+                  </p>
+                  <h4>Behöver du hjälp?</h4>
+                  <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+                  <ul class="Help-box-list">
+                    <li class="Help-box-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+                    <li class="Help-box-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <!-- END HELP BOX -->
             </div>
+            <!-- END MyPages-input-section -->
             <div class="MyPages-input-section">
               <label class="u-block" for="email">E-postadress:</label>
               <input class="" type="email" name="email" required/>
               <div class="MyPages-checkbox">
                 <input type="checkbox" name="remember" checked/>
                 <label for="remember">Ja tack, vinstbevakning via e-post</label>
-                <span class="Icon Icon--question Icon--topRight"></span>
+                <span class="Icon Icon--question js-MyPages-toggle-mail"></span>
               </div>
+              <!-- HELP BOX -->
+              <div class="js-MyPages-help-box--mail">
+              <div class="Help-box">
+                <div class="Help-box-inner">
+                  <p>
+                    Nam non purus volutpat, semper augue eget, sodales nisl.
+                    Fusce quis sagittis elit, sit amet commodo mi. Duis venenatis vitae ligula nec pellentesque.
+                    Vivamus at ligula aliquam sapien dapibus tempus a eget dui. Donec sed feugiat justo.
+                  </p>
+                  <h4>Behöver du hjälp?</h4>
+                  <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+                  <ul class="Help-box-list">
+                    <li class="Help-box-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+                    <li class="Help-box-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <!-- END HELP BOX -->
             </div>
+            <!-- END MyPages-input-section -->
+
+
             <div class="u-center">
               <button class="" type="submit">Spara dina ändringar</button>
             </div>
           </form>
+
+
+
+
         </div>
       </div>
 

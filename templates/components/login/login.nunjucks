@@ -11,16 +11,17 @@
         <input class="Login-input js-Login-input-username" type="text" name="username" required/>
         <div class="js-Login-username-toggle js-Login-question-icon"></div>
         <p class="js-Login-username-message"></p>
+
         <div class="js-Login-username-help-box">
-        <div class="Login-help-box">
-          <div class="Login-help-box-inner">
+        <div class="Help-box">
+          <div class="Help-box-inner">
             <p>Du hittar information om ditt kundnummer på ditt månadsbrev från oss. Om du tidigare har
               kopplat ditt kundnummer till en e-postadress kan du skriva in den.</p>
             <h4>Behöver du hjälp?</h4>
             <p>Kontakta kundtjänst så hjälper vi dig igång</p>
-            <ul class="Login-contact-list">
-              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
-              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            <ul class="Help-box-list">
+              <li class="Help-box-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Help-box-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
             </ul>
           </div>
         </div>
@@ -38,8 +39,8 @@
       <p class="js-Login-password-message"></p>
 
       <div class="js-Login-password-help-box">
-      <div class="Login-help-box">
-        <div class="Login-help-box-inner">
+        <div class="Help-box">
+          <div class="Help-box-inner">
 
           <!-- DEFAULT BOX -->
           <div class="js-Login-password-default-box">
@@ -47,9 +48,9 @@
             <p>Lösenordet står på ditt månadsbrev från oss.</p>
             <h4>Behöver du hjälp?</h4>
             <p>Kontakta kundtjänst så hjälper vi dig igång</p>
-            <ul class="Login-contact-list">
-              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
-              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            <ul class="Help-box-list">
+              <li class="Help-box-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Help-box-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
             </ul>
           </div>
 
@@ -61,9 +62,9 @@
             <button class="js-Login-reset-password-btn">Återställ</button>
             <h4>Behöver du hjälp?</h4>
             <p>Kontakta kundtjänst så hjälper vi dig igång</p>
-            <ul class="Login-contact-list">
-              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
-              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            <ul class="Help-box-list">
+              <li class="Help-box-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Help-box-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
             </ul>
           </div>
 
@@ -71,12 +72,12 @@
           <div class="js-Login-password-sent-box">
             <h4>Toppen!</h4>
             <p>Vi har nu skickat ett mail till:</p>
-            <p class="js-Login-reset-email"></p>
+            <p class="js-Login-reset-email"></p> 
             <p>Om du inte har fått något mail inom ett par minuter kan det bero på att den e-postadress du angivet inte är kopplad till något konto.</p>
             <p>Kontakta isåfall Kundtjänst</p>
-            <ul class="Login-contact-list">
-              <li class="Login-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
-              <li class="Login-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+            <ul class="Help-box-list">
+              <li class="Help-box-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+              <li class="Help-box-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
             </ul>
           </div>
         </div>

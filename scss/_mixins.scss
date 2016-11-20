@@ -19,10 +19,9 @@
   }
 }
 
-// $shadow-color:  rgba(77, 77, 77, .1);
 $shadow-color:  black;
-
-@mixin gradient-btn($color1, $color2) {
+@mixin gradient-btn($color) {
+  $color2: darken($color,5%);
   border-radius: 10px;
   font-size: 20px;
   border: solid 5px white;
@@ -34,14 +33,14 @@ $shadow-color:  black;
   max-width: 320px;
   margin: 0 auto;
   display: block;
-  background: linear-gradient($color1 45%, $color2 54%);
+  background: linear-gradient($color 45%, $color2 54%);
   outline: 0;
   cursor: pointer;
   color: white;
   text-align: center;
 
   &:hover {
-    background: linear-gradient(darken($color1,5%) 45%, darken($color2,5%) 54%);
+    background: linear-gradient(darken($color,5%) 45%, darken($color2,5%) 54%);
     text-decoration: none;
   }
   &:after {

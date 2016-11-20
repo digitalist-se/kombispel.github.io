@@ -17,6 +17,7 @@ input[type="date"] {
   padding-left: 5px;
   height: 40px;
   outline: 0;
+  outline: none;
   background-color: $lighter-grey;
   border: 1px solid $grey;
   width: 100%;
@@ -57,5 +58,44 @@ input[type="checkbox"] {
       background: $green url("../images/svg/check.svg") center center no-repeat;
       background-size: 90%;
     }
+  }
+}
+/////////////////////////////////////////////
+// Standard Form (Mostly for content page)
+/////////////////////////////////////////////
+.Standard-form {
+  h3 {
+    color: $orange;
+    font-size: 24px;
+    font-family: $gill-regular !important;
+  }
+
+  label {
+    font-size: 16px;
+    color: $dark-grey;
+    display: block;
+    margin: 20px 0 5px 0;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    padding: 5px 0 0 5px;
+    outline: 0;
+    outline: none;
+    background-color: $lighter-grey;
+    border: 1px solid $grey;
+    transition: all 0.2s ease;
+    &:focus {
+      border: 1px solid $orange;
+      background-color: white;
+    }
+  }
+  button {
+    @include rounded-btn($orange,white,100%);
+    margin-top: $base-margin;
+    width: 100%;
+    border-radius: 4px;
   }
 }

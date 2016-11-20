@@ -1,6 +1,8 @@
 /////////////////////////////////////////////
 // SUBMENU
 /////////////////////////////////////////////
+$border-red: rgb(208,81,88);
+
 .Submenu {
   background-color: $red;
 }
@@ -14,7 +16,6 @@
     max-width: 1280px;
   }
 }
-
 .Submenu-link {
   @include flex-gtr-col (2, 1px);
   margin-top: 0;
@@ -22,11 +23,24 @@
   padding: 15px 0;
   text-transform: uppercase;
   color: white;
-
+  @include breakpoint(1px, 1023px) {
+    border-right: 1px solid $border-red;
+    &:nth-of-type(1),&:nth-of-type(3)  {
+      border-left: 1px solid $border-red;
+    }
+    &:nth-of-type(1),&:nth-of-type(2)  {
+      border-bottom: 1px solid $border-red;
+    }
+  }
   @include breakpoint(1024px) {
     @include flex-gtr-col (4, 1px);
+    border-left: 1px solid $border-red;
+    border-right: none;
+    border-bottom: none;
+    &:last-of-type {
+      border-right: 1px solid $border-red;
+    }
   }
-  
   &.is-active {
     background-color: $darker-red;
   }

@@ -24,7 +24,7 @@ var state = {
   passWord: false,
   emailReg: false,
   numberReg: false
-} 
+}
 
 /////////////////////////////////////////////
 // USERNAME CHECK
@@ -130,7 +130,7 @@ $(".js-Login-input-password").on('input', function() {
 $(".js-Login-form-submit-btn").click(function(e) {
   e.preventDefault(e)
   if(validUser && state.passWord) {
-    window.location.replace("account.html");
+    window.location.replace("tickets.html");
   }
   else if(validUser == true && state.passWord != true) {
     $(".js-Login-password-toggle").removeClass("js-Login-question-icon").addClass("js-Login-error-icon")

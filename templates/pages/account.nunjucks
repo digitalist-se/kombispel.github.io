@@ -1,8 +1,0 @@
-{% set pageName = "Om oss" %}
-{% extends "layout.nunjucks" %}
-{% block content %}
-<div class="Account-container">
-  <h1 class="Logged-in-header">GRATTIS DU ÄR INLOGGAD</h1>
-  <a href="index.html">Tillbaka till startsidan</a>
-</div>
-{% endblock %}

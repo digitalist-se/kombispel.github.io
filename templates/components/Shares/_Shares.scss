@@ -1,0 +1,21 @@
+.Shares-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 50px;
+  li {
+    &:nth-of-type(odd) {
+      background-color: white;
+    }
+    .Shares-list-item {
+      @include flex-row();
+      width: 80%;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    span {
+      @include flex-gtr-col(2,15px);
+      text-align: center;
+    }
+  }
+}

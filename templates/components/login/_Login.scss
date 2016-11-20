@@ -62,7 +62,7 @@ transition: all 0.3s ease;
   .Login-input {
     &:focus {
       & + .js-Login-username-toggle, & + .js-Login-password-toggle {
-        top: 37px;
+        top: 40px;
       }
     }
   }
@@ -93,8 +93,8 @@ transition: all 0.3s ease;
   width: 25px;
   height: 25px;
   position: absolute;
-  right: 5px;
-  top: 31px;
+  right: 10px;
+  top: 35px;
   cursor: pointer;
   transition: all .2s ease;
 }
@@ -125,51 +125,6 @@ transition: all 0.3s ease;
 .js-Login-username-help-box,.js-Login-password-help-box {
   display: none;
 }
-.Login-help-box {
-  position: relative;
-  margin-top: 15px;
-  width: 100%;
-  border: 2px solid $orange;
-  &:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -10px;
-  right: 15px;
-  width: 15px;
-  height: 15px;
-  background: white;
-  border-right:2px solid $orange;
-  border-bottom:2px solid $orange;
-  transform:rotate(-135deg);
-  }
-  ul {
-    padding-left: 0;
-    list-style-type: none;
-  }
-}
-
-.Login-contact-phone, .Login-contact-mail {
-  padding: 7.5px 0 7.5px 30px;
-  position: relative;
-  &:before {
-    content:"";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    left: 0;
-  }
-}
-.Login-contact-phone:before {
-  background: url("../images/svg/phone.svg") no-repeat center center;
-}
-.Login-contact-mail:before {
-  background: url("../images/svg/mail.svg") no-repeat center center;
-}
-
-.Login-help-box-inner {
-  padding: $base-margin;
-}
 
 /////////////////////////////////////////////
 // LOGIN ROW
@@ -196,7 +151,7 @@ transition: all 0.3s ease;
 
   .js-Login-forgot-password {
     color: $red;
-    font-size: 12px;
+    font-size: 16px;
     text-align: right;
     padding: 10px 0;
   }
@@ -205,7 +160,7 @@ transition: all 0.3s ease;
     margin-top: 30px;
     text-align: center;
     text-decoration: none;
-    @include gradient-btn($red, $dark-red);
+    @include gradient-btn($red);
     color: white;
     margin-bottom: 40px;
   }
@@ -214,12 +169,9 @@ transition: all 0.3s ease;
 /////////////////////////////////////////////
 // ERROR DISPLAY
 /////////////////////////////////////////////
-
 .Login-header--error {
   color: red;
 }
-
-
 /////////////////////////////////////////////
 // LOGIN PASSWORD BOXES
 /////////////////////////////////////////////

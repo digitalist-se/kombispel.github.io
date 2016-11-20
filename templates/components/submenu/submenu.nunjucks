@@ -1,8 +1,14 @@
+{% import 'macros/header-navigation.nunjucks' as nav %}
+
 <nav class="Submenu">
   <div class="Submenu-container">
-    <a class="Submenu-link is-active" href="tickets.html">Mina lotter</a>
+    {# <a class="Submenu-link is-active" href="tickets.html">Mina lotter</a>
     <a class="Submenu-link" href="information.html">Mina uppgifter</a>
     <a class="Submenu-link" href="winnings.html">Vinsthistorik</a>
-    <a class="Submenu-link" href="bonus.html">Mina Andelar</a>
+    <a class="Submenu-link" href="shares.html">Mina Andelar</a> #}
+    {{nav.active(pageName,"tickets.html", "Mina lotter")}}
+    {{nav.active(pageName,"information.html", "Mina uppgifter")}}
+    {{nav.active(pageName,"winnings.html", "Vinsthistorik")}}
+    {{nav.active(pageName,"shares.html", "Mina Andelar")}}
   </div>
 </nav>

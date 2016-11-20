@@ -1,0 +1,94 @@
+{% include "components/submenu/submenu.nunjucks" %}
+
+<section class="MyPages">
+  <div class="MyPages-container">
+
+    <div class="MyPages-header">
+      <h1 class="Heading-1">Hej Tommy</h1>
+      <h3 class="Heading-3">Du har vunnit i veckans vinstregn!</h3>
+    </div>
+
+    <div class="List">
+      <div class="List-item">
+        <div class="List-item-inner">
+          <img class="List-item-image" src="../images/list/ps4.jpg" alt="PS4" />
+          <p class="List-item-p u-uppercase">PLAYSTATION 4 PRO</p>
+          <p class="List-item-p">Kombilott - 025785</p>
+          <p class="List-item-p">Speldragning vecka 7</p>
+        </div>
+      </div>
+      <div class="List-item">
+        <div class="List-item-inner">
+          <img class="List-item-image" src="../images/list/candles.jpg" alt="Candles" />
+          <p class="List-item-p u-uppercase">Ljusstake Nordic Light</p>
+          <p class="List-item-p">Kombilott - 025785</p>
+          <p class="List-item-p">Speldragning vecka 2</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="Heading-2 Heading-2--red">Dina andelar</h2>
+    <!-- ANDELSLISTA 1 -->
+    <h3 class="Heading-3">Jackpotten</h3>
+    <ul class="Shares-list">
+      <li>
+        <div class="Shares-list-item">
+          <span>365242</span>
+          <span>Andel 1 - Januari</span>
+        </div>
+
+      </li>
+      <li>
+        <div class="Shares-list-item">
+          <span>365242</span>
+          <span>Andel 1 - Januari</span>
+        </div>
+      </li>
+      <li>
+        <div class="Shares-list-item">
+          <span>365242</span>
+          <span>Andel 1 - Januari</span>
+        </div>
+      </li>
+    </ul>
+    <div class="Page-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+
+    <!-- ANDELSLISTA 2 -->
+    <h3 class="Heading-3">Vinstregnet</h3>
+    <ul class="Shares-list">
+      <li>
+        <div class="Shares-list-item">
+          <span>365242</span>
+          <span>Andel 1 - Januari</span>
+        </div>
+      </li>
+      <li>
+        <div class="Shares-list-item">
+          <span>365242</span>
+          <span>Andel 1 - Januari</span>
+        </div>
+      </li>
+      <li>
+        <div class="Shares-list-item">
+          <span>365242</span>
+          <span>Andel 1 - Januari</span>
+        </div>
+      </li>
+    </ul>
+
+    <a class="MyPages-show-list-link" href="#">Såhär fungerar dina andelar</a>
+
+  </div>
+
+  <div class="MyPages-buy-link-container">
+    <a class="MyPages-buy-link" href="#">
+      <span>Öka dina vinstchanser</span>
+      <span>Köp en lott till</span>
+    </a>
+  </div>
+
+</section>

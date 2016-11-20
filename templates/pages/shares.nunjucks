@@ -1,0 +1,5 @@
+{% set pageName = "Mina Andelar" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Shares/shares.nunjucks" %}
+{% endblock %}

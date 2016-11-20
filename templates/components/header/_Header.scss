@@ -171,6 +171,10 @@ $hamburger-layer-color                     : #000 !default;
 $hamburger-layer-border-radius             : 4px !default;
 $cubic-bezier:        cubic-bezier(0.215, 0.61, 0.355, 1);
 $cubic-bezier2:        cubic-bezier(0.55, 0.055, 0.675, 0.19);
+// $cubic-bezier:        all .2s ease;
+// $cubic-bezier2:        all .2s ease;
+
+
 
 .Header-hamburger-outer {
   width: 65%;
