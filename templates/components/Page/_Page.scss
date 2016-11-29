@@ -1,10 +1,24 @@
 /////////////////////////////////////////////
 // Page Grid Two columns
 /////////////////////////////////////////////
-$page-gtr: 15px;
+$page-gtr: 25px;
 
 .Page {
+background-color: #F2F2F2;
+padding-bottom: 2*$base-margin;
+&:after {
+  content: "";
+  height: 100px;
+  width: 100%;
+  background-color: red;
+}
+}
+.Page-inner {
+  background-color: white;
   @include flex-row();
+  @extend .Inner-container;
+  @include page-inner();
+
 }
 
 @include respond-to(large) {
@@ -22,34 +36,56 @@ $page-gtr: 15px;
 // Page Grid One column
 /////////////////////////////////////////////
 .Page-one-col {
-  @include flex-col(1, 1, $page-gtr);
+  @include flex-col(1, 1, 0);
   margin: 0 auto;
+  max-width: 900px;
 }
 
 .Page {
-  @extend .Inner-container;
-  padding-top: $base-margin;
-
   h1 {
+    font-size: 40px;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+  h2 {
+    font-size: 32px;
+    margin-bottom: $base-margin;
+  }
+  h3 {
+    font-size: 23px;
+    margin-bottom: $base-margin;
+  }
   p {
-    font-size: 16px;
-    @include margin-y(30px);
+    margin: $base-margin 0;
+    font-size: 18px;
+    // @include margin-y(30px);
   }
   ul {
-    padding-left: 0;
+    padding-left: 2*$base-margin;
     list-style-type: none;
  }
 
-li:before {
-    padding-top: 10px;
-    content: '\2022 ';
-    font-size: 20px;
-    color: $red;
-    padding-right: 0.5em;
+li {
+  position: relative;
+  padding-bottom: $base-margin;
+  &:before {
+    content: "";
+    background-color: $red;
+    height: $base-margin;
+    width: $base-margin;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 3.5px;
+  }
+
+
+    // padding-top: 10px;
+    // content: '\2022 ';
+    // font-size: 20px;
+    // color: $red;
+    // padding-right: 0.5em;
 }
 }
 .Page-image {
@@ -64,7 +100,7 @@ li:before {
 }
 .Page-lead {
   background-color: $lighter-grey;
-  font-size: 16px;
+  font-size: 23px;
   padding: 2*$base-margin;
 }
 
@@ -85,4 +121,6 @@ li:before {
 }
 .Page-buy-ticket {
   @include gradient-btn($red);
+  margin: 2*$base-margin auto;
+
 }

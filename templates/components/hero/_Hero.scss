@@ -46,7 +46,6 @@
   border-radius: 5px;
   padding: 20px;
   text-align: center;
-
   @include respond-to(medium) {
     margin-top: 100px;
   }
@@ -56,7 +55,6 @@
 }
 
 .Hero-box-title {
-  color: $green;
   margin-bottom: 15px;
   span {
     border-bottom: solid 1px gray;
@@ -64,8 +62,39 @@
   }
 }
 
+/////////////////////////////////////////////
+// Hero-box variants
+/////////////////////////////////////////////
+.Hero-box--kombi {
+  .Hero-box-title {
+    color: $orange;
+  }
+  .Hero-box-button {
+    @include gradient-btn($orange);
+  }
+}
+.Hero-box--dream {
+  .Hero-box-title {
+    color: $green;
+  }
+  .Hero-box-button {
+    @include gradient-btn($green);
+  }
+}
+.Hero-box--motor {
+  .Hero-box-title {
+    color: $red;
+  }
+  .Hero-box-button {
+    @include gradient-btn($red);
+  }
+}
+
+
+
 .Hero-box-quote {
-  font-size: 22px;
+  font-size: 25px;
+  line-height: 28px;
   margin-bottom: 25px;
   &:before {
     content: "“";
@@ -75,11 +104,6 @@
   }
 }
 
-.Hero-box-button {
-  @include gradient-btn($green);
-  color: white;
-  margin: 0 auto;
-}
 
 .Hero-box-button-text {
   font-size: 20px;
@@ -90,7 +114,7 @@
   color: white;
   text-align: center;
   padding: 15px 0 15px 0;
-  font-size: 18px;
+  font-size: 25px;
 
   @include breakpoint(1px, 767px) {
     padding: 15px 50px 15px 50px;

@@ -2,7 +2,7 @@
     <div class="Promo-container-inner">
         <div class="Promo-item">
             <div class="Promo-box Promo-box--correct-ticket">
-                <div class="Promo-box-title">Är du en vinnare?</div>
+                <h3 class="Promo-box-title">Är du en vinnare?</h3>
                 <img class="Promo-box-image" src="images/promo/promo1.png"></img>
                 <button class="Promo-box-button">RÄTTA DIN LOTT</button>
 
@@ -15,7 +15,7 @@
         </div>
         <div class="Promo-item">
             <div class="Promo-box Promo-box--campaign">
-                <div class="Promo-box-title">Månadens kampanj!</div>
+                <h3 class="Promo-box-title">Månadens kampanj!</h3>
                 <div class="Promo-box-text">Prenie: Vettenkaraff och skraplottpaket på köpet när du skaffar en Kombilott.</div>
                 <img class="Promo-box-image" src="images/promo/promo2.png"></img>
                 <button class="Promo-box-button">KÖP EN KOMBILOTT</button>

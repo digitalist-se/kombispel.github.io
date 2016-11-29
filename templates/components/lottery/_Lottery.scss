@@ -1,28 +1,60 @@
 $lotteryRowWidth:  480px;
-
+@keyframes lottery-spinner {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 [class*="Lottery-container--"] {
+  min-height: 810px;
   position: relative;
   overflow: hidden;
+  .Tickets-ticket-col:after {
+    background-color: transparent;
+  }
 }
-.Lottery-container--kombi {
-  background-color: $orange;
 
-}
-.Lottery-container--dream {
-  background-color: $green;
-}
-.Lottery-container--motor {
-  background-color: $red;
-}
 
 .Lottery-inner-container {
   padding: 20px 0 40px 0;
   @extend .Inner-container;
 }
 /////////////////////////////////////////////
+// DRAGNING PÅGÅR
+/////////////////////////////////////////////
+$small-spinner: 30px;
+.js-Lottery-status {
+  position: absolute;
+  bottom: 25px;
+  color: white;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 280px;
+  text-transform: uppercase;
+  text-align: center;
+  span {
+    display: inline-block;
+    height: $small-spinner;
+    vertical-align: top;
+    font-size: 22px;
+  }
+}
+.js-Lottery-ongoing {
+  margin-right: 10px;
+}
+.js-Lottery-spinner--small {
+  animation: lottery-spinner 1s linear infinite;
+  width: $small-spinner;
+  background-size: cover;
+  background:url("../images/svg/spinners/spinner-small.svg") no-repeat center center;
+}
+/////////////////////////////////////////////
 // Rotating backgrounds
 /////////////////////////////////////////////
-@keyframes rotating-one {
+@keyframes rotate-bg {
   from {
     transform: rotate(0deg);
   }
@@ -30,39 +62,21 @@ $lotteryRowWidth:  480px;
     transform: rotate(360deg);
   }
 }
-@keyframes rotating-two {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-
-
-
-.js-Lottery-rotating-background {
+.js-Lottery-starburst-bg {
   position: absolute;
   opacity: 0.2;
   width: 200%;
-  height: 500%;
-  top: -200%;
+  height: 400%;
+  top: -150%;
   left: -50%;
   background:url("../images/svg/starburst.svg") no-repeat center center;
   background-size: cover;
-  // animation: rotating 10s linear infinite;
 }
 
-$rotateSpeed: 16s;
-
-.Rotate-one {
-  animation: rotating-one $rotateSpeed linear infinite;
+.Lottery-rotate-bg {
+  animation: rotate-bg 20s linear infinite;
 }
-.Rotate-two {
-  animation: rotating-two $rotateSpeed linear infinite;
 
-}
 
 
 
@@ -129,13 +143,10 @@ $mynumber-size: 80px;
       color: $lottery-blue;
       margin: 0;
     }
-
   }
 }
-
-
-
 .js-Lottery-price-header {
+  transition: all 1s ease;
   font-family: $gill-bold;
   margin: 20px 0;
   text-align: center;
@@ -144,8 +155,6 @@ $mynumber-size: 80px;
   min-height: 46px;
   display: block;
 }
-
-
 /////////////////////////////////////////////
 // THE LOTTERY ROW
 /////////////////////////////////////////////
@@ -153,7 +162,6 @@ $mynumber-size: 80px;
   max-width: $lotteryRowWidth;
   margin: 30px auto 0 auto;
   position: relative;
-
   &:after {
     content: "";
     display: block;
@@ -165,7 +173,6 @@ $mynumber-size: 80px;
     text-align: center;
     font-size: 40px;
     color: white;
-
   }
 }
 .Lottery-column {
@@ -249,7 +256,6 @@ position: relative;
   max-width: $lotteryRowWidth;
   margin: 0 auto;
   color: white;
-  min-height: 40px;
 }
 .js-Lottery-message {
   text-align: center;
@@ -265,26 +271,103 @@ position: relative;
   @include gradient-btn($green);
 }
 .Hide-element {
-
   visibility: hidden;
   opacity: 0;
-
 }
 .Show-element {
   visibility: visible;;
   opacity: 1;
 }
+/////////////////////////////////////////////
+// CINEMA COUNTDOWN BETWEEN
+/////////////////////////////////////////////
 
+.js-Lottery-countdown-c {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 90px;
+  margin-top: $base-margin;
+}
+.js-Lottery-countdown {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  font-size: 60px;
+  right: 0;
+  top: 0;
+}
+
+.js-Lottery-spinner--big {
+  position: absolute;
+  animation: lottery-spinner 1s linear infinite;
+  height: 100%;
+  width: 90px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: cover;
+  background:url("../images/svg/spinners/spinner-big.svg") no-repeat center center;
+}
 /////////////////////////////////////////////
 // COLLECT WINNINGS LINKS
 /////////////////////////////////////////////
 .js-Lottery-winnings-links {
   margin: 0 auto;
   width: 90%;
+  text-align: center;
+  color: white;
   display: none;
-
+  h4 {
+    font-size: 28px;
+    margin: 35px 0 0 0;
+  }
   a {
-    @include gradient-btn($red);
     margin: 15px auto;
   }
 }
+
+// Variants
+[class*="Lottery-container--kombi"] {
+.js-Lottery-winnings-links a {
+  @include gradient-btn($orange);
+}
+}
+[class*="Lottery-container--dream"] {
+  .js-Lottery-winnings-links a {
+    @include gradient-btn($green);
+  }
+}
+[class*="Lottery-container--motor"] {
+  .js-Lottery-winnings-links a {
+    @include gradient-btn($red);
+  }
+}
+
+/////////////////////////////////////////////
+// BACKGROUND AND VARIANTS
+/////////////////////////////////////////////
+
+.Lottery-container--kombi {
+  //  background-color: $orange;
+   @include gradient-bg($orange);
+ }
+ .Lottery-container--kombi-win {
+  @include gradient-bg($orange);
+ }
+ .Lottery-container--dream {
+  //  background-color: $green;
+  @include gradient-bg($green);
+ }
+ .Lottery-container--dream-win {
+  @include gradient-bg($green);
+ }
+ .Lottery-container--motor {
+  //  background-color: $red;
+   @include gradient-bg($red);
+ }
+ .Lottery-container--motor-win {
+  @include gradient-bg($red);
+ }

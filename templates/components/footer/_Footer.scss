@@ -1,5 +1,7 @@
 .Footer-inner {
+  @include page-inner();
   @extend .Inner-container;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -9,6 +11,7 @@
   @include breakpoint(1180px) {
     @include flex-gtr-col(3,15px);
   }
+  margin-bottom: $base-margin;
 }
 
 .Footer-title {
@@ -39,7 +42,7 @@
     margin: 0;
     list-style: none;
     li{
-      margin-bottom: 20px;
+      margin-bottom: $base-margin;
     }
     a {
       text-transform: uppercase;
@@ -83,8 +86,17 @@
 // FOOTER THIRD
 /////////////////////////////////////////////
 @mixin media-btn($image,$color) {
-  background: $color url($image) no-repeat 10% 50%;
-  background-size: 25px;
+  background-color: $color ;
+  span:before {
+    background-image:  url($image);
+    background-position: center center;
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 25px;
+    background-repeat: no-repeat;
+  }
   &:hover {
     background-color: darken($color,10%);
   }
@@ -96,12 +108,20 @@
   }
   .Footer-follow-item {
     @include flex-gtr-col(2,$base-margin);
+    margin-top: 5px !important;
     text-align: center;
     padding: 20px 0;
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: all .2s ease;
+    span {
+      position: relative;
+      text-align: right;
+      display: inline-block;
+      padding-left: 2*$base-margin;
+      margin: 0 auto;
+    }
   }
   .Footer-follow-item--facebook {
     @include media-btn("../images/svg/footer/facebook.svg",$facebook-blue);

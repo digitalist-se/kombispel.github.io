@@ -1,0 +1,5 @@
+{% set pageName = "Möt våra vinnare" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Winners/Winners.nunjucks" %}
+{% endblock %}

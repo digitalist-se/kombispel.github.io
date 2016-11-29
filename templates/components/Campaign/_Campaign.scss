@@ -1,0 +1,48 @@
+.Campaign {
+  background-color: $content-grey;
+}
+.Campaign-inner {
+  @extend .Inner-container;
+  background-color: white;
+}
+.Campaign-start {
+  border-bottom: 10px solid $orange;
+}
+.Campaign-start-header {
+  @include flex-position(center);
+  @include gradient-bg($orange);
+  min-height: 400px;
+
+  color: white;
+  text-align: center;
+
+  > div {
+    max-width: 600px;
+    width: 90%;
+  }
+
+  h1 {
+    font-family: $gill-regular;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+  }
+ h3 {
+   font-family: $gill-regular;
+   font-size: 32px;
+ }
+}
+
+.Campaign-start-image {
+  position: relative;
+  height: 300px;
+  img {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 400px;
+    max-width: 90%;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+  }
+}

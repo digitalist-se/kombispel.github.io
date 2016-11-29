@@ -1,0 +1,113 @@
+<section class="Winners-container">
+  <div class="Winners-inner-container">
+    <h1 class="Winners-header">Träffa våra vinnare</h1>
+    <p class="Winners-intro">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia aliquet sapien id convallis.</p>
+    <!--
+    // WINNER-ROW
+    -->
+    <div class="Winners-row">
+      <!-- DRÖMVINNARE -->
+      <div class="Winners-winner Winners-winner--dream">
+        <div class="Winners-winner-inner">
+          <div class="Winners-winner-image" style="background-image: url('images/winners/vinnare2.png')">
+            <span class="Winners-winner-logo"></span>
+          </div>
+          <div class="Winners-winner-content">
+            <div class="Winners-winner-content-inner">
+                <p>Jag flyttar!</p>
+                <a href="#">Läs mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- KOMBIVINNARE -->
+      <div class="Winners-winner Winners-winner--kombi">
+        <div class="Winners-winner-inner">
+          <div class="Winners-winner-image" style="background-image: url('images/winners/vinnare3.png')">
+            <span class="Winners-winner-logo"></span>
+          </div>
+          <div class="Winners-winner-content">
+            <div class="Winners-winner-content-inner">
+                <p>Nu kan jag äntligen köpa en båt!</p>
+                <a href="#">Läs mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MOTORVINNARE -->
+      <div class="Winners-winner Winners-winner--motor">
+        <div class="Winners-winner-inner">
+          <div class="Winners-winner-image" style="background-image: url('images/winners/vinnare1.png')">
+            <span class="Winners-winner-logo"></span>
+          </div>
+          <div class="Winners-winner-content">
+            <div class="Winners-winner-content-inner">
+                <p>Wow, jag trodde aldrig att det skulle hända mig!</p>
+                <a href="#">Läs mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- END WINNER-ROW -->
+      </div>
+      <!-- END Inner-container -->
+
+      <div class="Fullwidth-buy-link-container">
+        <a class="Fullwidth-buy-link" href="#">
+          <span>Bli en vinnare du med!</span>
+          <span>Köp en kombilott!</span>
+        </a>
+      </div>
+
+      <!-- NEW Inner-container -->
+      <div class="Winners-inner-container">
+      <!--
+      // WINNER-ROW
+      -->
+      <div class="Winners-row">
+      <!-- DRÖMVINNARE -->
+      <div class="Winners-winner Winners-winner--dream">
+        <div class="Winners-winner-inner">
+          <div class="Winners-winner-image" style="background-image: url('images/winners/vinnare2.png')">
+            <span class="Winners-winner-logo"></span>
+          </div>
+          <div class="Winners-winner-content">
+            <div class="Winners-winner-content-inner">
+                <p>Herregud, jag har vunnit en miljon!</p>
+                <a href="#">Läs mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MOTORVINNARE -->
+      <div class="Winners-winner Winners-winner--motor">
+        <div class="Winners-winner-inner">
+          <div class="Winners-winner-image" style="background-image: url('images/winners/vinnare1.png')">
+            <span class="Winners-winner-logo"></span>
+          </div>
+          <div class="Winners-winner-content">
+            <div class="Winners-winner-content-inner">
+                <p>Så kul, jag är helt mållös!</p>
+                <a href="#">Läs mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- KOMBIVINNARE -->
+      <div class="Winners-winner Winners-winner--kombi">
+        <div class="Winners-winner-inner">
+          <div class="Winners-winner-image" style="background-image: url('images/winners/vinnare3.png')">
+            <span class="Winners-winner-logo"></span>
+          </div>
+          <div class="Winners-winner-content">
+            <div class="Winners-winner-content-inner">
+                <p>Köp den dyraste champagnen du hittar!</p>
+                <a href="#">Läs mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- END WINNER-ROW -->
+</section>

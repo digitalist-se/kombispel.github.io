@@ -1,0 +1,134 @@
+.Winner-container {
+  position: relative;
+  background-color: $content-grey;
+  padding-bottom: 2*$base-margin;
+}
+
+.Winner-inner-container {
+  background-color: white;
+  padding-top: $base-margin;
+  @extend .Inner-container;
+}
+.Winner-back-link {
+  @include rounded-btn($lottery-blue,white,300px);
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin: 0 auto 3*$base-margin auto;
+  span {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+}
+.Winner-header {
+  color: $lottery-blue;
+  width: 90%;
+  max-width: 780px;
+  margin: 0 auto 2*$base-margin auto;
+  text-align: center;
+}
+.Winner-hero {
+  height: auto;
+  width: 100%;
+  margin-bottom: -25px;
+}
+/////////////////////////////////////////////
+// THE BLOCKQUOTE
+/////////////////////////////////////////////
+.Winner-quote {
+  &:before {
+    background: none; // Get rid of the inital
+  }
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  position: relative;
+  span {
+    position: relative;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    &:before {
+      background: url("../images/svg/quote.svg");
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      left: -45px;
+      top: 5px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+/////////////////////////////////////////////
+// CONTENT
+/////////////////////////////////////////////
+.Winner-intro {
+  font-family: $gill-bold;
+  font-size: 18px;
+}
+.Winner-subheader {
+  color: $lottery-blue;
+}
+.Winner-inner-container {
+  h2,h3,p {
+    @include page-inner();
+  }
+}
+
+
+
+
+
+
+/////////////////////////////////////////////
+// WINNER DETAIL LIST
+/////////////////////////////////////////////
+.Winner-detail-list {
+  background-color: $lottery-blue;
+  color: white;
+  h4 {
+    font-size: 23px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 4*$base-margin;
+    margin: 4*$base-margin 0 0 0;
+    li {
+      font-size: 18px;
+      margin-bottom: $base-margin;
+    }
+    span {
+      font-family: $gill-bold;
+    }
+  }
+}
+/////////////////////////////////////////////
+// VARIANTS
+/////////////////////////////////////////////
+.Winner-container--dream {
+  .Winner-quote {
+    background-color: $green;
+  }
+  .Fullwidth-buy-link {
+    @include gradient-btn($green);
+  }
+}
+.Winner-container--kombi {
+  .Winner-quote {
+    background-color: $orange;
+  }
+  .Fullwidth-buy-link {
+    @include gradient-btn($orange);
+  }
+}
+.Winner-container--motor {
+  .Winner-quote {
+    background-color: $red;
+  }
+  .Fullwidth-buy-link {
+    @include gradient-btn($red);
+  }
+}

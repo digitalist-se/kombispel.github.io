@@ -45,31 +45,30 @@ transition: all 0.3s ease;
 .js-Login-header {
   color: $red;
   margin: 0;
+  font-size: 22px;
+  @include breakpoint(768px) {
+    font-size: 32px;
+  }
   text-align: center;
   padding: 50px 0 10px 0;
 }
 .Login-form {
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   margin: 0 auto;
   position: relative;
 
   .Login-label--block {
     display: block;
-
     margin-top: 25px;
   }
   .Login-input {
     &:focus {
       & + .js-Login-username-toggle, & + .js-Login-password-toggle {
-        top: 40px;
+        top: 65px;
       }
     }
   }
-
-
-
-
   .js-Login-input-error {
     border: 1px solid red;
     color: red;
@@ -94,7 +93,11 @@ transition: all 0.3s ease;
   height: 25px;
   position: absolute;
   right: 10px;
-  top: 35px;
+  top: 40px;
+
+  @include breakpoint($medium) {
+    top: 45px;
+  }
   cursor: pointer;
   transition: all .2s ease;
 }
@@ -138,20 +141,23 @@ transition: all 0.3s ease;
   @include flex-position(flex-start);
   label {
     margin-top: $base-margin/2;
+    font-size: 12px;
+    @include breakpoint($medium) {
+      font-size: 18px;
+    }
   }
-
 
 }
 .js-Login-forgot-password {
   @include flex-gtr-col(2,15px);
   @include flex-position(flex-end);
 }
-
-
-
   .js-Login-forgot-password {
     color: $red;
-    font-size: 16px;
+    font-size: 12px;
+    @include breakpoint($medium) {
+      font-size: 18px;
+    }
     text-align: right;
     padding: 10px 0;
   }

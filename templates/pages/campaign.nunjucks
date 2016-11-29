@@ -1,0 +1,5 @@
+{% set pageName = "Kampanj-sida" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Campaign/campaign.nunjucks" %}
+{% endblock %}

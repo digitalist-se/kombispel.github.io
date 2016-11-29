@@ -1,0 +1,164 @@
+$winners-gtr-small: 15px;
+$winners-gtr-medium: 30px;
+$winners-gtr-large: 30px;
+
+.Winners-container {
+  padding: 2*$base-margin 0;
+  background-color: #F2F2F2;
+}
+.Winners-inner-container {
+  @extend .Inner-container;
+}
+.Winners-header {
+  text-align: center;
+  color: $red;
+}
+.Winners-intro {
+  width: 90%;
+  max-width: 700px;
+  font-size: 24px;
+  margin: 0 auto;
+  padding-bottom: 4*$base-margin;
+}
+.Winners-row {
+  @include flex-row();
+}
+.Winners-winner {
+  @include flex-gtr-col(1,$winners-gtr-small);
+
+  @include breakpoint(1px,899px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include breakpoint(900px, 1199px) {
+    @include flex-gtr-col(2,$winners-gtr-medium);
+  }
+  @include breakpoint(1200px) {
+    @include flex-gtr-col(3,$winners-gtr-large);
+  }
+
+}
+.Winners-winner-inner {
+  @include flex-row();
+}
+
+.Winners-winner-image {
+  order: 1;
+  height: 400px;
+  flex-basis: percentage(2/5);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  &:after {
+    height: 80px;
+    width: 100%;
+    content:"";
+    background-color: $text;
+    bottom: 0;
+    position: absolute;
+  }
+  .Winners-winner-logo {
+    z-index: 99;
+    position: absolute;
+    bottom: 2*$base-margin;
+    display: block;
+    left: 0;
+    right: 0;
+    background-position: center center;
+    height: 90px;
+    background-repeat: no-repeat;
+  }
+}
+.Winners-winner-content {
+  order: 2;
+  flex-basis: percentage(3/5);
+  @include flex-position(center);
+  .Winners-winner-content-inner {
+    max-width: 85%;
+  }
+  p {
+    color: white;
+    margin-top: 0;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 38px;
+    &:before {
+      content: "“";
+    }
+    &:after {
+      content: "”";
+    }
+  }
+  a {
+    display: block;
+    text-align: center;
+  }
+}
+/////////////////////////////////////////////
+// VARANNAN TILL HÖGER OCH VÄNSTER
+/////////////////////////////////////////////
+@include breakpoint(1px, 900px) {
+  .Winners-winner:nth-of-type(even) {
+    .Winners-winner-image {
+      order: 2;
+    }
+    .Winners-winner-content {
+      order: 1;
+    }
+  }
+}
+
+/////////////////////////////////////////////
+// VARIANTER
+/////////////////////////////////////////////
+.Winners-winner--dream {
+  background-color: $green;
+  .Winners-winner-logo {
+    background-image: url("../images/svg/logos/dromrese.svg");
+  }
+  .Winners-winner-content-inner {
+    a {
+      @include rounded-btn($lottery-blue,white,100%);
+      font-size: 14px;
+    }
+  }
+}
+.Winners-winner--kombi {
+  background-color: $orange;
+  .Winners-winner-logo {
+    background-image: url("../images/svg/logos/kombi.svg");
+  }
+  .Winners-winner-content-inner {
+    a {
+      @include rounded-btn($lottery-blue,white,100%);
+      font-size: 14px;
+    }
+  }
+}
+.Winners-winner--motor {
+  background-color: $red;
+  .Winners-winner-logo {
+    background-image: url("../images/svg/logos/motor.svg");
+  }
+  .Winners-winner-content-inner {
+    a {
+      @include rounded-btn(black,white,100%);
+      font-size: 14px;
+    }
+  }
+}
+/////////////////////////////////////////////
+// Fullwidth-buy-link-container
+/////////////////////////////////////////////
+.Winners-container {
+  .Fullwidth-buy-link-container {
+    margin-top: $winners-gtr-small;
+    @include breakpoint(900px, 1199px) {
+      margin-top: $winners-gtr-medium;
+    }
+    @include breakpoint(1200px) {
+      margin-top: $winners-gtr-large;
+    }
+  }
+}

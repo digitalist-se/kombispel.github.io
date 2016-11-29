@@ -10,21 +10,29 @@
   background-color: white;
   text-align: center;
   box-shadow: 0px 5px 1px rgba(51, 51, 51, 0.08);
+  position: relative;
+  margin-bottom: 30px;
+
+
   @include breakpoint(1px, 999px) {
     @include flex-gtr-col(1, 10px);
+    margin-top: 0;
+    &:first-of-type {
+      margin-top: 30px ;
+    }
   }
-
   @include breakpoint(1000px) {
     @include flex-gtr-col(3, 15px);
+    margin-top: 30px ;
   }
 }
-
 .Promo-box {
   position: relative;
+  height: 100%;
 }
 .Promo-box-title {
   color: $red;
-  font-size: 22px;
+  font-size: 32px;
 }
 .Promo-box--correct-ticket, .Promo-box--campaign {
   padding: 25px 15px;
@@ -48,14 +56,18 @@
     max-height:100%;
   }
   .Promo-box-product {
-    bottom: 0;
-    margin: 0 auto;
-    @extend .Row;
-
+    margin: 2*$base-margin auto;
+    @include breakpoint(1000px) {
+      position: absolute;
+    }
+    right: 0;
+    left: 0;
+    bottom: 2*$base-margin;
+    @include flex-row();
   }
   .Promo-box-product-item {
-    @include gtr-col(3, 30px);
-    height: 60px;
+    width: 33%;
+    height: 5*$base-margin;
     background-repeat: no-repeat;
     background-position: center center;
     color: transparent;
@@ -69,10 +81,11 @@
   background: url("../images/promo/promo_background.png") no-repeat center center;
   background-color: white;
   .Promo-box-title {
-    margin-bottom: 5px;
+    margin-bottom: $base-margin/3;
   }
   .Promo-box-text {
-    margin-bottom: 15px;
+    margin-bottom: $base-margin;
+    font-size: 20px;
   }
   .Promo-box-button {
     @include gradient-btn($orange);
@@ -90,7 +103,7 @@
   .Promo-box-image-big {
     background: no-repeat center center;
     background-size: cover;
-    height: 250px;
+    height: 280px;
   }
   .Promo-box-band {
     background-color: $orange;
@@ -98,15 +111,27 @@
     color: white;
   }
   .Promo-box-band-text {
-    font-size: 12px;
+    font-size: 18px;
   }
   .Promo-box-band-text--big {
-    font-size: 22px;
+    font-size: 32px;
   }
   .Promo-box-link {
-    padding: 30px 0 25px 0;
+    padding: $base-margin;
+
+    @include breakpoint(1000px) {
+      position: absolute;
+      padding: 0;
+    }
+    left: 0;
+    right: 0;
+    bottom: 2*$base-margin;
     a {
-      @extend .Arrow-link ;
+      font-size: 18px;
+      @extend .Arrow-link;
+      &:before {
+        top: 8px;
+      }
     }
   }
 }

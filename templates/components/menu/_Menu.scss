@@ -19,7 +19,7 @@ menu {
 }
 .Menu-inner-container {
   height: 100%;
-  top: 108px;
+  top: 105px;
   bottom: 0;
   z-index: 9999;
   background-color: $red;
@@ -28,7 +28,7 @@ menu {
   transition: all .3s ease;
   width: 300px;
   @include breakpoint(768px, 1023px) {
-    top: 90px;
+    top: 85px;
   }
   @include breakpoint(1024px) {
   top: 110px;
@@ -116,7 +116,7 @@ background-position: center center;
   @include gtr-col(2,$menu-margin);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 85px;
+  background-size: 85px 80px;
   &:hover {
     background-color: $light-grey;
   }
@@ -149,6 +149,7 @@ background-position: center center;
   background-image: url("../images/svg/menu-arrow.svg");
   width: 20px;
   height: 20px;
+  margin-top: 5px;
 }
 /////////////////////////////////////////////
 // LEVEL TWO MENU ITEMS

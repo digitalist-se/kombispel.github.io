@@ -37,10 +37,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="Menu-level-one-header">
             <span class="Menu-item-header">Våra spel</span>
               <div class="Menu-promos-row">
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/motor.svg')">Motorlotteriet</a>
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/skrap.svg')">Skraplotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/kombi.svg')">Kombilotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/dromrese.svg')">Drömreselotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/motor.svg')">Motorlotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/skrap.svg')">Skraplotteriet</a>
               </div>
             </div>
           </li>
@@ -53,9 +53,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="Menu-level-two">
               <li><a href="index.html">Startsida</a></li>
               <li><a href="tickets.html">Mina lotter</a></li>
+              <li><a href="campaign.html">Kampanjsida</a></li>
               <li><a href="information.html">Mina uppgifter</a></li>
               <li><a href="winnings.html">Vinsthistorik</a></li>
               <li><a href="lottery.html">Rätta lotten</a></li>
+              <li><a href="winners.html">Lista vinnare</a></li>
+              <li><a href="winner.html">Möt en vinnare</a></li>
               <li><a href="page.html">Innehållssida</a></li>
             </ul>
           </li>
@@ -229,7 +232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           </div>
           <div class="Header-title">
-            <h3 class="js-Header-title--menu">meny</h3>
+            <h4 class="js-Header-title--menu">meny</h4>
           </div>
         </div>
       </div>
@@ -243,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="Header-inner-grid">
           <div class="Header-profile-image"></div>
           <div class="Header-title">
-            <h3>min sida</h3>
+            <h4>min sida</h4>
           </div>
         </div>
       </div>
@@ -257,18 +260,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main>
   
 <section class="Lottery-container Lottery-container--kombi">
-  <div class="js-Lottery-rotating-background"></div>
-  <div class="js-Lottery-rotating-background"></div>
+  <div class="js-Lottery-starburst-bg"></div>
+  <div class="js-Lottery-starburst-bg"></div>
     <div class="Lottery-inner-container">
       <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
       <div class="Tickets-ticket-col">
         <div class="Tickets-ticket Tickets-ticket--kombi">
             <h4 class="Tickets-ticket-title">Kombilott</h4>
               <h5 class="Tickets-ticket-number Lottery-mynumber--js"></h5>
+              <div class="js-Lottery-status">
+                
+              </div>
         </div>
       </div>
       <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
-
     <!-- THE ACTUAL LOTTO -->
     <div class="Lottery-row">
       <h3><span class="js-Lottery-price-header">Rätta lotten!</span></h3>
@@ -305,6 +310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="Lottery-message-container">
       <p class="js-Lottery-message"></p>
+
     </div>
     <div class="Start-lottery-btn-container">
       <button class="js-Start-lottery-btn">Starta dragning</button>
@@ -314,8 +320,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     Kan renderas från backenden men visas via JS först när dragningen är klar.
     -->
     <div class="js-Lottery-winnings-links">
-      <a href="#" class="">Hämta vinst för 30.000 kr</a>
-      <a href="#" class="">Hämta vinst för 10.000 kr</a>
+      <div class="Lottery-winnings-row">
+        <h4>Vinst på nivå 300 000 kr!</h4>
+        <a href="#" class="">Välj din vinst</a>
+      </div>
+      <div class="Lottery-winnings-row">
+        <h4>Vinst på nivå 500kr!</h4>
+        <a href="#" class="">Välj din vinst</a>
+      </div>
     </div>
   </div>
 </section>
@@ -346,8 +358,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="Footer-box Footer-box--third">
       <div class="Footer-title">Följ oss:</div>
       <div class="Footer-follow">
-        <a href="#" class="Footer-follow-item Footer-follow-item--facebook">Facebook</a>
-        <a href="#" class="Footer-follow-item Footer-follow-item--youtube">Youtube</a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--facebook"><span>Facebook</span></a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--youtube"><span>Youtube</span></a>
       </div>
     </div>
   </div>

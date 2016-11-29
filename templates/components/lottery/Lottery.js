@@ -16,6 +16,7 @@ xmlhttp.onreadystatechange = function() {
     var winning = false;
     var objectCounter = 0;
     var correctAmount; // Will be an array
+    var winningsOnTicket = 0;
 /////////////////////////////////////////////
 // SET INITIAL STATE OF APPLICATION
 /////////////////////////////////////////////
@@ -23,17 +24,19 @@ xmlhttp.onreadystatechange = function() {
 var myLotteryNumber = document.getElementsByClassName("Lottery-mynumber--js")[0];
 myLotteryNumber.innerHTML = myNumbers.toString().replace(/^[,]$|[,]+/g,"");
 
+// Lottery status
+var lotteryStatus = document.getElementsByClassName("js-Lottery-status")[0];
+
 // Set Lottery-row
 var lotteryNumbers = document.getElementsByClassName('js-Lottery-number');
 var lotteryHeader = document.getElementsByClassName("js-Lottery-price-header")[0];
 // Backgrounds
-var rotatingBackgrounds = document.getElementsByClassName("js-Lottery-rotating-background");
+var rotateBG = document.getElementsByClassName("js-Lottery-starburst-bg")[0];
 
-const startLottery = () => {
-    // Stop background rotation
-    for (var i = 0; i < rotatingBackgrounds.length; i++) {
-      rotatingBackgrounds[i].className = "js-Lottery-rotating-background";
-    }
+function startLottery () {
+  lotteryStatus.innerHTML = "<span class='js-Lottery-ongoing'>Dragning pågår</span><span class='js-Lottery-spinner--small'></span>";
+  rotateBG.className = "js-Lottery-starburst-bg"
+
   // Clear numbers after first iteration
     for (var i = 0; i < lotteryNumbers.length; i++) {
       lotteryNumbers[i].innerHTML = "";
@@ -49,13 +52,14 @@ const startLottery = () => {
     }
   }
  // CHANGE THE HEADER
+lotteryHeader.className = "js-Lottery-price-header";
 lotteryHeader.innerHTML = correctNumbers[objectCounter].header+" kr!";
-lotteryMessage.innerHTML = "Dragning pågår";
+lotteryMessage.innerHTML = "";
 // Check how correct each array is in number. Eg
 // If an array matches by two digits the value will be two
 correctAmount = [];
 // Function to push the value to the array
-checkArray = (winningNumbers) => {
+function checkArray(winningNumbers) {
   // console.log(winningNumbers);
   let correct = 0;
 
@@ -83,29 +87,27 @@ for (var i = 0; i < correctNumbers[objectCounter].numbers.length; i++) {
   checkArray(correctNumbers[objectCounter].numbers[i])
 }
 // Check which number is the highest in the array
-getMaxOfArray = (numArray) =>  Math.max.apply(null, numArray);
+ function getMaxOfArray(numArray) { return  Math.max.apply(null, numArray) };
 // Get the number
 var highestNumber = getMaxOfArray(correctAmount);
 
 if(highestNumber === myNumbers.length) {
   winning = true;
+  winningsOnTicket++;
 } else {
   winning = false;
 }
 // The array that the drawing will be based on
 var drawArray = correctNumbers[objectCounter].numbers[correctAmount.indexOf(highestNumber)];
+var spinnInterval = 100; // Interval for spinn start for each number
+var counter = 0;
+var startInterval = true; // Set to true if the spinner should start at the same time
 /////////////////////////////////////////////
 // *
 // LOTTERY ANIMATION
 // *
 /////////////////////////////////////////////
-var spinnInterval = 100; // Interval for spinn start for each number
-/////////////////////////////////////////////
-// START ROLLING THE NUMBERS
-/////////////////////////////////////////////
-var counter = 0;
-var startInterval = true; // Set to true if the spinner should start at the same time
-const rollNumbers = () => {
+function rollNumbers () {
 if(startInterval) {
     if(counter<lotteryNumbers.length)
       {
@@ -126,12 +128,15 @@ if(startInterval) {
 var y = 0;
 var spinnTime = 1700; // HOW LONG DOES THE ANIMATION, SYNC WITH CSS FILE
 var ratio = spinnTime * ( drawArray[0] / 10);
-const correct = () => {
+function correct () {
   var stop = 2000; // INITIAL VALUE (Kinda pointless)
   var diff = 0;
 
   if(y < drawArray.length)
     {
+      /////////////////////////////////////////////
+      // LOGIC FOR WHEN EACH NUMBER SHOULD STOP
+      /////////////////////////////////////////////
       if(drawArray[y+1] > drawArray[y]) {
         diff = drawArray[y+1] - drawArray[y];
       }
@@ -139,15 +144,20 @@ const correct = () => {
         diff = 10 - (drawArray[y] - drawArray[y+1]);
       }
       startInterval ? stop = spinnInterval + (( diff * spinnTime )/10) : stop =  (( diff * spinnTime )/10);
-
       lotteryNumbers[y].className = "js-Lottery-number";
-      // IF IT IS EITHER CORRECT OR IF ITS THE LAST ROUND
-      if(drawArray[y] === myNumbers[y] || objectCounter == (correctNumbers.length-1)) {
-        lotteryNumbers[y].innerHTML = "<div class='Lottery-correct'>"+drawArray[y]+"</div>";
+      /////////////////////////////////////////////
+      // COLOR OF EACH NUMBER
+      /////////////////////////////////////////////
+      if(objectCounter == (correctNumbers.length-1)) { // IF ITS THE LAST ROUND THE FIRST THE FIRST THREE NUMBERS SHOULD BE DISREGARDED
+        if(y<3) {
+          lotteryNumbers[y].innerHTML = "<div class='Lottery-correct'>"+drawArray[y]+"</div>";
+        } else {
+          colorNumber(y)
+        }
       } else {
-        lotteryNumbers[y].innerHTML = "<div class='Lottery-wrong'>"+drawArray[y]+"</div>";
+        colorNumber(y)
       }
-      setTimeout(() =>
+      setTimeout( function()
       {
         correct()
       },
@@ -155,13 +165,21 @@ const correct = () => {
     );
        y++;
     } else {
-      // Drawing done
       drawingDone()
     }
+}
+function colorNumber(i) {
+  if(drawArray[i] === myNumbers[i]) {
+    lotteryNumbers[i].innerHTML = "<div class='Lottery-correct'>"+drawArray[i]+"</div>";
+  } else {
+    lotteryNumbers[i].innerHTML = "<div class='Lottery-wrong'>"+drawArray[i]+"</div>";
+  }
 }
 rollNumbers();
 setTimeout( function(){ correct(); }, spinnTime+ratio);
 }
+
+
 /////////////////////////////////////////////
 // END STARTLOTTERY FUNCTION
 /////////////////////////////////////////////
@@ -172,22 +190,40 @@ lotteryBtn.addEventListener("click",function() {
 })
 
 /////////////////////////////////////////////
-// After a single drawing round is done
+// GET DOM
 /////////////////////////////////////////////
 var messageContainer = document.getElementsByClassName("Lottery-message-container")[0];
 var lotteryMessage = document.getElementsByClassName("js-Lottery-message")[0];
 var winningLinks = document.getElementsByClassName("js-Lottery-winnings-links")[0];
-
-
+var ticket = document.getElementsByClassName("Tickets-ticket")[0];
+var status = "";
+/////////////////////////////////////////////
+// *
+// WHEN A DRAWING ROUND IS DONE
+// *
+/////////////////////////////////////////////
 function drawingDone()  {
-  objectCounter++; // Counter for the iteration in the JSON RESPONSE
+  // Let the numberheader fadeout
+  // lotteryHeader.className += " Hide-element";
+
+  if(winning) {
+    status = "Vinst!"
+    rotateBG.className += " Lottery-rotate-bg"
+  } else {
+    status = "Ingen vinst!"
+  }
+  lotteryHeader.innerHTML = status;
+
+
   /////////////////////////////////////////////
   // COUNTDOWN FUNCTIONALITY
   /////////////////////////////////////////////
-  if(objectCounter < correctNumbers.length) {
-    var count = 3;
-    lotteryMessage.innerHTML =  "Nästa dragning för "+correctNumbers[objectCounter].header+" om "+count+" sekunder";
 
+  objectCounter++; // Counter for the iteration in the JSON RESPONSE
+  if(objectCounter < correctNumbers.length) {
+
+    var count = 5;
+    lotteryMessage.innerHTML = "Nästa dragning för <span class='u-bold'>"+correctNumbers[objectCounter].header+" kr</span> om:<span class='js-Lottery-countdown-c'><span class='js-Lottery-spinner--big'></span><span class='js-Lottery-countdown'>"+count+"</span></span>";
     var myVar;
     function myFunction() {
       myVar = setInterval(function(){ countDown() }, 1000);
@@ -198,7 +234,8 @@ function drawingDone()  {
     function countDown() {
       count--;
 
-      lotteryMessage.innerHTML =  "Nästa dragning för "+correctNumbers[objectCounter].header+" om "+count+" sekunder";
+      lotteryMessage.innerHTML = "Nästa dragning för <span class='u-bold'>"+correctNumbers[objectCounter].header+" kr</span> om:<span class='js-Lottery-countdown-c'><span class='js-Lottery-spinner--big'></span><span class='js-Lottery-countdown'>"+count+"</span></span>";
+
       if(count < 0) {
         startLottery();
         myStopFunction();
@@ -206,14 +243,22 @@ function drawingDone()  {
     }
     myFunction();
     // END COUNTDOWN FUNCTIONALITY
-    // ROTATE BACKGROUNDS
-    rotatingBackgrounds[0].className += " Rotate-one";
-    rotatingBackgrounds[1].className += " Rotate-two";
+    lotteryStatus.innerHTML = "";
   }
   /////////////////////////////////////////////
   // WHEN ALL ROUNDS ARE DONE
   /////////////////////////////////////////////
   else {
+  lotteryStatus.innerHTML = "";
+
+  if(winningsOnTicket > 0){
+    lotteryHeader.innerHTML = "Dragning klar, du vann!";
+    ticket.className += "-win";
+    rotateBG.className += " Lottery-rotate-bg"
+  } else {
+    lotteryHeader.innerHTML = "Dragning klar, tyvärr ingen vinst.";
+    ticket.className += "-lose";
+  }
     winningLinks.style.display = "block";
     lotteryBtn.style.display = "none";
     lotteryMessage.style.display += "none";

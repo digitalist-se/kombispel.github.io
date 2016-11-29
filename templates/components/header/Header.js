@@ -1,5 +1,6 @@
 $(".js-Header-correct-btn").click(function() {
   $(".js-Login-header").html("Logga in för att rätta din lott")
+  $(".js-Site-container").toggleClass("locked");
   $(".js-Login-overlay-container").fadeIn("fast");
   if($(".js-Menu-container").hasClass("Menu--open")) {
       toggleMenu();
@@ -8,7 +9,8 @@ $(".js-Header-correct-btn").click(function() {
 //
 $(".js-Header-profile, .js-Open-login").click(function() {
   $(".js-Login-header").html("Logga in på Min Sida")
-    $(".js-Login-overlay-container").fadeIn("fast");
+  $(".js-Site-container").toggleClass("locked");
+  $(".js-Login-overlay-container").fadeIn("fast");
     if($(".js-Menu-container").hasClass("Menu--open")) {
         toggleMenu();
     }

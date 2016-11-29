@@ -14,10 +14,10 @@
             <div class="Menu-level-one-header">
             <span class="Menu-item-header">Våra spel</span>
               <div class="Menu-promos-row">
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/motor.svg')">Motorlotteriet</a>
-                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/skrap.svg')">Skraplotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/kombi.svg')">Kombilotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/dromrese.svg')">Drömreselotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/motor.svg')">Motorlotteriet</a>
+                  <a class="Menu-promos-item" href="#" style="background-image: url('images/svg/logos/skrap.svg')">Skraplotteriet</a>
               </div>
             </div>
           </li>
@@ -30,9 +30,12 @@
             <ul class="Menu-level-two">
               <li><a href="index.html">Startsida</a></li>
               <li><a href="tickets.html">Mina lotter</a></li>
+              <li><a href="campaign.html">Kampanjsida</a></li>
               <li><a href="information.html">Mina uppgifter</a></li>
               <li><a href="winnings.html">Vinsthistorik</a></li>
               <li><a href="lottery.html">Rätta lotten</a></li>
+              <li><a href="winners.html">Lista vinnare</a></li>
+              <li><a href="winner.html">Möt en vinnare</a></li>
               <li><a href="page.html">Innehållssida</a></li>
             </ul>
           </li>

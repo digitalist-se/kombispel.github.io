@@ -64,7 +64,7 @@
       </div>
 
       <!-- Kombi vinstlott -->
-      <div class="Tickets-ticket-col">
+      <div class="Tickets-ticket-col Tickets-ticket-col--win">
         <div class="Tickets-ticket Tickets-ticket--kombi-win">
           <h4 class="Tickets-ticket-title">Kombilott</h4>
               <h5 class="Tickets-ticket-number">223290</h5>
@@ -73,7 +73,7 @@
         <a href="#" class="Tickets-winning-ticket-link--kombi">Välj din vinst!</a>
       </div>
       <!-- Dröm vinstlott -->
-      <div class="Tickets-ticket-col">
+      <div class="Tickets-ticket-col Tickets-ticket-col--win">
         <div class="Tickets-ticket Tickets-ticket--dream-win">
           <h4 class="Tickets-ticket-title">Drömreselott</h4>
               <h5 class="Tickets-ticket-number">024680</h5>
@@ -82,7 +82,7 @@
         <a href="#" class="Tickets-winning-ticket-link--dream">Välj din vinst!</a>
       </div>
       <!-- Motor vinstlott -->
-      <div class="Tickets-ticket-col">
+      <div class="Tickets-ticket-col Tickets-ticket-col--win">
         <div class="Tickets-ticket Tickets-ticket--motor-win">
           <h4 class="Tickets-ticket-title">Motorlott</h4>
               <h5 class="Tickets-ticket-number">024680</h5>
@@ -116,11 +116,10 @@
     <a class="MyPages-show-list-link" href="#">Visa tidigare dragningslistor</a>
   </div>
 
-  <div class="MyPages-buy-link-container">
-    <a class="MyPages-buy-link" href="#">
+  <div class="Fullwidth-buy-link-container">
+    <a class="Fullwidth-buy-link" href="#">
       <span>Öka dina vinstchanser</span>
       <span>Köp en lott till</span>
     </a>
   </div>
-
 </section>

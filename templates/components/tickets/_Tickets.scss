@@ -6,25 +6,25 @@
 }
 .Tickets-ticket-col {
   @include flex-gtr-col (1, 10px);
-  @include breakpoint(1024px) {
+  @include breakpoint(1080px) {
     @include flex-gtr-col (2, 15px);
   }
-  padding: 2*$base-margin 0;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background-color: $light-grey;
-    bottom: 0px;
-    margin: 0 auto;
-    left: 20%;
-    right: 20%;
+  @include breakpoint(1px, 374px) {
+    margin: 0 !important;
   }
+  padding: 2*$base-margin 0;
+  position: relative;
 
 }
+.Tickets-ticket-container {
+  .Tickets-ticket-col {
+    background-color: white;
+    &.Tickets-ticket-col--win {
+      background-color: $gold;
+    }
+  }
+}
+
 [class*="Tickets-ticket"] {
   background-position: center center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@
     height: 10px;
     bottom: -10px;
     content: "";
-    left:10%;
+    left: 10%;
     right: 10%;
   }
   .Tickets-ticket-title {
@@ -75,7 +75,7 @@
     color: white;
     box-shadow: -2px 11px 22px -13px rgba(0,0,0,0.75);
   }
-  @include breakpoint(420px) {
+  @include breakpoint(375px) {
     width: 350px;
     height: 175px;
     .Tickets-ticket-title {
@@ -83,7 +83,7 @@
       font-size: 22px;
     }
     .Tickets-ticket-link {
-      bottom: 18px;
+      bottom: 14px;
       font-size: 16px;
     }
   }
@@ -151,7 +151,7 @@
   left: -12px;
   height: 95px;
   width: 150px;
-  @include breakpoint(420px) {
+  @include breakpoint(375px) {
     top: 5px;
     left: -10px;
     height: 120px;
@@ -196,6 +196,7 @@
 .Tickets-winning-ticket-header {
   text-align: center;
   text-transform: uppercase;
+  color: white;
 }
 .Tickets-winning-ticket-link--kombi {
   @include gradient-btn($orange);

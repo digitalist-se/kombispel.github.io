@@ -1,6 +1,9 @@
 label {
   margin-bottom: 7.5px;
-  font-size: 14px;
+  font-size: 16px;
+  @include breakpoint(768px) {
+    font-size: 20px;
+  }
 }
 
 /////////////////////////////////////////////
@@ -24,7 +27,7 @@ input[type="date"] {
   transition: all 0.2s ease;
 
   &:focus {
-    height: 50px;
+    height: 80px;
     border: 1px solid $orange;
     background-color: white;
   }

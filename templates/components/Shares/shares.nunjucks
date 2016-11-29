@@ -54,9 +54,6 @@
     <div class="Page-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
     </div>
-
-
-
     <!-- ANDELSLISTA 2 -->
     <h3 class="Heading-3">Vinstregnet</h3>
     <ul class="Shares-list">
@@ -84,11 +81,12 @@
 
   </div>
 
-  <div class="MyPages-buy-link-container">
-    <a class="MyPages-buy-link" href="#">
+  <div class="Fullwidth-buy-link-container">
+    <a class="Fullwidth-buy-link" href="#">
       <span>Öka dina vinstchanser</span>
       <span>Köp en lott till</span>
     </a>
   </div>
+
 
 </section>

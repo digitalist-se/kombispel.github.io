@@ -1,0 +1,5 @@
+{% set pageName = "Annika vann 1 miljon" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Winner/Winner.nunjucks" %}
+{% endblock %}

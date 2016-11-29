@@ -1,6 +1,10 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="593.87" height="10.8" viewBox="0 0 593.87 10.8" style="enable-background:new 0 0 292.6 120.6;"  preserveAspectRatio="none">
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="593.87" height="10.8" viewBox="0 0 593.87 10.8"
+  style="enable-background:new 0 0 292.6 120.6;"
+  preserveAspectRatio="none">
   <title>skugga</title>
   <g opacity="0.5">
     <path d="M593.87,0A10.82,10.82,0,0,1,583.1,10.8L303.34,4.58,10.78,10.8A10.82,10.82,0,0,1,0,0" fill="#999"/>
-  </g>
+  </g> 
 </svg>

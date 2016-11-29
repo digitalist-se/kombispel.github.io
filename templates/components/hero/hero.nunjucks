@@ -1,6 +1,11 @@
 <section class="Hero" style="background-image: url('images/heroes/start_hero.png')">
   <div class="Hero-inner">
-        <div class="Hero-box">
+        <div class="Hero-box Hero-box--dream">
+          <!-- CAN HAVE VARIANTS
+          <div class="Hero-box Hero-box--kombi">
+          <div class="Hero-box Hero-box--motor">
+          <div class="Hero-box Hero-box--dream">
+          -->
             <div class="Hero-box-title"><span>VECKANS VINNARE<span></div>
             <div class="Hero-box-quote">Vi har alltid drömt om att åka till karibien. Nu blir det av!</div>
             <button class="Hero-box-button">
@@ -9,5 +14,5 @@
             </button>
         </div>
     </div>
-    <div class="Hero-caption">Det svenska lotteriet med störst chans att bli miljönar!</div>
+    <div class="Hero-caption">Det svenska lotteriet med störst chans att bli miljonär!</div>
 </section>

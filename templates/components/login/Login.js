@@ -3,6 +3,8 @@
  ////////////////////////////////////////////
 $(".js-Login-clickarea, .js-Login-close-form").click(function() {
   $(".js-Login-overlay-container").fadeOut("fast")
+  $(".js-Site-container").toggleClass("locked");
+
 })
 
 /////////////////////////////////////////////

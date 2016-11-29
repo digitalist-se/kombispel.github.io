@@ -8,7 +8,7 @@
   outline: 0;
   color: $color;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
   padding: 15px 20px;
   max-width: $width;
   transition: all 0.2s ease;
@@ -29,7 +29,7 @@ $shadow-color:  black;
   width: 100%;
   text-transform: uppercase;
   position: relative;
-  font-family: $gill-light;
+  font-family: $gill-regular;
   max-width: 320px;
   margin: 0 auto;
   display: block;
@@ -71,4 +71,22 @@ $shadow-color:  black;
 @mixin margin-y($m: 10px) {
   margin-top: $m;
   margin-bottom: $m;
+}
+/////////////////////////////////////////////
+ // Inner page container
+ /////////////////////////////////////////////
+@mixin page-inner() {
+  padding: $base-margin 1*$base-margin 0;
+  @include respond-to(medium) {
+    padding: $base-margin 2*$base-margin 0;
+  }
+  @include respond-to(large) {
+    padding: $base-margin 3*$base-margin 0;
+  }
+}
+/////////////////////////////////////////////
+// Gradient background
+/////////////////////////////////////////////
+ @mixin gradient-bg($color) {
+   background: radial-gradient(lighten($color,20%) 10%,lighten($color,15%) 25%, $color 80%);
 }

@@ -5,6 +5,7 @@
 ##############################################################
 -->
 <section class="Page">
+      <div class="Page-inner">
       <h1 class="Heading-1">Här är en rubrik utanför kolumnerna.</h1>
       <!-- KOLUMN NUMMER 1 -->
       <article class="Page-two-col-main">
@@ -72,7 +73,7 @@
       </blockquote>
       <img class="Page-image" src="../images/content/beach.jpg" alt="Strand" />
     </article>
-  {# </div> #}
+  </div>
 </section>
 <!--
 ###############################################################
@@ -80,8 +81,9 @@
 ##############################################################
 -->
 <section class="Page">
+  <div class="Page-inner">
     <article class="Page-one-col">
-      <h1 class="Heading-1">Rubrik till sidan som bara har en kolumn. Förövrigt max 960px bred</h1>
+      <h1 class="Heading-1">Rubrik till sidan som bara har en kolumn. Förövrigt max 900px bred</h1>
 
       <div class="Page-image">
         <img class="Page-image-image" src="../images/content/beach.jpg" alt="Strand" />
@@ -94,4 +96,5 @@
         Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
       </p>
     </article>
+    </div>
 </section>

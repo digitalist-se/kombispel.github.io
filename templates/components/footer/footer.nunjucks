@@ -21,8 +21,8 @@
     <div class="Footer-box Footer-box--third">
       <div class="Footer-title">Följ oss:</div>
       <div class="Footer-follow">
-        <a href="#" class="Footer-follow-item Footer-follow-item--facebook">Facebook</a>
-        <a href="#" class="Footer-follow-item Footer-follow-item--youtube">Youtube</a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--facebook"><span>Facebook</span></a>
+        <a href="#" class="Footer-follow-item Footer-follow-item--youtube"><span>Youtube</span></a>
       </div>
     </div>
   </div>

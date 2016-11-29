@@ -8,6 +8,7 @@ body {
   font-family: $gill-regular, "sans-serif";
   overflow-x: hidden;
   color: $text;
+  // letter-spacing: 1px
 }
 h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
   font-family: $gill-bold, "sans-serif";
@@ -24,17 +25,9 @@ main {
   width: 100%;
   &.locked {
     position: fixed;
-    // overflow-y: hidden;
-    // overflow: hidden;
     height: 100%;
-    // main {
-    //   transform: translateX(100px);
-    // }
   }
 }
-
-
-
 a {
   text-decoration: none;
   color: $red;
@@ -43,29 +36,28 @@ a {
     text-decoration: underline;
   }
 }
-
 blockquote {
-  background-color: #ff9d2b;
+  background-color: #949d9e;
   color: #fff;
   font-family: $gill-bookItalic;
-  font-size: 22px;
+  font-size: 25px;
   margin: $base-margin 0;
-  padding: 30px;
+  padding: 30px 30px 30px 60px;
   position: relative;
   &:before {
     background: url("../images/svg/quote.svg");
     content: '';
     position: absolute;
-    font-size: 40px;
-    // left: -10px;
+    height: 30px;
+    width: 30px;
+    left: 20px;
+    top: 35px;
     background-repeat: no-repeat;
   }
-
-
 }
-
 img {
   max-width: 100%;
+  height: auto;
 }
 
 /////////////////////////////////////////////
@@ -94,3 +86,24 @@ img {
   font-family: $gill-regular;
   text-align: center;
 }
+/////////////////////////////////////////////
+// FULLWIDTH BUY LINK
+/////////////////////////////////////////////
+ .Fullwidth-buy-link-container {
+   background-color: white;
+   padding: 30px 0;
+ }
+
+ .Fullwidth-buy-link {
+   @include gradient-btn($red);
+   color: white;
+   span {
+     display: block;
+     text-align: center;
+     &:first-of-type {
+       margin-bottom: 5px;
+       font-size: 15px;
+       font-family: $gill-light;
+     }
+   }
+ }

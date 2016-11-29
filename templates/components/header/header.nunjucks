@@ -14,7 +14,7 @@
 
           </div>
           <div class="Header-title">
-            <h3 class="js-Header-title--menu">meny</h3>
+            <h4 class="js-Header-title--menu">meny</h4>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class="Header-inner-grid">
           <div class="Header-profile-image"></div>
           <div class="Header-title">
-            <h3>min sida</h3>
+            <h4>min sida</h4>
           </div>
         </div>
       </div>

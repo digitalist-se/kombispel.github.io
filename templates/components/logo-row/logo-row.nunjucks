@@ -4,8 +4,8 @@
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
 
-        <a href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
-      <h4>Kombilotteriet</h4>
+        <a href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/logos/kombi.svg')">Kombilotteriet</a>
+      <h3>Kombilotteriet</h3>
       <p>Störst chans att bli miljonär</p>
       <div class="Logo-row-links">
         <a href="#">Köp en lott</a>
@@ -17,8 +17,8 @@
 
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
-      <a  href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
-      <h4>Drömreselotteriet</h4>
+      <a  href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/logos/dromrese.svg')">Drömreselotteriet</a>
+      <h3>Drömreselotteriet</h3>
       <p>Motorer och miljoner!</p>
       <div class="Logo-row-links">
         <a href="#">Köp en lott</a>
@@ -30,8 +30,8 @@
 
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
-      <a  href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/motor.svg')">Motorlotteriet</a>
-      <h4>Motorlotteriet</h4>
+      <a  href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/logos/motor.svg')">Motorlotteriet</a>
+      <h3>Motorlotteriet</h3>
       <p>Vinn resan och reskassan!</p>
       <div class="Logo-row-links">
         <a href="#">Köp en lott</a>
@@ -43,8 +43,8 @@
 
     <div class="Logo-row-logo">
       <div class="Logo-row-logo-inner">
-      <a href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/skrap.svg')">Skraplotter</a>
-      <h4>Skraplotter</h4>
+      <a href="#" class="Logo-row-logo-icon" style="background-image: url('images/svg/logos/skrap.svg')">Skraplotter</a>
+      <h3>Skraplotter</h3>
       <p>Störst chans att bli miljonär</p>
       <div class="Logo-row-links">
         <a href="#">Köp en lott</a>
