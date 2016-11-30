@@ -31,8 +31,9 @@
   .Footer-box-col--image {
       span {
         color: transparent;
-        background: url("../images/svg/footer/stamp.svg") no-repeat;
-        height: 50px;
+        background: url("../images/svg/footer/stamp.png") no-repeat;
+        background-size: contain;
+        height: 60px;
         width: 50px;
         display: block;
       }

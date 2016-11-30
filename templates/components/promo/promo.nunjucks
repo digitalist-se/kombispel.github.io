@@ -7,9 +7,9 @@
                 <button class="Promo-box-button">RÄTTA DIN LOTT</button>
 
                 <div class="Promo-box-product">
-                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/kombi.svg')">Kombilotteriet</a>
-                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/dromrese.svg')">Drömreselotteriet</a>
-                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/skrap.svg')">Skraplotten</a>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/kombi.svg')">Kombilotteriet</a>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/dromrese.svg')">Drömreselotteriet</a>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/skrap.svg')">Skraplotten</a>
                 </div>
             </div>
         </div>

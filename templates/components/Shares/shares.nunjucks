@@ -51,8 +51,11 @@
         </div>
       </li>
     </ul>
+    <!-- VIDEO -->
     <div class="Page-video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
+      <div class="Page-video-inner">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
     <!-- ANDELSLISTA 2 -->
     <h3 class="Heading-3">Vinstregnet</h3>

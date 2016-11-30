@@ -1,7 +1,7 @@
-<section class="Campaign Campaign--kombi">
+<section class="Campaign Campaign--dream">
   <div class="Campaign-inner">
+    <!-- START PROMO -->
   <div class="Campaign-start">
-
     <div class="Campaign-start-header">
       <div>
         <h1>Störst chans att bli miljonär</h1>
@@ -10,32 +10,68 @@
         </h3>
       </div>
     </div>
-
-
-
     <div class="Campaign-start-image">
       <img src="images/campaign/kampanjbild.png" alt="Annika vann en miljon!">
     </div>
-
-
   <div class="Campaign-start-splash">
-
+    <div>
+      <span>En månad för endast</span>
+      <span class="u-big">59 kr</span>
+      <span>ORD PRIS 199 kr</span>
+    </div>
   </div>
   <span class="Campaign-start-logo"></span>
   </div>
-
-
-
-  <div class="">
-    <h3>Fyll i dina uppgifter</h3>
-
-
-
-
+  <!-- SIGN UP FORM -->
+  <div class="Campaign-signup">
+    <h3 class="Campaign-signup-header">Fyll i dina uppgifter</h3>
+    <form class="Campaign-signup-form" action="" method="">
+      <label class="Campaign-grey-label" for="person-number">Personnummer:</label>
+      <input type="text" name="person-number" value="" placeholder="YYMMDD-XXXX" required>
+      <label class="Campaign-grey-label" for="email">E-postadress:</label>
+      <input type="email" name="email" value="" placeholder="YYMMDD-XXXX" required>
+      <div class="Campaign-checkbox">
+        <span><input type="checkbox" name="signup-check" checked/></span>
+        <span><label for="signup-check">Ja, jag vill beställa en lott, är över 18 år och godkänner <a href="#">villkoren.</a></label></span>
+      </div>
+      <button type="submit" name="button" class="Campaign-signup-btn">Nästa steg</button>
+    </form>
   </div>
-
-
-
+  {# <div class="Campaign-signup">
+    <h3 class="Campaign-signup-header">Fyll i ditt personnummer</h3>
+    <form class="Campaign-signup-form" action="" method="">
+      <input type="text" name="person-number" value="" placeholder="YYMMDD-XXXX" required>
+      <button type="submit" name="button" class="Campaign-signup-btn">Nästa steg</button>
+    </form>
+  </div> #}
+  <!-- STAR LIST -->
+  <div class="Campaign-star-list">
+    <ul>
+      <li>Vinst på var 3:e lott</li>
+      <li>68560 vinster / månad</li>
+      <li>Störst chans att bli miljonär</li>
+      <li>Roligt att spela</li>
+      <li>Fri support</li>
+    </ul>
+  </div>
+  <!-- WELCOME PACKAGE -->
+  <div class="Campaign-welcome-pkg">
+    <div class="Campaign-welcome-pkg-inner">
+      <h3 class="Campaign-welcome-pkg-header">Välkomstpaketet innehåller:</h3>
+      <ul>
+        <li><span class="u-bold">Kombilott</span> (Värde 200 kr)</li>
+        <li><span class="u-bold">Hygge rumsdoft</span> (Värde 289 kr)</li>
+        <li><span class="u-bold">2 Femmanlotter</span> (Värde 10 kr)</li>
+        <li>Totalt värde 499 kr</li>
+      </ul>
+      <p>
+        25 kr i faktureringsavgift.
+      </p>
+      <p>
+        Du kan närsomhelst avsluta din prenumeration.
+      </p>
+  </div>
+  </div>
 
 
 </div>

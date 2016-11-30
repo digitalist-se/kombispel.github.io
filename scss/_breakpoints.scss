@@ -30,7 +30,6 @@ $large: 1024px;
   }
 }
 
-
 @mixin breakpoint($min,$max:null) {
 @if $max {
   @media (min-width: $min) and (max-width: $max) {

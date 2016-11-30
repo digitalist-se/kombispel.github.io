@@ -24,14 +24,22 @@
 .MyPages-information {
   @include flex-row();
 }
-
-.MyPages-information-column {
-  @include flex-gtr-col (1, 10px);
-
-  @include breakpoint(1024px) {
-    @include flex-gtr-col (2, 30px);
+.MyPages-info-col-main,.MyPages-info-col-side  {
+  @include flex-col(1, 1, $base-margin);
+}
+@include respond-to(large) {
+  .MyPages-info-col-main  {
+    @include flex-col(2, 3, $base-margin);
+    margin-right: $base-margin;
+  }
+  .MyPages-info-col-side {
+    @include flex-col(1, 3, $base-margin);
+    margin-left: $base-margin;
   }
 }
+
+
+
 
 .MyPages-block {
   background-color: #fff;
@@ -54,9 +62,11 @@
 }
 
 .MyPages-settingsForm {
+  margin: 0 auto;
   input[type="text"],
+  input[type="number"],
   input[type="email"] {
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
   }
 }
 
@@ -67,6 +77,25 @@
     border-bottom: 1px solid $dark-grey;
     padding-bottom: 30px;
   }
+  .MyPages-input-row {
+    @include flex-row();
+  }
+
+  input {
+    flex-basis: calc(100% - #{3*$base-margin});
+  }
+  .MyPages-toggle-helpbox {
+    // background-color: red;
+    position: relative;
+    height: 40px;
+    flex-basis: 3*$base-margin;
+    @include flex-position(center);
+    .Icon {
+      position: static;
+    }
+  }
+
+
 }
 
 .MyPages-block-title {
@@ -75,8 +104,9 @@
   padding-bottom: 10px;
 }
 
-.MyPages-checkbox {
+.MyPages-toggle-helpbox {
   position: relative;
+  height: 25px;
 }
 
 .MyPages-block-section {
@@ -115,8 +145,6 @@
   @extend .Arrow-link;
 
 }
-
-
 /////////////////////////////////////////////
 // HELP BOXES
 /////////////////////////////////////////////
@@ -126,4 +154,25 @@
 }
 .js-MyPages-help-box--mail, .js-MyPages-help-box--phone {
   display: none;
+}
+/////////////////////////////////////////////
+//  SELECT BOXES
+/////////////////////////////////////////////
+.MyPages-select-heading {
+  color: $label-grey;
+}
+.MyPages-select {
+  cursor: pointer;
+  border-radius: 0;
+  outline: $orange;
+  height: 45px;
+  padding-left: $base-margin;
+  appearance: none;
+  border-radius: 0px;
+  width: calc(100% - #{3*$base-margin});
+  background-image: url("../images/svg/orange-arrow.svg");
+  background-position: calc(100% - #{$base-margin});
+  background-repeat: no-repeat;
+  background-size: 20px 30px;
+
 }

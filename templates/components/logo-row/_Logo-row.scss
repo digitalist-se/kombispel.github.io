@@ -16,35 +16,39 @@ border-bottom: 8px solid $green;
 .Logo-row-logo {
   letter-spacing: 0px;
 
+
+
+
   @include breakpoint(1px, 1023px) {
     position: relative;
     padding: 20px 0;
     margin: 15px 0;
     flex-basis: 50%;
-    // flex-basis: calc(50%);
-    h3,p,.Logo-row-links {
-      display: none;
-    }
     [class*="Logo-row-logo--"] {
       width: 80px;
     }
+    &:nth-of-type(2),&:nth-of-type(4) {
+      border-left: $logoBorder;
+    }
+    &:nth-of-type(3),&:nth-of-type(4) {
+      &:after {
+        position: absolute;
+        content: "";
+        left: 15px;
+        right: 15px;
+        height: 2px;
+        background-color: rgb(214,214,214);
+        top: -15px;
+      }
+    }
+  }
+  @include breakpoint(768px, 1023px) {
     &:nth-of-type(1),&:nth-of-type(3) {
       border-left: $logoBorder;
     }
     &:nth-of-type(2),&:nth-of-type(4) {
       border-left: $logoBorder;
       border-right: $logoBorder;
-    }
-    &:nth-of-type(3),&:nth-of-type(4) {
-      &:after {
-        position: absolute;
-        content: "";
-        left: 0;
-        width: 102%;
-        height: 2px;
-        background-color: rgb(214,214,214);
-        top: -15px;
-      }
     }
   }
   @include flex-position(center);
@@ -56,8 +60,11 @@ border-bottom: 8px solid $green;
       border-right: $logoBorder;
     }
   }
+  /////////////////////////////////////////////
+  // FONTS
+  /////////////////////////////////////////////
   h3 {
-    font-size: 23px;
+    font-size: 16px;
     margin: 15px 0 0 0;
     text-align: center;
      @include respond-to(large) {
@@ -65,23 +72,40 @@ border-bottom: 8px solid $green;
      }
   }
   p {
+    display: none;
     font-size: 18px;
     text-align: center;
     color: rgb(128,128,128);
     margin: 10px 0;
+  }
+  .Logo-row-links {
+    a {
+      display: none;
+    }
+  }
+  @include respond-to(medium) {
+    h3 {
+      font-size: 23px;
+    }
+    p {
+      display: block;
+    }
+    .Logo-row-links {
+      a {
+        display: block;
+        font-size: 18px;
+        &:before {
+          top: 8px;
+        }
+      }
   }
 }
 .Logo-row-links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 18px;
   a {
     @extend .Arrow-link;
-    &:before {
-      top: 8px;
-    }
-
     &:first-of-type {
       margin-left: 18px;
     }
@@ -90,7 +114,7 @@ border-bottom: 8px solid $green;
     }
   }
 }
-
+}
 /////////////////////////////////////////////
 // THE ACTUAL LOGOS
 /////////////////////////////////////////////

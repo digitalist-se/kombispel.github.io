@@ -2,7 +2,6 @@
 // Inner-container
 /////////////////////////////////////////////
 .Inner-container {
-  // width: calc(100% - 15px);
   margin: 0 auto;
   @include respond-to(medium) {
     width: 80%;

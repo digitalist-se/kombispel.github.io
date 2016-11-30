@@ -33,7 +33,9 @@
       <h2>Se på en video!</h2>
       <!-- VIDEO -->
       <div class="Page-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LdLrzViQWGk" frameborder="0" allowfullscreen></iframe>
+        <div class="Page-video-inner">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
 
       <h2>Glöm aldrig dessa tre punkter.</h2>

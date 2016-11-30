@@ -105,15 +105,14 @@ background-position: center center;
 // MENU PROMOS
 /////////////////////////////////////////////
 .Menu-promos-row {
-  @extend .Row;
-  width: calc(100% - #{$menu-margin});
-  margin-right: $menu-margin;
+  @include row(calc(100% - #{$menu-margin}));
 }
 .Menu-promos-item {
+  // width: calc(50% - 15px);
+  @include gtr-col(2,15px);
   background-color: white;
   height: 90px;
   color: transparent;
-  @include gtr-col(2,$menu-margin);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 85px 80px;

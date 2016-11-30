@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mina uppgifter</title>
-  <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -279,12 +279,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
+<!-- POP-UP FÖR ATT ÄNDRA LÖSENORD -->
 
+<section class="js-MyPages-overlay-container">
+  <div class="js-MyPages-clickarea"></div>
+  <div class="MyPages-form-container">
+    <div class="js-MyPages-close-form"></div>
+    <h2 class="">Ändra lösenord</h2>
+    <form name="Login-form" class="Login-form">
+      <!-- INPUT SECTION -->
+      <div class="Login-input-section">
+        <label class="Login-label--block" for="username">Kundnummer eller e-postadress</label>
+        <input class="Login-input js-Login-input-username" type="text" name="username" required/>
+        <div class="js-Login-username-toggle js-Login-question-icon"></div>
+        <p class="js-Login-username-message"></p>
+      </div>
+      <!-- END -->
+
+
+      <div class="Login-row">
+        <div class="Login-checkbox">
+          <input type="checkbox" name="remember" checked/>
+          <label for="remember">Kom ihåg mig</label>
+        </div>
+        <div class="js-Login-forgot-password">
+          <a href="#" >Glömt ditt lösenord?</a>
+        </div>
+      </div>
+      <button class="js-Login-form-submit-btn" type="submit">Logga in</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+<!-- SIDA -->
 <section class="MyPages">
   <div class="MyPages-container">
 
     <div class="MyPages-information">
-      <div class="MyPages-information-column">
+      <div class="MyPages-info-col-main">
         <div class="MyPages-header">
           <h1 class="Heading-1">Mina uppgifter</h1>
         </div>
@@ -294,7 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p><span>Namn: </span><span class="u-bold">Tommy Nilsson</span></p>
           <p><span>Personnummer: </span><span class="u-bold">700702-1458</span></p>
           <p><span>Kundnummer: </span><span class="u-bold">AB17268763</span></p>
-          <button class="" type="submit">Ändra ditt lösenord</button>
+          <button class="js-MyPages-password-btn" type="button">Ändra ditt lösenord</button>
         </div>
 
         <div class="MyPages-block MyPages-block--settings">
@@ -302,13 +337,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <form name="MyPages-settingsForm" class="MyPages-settingsForm">
             <div class="MyPages-input-section">
-              <label class="u-block" for="phone">Mobiltelefon:</label>
-              <input class="" type="text" name="phone" required/>
-              <div class="MyPages-checkbox">
-                <input type="checkbox" name="remember" checked/>
-                <label for="remember">Ja tack, vinstbevakning via SMS</label>
-                <span class="Icon Icon--question js-MyPages-toggle-phone"></span>
-              </div>
+                <label class="u-block" for="phone">Mobiltelefon:</label>
+
+                <div class="MyPages-input-row">
+                  <input class="" type="text" name="phone" required/>
+                  <div class="MyPages-toggle-helpbox">
+                    <span class="Icon Icon--question js-MyPages-toggle-phone"></span>
+                  </div>
+                </div>
               <!-- HELP BOX -->
               <div class="js-MyPages-help-box--phone">
               <div class="Help-box">
@@ -329,14 +365,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <!-- END HELP BOX -->
             </div>
-            <!-- END MyPages-input-section -->
             <div class="MyPages-input-section">
               <label class="u-block" for="email">E-postadress:</label>
-              <input class="" type="email" name="email" required/>
-              <div class="MyPages-checkbox">
-                <input type="checkbox" name="remember" checked/>
-                <label for="remember">Ja tack, vinstbevakning via e-post</label>
-                <span class="Icon Icon--question js-MyPages-toggle-mail"></span>
+
+              <div class="MyPages-input-row">
+                <input class="" type="email" name="email" required/>
+                <div class="MyPages-toggle-helpbox">
+                  <span class="Icon Icon--question js-MyPages-toggle-mail"></span>
+                </div>
               </div>
               <!-- HELP BOX -->
               <div class="js-MyPages-help-box--mail">
@@ -358,21 +394,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <!-- END HELP BOX -->
             </div>
-            <!-- END MyPages-input-section -->
+            <div class="MyPages-input-section">
+            <h3 class="Heading-3">Välj standardvinst</h3>
+            <p>
+              Förklaringstext lorem ipsum doler sit amet Quisque tincidunt malesuada commodo.
+              Vestibulum accumsan sodales accumsan. Sed et interdum magna. Aenean vitae ipsum nibh. Sed egestas felis.
+            </p>
+            <h4 class="MyPages-select-heading">Vinstnivå 200 kr</h4>
+            <select class="MyPages-select" name="">
+                <option value="">Vinstnivå 1</option>
+                <option value="">Vinstnivå 2</option>
+                <option value="">Vinstnivå 3</option>
+                <option value="">Vinstnivå 4</option>
+            </select>
 
 
+            </div>
             <div class="u-center">
               <button class="" type="submit">Spara dina ändringar</button>
             </div>
           </form>
-
-
-
-
         </div>
       </div>
 
-      <div class="MyPages-information-column">
+      <div class="MyPages-info-col-side">
         <div class="MyPages-header">
           <h1 class="Heading-1">Betalningar</h1>
         </div>
@@ -381,20 +426,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="MyPages-block-section">
             <label>Obetalda fakturor</label>
             <div class="MyPages-block-row">
-              <span>2016-01-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+              <span>2016-01-25</span>
+              <span>200 SEK</span>
+              
             </div>
             <div class="MyPages-block-row">
-              <span>2016-01-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+              <span>2016-01-25</span>
+              <span>200 SEK</span>
+              
             </div>
           </div>
 
           <div class="MyPages-block-section">
             <label>Betalda fakturor</label>
             <div class="MyPages-block-row">
-              <span>2015-12-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+              <span>2015-12-25</span>
+              <span>200 SEK</span>
+              
+              </span>
             </div>
             <div class="MyPages-block-row">
-              <span>2015-12-25</span><span>200 SEK</span><span><a href="#">Ladda hem PDF</a></span>
+              <span>2015-12-25</span>
+              <span>200 SEK</span>
+              
             </div>
           </div>
         </div>

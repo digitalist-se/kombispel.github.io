@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ pageName }}</title>
-  <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">

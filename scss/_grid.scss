@@ -66,14 +66,14 @@ margin-right: $gutter/2;
     };
   }
 }
-
-
-@mixin flex-col($span, $col, $margin: 0) {
-  $percentage: percentage($span/$col);
-  flex-basis: calc(#{$percentage} - #{$margin});
+@mixin flex-col($span, $columns, $margin: 0) {
+  $percentage: percentage($span/$columns);
+  @if $columns != 1 {
+    flex-basis: calc(#{$percentage} - #{$margin});
+  } @else {
+    flex-basis: calc(#{$percentage});
+  }
 }
-
-
 
 /////////////////////////////////////////////
 // FLEX POSITION
