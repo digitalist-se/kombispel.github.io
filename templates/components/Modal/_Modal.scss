@@ -1,0 +1,60 @@
+.Modal-overlay-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: $transparent-grey;
+  display: none;
+}
+.Modal-clickarea {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+}
+.Modal-form-container {
+  background: white;
+  max-height: calc(100vh - 70px);
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  position: relative;
+  overflow: auto;
+  @include respond-to("medium") {
+    margin-top: 100px;
+    max-height: calc(100vh - 150px);
+  }
+}
+.Modal-close-form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 25px;
+  width: 25px;
+  background: url("../images/svg/close.svg") no-repeat center center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+.Modal-header {
+  color: $red;
+  margin: 0;
+  font-size: 22px;
+  @include breakpoint(768px) {
+    font-size: 32px;
+  }
+  text-align: center;
+  padding: 50px 0 10px 0;
+}
+.Modal-form {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}

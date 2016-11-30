@@ -1,0 +1,89 @@
+<section class="NotFound-container">
+
+<div class="NotFound-inner-container">
+
+  <div class="NotFound-lottery-container">
+    <!-- NUMBER -->
+    <div class="NotFound-col NotFound-col--first">
+      <div class="NotFound-col-numbers">
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>0</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>0</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
+    </div>
+    <!-- NUMBER -->
+    <div class="NotFound-col NotFound-col--second">
+      <div class="NotFound-col-numbers">
+        <span>0</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>0</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+      </div>
+    </div>
+    <!-- NUMBER -->
+    <div class="NotFound-col NotFound-col--third">
+      <div class="NotFound-col-numbers">
+        <div class="NotFound-col-numbers">
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>0</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>0</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="NotFound-Message-container">
+    <h1>Sidan kunde tyvärr inte hittas</h1>
+    <a class="" href="#">Tillbaka till startsidan</a>
+  </div>
+</div>
+</section>

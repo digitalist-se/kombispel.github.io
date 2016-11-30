@@ -60,6 +60,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li><a href="winners.html">Lista vinnare</a></li>
               <li><a href="winner.html">Möt en vinnare</a></li>
               <li><a href="page.html">Innehållssida</a></li>
+              <li><a href="404.html">404</a></li>
             </ul>
           </li>
           <!-- ITEM -->
@@ -279,41 +280,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
-<!-- POP-UP FÖR ATT ÄNDRA LÖSENORD -->
-
-<section class="js-MyPages-overlay-container">
-  <div class="js-MyPages-clickarea"></div>
-  <div class="MyPages-form-container">
+<!-- POP-UP MODAL FOR CHANGE PASSWORD -->
+<section class="js-MyPages-pswrd-overlay-container">
+  <div class="js-MyPages-pswrd-clickarea"></div>
+  <div class="MyPages-pswrd-form-container">
     <div class="js-MyPages-close-form"></div>
     <h2 class="">Ändra lösenord</h2>
-    <form name="Login-form" class="Login-form">
-      <!-- INPUT SECTION -->
-      <div class="Login-input-section">
-        <label class="Login-label--block" for="username">Kundnummer eller e-postadress</label>
-        <input class="Login-input js-Login-input-username" type="text" name="username" required/>
-        <div class="js-Login-username-toggle js-Login-question-icon"></div>
-        <p class="js-Login-username-message"></p>
-      </div>
-      <!-- END -->
-
-
-      <div class="Login-row">
-        <div class="Login-checkbox">
-          <input type="checkbox" name="remember" checked/>
-          <label for="remember">Kom ihåg mig</label>
-        </div>
-        <div class="js-Login-forgot-password">
-          <a href="#" >Glömt ditt lösenord?</a>
-        </div>
-      </div>
-      <button class="js-Login-form-submit-btn" type="submit">Logga in</button>
+    <form name="MyPages-pswrd-form" class="MyPages-pswrd-form">
+        <label for="current-password">Ange ditt nuvarande lösenord</label>
+        <input type="password" name="current-password" required/>
+        <label for="username">Ange ditt nya lösenord</label>
+        <input class="js-MyPages-new-pswrd" type="password" name="new-password" required/>
+        <span class="js-MyPages-new-pswrd-status"></span>
+        <label class="" for="username">Ange ditt nya lösenord igen</label>
+        <input class="js-MyPages-repeat-pswrd" type="password" name="repeat-password" required/>
+        <span class="js-MyPages-new-pswrd-match"></span>
+        <p>Lösenordet måste vara minst 6 tecken långt</p>
+      <button class="" type="submit">Spara ditt nya lösenord</button>
     </form>
   </div>
 </section>
-
-
-
-
 <!-- SIDA -->
 <section class="MyPages">
   <div class="MyPages-container">
@@ -400,6 +386,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Förklaringstext lorem ipsum doler sit amet Quisque tincidunt malesuada commodo.
               Vestibulum accumsan sodales accumsan. Sed et interdum magna. Aenean vitae ipsum nibh. Sed egestas felis.
             </p>
+            <h4 class="MyPages-select-heading">Vinstnivå 500 kr</h4>
+            <select class="MyPages-select" name="">
+                <option value="">Vinstnivå 1</option>
+                <option value="">Vinstnivå 2</option>
+                <option value="">Vinstnivå 3</option>
+                <option value="">Vinstnivå 4</option>
+            </select>
             <h4 class="MyPages-select-heading">Vinstnivå 200 kr</h4>
             <select class="MyPages-select" name="">
                 <option value="">Vinstnivå 1</option>

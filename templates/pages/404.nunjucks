@@ -1,0 +1,5 @@
+{% set pageName = "404 - Sidan kunde inte hittas" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/404/404.nunjucks" %}
+{% endblock %} 

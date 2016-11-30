@@ -77,12 +77,6 @@ $small-spinner: 30px;
   animation: rotate-bg 20s linear infinite;
 }
 
-
-
-
-
-
-
 .Lottery-mynumber-container {
   max-width: $lotteryRowWidth;
   margin: 0 auto;
@@ -208,7 +202,7 @@ $mynumber-size: 80px;
   }
 }
 .js-Lottery-number--spinning {
-  animation: spinning 1.7s linear infinite;
+  animation: spinning 1.7s linear  infinite;
   div {
     color: darken($grey,30%) !important;
   }

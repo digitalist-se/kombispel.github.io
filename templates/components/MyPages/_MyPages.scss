@@ -2,11 +2,9 @@
   background-color: $lighter-grey;
   padding-bottom: 100px;
 }
-
 .MyPages-container {
   @extend .Inner-container;
 }
-
 /////////////////////////////////////////////
 // HEADER
 /////////////////////////////////////////////
@@ -37,9 +35,6 @@
     margin-left: $base-margin;
   }
 }
-
-
-
 
 .MyPages-block {
   background-color: #fff;
@@ -94,21 +89,16 @@
       position: static;
     }
   }
-
-
 }
-
 .MyPages-block-title {
   display: inline-block;
   border-bottom: 1px solid $dark-grey;
   padding-bottom: 10px;
 }
-
 .MyPages-toggle-helpbox {
   position: relative;
   height: 25px;
 }
-
 .MyPages-block-section {
   &:first-child {
     margin-bottom: 30px;
@@ -119,21 +109,14 @@
     margin-bottom: 10px;
   }
 }
-
 .MyPages-block-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-
   a {
     @extend .Arrow-link;
   }
 }
-/////////////////////////////////////////////
-// PRODUCT IMAGE
-/////////////////////////////////////////////
-
-
 /////////////////////////////////////////////
 // LINKS
 /////////////////////////////////////////////
@@ -160,6 +143,7 @@
 /////////////////////////////////////////////
 .MyPages-select-heading {
   color: $label-grey;
+  margin: 2*$base-margin 0 10px 0;
 }
 .MyPages-select {
   cursor: pointer;
@@ -174,5 +158,35 @@
   background-position: calc(100% - #{$base-margin});
   background-repeat: no-repeat;
   background-size: 20px 30px;
+}
+/////////////////////////////////////////////
+// CHANGE PASSWORD MODAL
+/////////////////////////////////////////////
+.js-MyPages-pswrd-overlay-container {
+  @extend .Modal-overlay-container;
+}
+.js-MyPages-pswrd-clickarea {
+  @extend .Modal-clickarea;
+}
+.MyPages-pswrd-form-container {
+  @extend .Modal-form-container;
+  h2 {
+    text-align: center;
+    @extend .Modal-header;
+  }
+}
+.js-MyPages-close-form {
+  @extend .Modal-close-form;
+}
+.MyPages-pswrd-form {
+  @extend .Modal-form;
 
+  label {
+    margin-top: 25px;
+    display: block;
+  }
+  button {
+    @include gradient-btn($orange);
+    margin-bottom: 3*$base-margin;
+  }
 }
