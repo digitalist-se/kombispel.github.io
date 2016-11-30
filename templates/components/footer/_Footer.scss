@@ -31,7 +31,7 @@
   .Footer-box-col--image {
       span {
         color: transparent;
-        background: url("../images/svg/footer/stamp.svg") no-repeat;
+        background: url("./images/svg/footer/stamp.svg") no-repeat;
         height: 50px;
         width: 50px;
         display: block;
@@ -124,10 +124,10 @@
     }
   }
   .Footer-follow-item--facebook {
-    @include media-btn("../images/svg/footer/facebook.svg",$facebook-blue);
+    @include media-btn("./images/svg/footer/facebook.svg",$facebook-blue);
   }
   .Footer-follow-item--youtube {
-    @include media-btn("../images/svg/footer/youtube.svg",$youtube-red);
+    @include media-btn("./images/svg/footer/youtube.svg",$youtube-red);
   }
 }
 /////////////////////////////////////////////
@@ -171,8 +171,8 @@
   background-position: center center;
 }
 .Footer-logo--lottery-inspection {
-  background-image: url("../images/svg/footer/lotteryinspection-logo.svg");
+  background-image: url("./images/svg/footer/lotteryinspection-logo.svg");
 }
 .Footer-logo--gamble {
-  background-image: url("../images/svg/footer/gamble.svg") ;
+  background-image: url("./images/svg/footer/gamble.svg") ;
 }

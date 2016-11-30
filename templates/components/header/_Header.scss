@@ -258,7 +258,7 @@ $cubic-bezier2:        cubic-bezier(0.55, 0.055, 0.675, 0.19);
 // LOGO
 /////////////////////////////////////////////
 .Header-kombo-logo {
-  background: url("../images/svg/logos/logo.svg") no-repeat center center;
+  background: url("./images/svg/logos/logo.svg") no-repeat center center;
   height: 45px;
   width: 95%;
   margin: 0 auto;
@@ -278,7 +278,7 @@ $cubic-bezier2:        cubic-bezier(0.55, 0.055, 0.675, 0.19);
 .Header-profile-image {
 margin: 0 auto;
 margin-top: 0px;
-background: url("../images/svg/profile-icon-red.svg") no-repeat center center;
+background: url("./images/svg/profile-icon-red.svg") no-repeat center center;
 height: $menuSize+3px; //  Compensate for the menus 3+3px border
 width: 22px;
 // width: 100%;
@@ -318,7 +318,7 @@ width: 22px;
   position: relative;
   @include headerBorders($dark-red, null);
   .Header-profile-image {
-    background-image: url("../images/svg/profile-icon-white.svg");
+    background-image: url("./images/svg/profile-icon-white.svg");
   }
   .Header-title h3 {
     color: white;

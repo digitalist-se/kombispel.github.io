@@ -35,7 +35,7 @@
   margin: 0 auto;
   position: relative;
   &:after {
-    background: url("../images/svg/shadow-border.svg") no-repeat;
+    background: url("./images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -116,7 +116,7 @@
   }
 }
 .Tickets-ticket--kombi {
-  background-image: url("../images/svg/tickets/ticket-kombi.svg");
+  background-image: url("./images/svg/tickets/ticket-kombi.svg");
   .Tickets-ticket-number {
     color: $lottery-blue;
   }
@@ -125,7 +125,7 @@
   }
 }
 .Tickets-ticket--motor {
-  background-image: url("../images/svg/tickets/ticket-motor.svg") ;
+  background-image: url("./images/svg/tickets/ticket-motor.svg") ;
   .Tickets-ticket-number {
     color: black;
   }
@@ -134,7 +134,7 @@
   }
 }
 .Tickets-ticket--dream {
-  background-image: url("../images/svg/tickets/ticket-dream.svg");
+  background-image: url("./images/svg/tickets/ticket-dream.svg");
   .Tickets-ticket-number {
     color: $lottery-blue;
   }
@@ -166,31 +166,31 @@
 }
 .Tickets-ticket--kombi,.Tickets-ticket--dream  {
   .Tickets-ticket-ribbon {
-    background-image: url("../images/svg/tickets/ribbon-blue.svg");
+    background-image: url("./images/svg/tickets/ribbon-blue.svg");
   }
 }
 .Tickets-ticket--motor {
   .Tickets-ticket-ribbon {
-    background-image: url("../images/svg/tickets/ribbon-black.svg");
+    background-image: url("./images/svg/tickets/ribbon-black.svg");
   }
 }
 /////////////////////////////////////////////
 // VINSTLOTTER
 /////////////////////////////////////////////
 .Tickets-ticket--kombi-win {
-  background-image: url("../images/svg/tickets/winning-ticket-kombi.svg");
+  background-image: url("./images/svg/tickets/winning-ticket-kombi.svg");
   .Tickets-ticket-number {
     color: $lottery-blue;
   }
 }
 .Tickets-ticket--dream-win {
-  background-image: url("../images/svg/tickets/winning-ticket-dream.svg");
+  background-image: url("./images/svg/tickets/winning-ticket-dream.svg");
   .Tickets-ticket-number {
     color: $lottery-blue;
   }
 }
 .Tickets-ticket--motor-win {
-  background-image: url("../images/svg/tickets/winning-ticket-motor.svg");
+  background-image: url("./images/svg/tickets/winning-ticket-motor.svg");
 }
 
 .Tickets-winning-ticket-header {
@@ -216,19 +216,19 @@
 // NITLOTTER
 /////////////////////////////////////////////
 .Tickets-ticket--kombi-lose {
-  background-image: url("../images/svg/tickets/lose-ticket-kombi.svg");
+  background-image: url("./images/svg/tickets/lose-ticket-kombi.svg");
   .Tickets-ticket-number {
     color: white;
   }
 }
 .Tickets-ticket--dream-lose {
-  background-image: url("../images/svg/tickets/lose-ticket-dream.svg");
+  background-image: url("./images/svg/tickets/lose-ticket-dream.svg");
   .Tickets-ticket-number {
     color: white;
   }
 }
 .Tickets-ticket--motor-lose {
-  background-image: url("../images/svg/tickets/lose-ticket-motor.svg");
+  background-image: url("./images/svg/tickets/lose-ticket-motor.svg");
   .Tickets-ticket-number {
     color: white;
   }
