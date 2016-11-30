@@ -58,7 +58,7 @@ input[type="checkbox"] {
 
   &:checked {
     &:after {
-      background: $green url("./images/svg/check.svg") center center no-repeat;
+      background: $green url("../images/svg/check.svg") center center no-repeat;
       background-size: 90%;
     }
   }

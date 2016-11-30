@@ -35,7 +35,7 @@ right: 10px;
 top: 10px;
 height: 25px;
 width: 25px;
-background: url("./images/svg/close.svg") no-repeat center center;
+background: url("../images/svg/close.svg") no-repeat center center;
 cursor: pointer;
 transition: all 0.3s ease;
 &:hover {
@@ -102,14 +102,14 @@ transition: all 0.3s ease;
   transition: all .2s ease;
 }
 .js-Login-question-icon {
-  background: url("./images/svg/login-question.svg") no-repeat center center;
+  background: url("../images/svg/login-question.svg") no-repeat center center;
 }
 .js-Login-error-icon {
-  background: url("./images/svg/login-error.svg") no-repeat center center;
+  background: url("../images/svg/login-error.svg") no-repeat center center;
 }
 
 .js-Login-check-icon {
-  background: url("./images/svg/login-valid.svg") no-repeat center center;
+  background: url("../images/svg/login-valid.svg") no-repeat center center;
 }
 
   .js-Login-reset-password-btn {

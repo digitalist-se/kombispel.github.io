@@ -49,7 +49,7 @@ $small-spinner: 30px;
   animation: lottery-spinner 1s linear infinite;
   width: $small-spinner;
   background-size: cover;
-  background:url("./images/svg/spinners/spinner-small.svg") no-repeat center center;
+  background:url("../images/svg/spinners/spinner-small.svg") no-repeat center center;
 }
 /////////////////////////////////////////////
 // Rotating backgrounds
@@ -69,7 +69,7 @@ $small-spinner: 30px;
   height: 400%;
   top: -150%;
   left: -50%;
-  background:url("./images/svg/starburst.svg") no-repeat center center;
+  background:url("../images/svg/starburst.svg") no-repeat center center;
   background-size: cover;
 }
 
@@ -131,7 +131,7 @@ $mynumber-size: 80px;
   .Lottery-mynumber-logo {
     position: relative;
     z-index: 2;
-    background: url("./images/svg/kombi.svg") no-repeat center center;
+    background: url("../images/svg/kombi.svg") no-repeat center center;
     height: $mynumber-size;
     width: $mynumber-size;
     margin-right: 30px;
@@ -309,7 +309,7 @@ position: relative;
   right: 0;
   margin: 0 auto;
   background-size: cover;
-  background:url("./images/svg/spinners/spinner-big.svg") no-repeat center center;
+  background:url("../images/svg/spinners/spinner-big.svg") no-repeat center center;
 }
 /////////////////////////////////////////////
 // COLLECT WINNINGS LINKS

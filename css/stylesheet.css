@@ -454,7 +454,7 @@ template {
   position: relative;
   display: inline-block; }
   .Arrow-link:before, .Logo-row-links a:before, .Promo-box--winner .Promo-box-link a:before, .Footer-box--second .Footer-link:before, .MyPages-block-row a:before, .MyPages-show-list-link:before {
-    background: url("./images/svg/red-arrows.svg") center center no-repeat;
+    background: url("../images/svg/red-arrows.svg") center center no-repeat;
     position: absolute;
     height: 13px;
     width: 13px;
@@ -527,7 +527,7 @@ input[type="checkbox"] {
     background-color: white;
     border: 1px solid #b3b3b3; }
   input[type="checkbox"]:checked:after {
-    background: #8cc841 url("./images/svg/check.svg") center center no-repeat;
+    background: #8cc841 url("../images/svg/check.svg") center center no-repeat;
     background-size: 90%; }
 
 .Standard-form h3 {
@@ -620,7 +620,7 @@ blockquote {
   padding: 30px 30px 30px 60px;
   position: relative; }
   blockquote:before {
-    background: url("./images/svg/quote.svg");
+    background: url("../images/svg/quote.svg");
     content: '';
     position: absolute;
     height: 30px;
@@ -683,7 +683,7 @@ img {
     background: linear-gradient(#af2129 45%, #991d24 54%);
     text-decoration: none; }
   .Fullwidth-buy-link:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -750,7 +750,7 @@ img {
           animation: lottery-spinner 1s linear infinite;
   width: 30px;
   background-size: cover;
-  background: url("./images/svg/spinners/spinner-small.svg") no-repeat center center; }
+  background: url("../images/svg/spinners/spinner-small.svg") no-repeat center center; }
 
 @-webkit-keyframes rotate-bg {
   from {
@@ -775,7 +775,7 @@ img {
   height: 400%;
   top: -150%;
   left: -50%;
-  background: url("./images/svg/starburst.svg") no-repeat center center;
+  background: url("../images/svg/starburst.svg") no-repeat center center;
   background-size: cover; }
 
 .Lottery-rotate-bg {
@@ -828,7 +828,7 @@ img {
   .Lottery-mynumber-number-container .Lottery-mynumber-logo {
     position: relative;
     z-index: 2;
-    background: url("./images/svg/kombi.svg") no-repeat center center;
+    background: url("../images/svg/kombi.svg") no-repeat center center;
     height: 80px;
     width: 80px;
     margin-right: 30px; }
@@ -977,7 +977,7 @@ img {
     background: linear-gradient(#7fba36 45%, #72a630 54%);
     text-decoration: none; }
   .js-Start-lottery-btn:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -1022,7 +1022,7 @@ img {
   right: 0;
   margin: 0 auto;
   background-size: cover;
-  background: url("./images/svg/spinners/spinner-big.svg") no-repeat center center; }
+  background: url("../images/svg/spinners/spinner-big.svg") no-repeat center center; }
 
 .js-Lottery-winnings-links {
   margin: 0 auto;
@@ -1059,7 +1059,7 @@ img {
     background: linear-gradient(#e69100 45%, #cc8100 54%);
     text-decoration: none; }
   [class*="Lottery-container--kombi"] .js-Lottery-winnings-links a:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -1092,7 +1092,7 @@ img {
     background: linear-gradient(#7fba36 45%, #72a630 54%);
     text-decoration: none; }
   [class*="Lottery-container--dream"] .js-Lottery-winnings-links a:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -1125,7 +1125,7 @@ img {
     background: linear-gradient(#af2129 45%, #991d24 54%);
     text-decoration: none; }
   [class*="Lottery-container--motor"] .js-Lottery-winnings-links a:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -1409,7 +1409,7 @@ img {
   color: white; }
 
 .Header-kombo-logo {
-  background: url("./images/svg/logos/logo.svg") no-repeat center center;
+  background: url("../images/svg/logos/logo.svg") no-repeat center center;
   height: 45px;
   width: 95%;
   margin: 0 auto;
@@ -1425,7 +1425,7 @@ img {
 .Header-profile-image {
   margin: 0 auto;
   margin-top: 0px;
-  background: url("./images/svg/profile-icon-red.svg") no-repeat center center;
+  background: url("../images/svg/profile-icon-red.svg") no-repeat center center;
   height: 36px;
   width: 22px; }
 
@@ -1506,7 +1506,7 @@ img {
           height: 20px;
           bottom: -15px; } }
     .Header-container.Logged-in .Header-flex--three .Header-profile-image {
-      background-image: url("./images/svg/profile-icon-white.svg"); }
+      background-image: url("../images/svg/profile-icon-white.svg"); }
     .Header-container.Logged-in .Header-flex--three .Header-title h3 {
       color: white; }
   .Header-container.Logged-in .Header-flex--four {
@@ -1593,7 +1593,7 @@ menu {
   border-bottom: 1px solid #820f1c; }
 
 .Menu-icon--lock {
-  background-image: url("./images/svg/lock.svg");
+  background-image: url("../images/svg/lock.svg");
   width: 25px;
   height: 25px;
   margin-top: 3px; }
@@ -1647,7 +1647,7 @@ menu {
             transform: rotate(90deg); }
 
 .Menu-icon--arrow {
-  background-image: url("./images/svg/menu-arrow.svg");
+  background-image: url("../images/svg/menu-arrow.svg");
   width: 20px;
   height: 20px;
   margin-top: 5px; }
@@ -1846,7 +1846,7 @@ menu {
     background: linear-gradient(#e69100 45%, #cc8100 54%);
     text-decoration: none; }
   .Hero-box--kombi .Hero-box-button:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -1882,7 +1882,7 @@ menu {
     background: linear-gradient(#7fba36 45%, #72a630 54%);
     text-decoration: none; }
   .Hero-box--dream .Hero-box-button:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -1918,7 +1918,7 @@ menu {
     background: linear-gradient(#af2129 45%, #991d24 54%);
     text-decoration: none; }
   .Hero-box--motor .Hero-box-button:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -2036,7 +2036,7 @@ menu {
     background: linear-gradient(#af2129 45%, #991d24 54%);
     text-decoration: none; }
   .Promo-box--correct-ticket .Promo-box-button:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -2077,7 +2077,7 @@ menu {
   color: transparent; }
 
 .Promo-box--campaign {
-  background: url("./images/promo/promo_background.png") no-repeat center center;
+  background: url("../images/promo/promo_background.png") no-repeat center center;
   background-color: white; }
   .Promo-box--campaign .Promo-box-title {
     margin-bottom: 5px; }
@@ -2107,7 +2107,7 @@ menu {
       background: linear-gradient(#e69100 45%, #cc8100 54%);
       text-decoration: none; }
     .Promo-box--campaign .Promo-box-button:after {
-      background: url("./images/svg/shadow-border.svg") no-repeat;
+      background: url("../images/svg/shadow-border.svg") no-repeat;
       background-size: contain;
       position: absolute;
       height: 10px;
@@ -2185,7 +2185,7 @@ menu {
   top: 10px;
   height: 25px;
   width: 25px;
-  background: url("./images/svg/close.svg") no-repeat center center;
+  background: url("../images/svg/close.svg") no-repeat center center;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
@@ -2237,11 +2237,11 @@ menu {
       .Login-form .js-Login-username-toggle, .Login-form .js-Login-password-toggle {
         top: 45px; } }
   .Login-form .js-Login-question-icon {
-    background: url("./images/svg/login-question.svg") no-repeat center center; }
+    background: url("../images/svg/login-question.svg") no-repeat center center; }
   .Login-form .js-Login-error-icon {
-    background: url("./images/svg/login-error.svg") no-repeat center center; }
+    background: url("../images/svg/login-error.svg") no-repeat center center; }
   .Login-form .js-Login-check-icon {
-    background: url("./images/svg/login-valid.svg") no-repeat center center; }
+    background: url("../images/svg/login-valid.svg") no-repeat center center; }
   .Login-form .js-Login-reset-password-btn {
     text-transform: uppercase;
     cursor: pointer;
@@ -2362,7 +2362,7 @@ menu {
       background: linear-gradient(#af2129 45%, #991d24 54%);
       text-decoration: none; }
     .Login-form .js-Login-form-submit-btn:after {
-      background: url("./images/svg/shadow-border.svg") no-repeat;
+      background: url("../images/svg/shadow-border.svg") no-repeat;
       background-size: contain;
       position: absolute;
       height: 10px;
@@ -2433,7 +2433,7 @@ menu {
   margin: 0 auto;
   position: relative; }
   .Tickets-ticket:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -2495,7 +2495,7 @@ menu {
         width: 160px; } }
 
 .Tickets-ticket--kombi {
-  background-image: url("./images/svg/tickets/ticket-kombi.svg"); }
+  background-image: url("../images/svg/tickets/ticket-kombi.svg"); }
   .Tickets-ticket--kombi .Tickets-ticket-number {
     color: #0064a0; }
   .Tickets-ticket--kombi .Tickets-ticket-link {
@@ -2505,7 +2505,7 @@ menu {
       background-color: white; }
 
 .Tickets-ticket--motor {
-  background-image: url("./images/svg/tickets/ticket-motor.svg"); }
+  background-image: url("../images/svg/tickets/ticket-motor.svg"); }
   .Tickets-ticket--motor .Tickets-ticket-number {
     color: black; }
   .Tickets-ticket--motor .Tickets-ticket-link {
@@ -2515,7 +2515,7 @@ menu {
       background-color: white; }
 
 .Tickets-ticket--dream {
-  background-image: url("./images/svg/tickets/ticket-dream.svg"); }
+  background-image: url("../images/svg/tickets/ticket-dream.svg"); }
   .Tickets-ticket--dream .Tickets-ticket-number {
     color: #0064a0; }
   .Tickets-ticket--dream .Tickets-ticket-link {
@@ -2544,23 +2544,23 @@ menu {
       width: 200px; } }
 
 .Tickets-ticket--kombi .Tickets-ticket-ribbon, .Tickets-ticket--dream .Tickets-ticket-ribbon {
-  background-image: url("./images/svg/tickets/ribbon-blue.svg"); }
+  background-image: url("../images/svg/tickets/ribbon-blue.svg"); }
 
 .Tickets-ticket--motor .Tickets-ticket-ribbon {
-  background-image: url("./images/svg/tickets/ribbon-black.svg"); }
+  background-image: url("../images/svg/tickets/ribbon-black.svg"); }
 
 .Tickets-ticket--kombi-win {
-  background-image: url("./images/svg/tickets/winning-ticket-kombi.svg"); }
+  background-image: url("../images/svg/tickets/winning-ticket-kombi.svg"); }
   .Tickets-ticket--kombi-win .Tickets-ticket-number {
     color: #0064a0; }
 
 .Tickets-ticket--dream-win {
-  background-image: url("./images/svg/tickets/winning-ticket-dream.svg"); }
+  background-image: url("../images/svg/tickets/winning-ticket-dream.svg"); }
   .Tickets-ticket--dream-win .Tickets-ticket-number {
     color: #0064a0; }
 
 .Tickets-ticket--motor-win {
-  background-image: url("./images/svg/tickets/winning-ticket-motor.svg"); }
+  background-image: url("../images/svg/tickets/winning-ticket-motor.svg"); }
 
 .Tickets-winning-ticket-header {
   text-align: center;
@@ -2590,7 +2590,7 @@ menu {
     background: linear-gradient(#e69100 45%, #cc8100 54%);
     text-decoration: none; }
   .Tickets-winning-ticket-link--kombi:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -2623,7 +2623,7 @@ menu {
     background: linear-gradient(#af2129 45%, #991d24 54%);
     text-decoration: none; }
   .Tickets-winning-ticket-link--motor:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -2656,7 +2656,7 @@ menu {
     background: linear-gradient(#7fba36 45%, #72a630 54%);
     text-decoration: none; }
   .Tickets-winning-ticket-link--dream:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -2667,17 +2667,17 @@ menu {
     right: 0; }
 
 .Tickets-ticket--kombi-lose {
-  background-image: url("./images/svg/tickets/lose-ticket-kombi.svg"); }
+  background-image: url("../images/svg/tickets/lose-ticket-kombi.svg"); }
   .Tickets-ticket--kombi-lose .Tickets-ticket-number {
     color: white; }
 
 .Tickets-ticket--dream-lose {
-  background-image: url("./images/svg/tickets/lose-ticket-dream.svg"); }
+  background-image: url("../images/svg/tickets/lose-ticket-dream.svg"); }
   .Tickets-ticket--dream-lose .Tickets-ticket-number {
     color: white; }
 
 .Tickets-ticket--motor-lose {
-  background-image: url("./images/svg/tickets/lose-ticket-motor.svg"); }
+  background-image: url("../images/svg/tickets/lose-ticket-motor.svg"); }
   .Tickets-ticket--motor-lose .Tickets-ticket-number {
     color: white; }
 
@@ -2741,7 +2741,7 @@ menu {
             flex-direction: row; }
   .Footer-box--first .Footer-box-col--image span {
     color: transparent;
-    background: url("./images/svg/footer/stamp.svg") no-repeat;
+    background: url("../images/svg/footer/stamp.svg") no-repeat;
     height: 50px;
     width: 50px;
     display: block; }
@@ -2840,7 +2840,7 @@ menu {
   .Footer-box--third .Footer-follow-item--facebook {
     background-color: #3b5998; }
     .Footer-box--third .Footer-follow-item--facebook span:before {
-      background-image: url("./images/svg/footer/facebook.svg");
+      background-image: url("../images/svg/footer/facebook.svg");
       background-position: center center;
       content: "";
       position: absolute;
@@ -2853,7 +2853,7 @@ menu {
   .Footer-box--third .Footer-follow-item--youtube {
     background-color: #cd201f; }
     .Footer-box--third .Footer-follow-item--youtube span:before {
-      background-image: url("./images/svg/footer/youtube.svg");
+      background-image: url("../images/svg/footer/youtube.svg");
       background-position: center center;
       content: "";
       position: absolute;
@@ -2922,10 +2922,10 @@ menu {
         margin-right: 0; } }
 
 .Footer-logo--lottery-inspection {
-  background-image: url("./images/svg/footer/lotteryinspection-logo.svg"); }
+  background-image: url("../images/svg/footer/lotteryinspection-logo.svg"); }
 
 .Footer-logo--gamble {
-  background-image: url("./images/svg/footer/gamble.svg"); }
+  background-image: url("../images/svg/footer/gamble.svg"); }
 
 .Submenu {
   background-color: #c4252e; }
@@ -3189,7 +3189,7 @@ menu {
   right: 10px; }
 
 .Icon--question {
-  background-image: url("./images/svg/login-question.svg"); }
+  background-image: url("../images/svg/login-question.svg"); }
 
 .Page {
   background-color: #F2F2F2;
@@ -3320,7 +3320,7 @@ menu {
     background: linear-gradient(#af2129 45%, #991d24 54%);
     text-decoration: none; }
   .Page-buy-ticket:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -3401,10 +3401,10 @@ menu {
     left: 0; }
 
 .Help-box-contact-phone:before {
-  background: url("./images/svg/phone.svg") no-repeat center center; }
+  background: url("../images/svg/phone.svg") no-repeat center center; }
 
 .Help-box-contact-mail:before {
-  background: url("./images/svg/mail.svg") no-repeat center center; }
+  background: url("../images/svg/mail.svg") no-repeat center center; }
 
 .Winners-container {
   padding: 30px 0;
@@ -3553,7 +3553,7 @@ menu {
 .Winners-winner--dream {
   background-color: #8cc841; }
   .Winners-winner--dream .Winners-winner-logo {
-    background-image: url("./images/svg/logos/dromrese.svg"); }
+    background-image: url("../images/svg/logos/dromrese.svg"); }
   .Winners-winner--dream .Winners-winner-content-inner a {
     text-transform: uppercase;
     cursor: pointer;
@@ -3575,7 +3575,7 @@ menu {
 .Winners-winner--kombi {
   background-color: #ffa100; }
   .Winners-winner--kombi .Winners-winner-logo {
-    background-image: url("./images/svg/logos/kombi.svg"); }
+    background-image: url("../images/svg/logos/kombi.svg"); }
   .Winners-winner--kombi .Winners-winner-content-inner a {
     text-transform: uppercase;
     cursor: pointer;
@@ -3597,7 +3597,7 @@ menu {
 .Winners-winner--motor {
   background-color: #c4252e; }
   .Winners-winner--motor .Winners-winner-logo {
-    background-image: url("./images/svg/logos/motor.svg"); }
+    background-image: url("../images/svg/logos/motor.svg"); }
   .Winners-winner--motor .Winners-winner-content-inner a {
     text-transform: uppercase;
     cursor: pointer;
@@ -3683,7 +3683,7 @@ menu {
     display: inline-block;
     margin: 0 auto; }
     .Winner-quote span:before {
-      background: url("./images/svg/quote.svg");
+      background: url("../images/svg/quote.svg");
       content: '';
       position: absolute;
       height: 30px;
@@ -3749,7 +3749,7 @@ menu {
     background: linear-gradient(#7fba36 45%, #72a630 54%);
     text-decoration: none; }
   .Winner-container--dream .Fullwidth-buy-link:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -3785,7 +3785,7 @@ menu {
     background: linear-gradient(#e69100 45%, #cc8100 54%);
     text-decoration: none; }
   .Winner-container--kombi .Fullwidth-buy-link:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
@@ -3821,7 +3821,7 @@ menu {
     background: linear-gradient(#af2129 45%, #991d24 54%);
     text-decoration: none; }
   .Winner-container--motor .Fullwidth-buy-link:after {
-    background: url("./images/svg/shadow-border.svg") no-repeat;
+    background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
     height: 10px;
