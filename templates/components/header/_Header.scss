@@ -1,6 +1,5 @@
-$menuSize: 33px;
+$menuSize: 37px;
 $menuBorder: 2px solid rgb(214,214,214);
-
 .Header-container {
 width: 100%;
 background-color: white;
@@ -21,7 +20,6 @@ border-bottom: 15px solid $orange;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-height: 95px;
 }
 
 /////////////////////////////////////////////
@@ -76,7 +74,6 @@ border-bottom: 15px solid $orange;
 /////////////////////////////////////////////
 .Header-title {
   min-width: 35px;
-
   @include breakpoint(768px) {
     margin-left: 10px;
     @include flex-position(center);
@@ -154,7 +151,6 @@ border-bottom: 15px solid $orange;
   &.Burger--open {
     background-color: $red;
     @include headerBorders($red, true);
-
   }
 }
 .Header-menu-circle {
@@ -163,96 +159,77 @@ border-bottom: 15px solid $orange;
   border-radius: 50%;
   margin: 0 auto;
   border: 3px solid $red;
-  @extend .Flex-center;
+  @include flex-position(center);
 }
-/////////////////////////////////////////////
-// MENU BURGER
-/////////////////////////////////////////////
-$hamburger-layer-height                    : 3px !default;
-$hamburger-layer-spacing                   : 4px !default;
-$hamburger-layer-color                     : #000 !default;
-$hamburger-layer-border-radius             : 4px !default;
-$cubic-bezier:        cubic-bezier(0.215, 0.61, 0.355, 1);
-$cubic-bezier2:        cubic-bezier(0.55, 0.055, 0.675, 0.19);
-// $cubic-bezier:        all .2s ease;
-// $cubic-bezier2:        all .2s ease;
-
-
-
-.Header-hamburger-outer {
-  width: 65%;
-  transition-property: opacity, filter;
-  transition-duration: .15s;
-  transition-timing-function: linear;
-  position: relative;
-  .Header-hamburger-inner{
-    transition-duration: 0.1s;
-    transition-timing-function: $cubic-bezier2;
-  }
+//////////////////////////////////////////
+///////// HAMBURGER
+//////////////////////////////////////////
+$lineThick: 3px;
+$burger-radius: 4px;
+.Burger-outer {
+    z-index: 999;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    perspective: 40px;
 }
-.Header-hamburger-inner {
-  top: -1.5px;
-  &,
-  &::before,
-  &::after {
-    width: 100%;
-    height: $hamburger-layer-height;
-    background-color: $red;
-    border-radius: $hamburger-layer-border-radius;
+.Burger-inner {
+    position: relative;
+    transform: translate3d(0,0,0);
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    transition: transform 0.4s ease-out;
+    transform: translate3d(0,0,0);
+}
+.Burger {
     position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-  }
-  &::before {
-    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-    transition: top 0.1s 0.14s ease,
-    opacity 0.1s ease;
-  }
-  &::after {
-    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-    transition: bottom 0.1s 0.14s ease,
-    transform 0.1s $cubic-bezier2;
-  }
-}
-/*********** OPEN BURGER ************/
-.Burger--open {
-  .Header-hamburger-inner {
-    transform: rotate(45deg);
-    transition-delay: 0.14s;
-    transition-timing-function: $cubic-bezier;
-    background-color: white;
-    &::before {
-      top: 0;
-      opacity: 0;
-      transition: top 0.1s ease,
-      opacity 0.1s 0.14s ease;
-      background-color: white;
-
+    height: $lineThick;
+    top: 11px;
+    width: 100%;
+    border-radius: $burger-radius;
+    background-color: $red;
+    transition: all 0.3s ease-in;
+    &:before, &:after {
+      background-color: $red;
+      position: absolute;
+      content: "";
+      border-radius: $burger-radius;
+      height: $lineThick;
+      width: 100%;
+      right: 0;
+      transition: transform 0.5s cubic-bezier(0.6,0,.4,1);
     }
-    &::after {
-      bottom: 0;
-      transform: rotate(-90deg);
-      transition: bottom 0.1s ease,
-      transform 0.1s 0.14s $cubic-bezier;
-      background-color: white;
-
+    &:before {
+        top: -7px;
     }
-  }
+    &:after {
+        bottom: -7px;
+    }
 }
-//  STATE OPEN
-.Burger--open {
-.Header-menu-circle {
-  border: 3px solid white;
-  }
-.js-Header-title--menu {
-  color: white;
-}
+.Burger--open  {
+    .Burger-inner {
+        transform: rotateY(0) rotateX(180deg);
+    }
+    .Burger {
+        background-color: $red;
+    }
+    .Burger:before {
+        background-color: white;
+        opacity: 1;
+        transform: translateY(7px) translateX(0px) rotate(-45deg);
+    }
+    .Burger:after {
+        background-color: white;
+        opacity: 1;
+        transform: translateY(-7px) translateX(0px) rotate(45deg);
+    }
+    .Header-menu-circle {
+      border: 3px solid white;
+      }
+    .js-Header-title--menu {
+      color: white;
+    }
 }
 /////////////////////////////////////////////
 // LOGO
@@ -281,7 +258,6 @@ margin-top: 0px;
 background: url("../images/svg/profile-icon-red.svg") no-repeat center center;
 height: $menuSize+3px; //  Compensate for the menus 3+3px border
 width: 22px;
-// width: 100%;
 }
 /////////////////////////////////////////////
 // RÄTTA DIN LOTT
@@ -308,23 +284,44 @@ width: 22px;
 /////////////////////////////////////////////
 // STATE LOGGED IN
 /////////////////////////////////////////////
-.Header-container.Logged-in {
+.Header-container--MyPages {
   border-bottom: none;
   .Header-flex--one {
     border: none;
   }
   .Header-flex--three {
-  background-color: $dark-red;
-  position: relative;
-  @include headerBorders($dark-red, null);
+  background-color: $darker-red;
+  @include headerBorders($darker-red, null);
   .Header-profile-image {
     background-image: url("../images/svg/profile-icon-white.svg");
   }
-  .Header-title h3 {
-    color: white;
+  .Header-title  {
+    h4 {
+      color: white;
+
+    }
   }
   }
   .Header-flex--four {
     display: none; // The button
   }
+}
+/////////////////////////////////////////////
+// TIGHTER HEADER AFTER SCROLL IN DESKTOP
+/////////////////////////////////////////////
+.Header-container--tights {
+  border-top: 2px solid $red;
+  border-bottom: 2px solid $orange;
+  position: fixed;
+  z-index: 40;
+  .Header-inner-container {
+    padding: 5px 0;
+  }
+
+
+  .js-Header-correct-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
 }

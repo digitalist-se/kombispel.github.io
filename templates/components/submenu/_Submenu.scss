@@ -33,7 +33,8 @@ $border-red: rgb(208,81,88);
     }
   }
   @include breakpoint(1024px) {
-    @include flex-gtr-col (4, 1px);
+    @include flex-gtr-col (4, 3px);
+
     border-left: 1px solid $border-red;
     border-right: none;
     border-bottom: none;

@@ -1,6 +1,6 @@
 form {
   margin: 0 auto;
-  width: 90%;
+  // width: 90%;
   max-width: 560px;
 }
 
@@ -21,7 +21,10 @@ input[type="password"],
 input[type="number"],
 input[type="email"],
 input[type="tel"],
-input[type="date"] {
+input[type="date"],
+select {
+  margin: 0;
+  box-sizing: content-box;
   position: relative;
   padding-left: 5px;
   height: 40px;
@@ -31,14 +34,15 @@ input[type="date"] {
   border: 1px solid $grey;
   width: 100%;
   transition: all 0.2s ease;
-
   &:focus {
-    height: 80px;
+    height: 60px;
     border: 1px solid $orange;
     background-color: white;
   }
 }
-
+select::-ms-expand {
+    display: none;
+}
 /////////////////////////////////////////////
 // Checkbox
 /////////////////////////////////////////////

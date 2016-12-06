@@ -80,7 +80,7 @@ $winners-gtr-large: 30px;
   p {
     color: white;
     margin-top: 0;
-    font-size: 30px;
+    font-size: 26px;
     font-style: italic;
     line-height: 38px;
     &:before {
@@ -143,7 +143,7 @@ $winners-gtr-large: 30px;
   }
   .Winners-winner-content-inner {
     a {
-      @include rounded-btn(black,white,100%);
+      @include rounded-btn($motor-black,white,100%);
       font-size: 14px;
     }
   }

@@ -262,7 +262,6 @@ position: relative;
   opacity: 1;
   visibility: visible;
   transition: all .2s ease;
-  @include gradient-btn($green);
 }
 .Hide-element {
   visibility: hidden;
@@ -323,45 +322,34 @@ position: relative;
   }
 }
 
-// Variants
-[class*="Lottery-container--kombi"] {
-.js-Lottery-winnings-links a {
-  @include gradient-btn($orange);
-}
-}
-[class*="Lottery-container--dream"] {
-  .js-Lottery-winnings-links a {
-    @include gradient-btn($green);
-  }
-}
-[class*="Lottery-container--motor"] {
-  .js-Lottery-winnings-links a {
-    @include gradient-btn($red);
-  }
-}
-
 /////////////////////////////////////////////
-// BACKGROUND AND VARIANTS
+// VARIANTS
 /////////////////////////////////////////////
-
-.Lottery-container--kombi {
-  //  background-color: $orange;
-   @include gradient-bg($orange);
- }
- .Lottery-container--kombi-win {
+ .Lottery-container--kombi-win, .Lottery-container--kombi {
   @include gradient-bg($orange);
+  .js-Start-lottery-btn {
+   @include gradient-btn($lottery-blue);
+  }
+  .js-Lottery-winnings-links a {
+    @include gradient-btn($lottery-blue);
+  }
  }
- .Lottery-container--dream {
-  //  background-color: $green;
+ .Lottery-container--dream, .Lottery-container--dream-win  {
   @include gradient-bg($green);
+  .js-Start-lottery-btn {
+   @include gradient-btn($lottery-blue);
+  }
+  .js-Lottery-winnings-links a {
+    @include gradient-btn($lottery-blue);
+  }
  }
- .Lottery-container--dream-win {
-  @include gradient-bg($green);
- }
- .Lottery-container--motor {
-  //  background-color: $red;
+
+ .Lottery-container--motor, .Lottery-container--motor-win {
    @include gradient-bg($red);
- }
- .Lottery-container--motor-win {
-  @include gradient-bg($red);
+   .js-Start-lottery-btn {
+    @include gradient-btn($motor-black);
+   }
+   .js-Lottery-winnings-links a {
+     @include gradient-btn($motor-black);
+   }
  }

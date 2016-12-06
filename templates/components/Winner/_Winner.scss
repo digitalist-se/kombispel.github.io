@@ -10,7 +10,6 @@
   @extend .Inner-container;
 }
 .Winner-back-link {
-  @include rounded-btn($lottery-blue,white,300px);
   font-size: 14px;
   text-align: center;
   display: block;
@@ -22,7 +21,6 @@
 
 }
 .Winner-header {
-  color: $lottery-blue;
   width: 90%;
   max-width: 780px;
   margin: 0 auto 2*$base-margin auto;
@@ -68,9 +66,7 @@
   font-family: $gill-bold;
   font-size: 18px;
 }
-.Winner-subheader {
-  color: $lottery-blue;
-}
+
 .Winner-inner-container {
   h2,h3,p {
     @include page-inner();
@@ -86,7 +82,6 @@
 // WINNER DETAIL LIST
 /////////////////////////////////////////////
 .Winner-detail-list {
-  background-color: $lottery-blue;
   color: white;
   h4 {
     font-size: 23px;
@@ -115,6 +110,18 @@
   .Fullwidth-buy-link {
     @include gradient-btn($green);
   }
+  .Winner-back-link {
+    @include rounded-btn($lottery-blue,white,300px);
+  }
+  .Winner-header,.Winner-subheader {
+    color: $lottery-blue;
+  }
+  .Winner-detail-list {
+    background-color: $lottery-blue;
+  }
+
+
+
 }
 .Winner-container--kombi {
   .Winner-quote {
@@ -123,6 +130,17 @@
   .Fullwidth-buy-link {
     @include gradient-btn($orange);
   }
+  .Winner-back-link {
+    @include rounded-btn($lottery-blue,white,300px);
+  }
+  .Winner-header,.Winner-subheader {
+    color: $lottery-blue;
+  }
+  .Winner-detail-list {
+    background-color: $lottery-blue;
+  }
+
+
 }
 .Winner-container--motor {
   .Winner-quote {
@@ -131,4 +149,16 @@
   .Fullwidth-buy-link {
     @include gradient-btn($red);
   }
+
+  .Winner-back-link {
+    @include rounded-btn($red,white,300px);
+  }
+  .Winner-header,.Winner-subheader {
+    color: $red;
+  }
+  .Winner-detail-list {
+    background-color: $red;
+  }
+
+
 }

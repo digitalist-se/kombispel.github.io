@@ -1,5 +1,9 @@
 <!-- layout.nunjucks -->
 <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->    
 <html lang="se">
 <head>
   <meta charset="UTF-8">
@@ -21,6 +25,12 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTHCKR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+  <section class="Browser">
+  <div class="Browser-inner">
+    <p>Din webbläsare stödjs tyvärr inte. Vänligen uppdatera till en nyare version.</p>
+  </div>
+</section>
+
   <section class="js-Menu-container">
     <menu class="Menu-inner-container">
       <nav>
@@ -217,7 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
   <div class="js-Site-container">
-  <header class="Header-container">
+  <header class="Header-container Header-container--tight"> 
 
     <div class="Header-inner-container">
       <!-- MENU -->
@@ -226,9 +236,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="Header-menu-circle">
 
             <!-- START BURGER -->
-            <div class="Header-hamburger-outer">
-                  <div class="Header-hamburger-inner"></div>
-            </div>
+            
+
+            <div class= "Burger-outer" >
+                <div class="Burger-inner">
+                  <div class="Burger"></div>
+                </div>
+           </div>
+
+
             <!-- END BURGER -->
 
           </div>
@@ -261,9 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main>
   
 <section class="NotFound-container">
-
 <div class="NotFound-inner-container">
-
   <div class="NotFound-lottery-container">
     <!-- NUMBER -->
     <div class="NotFound-col NotFound-col--first">

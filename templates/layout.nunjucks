@@ -1,10 +1,14 @@
 <!-- layout.nunjucks -->
 <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->    
 <html lang="se">
 <head>
   <meta charset="UTF-8">
   <title>{{ pageName }}</title>
-  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -21,14 +25,15 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTHCKR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  {% include "components/menu/menu.nunjucks" %}
-  {% include "components/login/login.nunjucks" %}
+  {% include "components/Browser/browser.nunjucks" %}
+  {% include "components/Menu/menu.nunjucks" %}
+  {% include "components/Login/login.nunjucks" %}
   <div class="js-Site-container">
-  {% include "components/header/header.nunjucks" %}
+  {% include "components/Header/header.nunjucks" %}
   <main>
   {% block content %} {% endblock %}
   </main>
-  {% include "components/footer/footer.nunjucks" %}
+  {% include "components/Footer/footer.nunjucks" %}
   </div>
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/main.js"></script>

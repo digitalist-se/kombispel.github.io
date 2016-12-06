@@ -1,17 +1,23 @@
-<section class="Lottery-container Lottery-container--kombi">
+<section class="Lottery-container Lottery-container--dream">
   <div class="js-Lottery-starburst-bg"></div>
   <div class="js-Lottery-starburst-bg"></div>
     <div class="Lottery-inner-container">
       <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
       <div class="Tickets-ticket-col">
-        <div class="Tickets-ticket Tickets-ticket--kombi">
-            <h4 class="Tickets-ticket-title">Kombilott</h4>
-              <h5 class="Tickets-ticket-number Lottery-mynumber--js"></h5>
-              <div class="js-Lottery-status">
-                {# <span class='js-Lottery-ongoing'>Dragning pågår</span><span class='js-Lottery-spinner--small'></span> #}
-              </div>
+        <div class="Tickets-ticket Tickets-ticket--dream Tickets-ticket--dream-extra">
+          <div class="Tickets-ticket-ribbon"></div> 
+            <h4 class="Tickets-ticket-title">Drömreselott</h4>
+            <h5 class="Tickets-ticket-number Lottery-mynumber--js"></h5>
+            <div class="js-Lottery-status"></div>
         </div>
       </div>
+      {# <div class="Tickets-ticket-col">
+        <div class="Tickets-ticket Tickets-ticket--dream">
+            <h4 class="Tickets-ticket-title">Drömreselott</h4>
+              <h5 class="Tickets-ticket-number Lottery-mynumber--js"></h5>
+              <div class="js-Lottery-status"></div>
+        </div>
+      </div> #}
       <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
     <!-- THE ACTUAL LOTTO -->
     <div class="Lottery-row">

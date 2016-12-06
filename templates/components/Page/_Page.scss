@@ -29,7 +29,6 @@ padding-bottom: 2*$base-margin;
     margin-left: $page-gtr;
   }
 }
-
 /////////////////////////////////////////////
 // Page Grid One column
 /////////////////////////////////////////////
@@ -38,7 +37,6 @@ padding-bottom: 2*$base-margin;
   margin: 0 auto;
   max-width: 900px;
 }
-
 .Page {
   h1 {
     font-size: 40px;
@@ -49,15 +47,16 @@ padding-bottom: 2*$base-margin;
   h2 {
     font-size: 32px;
     margin-bottom: $base-margin;
+    @extend .Heading-2;
   }
   h3 {
     font-size: 23px;
     margin-bottom: $base-margin;
+    @extend .Heading-3;
   }
   p {
     margin: $base-margin 0;
     font-size: 18px;
-    // @include margin-y(30px);
   }
   ul {
     padding-left: 2*$base-margin;

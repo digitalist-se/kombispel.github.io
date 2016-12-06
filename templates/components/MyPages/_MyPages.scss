@@ -77,16 +77,15 @@
   }
 
   input {
-    flex-basis: calc(100% - #{3*$base-margin});
+    flex-basis: calc(100% - #{4*$base-margin});
   }
   .MyPages-toggle-helpbox {
-    // background-color: red;
     position: relative;
     height: 40px;
-    flex-basis: 3*$base-margin;
+    flex-basis: 50px; //  IE FIX
     @include flex-position(center);
     .Icon {
-      position: static;
+      // position: static;
     }
   }
 }
@@ -95,10 +94,7 @@
   border-bottom: 1px solid $dark-grey;
   padding-bottom: 10px;
 }
-.MyPages-toggle-helpbox {
-  position: relative;
-  height: 25px;
-}
+
 .MyPages-block-section {
   &:first-child {
     margin-bottom: 30px;
@@ -132,8 +128,8 @@
 // HELP BOXES
 /////////////////////////////////////////////
 .js-MyPages-toggle-mail,.js-MyPages-toggle-phone {
-  top: 0 !important;
-  right: 10px !important;
+  top: 8px !important;
+  right: 9px !important;
 }
 .js-MyPages-help-box--mail, .js-MyPages-help-box--phone {
   display: none;

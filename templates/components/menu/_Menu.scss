@@ -3,9 +3,9 @@ $half-large: $full-large/2;
 $menu-width-small: 300px;
 $menu-width-medium: calc(10% + 368px);
 $menu-width-large: calc(#{$half-large} + 368px);
-// $menu-width-large: 300px;
-$menu-margin: 15px;
+$menu-margin-mob: 12px;
 $menu-height: 90px;
+
 menu {
   margin: 0;
   padding: 0;
@@ -13,7 +13,10 @@ menu {
     margin: 0;
     list-style-type: none;
     padding: 0;
+    font-size: 16px;
+    @include respond-to(medium) {
     font-size: 18px;
+    }
     text-transform: uppercase;
   }
 }
@@ -105,10 +108,9 @@ background-position: center center;
 // MENU PROMOS
 /////////////////////////////////////////////
 .Menu-promos-row {
-  @include row(calc(100% - #{$menu-margin}));
+  @include row(calc(100% - #{$base-margin}));
 }
 .Menu-promos-item {
-  // width: calc(50% - 15px);
   @include gtr-col(2,15px);
   background-color: white;
   height: 90px;
@@ -131,7 +133,10 @@ background-position: center center;
   }
 }
 .Menu-level-one-header,.js-Menu-level-one-header  {
-  padding: $menu-margin 0 $menu-margin $menu-margin;
+  padding: $menu-margin-mob 0 $menu-margin-mob $menu-margin-mob ;
+  @include respond-to(medium) {
+    padding: $base-margin 0 $base-margin $base-margin;
+  }
   cursor: pointer;
   transition: all .2s ease;
   &:hover {
@@ -148,7 +153,10 @@ background-position: center center;
   background-image: url("../images/svg/menu-arrow.svg");
   width: 20px;
   height: 20px;
-  margin-top: 5px;
+  margin-top: 2px;
+  @include respond-to(medium) {
+    margin-top: 5px;
+  }
 }
 /////////////////////////////////////////////
 // LEVEL TWO MENU ITEMS
@@ -162,7 +170,10 @@ background-position: center center;
     background-color: $orange;
     border-bottom: 1px solid white;
     text-decoration: none;
-    padding: $menu-margin 0 $menu-margin 50px;
+    padding: $menu-margin-mob 0 $menu-margin-mob 50px;
+    @include respond-to(medium) {
+      padding: $base-margin 0 $base-margin 50px;
+    }
     &:hover {
       background-color: $dark-orange;
     }

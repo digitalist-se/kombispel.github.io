@@ -121,16 +121,16 @@
     color: $lottery-blue;
   }
   .Tickets-ticket-link {
-    @include lottery-btn($orange);
+    @include lottery-btn($lottery-blue);
   }
 }
 .Tickets-ticket--motor {
   background-image: url("../images/svg/tickets/ticket-motor.svg") ;
   .Tickets-ticket-number {
-    color: black;
+    color: $motor-black;
   }
   .Tickets-ticket-link {
-    @include lottery-btn(rgb(196,37,46));
+    @include lottery-btn($motor-black);
   }
 }
 .Tickets-ticket--dream {
@@ -139,7 +139,7 @@
     color: $lottery-blue;
   }
   .Tickets-ticket-link {
-    @include lottery-btn($green);
+    @include lottery-btn($lottery-blue);
   }
 }
 /////////////////////////////////////////////
@@ -164,12 +164,12 @@
     width: 200px;
   }
 }
-.Tickets-ticket--kombi,.Tickets-ticket--dream  {
+.Tickets-ticket--kombi-extra, .Tickets-ticket--dream-extra  {
   .Tickets-ticket-ribbon {
     background-image: url("../images/svg/tickets/ribbon-blue.svg");
   }
 }
-.Tickets-ticket--motor {
+.Tickets-ticket--motor-extra {
   .Tickets-ticket-ribbon {
     background-image: url("../images/svg/tickets/ribbon-black.svg");
   }
@@ -191,6 +191,9 @@
 }
 .Tickets-ticket--motor-win {
   background-image: url("../images/svg/tickets/winning-ticket-motor.svg");
+  .Tickets-ticket-number {
+    color: $motor-black;
+  }
 }
 
 .Tickets-winning-ticket-header {

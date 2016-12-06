@@ -48,10 +48,18 @@ margin-right: $gutter/2;
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+
+.jej {
+  // @include flex-gtr-col (4, 1px);
+}
+
+
 @mixin flex-gtr-col ($columns, $gutter) {
   $percentage: percentage(1/$columns);
   $width: (($columns - 1)*$gutter)/$columns;
   flex-basis: calc(#{$percentage} - #{$width});
+  z-index: $width;
   margin-top: $gutter;
   margin-left: $gutter/2;
   margin-right: $gutter/2;
