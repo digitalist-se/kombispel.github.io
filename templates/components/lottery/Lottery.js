@@ -27,6 +27,8 @@ myLotteryNumber.innerHTML = myNumbers.toString().replace(/^[,]$|[,]+/g,"");
 // Lottery status
 var lotteryStatus = document.getElementsByClassName("js-Lottery-status")[0];
 
+var lotteryRow = document.getElementsByClassName("js-Lottery-row")[0];
+
 // Set Lottery-row
 var lotteryNumbers = document.getElementsByClassName('js-Lottery-number');
 var lotteryHeader = document.getElementsByClassName("js-Lottery-price-header")[0];
@@ -195,6 +197,14 @@ lotteryBtn.addEventListener("click",function() {
 var messageContainer = document.getElementsByClassName("Lottery-message-container")[0];
 var lotteryMessage = document.getElementsByClassName("js-Lottery-message")[0];
 var winningLinks = document.getElementsByClassName("js-Lottery-winnings-links")[0];
+var extraChance = document.getElementsByClassName("js-Lottery-extrachance-container")[0];
+// if (extraChance) {
+// } else {
+//   extraChance = true
+//   console.log("finns inte i dom");
+// }
+
+
 var ticket = document.getElementsByClassName("Tickets-ticket")[0];
 var status = "";
 /////////////////////////////////////////////
@@ -254,12 +264,18 @@ function drawingDone()  {
   if(winningsOnTicket > 0){
     lotteryHeader.innerHTML = "Dragning klar, du vann!";
     ticket.className += "-win";
-    rotateBG.className += " Lottery-rotate-bg"
+    rotateBG.className += " Lottery-rotate-bg";
+    if (winningLinks) {
+      winningLinks.style.display = "block";
+    }
   } else {
-    lotteryHeader.innerHTML = "Dragning klar, tyvärr ingen vinst.";
+    lotteryHeader.innerHTML = "Tyvärr - ingen vinst denna gång";
     ticket.className += "-lose";
+    if (extraChance) {
+      extraChance.style.display = "block";
+    }
   }
-    winningLinks.style.display = "block";
+    lotteryRow.style.display = "none";
     lotteryBtn.style.display = "none";
     lotteryMessage.style.display += "none";
   }

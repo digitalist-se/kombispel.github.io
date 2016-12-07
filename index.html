@@ -1,9 +1,5 @@
 <!-- layout.nunjucks -->
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html> <!--<![endif]-->    
 <html lang="se">
 <head>
   <meta charset="UTF-8">
@@ -25,12 +21,49 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTHCKR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <section class="Browser">
-  <div class="Browser-inner">
-    <p>Din webbläsare stödjs tyvärr inte. Vänligen uppdatera till en nyare version.</p>
+  <!-- Start Site information -->
+
+  <!-- CHECK FOR OLD IE -->
+  <!--[if lt IE 7]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<!--[if IE 7]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<!--[if IE 8]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<!--[if gt IE 8]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<div class="Browser-inner">
+  <p>Din webbläsare stödjs tyvärr inte. Vänligen uppdatera till en nyare version. Kombispel.se stödjer de senaste versionerna av Google Chrome, Firefox, Safari och Internet Explorer 11 och framåt.</p>
+</div>
+<!--[if lt IE 7]>
+  </div>
+<![endif]-->
+<!--[if IE 7]>
+</div>
+<![endif]-->
+<!--[if IE 8]>
+</div>
+<![endif]-->
+<!--[if gt IE 8]>
+</div>
+<![endif]-->
+
+  <!-- END CHECK FOR OLD IE -->
+
+  <section class="Cookie-container">
+  <div class="Cookie-inner">
+    <p>
+      Den här sidan använder sig av cookies. Genom att fortsätta använda den här sidan godkänner du att vi lagrar en cookie i din
+      webbläsare för att förbättra upplevelsen för dig som besökare. <a href="https://www.pts.se/cookies" target="_blank">Läs mer om vad cookies innebär.</a> </p>
+      <button class="js-Cookies-approve-btn">Jag förstår</button>
   </div>
 </section>
 
+  <!-- End Site information -->
   <section class="js-Menu-container">
     <menu class="Menu-inner-container">
       <nav>
@@ -63,6 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="Menu-level-two">
               <li><a href="index.html">Startsida</a></li>
               <li><a href="tickets.html">Mina lotter</a></li>
+              <li><a href="prices.html">Vinstval</a></li>
               <li><a href="campaign.html">Kampanjsida</a></li>
               <li><a href="information.html">Mina uppgifter</a></li>
               <li><a href="winnings.html">Vinsthistorik</a></li>
@@ -227,26 +261,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
   <div class="js-Site-container">
-  <header class="Header-container Header-container--tight"> 
+  <header class="Header-container">
+
 
     <div class="Header-inner-container">
       <!-- MENU -->
       <div class="js-Header-menu-container Header-flex--one">
         <div class="Header-inner-grid">
           <div class="Header-menu-circle">
-
             <!-- START BURGER -->
-            
-
             <div class= "Burger-outer" >
                 <div class="Burger-inner">
                   <div class="Burger"></div>
                 </div>
            </div>
-
-
             <!-- END BURGER -->
-
           </div>
           <div class="Header-title">
             <h4 class="js-Header-title--menu">meny</h4>
@@ -276,8 +305,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main>
   
+<section class="Hero" style="background-image: url('images/heroes/start_hero.png')">
 
-<section class="Hero" style="background-image: url('images/heroes/start_hero2.jpg')">
+
   <div class="Hero-inner">
         <div class="Hero-box Hero-box--dream">
           <!-- CAN HAVE VARIANTS
@@ -431,5 +461,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>

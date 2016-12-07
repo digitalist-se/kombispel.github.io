@@ -1,25 +1,18 @@
-<header class="Header-container Header-container--tight"> 
+<header class="Header-container">
+{# <header class="Header-container Header-container--tight">  #}
 {# <header class="Header-container Header-container--MyPages"> #}
     <div class="Header-inner-container">
       <!-- MENU -->
       <div class="js-Header-menu-container Header-flex--one">
         <div class="Header-inner-grid">
           <div class="Header-menu-circle">
-
             <!-- START BURGER -->
-            {# <div class="Header-hamburger-outer">
-                  <div class="Header-hamburger-inner"></div>
-            </div> #}
-
             <div class= "Burger-outer" >
                 <div class="Burger-inner">
                   <div class="Burger"></div>
                 </div>
            </div>
-
-
             <!-- END BURGER -->
-
           </div>
           <div class="Header-title">
             <h4 class="js-Header-title--menu">meny</h4>

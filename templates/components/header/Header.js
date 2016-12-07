@@ -1,3 +1,41 @@
+/////////////////////////////////////////////
+// Debounce for header. Courtesy of David Walsh
+/////////////////////////////////////////////
+// var $headerContainer = $(".Header-container");
+// function debounce(func, wait, immediate) {
+// 	var timeout;
+// 	return function() {
+// 		var context = this, args = arguments;
+// 		var later = function() {
+// 			timeout = null;
+// 			if (!immediate) func.apply(context, args);
+// 		};
+// 		var callNow = immediate && !timeout;
+// 		clearTimeout(timeout);
+// 		timeout = setTimeout(later, wait);
+// 		if (callNow) func.apply(context, args);
+// 	};
+// };
+//
+// var $tightHeader = debounce(function() {
+//   // console.log($siteContainer.offset().top);
+//   if(document.body.scrollTop > 0) {
+//     $headerContainer.addClass("Header-container--tight")
+//   } else {
+//     $headerContainer.removeClass("Header-container--tight")
+//   }
+// }, 250);
+//
+// $(window).on('scroll', function() {
+// $tightHeader()
+//  })
+
+
+
+
+
+
+
 $(".js-Header-correct-btn").click(function() {
   $(".js-Login-header").html("Logga in för att rätta din lott")
   $(".js-Site-container").toggleClass("locked");

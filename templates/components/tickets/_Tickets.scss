@@ -14,17 +14,27 @@
   }
   padding: 2*$base-margin 0;
   position: relative;
-
 }
 .Tickets-ticket-container {
   .Tickets-ticket-col {
     background-color: white;
     &.Tickets-ticket-col--win {
       background-color: $gold;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url("../images/svg/starburst.svg") no-repeat center center;
+        background-size: cover;
+      }
     }
   }
 }
-
 [class*="Tickets-ticket"] {
   background-position: center center;
   background-repeat: no-repeat;
@@ -218,19 +228,19 @@
 /////////////////////////////////////////////
 // NITLOTTER
 /////////////////////////////////////////////
-.Tickets-ticket--kombi-lose {
+.Tickets-ticket--kombi-lose, .Tickets-ticket--kombi-extra-lose {
   background-image: url("../images/svg/tickets/lose-ticket-kombi.svg");
   .Tickets-ticket-number {
     color: white;
   }
 }
-.Tickets-ticket--dream-lose {
+.Tickets-ticket--dream-lose, .Tickets-ticket--dream-extra-lose {
   background-image: url("../images/svg/tickets/lose-ticket-dream.svg");
   .Tickets-ticket-number {
     color: white;
   }
 }
-.Tickets-ticket--motor-lose {
+.Tickets-ticket--motor-lose, .Tickets-ticket--motor-extra-lose  {
   background-image: url("../images/svg/tickets/lose-ticket-motor.svg");
   .Tickets-ticket-number {
     color: white;

@@ -1,0 +1,8 @@
+<section class="Cookie-container">
+  <div class="Cookie-inner">
+    <p>
+      Den här sidan använder sig av cookies. Genom att fortsätta använda den här sidan godkänner du att vi lagrar en cookie i din
+      webbläsare för att förbättra upplevelsen för dig som besökare. <a href="https://www.pts.se/cookies" target="_blank">Läs mer om vad cookies innebär.</a> </p>
+      <button class="js-Cookies-approve-btn">Jag förstår</button>
+  </div>
+</section>

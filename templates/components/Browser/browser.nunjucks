@@ -1,5 +1,27 @@
-<section class="Browser">
-  <div class="Browser-inner">
-    <p>Din webbläsare stödjs tyvärr inte. Vänligen uppdatera till en nyare version.</p>
+<!--[if lt IE 7]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<!--[if IE 7]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<!--[if IE 8]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<!--[if gt IE 8]>
+<div class="Browser-warning-IE">
+<![endif]-->
+<div class="Browser-inner">
+  <p>Din webbläsare stödjs tyvärr inte. Vänligen uppdatera till en nyare version. Kombispel.se stödjer de senaste versionerna av Google Chrome, Firefox, Safari och Internet Explorer 11 och framåt.</p>
+</div>
+<!--[if lt IE 7]>
   </div>
-</section>
+<![endif]-->
+<!--[if IE 7]>
+</div>
+<![endif]-->
+<!--[if IE 8]>
+</div>
+<![endif]-->
+<!--[if gt IE 8]>
+</div>
+<![endif]-->

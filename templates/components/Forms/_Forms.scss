@@ -43,6 +43,12 @@ select {
 select::-ms-expand {
     display: none;
 }
+.person-number:focus {
+  height: 40px !important;
+}
+
+
+
 /////////////////////////////////////////////
 // Checkbox
 /////////////////////////////////////////////

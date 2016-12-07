@@ -1,14 +1,22 @@
-.Browser {
-  background-color: $dark-red;
-  @include flex-position(center);
-  display: none;
-}
+
 .Browser-inner {
+  display: none;
+  margin: 0 auto;
   color: white;
+  text-align: center;
   padding: 2*$base-margin;
-  width: 90%;
+  width: 80%;
   max-width: 560px;
   p {
+    text-align: center;
+    color: white;
     font-size: 26px;
+  }
+}
+.Browser-warning-IE {
+  display: block;
+  background-color: $dark-red;
+  .Browser-inner {
+    display: block !important;
   }
 }

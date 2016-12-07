@@ -19,6 +19,8 @@ $text: rgb(51,51,51);
 
 $dark-green: rgb(141,171,64);
 $facebook-blue: rgb(59, 89, 152);
+$purple: rgb(142,37,141);
+
 
 /////////////////////////////////////////////
 // Lottery theme colors
@@ -30,11 +32,13 @@ $red: rgb(196,37,46); //  Motorlotteriet
 $orange: rgb(255,161,0); // Kombilotteriet
 
 /////////////////////////////////////////////
-// Margin and offsets
+// Margin, widths and offsets
 /////////////////////////////////////////////
 $base-margin: 15px;
 $inner-width: 95%;
-$page-gtr: 25px;
+$max-inner: 760px; // Width for inner stuff like page with one col, vinstval etc.
+
+
 /////////////////////////////////////////////
 // FONTS
 /////////////////////////////////////////////

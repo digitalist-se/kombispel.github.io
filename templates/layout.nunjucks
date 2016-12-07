@@ -1,9 +1,5 @@
 <!-- layout.nunjucks -->
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html> <!--<![endif]-->    
 <html lang="se">
 <head>
   <meta charset="UTF-8">
@@ -25,7 +21,14 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTHCKR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+  <!-- Start Site information -->
+
+  <!-- CHECK FOR OLD IE -->
   {% include "components/Browser/browser.nunjucks" %}
+  <!-- END CHECK FOR OLD IE -->
+
+  {% include "components/Cookies/cookies.nunjucks" %}
+  <!-- End Site information -->
   {% include "components/Menu/menu.nunjucks" %}
   {% include "components/Login/login.nunjucks" %}
   <div class="js-Site-container">
@@ -37,5 +40,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>

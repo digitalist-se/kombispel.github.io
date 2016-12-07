@@ -5,7 +5,7 @@
       <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
       <div class="Tickets-ticket-col">
         <div class="Tickets-ticket Tickets-ticket--dream Tickets-ticket--dream-extra">
-          <div class="Tickets-ticket-ribbon"></div> 
+          <div class="Tickets-ticket-ribbon"></div>
             <h4 class="Tickets-ticket-title">Drömreselott</h4>
             <h5 class="Tickets-ticket-number Lottery-mynumber--js"></h5>
             <div class="js-Lottery-status"></div>
@@ -19,9 +19,10 @@
         </div>
       </div> #}
       <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
+    <h3><span class="js-Lottery-price-header">Rätta lotten!</span></h3>
+
     <!-- THE ACTUAL LOTTO -->
-    <div class="Lottery-row">
-      <h3><span class="js-Lottery-price-header">Rätta lotten!</span></h3>
+    <div class="js-Lottery-row">
       <div class="Lottery-column">
         <div class="js-Lottery-number">
           <div>0</div>
@@ -74,5 +75,25 @@
         <a href="#" class="">Välj din vinst</a>
       </div>
     </div>
+    <!-- Extra chansen -->
+    <div class="js-Lottery-extrachance-container">
+      <div class="Lottery-extrachance-inner">
+        <div class="Lottery-extrachance-left">
+          <img src="./images/campaign/extrachansen.png" alt="Tina Nordströms mat" />
+        </div>
+        <div class="Lottery-extrachance-right">
+            <h3>Var med i extrachansen</h3>
+            <p>
+              Tävla om en kokbok med Tina Nordström genom
+              att svara rätt på 3 frågor om mat
+            </p>
+            <a class="Lottery-extrachance-link" href="#">Till extrachansen</a>
+        </div>
+      </div>
+
+
+
+    </div>
+
   </div>
 </section>

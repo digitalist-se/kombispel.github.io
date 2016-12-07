@@ -4,9 +4,7 @@
 $(".js-Login-clickarea, .js-Login-close-form").click(function() {
   $(".js-Login-overlay-container").fadeOut("fast")
   $(".js-Site-container").toggleClass("locked");
-
 })
-
 /////////////////////////////////////////////
  // SLIDETOGGLE THE HELPBOXES
  ////////////////////////////////////////////
@@ -27,7 +25,6 @@ var state = {
   emailReg: false,
   numberReg: false
 }
-
 /////////////////////////////////////////////
 // USERNAME CHECK
 /////////////////////////////////////////////
@@ -69,7 +66,8 @@ $('.js-Login-input-username').focusout(function() {
     $(".js-Login-username-message").show().html(userNameMessage)
 
   } else {
-    $(".js-Login-username-toggle").removeClass("js-Login-question-icon").removeClass("js-Login-error-icon").addClass("js-Login-check-icon")
+    // $(".js-Login-username-toggle").removeClass("js-Login-question-icon").removeClass("js-Login-error-icon").addClass("js-Login-check-icon")
+    $(".js-Login-username-toggle").addClass("js-Login-question-icon").removeClass("js-Login-error-icon");
     $(this).removeClass("js-Login-input-error")
     $(".js-Login-username-message").hide().html("")
   }

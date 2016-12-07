@@ -22,7 +22,7 @@
   .Login-input {
     &:focus {
       & + .js-Login-username-toggle, & + .js-Login-password-toggle {
-        top: 65px;
+        top: 55px;
       }
     }
   }

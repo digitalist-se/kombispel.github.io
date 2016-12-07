@@ -13,6 +13,11 @@ body {
 h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
   font-family: $gill-bold, "sans-serif";
 }
+h1,h2,h3,h4,h5,h6,p {
+  // max-width: $max-inner;
+  // margin-left: auto;
+  // margin-right: auto;
+}
 main {
   transition: all .2s ease;
 }
@@ -25,7 +30,7 @@ main {
   width: 100%;
   &.locked {
     position: fixed;
-    height: 100%;
+
   }
 }
 a {

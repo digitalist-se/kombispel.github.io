@@ -1,5 +1,6 @@
-{# <section class="Hero" style="background-image: url('images/heroes/start_hero.png')"> #}
-<section class="Hero" style="background-image: url('images/heroes/start_hero2.jpg')">
+<section class="Hero" style="background-image: url('images/heroes/start_hero.png')">
+{# <section class="Hero" style="background-image: url('images/heroes/start-hero-hotspot.png')"> #}
+{# <section class="Hero" style="background-image: url('images/heroes/start_hero2.jpg')"> #}
   <div class="Hero-inner">
         <div class="Hero-box Hero-box--dream">
           <!-- CAN HAVE VARIANTS

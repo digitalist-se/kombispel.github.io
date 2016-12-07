@@ -167,7 +167,7 @@ border-bottom: 15px solid $orange;
 $lineThick: 3px;
 $burger-radius: 4px;
 .Burger-outer {
-    z-index: 999;
+    // z-index: 999;
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -309,19 +309,25 @@ width: 22px;
 /////////////////////////////////////////////
 // TIGHTER HEADER AFTER SCROLL IN DESKTOP
 /////////////////////////////////////////////
-.Header-container--tights {
-  border-top: 2px solid $red;
-  border-bottom: 2px solid $orange;
-  position: fixed;
-  z-index: 40;
-  .Header-inner-container {
-    padding: 5px 0;
+@include respond-to(large){
+  .Header-container--tight {
+    border-top: 2px solid $red;
+    border-bottom: 2px solid $orange;
+    position: fixed;
+    z-index: 40;
+
+    .Header-inner-grid, .js-Header-menu-container  {
+      &::before, &::after {
+        display: none;
+        // position: static;
+      }
+    }
+    .Header-inner-container {
+      padding: 4px 0;
+    }
+    .js-Header-correct-btn {
+      padding: 10px 30px;
+      font-size: 16px;
+    }
   }
-
-
-  .js-Header-correct-btn {
-    padding: 15px 30px;
-    font-size: 16px;
-  }
-
 }

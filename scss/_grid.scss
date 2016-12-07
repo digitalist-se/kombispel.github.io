@@ -49,12 +49,6 @@ margin-right: $gutter/2;
   flex-direction: row;
 }
 
-
-.jej {
-  // @include flex-gtr-col (4, 1px);
-}
-
-
 @mixin flex-gtr-col ($columns, $gutter) {
   $percentage: percentage(1/$columns);
   $width: (($columns - 1)*$gutter)/$columns;
@@ -74,7 +68,7 @@ margin-right: $gutter/2;
     };
   }
 }
-@mixin flex-col($span, $columns, $margin: 0) {
+@mixin flex-col($span, $columns, $margin: 0px) {
   $percentage: percentage($span/$columns);
   @if $columns != 1 {
     flex-basis: calc(#{$percentage} - #{$margin});

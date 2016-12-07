@@ -10,23 +10,26 @@ padding-bottom: 2*$base-margin;
   width: 100%;
   background-color: red;
 }
+h1,h2,h3,h4,h5,h6,p,ul {
+  max-width: $max-inner;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 .Page-inner {
   background-color: white;
   @include flex-row();
   @extend .Inner-container;
   @include page-inner();
-
 }
-
 @include respond-to(large) {
   .Page-two-col-main {
-    @include flex-col(2, 3, $page-gtr);
-    margin-right: $page-gtr;
+    @include flex-col(2, 3, 2*$base-margin);
+    margin-right: 2*$base-margin;
   }
   .Page-two-col-side {
-    @include flex-col(1, 3, $page-gtr);
-    margin-left: $page-gtr;
+    @include flex-col(1, 3, 2*$base-margin);
+    margin-left: 2*$base-margin;
   }
 }
 /////////////////////////////////////////////
@@ -35,7 +38,7 @@ padding-bottom: 2*$base-margin;
 .Page-one-col {
   @include flex-col(1, 1, 0);
   margin: 0 auto;
-  max-width: 900px;
+  // max-width: 900px;
 }
 .Page {
   h1 {
@@ -55,7 +58,7 @@ padding-bottom: 2*$base-margin;
     @extend .Heading-3;
   }
   p {
-    margin: $base-margin 0;
+    margin: $base-margin auto;
     font-size: 18px;
   }
   ul {
