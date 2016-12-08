@@ -30,7 +30,7 @@
       <p>
         Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
       </p>
-      <a class="Page-buy-ticket" href="#">Köp en lott!</a>
+      <a class="Page-buy-ticket" href="./campaign.html">Köp en lott!</a>
       <h2>Se på en video!</h2>
       <!-- VIDEO -->
       <div class="Page-video">
@@ -121,7 +121,7 @@
         Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
         Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
       </p>
-      <a class="Page-buy-ticket" href="#">Köp en lott!</a>
+      <a class="Page-buy-ticket" href="./campaign.html">Köp en lott!</a>
       <h2>Se på en video!</h2>
       <!-- VIDEO -->
       <div class="Page-video">

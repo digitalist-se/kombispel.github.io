@@ -1,12 +1,14 @@
 /////////////////////////////////////////////
-// Check if GA Cookie is set
+// Check if Cookie is set
 /////////////////////////////////////////////
 if (document.cookie.indexOf("_ga") == -1) {
    $(".Cookie-container").show();
 }
+
+
 /////////////////////////////////////////////
-// Approve and hide message
+// Approve hide cookie info
 /////////////////////////////////////////////
 $(".js-Cookies-approve-btn").click(function() {
-    $(".Cookie-container").fadeOut("fast");
+   $(".Cookie-container").fadeOut("fast");
 })

@@ -54,7 +54,7 @@
       <!-- END Inner-container -->
 
       <div class="Fullwidth-buy-link-container">
-        <a class="Fullwidth-buy-link" href="#">
+        <a class="Fullwidth-buy-link" href="./campaign.html">
           <span>Bli en vinnare du med!</span>
           <span>Köp en kombilott!</span>
         </a>
