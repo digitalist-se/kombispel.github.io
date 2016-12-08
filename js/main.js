@@ -221,13 +221,6 @@ var cookieSet = false;
 /////////////////////////////////////////////
 // Check if Cookie is set
 /////////////////////////////////////////////
-if(cookies.length > 0) {
- cookies.map(function(cookie) {
- if(cookie.indexOf($cookieName) != -1 ) {
-   cookieSet = true;
- }
- });
-}
 if(cookieSet != true) {
   $(".Cookie-container").show()
 }
