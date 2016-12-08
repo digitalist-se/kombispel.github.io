@@ -216,7 +216,7 @@ $(".js-Login-form-submit-btn").click(function(e) {
 });
 
 var cookies = document.cookie.split(';');
-var $cookieName = "KS-Approvedcookies";
+var $cookieName = "_ga";
 var cookieSet = false;
 /////////////////////////////////////////////
 // Check if Cookie is set
