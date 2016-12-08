@@ -235,10 +235,10 @@ if(cookieSet != true) {
 // Approve and set cookie on click
 /////////////////////////////////////////////
 $(".js-Cookies-approve-btn").click(function() {
-   var d = new Date();
-   d.setTime(d.getTime() + (365*24*60*60*1000)); // Valid for a year
-   var expires = "expires="+ d.toUTCString();
-   document.cookie =$cookieName+"=true;"+expires;
+   //var d = new Date();
+   //d.setTime(d.getTime() + (365*24*60*60*1000)); // Valid for a year
+   //var expires = "expires="+ d.toUTCString();
+   //document.cookie =$cookieName+"=true;"+expires;
    $(".Cookie-container").fadeOut("fast");
 })
 
