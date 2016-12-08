@@ -1,4 +1,4 @@
-{% set pageName = "Vinstval" %}
+{% set pageName = "Det här kan du vinna" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
 {% include "components/Prices/prices.nunjucks" %}

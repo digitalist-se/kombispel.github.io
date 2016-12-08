@@ -1,0 +1,89 @@
+<section class="Choices-container">
+  <div class="Choices-inner-container">
+    <div class="Choices-header">
+      <h1 class="Heading-1">Stort grattis till vinsten Ann-Charlotte!</h1>
+      <h3 class="Heading-3">Vinstnivå: 300 kr</h3>
+    </div>
+    <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
+    <div class="Tickets-ticket-col">
+      <div class="Tickets-ticket Tickets-ticket--dream-win">
+        {# <div class="Tickets-ticket-ribbon"></div> #}
+          <h4 class="Tickets-ticket-title">Drömreselott</h4>
+          <h5 class="Tickets-ticket-number">205563</h5>
+          <div class="js-Lottery-status"></div>
+      </div>
+    </div>
+    <!-- ########## END TICKETS VIEW ########## -->
+
+    <div class="Choices-chosen-container">
+      <div class="Choices-chosen-ribbon"><span>Veckans vinst</span></div>
+      <img src="./images/campaign/foundue.png" alt="Fonduegryta Deluxe"/>
+      <h3 class="Heading-3">Fonduegryta Deluxe</h3>
+      <a class="" href="#">Läs mer</a>
+      <p>
+        Detta är din utvalda vinst som du får om du inte väljer en annan vinst.
+      </p>
+    </div>
+
+    <h2 class="Choices-others-header">Eller välj en annan vinst:</h2>
+    <div class="Choices-others-container">
+      <div class="Choices-others-col">
+        <div class="Choices-others-image">
+          <img src="./images/campaign/bestick.png" alt=""/>
+        </div>
+        <h4>Bestick</h4>
+        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <a class="Choices-others-choose" href="#">Välj</a>
+      </div>
+      <div class="Choices-others-col">
+        <div class="Choices-others-image">
+          <img src="./images/campaign/hygien.png" alt=""/>
+        </div>
+        <h4>Nessesär</h4>
+        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <a class="Choices-others-choose" href="#">Välj</a>
+      </div>
+      <div class="Choices-others-col">
+        <div class="Choices-others-image">
+          <img src="./images/campaign/killingdvd.png" alt=""/>
+        </div>
+        <h4>Killing DVD-box</h4>
+        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <a class="Choices-others-choose" href="#">Välj</a>
+      </div>
+      <div class="Choices-others-col">
+        <div class="Choices-others-image">
+          <img src="./images/campaign/fotoram.png" alt=""/>
+        </div>
+        <h4>Digital fotoram</h4>
+        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <a class="Choices-others-choose" href="#">Välj</a>
+      </div>
+      <div class="Choices-others-col">
+        <div class="Choices-others-image">
+            <img src="./images/campaign/kampanjbild.png" alt=""/>
+        </div>
+
+        <h4>Digital fotoram</h4>
+        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <a class="Choices-others-choose" href="#">Välj</a>
+      </div>
+      <div class="Choices-others-col">
+        <div class="Choices-others-image">
+          <img src="./images/campaign/extrachansen.png" alt=""/>
+        </div>
+        <h4>Digital fotoram</h4>
+        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <a class="Choices-others-choose" href="#">Välj</a>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+  </div>
+</section>

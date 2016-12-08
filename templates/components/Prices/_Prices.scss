@@ -4,123 +4,239 @@
 
 .Prices-inner-container {
   @extend .Inner-container;
+  h4 {
+    text-align: center;
+    font-size: 22px;
+    font-family: $gill-regular;
+  }
 }
 .Prices-header {
   padding-top: $base-margin;
-  h1 {
-    padding-bottom: 0;
-  }
-  h3 {
-    margin: 0;
+}
+
+
+@mixin prices-col($color) {
+  transition: all .2s ease;
+  background-color: $color;
+  &:hover {
+    background-color: darken($color, 15%);
   }
 }
-.Prices-chosen-container {
-  background-color: white;
+
+
+.Prices-lottery-row {
+  @include flex-row();
   max-width: $max-inner;
-  width: 95%;
-  margin: 2*$base-margin auto;
-  border: 3px solid $purple;
-  position: relative;
+  margin: 0 auto;
+}
+.Prices-lottery-col {
+  @include flex-col(1,3);
+  @include prices-col(rgb(230,230,230));
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 120px;
+  cursor: pointer;
+}
+/////////////////////////////////////////////
+// VARIANTS "Välj lotteri här"
+/////////////////////////////////////////////
+.Prices-lottery-row--kombi-active {
+  border-bottom: 10px solid $orange;
+  .Prices-lottery-col--kombi  {
+    @include prices-col($orange);
+  }
+}
+.Prices-lottery-row--dream-active {
+  border-bottom: 10px solid $green;
+  .Prices-lottery-col--dream  {
+    @include prices-col($green);
+  }
+}
+.Prices-lottery-row--motor-active {
+  border-bottom: 10px solid $red;
+  .Prices-lottery-col--motor  {
+    @include prices-col($red);
+  }
+}
+.Prices-lottery-col--kombi {
+  background-image: url("../images/svg/logos/kombi.svg");
+}
+.Prices-lottery-col--dream {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  background-image: url("../images/svg/logos/dromrese.svg");
+}
+.Prices-lottery-col--motor {
+  background-image: url("../images/svg/logos/motor.svg");
+}
+/////////////////////////////////////////////
+// ANCHOR LINKS
+/////////////////////////////////////////////
+.Prices-lottery-links {
+  max-width: $max-inner;
+  margin: 0 auto;
+  @include flex-row();
+  a {
+    text-align: center;
+    color: $label-grey;
+    padding: $base-margin;
+    background-color: white;
+    text-decoration: none;
+    @include breakpoint(1px, 599px) {
+        @include flex-gtr-col(3,$base-margin);
+    }
+    @include breakpoint(600px, 1023px) {
+      @include flex-gtr-col(4,$base-margin);
+      &:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(6),&:nth-of-type(7) {
+        flex-basis: calc(25% - 15px)
+      }
+    }
+    @include breakpoint(1024px) {
+      @include flex-gtr-col(7,$base-margin);
+    }
+    &:hover {
+      background-color: $grey;
+      color: white;
+    }
+  }
+}
+
+
+
+
+/////////////////////////////////////////////
+// PRICES PRICE LEVELS
+/////////////////////////////////////////////
+.Prices-price-level {
+  max-width: $max-inner;
+  margin: 0 auto;
   text-align: center;
+  // border-top: 4px solid red;
+  &:first-of-type {
+    border-top: 4px solid green;
+  }
+
   img {
-    max-height: 390px;
-    display: block;
-    margin: 0 auto;
-    padding: 2*$base-margin;
+    width: 100%;
   }
   p {
-    color: lighten($purple,10%);
-    width: 90%;
-    max-width: 320px;
-    margin: $base-margin auto;
     text-align: center;
+    color: $dark-grey;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 2*$base-margin;
   }
   a {
-    display: inline-block;
-    @extend .Arrow-link;
+    @include gradient-btn($orange);
   }
 }
 
-$ribbon-height: 170px;
-.Prices-chosen-ribbon {
-  left: -10px;
-  top: -15px;
-  position: absolute;
-  background:  url("../images/svg/tickets/ribbon-purple.svg") no-repeat;
-  height: $ribbon-height;
-  width: 1.4 * $ribbon-height;
-  span {
-    display: block;
-    position: absolute;
-    left: -5px;
-    top: 55px;
-    transform: rotate(-36deg);
-    font-size: 24px;
-    font-family: $gill-bold;
-    color: white;
-    text-transform: uppercase;
-  }
-}
-
-/////////////////////////////////////////////
-// Eller välj annan vinst
-/////////////////////////////////////////////
-.Prices-others-header {
-  color: $red;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.Prices-others-container {
-@include flex-row();
-max-width: $max-inner;
-margin: 0 auto;
-padding-bottom: 4*$base-margin;
-}
-.Prices-others-col {
+.Prices-price-inner {
   background-color: white;
-  text-align: center;
+  margin-bottom: 2*$base-margin;
+}
+
+
+.Prices-price-image {
   position: relative;
-  @include breakpoint(1px, 767px) {
-    @include flex-gtr-col(2,$base-margin);
-    .Prices-others-image {
-      height: 150px;
-    }
-    img {
-      max-height: 150px;
-    }
-  }
-  @include breakpoint(767px) {
-    @include flex-gtr-col(3,$base-margin);
-    .Prices-others-image {
-      height: 200px;
-    }
-    img {
-      max-height: 200px;
-    }
-  }
-  img {
-    margin: 0 auto;
-    display: block;
-    padding: $base-margin;
-    width: auto;
-  }
-  h4 {
-    font-family: $gill-regular;
-    font-size: 28px;
-    margin: 0;
-  }
 }
-.Prices-others-readmore  {
-  @extend .Arrow-link;
-  margin-bottom: $base-margin;
-  padding-bottom: 75px;
-}
-.Prices-others-choose {
-  @include gradient-btn($orange);
-  width: auto;
+.Prices-number {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
+  left: $base-margin;
+  top: $base-margin;
+  width: 45px;
+  height: 45px;
+  color: white;
+  font-size: 24px;
+  @include flex-position(center);
+  background-color: $orange;
+  border-radius: 50%;
+}
+/////////////////////////////////////////////
+// Prices with 2 columns
+/////////////////////////////////////////////
+.Prices-price-level--cols {
+  .Prices-price-inner {
+    margin-bottom: 0;
+  }
+}
+
+
+.Prices-ord-price {
+  margin-top: $base-margin;
+  display: inline-block;
+  background-color: $purple;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 5px $base-margin;
+}
+
+
+
+.Prices-cols-container {
+  @include flex-row();
+  background-color: $content-grey;
+  padding-bottom: 2*$base-margin;
+}
+.Prices-col {
+  background-color: white;
+  padding: $base-margin;
+
+  @include flex-gtr-col(2,2*$base-margin);
+  .Prices-image {
+  }
+}
+/////////////////////////////////////////////
+// PROMOS FOR OTHER LOTTERYS
+/////////////////////////////////////////////
+.Prices-promo {
+  margin-bottom: 2*$base-margin;
+  @include flex-row();
+
+}
+.Prices-promo-left {
+  flex-basis: 100px;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    left: $base-margin;
+    top: -10px;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    height: 100px;
+    width: 100px;
+  }
+}
+.Prices-promo-right {
+  flex-basis: calc(100% - 100px);
+  @include flex-position(center);
+  p {
+    margin: 0;
+    padding: $base-margin/3 0;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+  }
+}
+// VARIANTS
+.Prices-promo--kombi {
+  background-color: $orange;
+  .Prices-promo-left:before {
+    background-image: url("../images/svg/logos/kombi.svg");
+  }
+}
+.Prices-promo--dream {
+  background-color: $green;
+  .Prices-promo-left:before {
+    background-image: url("../images/svg/logos/dromrese.svg");
+  }
+}
+.Prices-promo--motor {
+  background-color: $red;
+  .Prices-promo-left:before {
+    background-image: url("../images/svg/logos/motor.svg");
+  }
 }

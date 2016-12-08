@@ -282,26 +282,32 @@ width: 22px;
   }
 }
 /////////////////////////////////////////////
-// STATE LOGGED IN
+// STATE LOGGED IN MYPAGES
 /////////////////////////////////////////////
 .Header-container--MyPages {
   border-bottom: none;
-  .Header-flex--one {
-    border: none;
-  }
-  .Header-flex--three {
-  background-color: $darker-red;
-  @include headerBorders($darker-red, null);
-  .Header-profile-image {
-    background-image: url("../images/svg/profile-icon-white.svg");
-  }
-  .Header-title  {
-    h4 {
-      color: white;
-
+  @include breakpoint(1px,1023px) {
+    .Header-flex--one {
+      border: none;
+    }
+    .Header-flex--three {
+    background-color: $darker-red;
+    @include headerBorders($darker-red, null);
+    .Header-profile-image {
+      background-image: url("../images/svg/profile-icon-white.svg");
+    }
+    .Header-title  {
+      h4 {
+        color: white;
+      }
+    }
     }
   }
-  }
+    @include breakpoint(1024px) {
+      .Header-inner-container {
+        padding: 22px 0;
+      }
+    }
   .Header-flex--four {
     display: none; // The button
   }

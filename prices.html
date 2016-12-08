@@ -3,7 +3,7 @@
 <html lang="se">
 <head>
   <meta charset="UTF-8">
-  <title>Vinstval</title>
+  <title>Det här kan du vinna</title>
   <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
@@ -56,10 +56,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="Cookie-container">
   <div class="Cookie-inner">
-    <p>
-      Den här sidan använder sig av cookies. Genom att fortsätta använda den här sidan godkänner du att vi lagrar en cookie i din
+    <div class="Cookie-left">
+      <p>Den här sidan använder sig av cookies. Genom att fortsätta använda den här sidan godkänner du att vi lagrar en cookie i din
       webbläsare för att förbättra upplevelsen för dig som besökare. <a href="https://www.pts.se/cookies" target="_blank">Läs mer om vad cookies innebär.</a> </p>
+    </div>
+    <div class="Cookie-right">
       <button class="js-Cookies-approve-btn">Jag förstår</button>
+    </div>
   </div>
 </section>
 
@@ -96,7 +99,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="Menu-level-two">
               <li><a href="index.html">Startsida</a></li>
               <li><a href="tickets.html">Mina lotter</a></li>
-              <li><a href="prices.html">Vinstval</a></li>
+              <li><a href="prices.html">Det här kan du vinna</a></li>
+              <li><a href="choices.html">Vinstval</a></li>
               <li><a href="campaign.html">Kampanjsida</a></li>
               <li><a href="information.html">Mina uppgifter</a></li>
               <li><a href="winnings.html">Vinsthistorik</a></li>
@@ -305,93 +309,149 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main>
   
-<section class="Prices-container">
+<section class="Prices-container ">
   <div class="Prices-inner-container">
     <div class="Prices-header">
-      <h1 class="Heading-1">Stort grattis till vinsten Ann-Charlotte!</h1>
-      <h3 class="Heading-3">Vinstnivå: 300 kr</h3>
+      <h1 class="Heading-1">Det här kan du vinna!</h1>
     </div>
-    <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
-    <div class="Tickets-ticket-col">
-      <div class="Tickets-ticket Tickets-ticket--dream-win">
-        
-          <h4 class="Tickets-ticket-title">Drömreselott</h4>
-          <h5 class="Tickets-ticket-number">205563</h5>
-          <div class="js-Lottery-status"></div>
-      </div>
+    <h4 >Välj lotteri här</h4>
+
+    <div class="Prices-lottery-row Prices-lottery-row--kombi-active">
+      <div class="Prices-lottery-col Prices-lottery-col--kombi"></div>
+      <div class="Prices-lottery-col Prices-lottery-col--dream"></div>
+      <div class="Prices-lottery-col Prices-lottery-col--motor"></div>
     </div>
-    <!-- ########## END TICKETS VIEW ########## -->
-
-    <div class="Prices-chosen-container">
-      <div class="Prices-chosen-ribbon"><span>Veckans vinst</span></div>
-      <img src="./images/campaign/foundue.png" alt="Fonduegryta Deluxe"/>
-      <h3 class="Heading-3">Fonduegryta Deluxe</h3>
-      <a class="" href="#">Läs mer</a>
-      <p>
-        Detta är din utvalda vinst som du får om du inte väljer en annan vinst.
-      </p>
-    </div>
-
-    <h2 class="Prices-others-header">Eller välj en annan vinst:</h2>
-    <div class="Prices-others-container">
-      <div class="Prices-others-col">
-        <div class="Prices-others-image">
-          <img src="./images/campaign/bestick.png" alt=""/>
-        </div>
-        <h4>Bestick</h4>
-        <a class="Prices-others-readmore" href="#">Läs mer</a>
-        <a class="Prices-others-choose" href="#">Välj</a>
-      </div>
-      <div class="Prices-others-col">
-        <div class="Prices-others-image">
-          <img src="./images/campaign/hygien.png" alt=""/>
-        </div>
-        <h4>Nessesär</h4>
-        <a class="Prices-others-readmore" href="#">Läs mer</a>
-        <a class="Prices-others-choose" href="#">Välj</a>
-      </div>
-      <div class="Prices-others-col">
-        <div class="Prices-others-image">
-          <img src="./images/campaign/killingdvd.png" alt=""/>
-        </div>
-        <h4>Killing DVD-box</h4>
-        <a class="Prices-others-readmore" href="#">Läs mer</a>
-        <a class="Prices-others-choose" href="#">Välj</a>
-      </div>
-      <div class="Prices-others-col">
-        <div class="Prices-others-image">
-          <img src="./images/campaign/fotoram.png" alt=""/>
-        </div>
-        <h4>Digital fotoram</h4>
-        <a class="Prices-others-readmore" href="#">Läs mer</a>
-        <a class="Prices-others-choose" href="#">Välj</a>
-      </div>
-      <div class="Prices-others-col">
-        <div class="Prices-others-image">
-            <img src="./images/campaign/kampanjbild.png" alt=""/>
-        </div>
-
-        <h4>Digital fotoram</h4>
-        <a class="Prices-others-readmore" href="#">Läs mer</a>
-        <a class="Prices-others-choose" href="#">Välj</a>
-      </div>
-      <div class="Prices-others-col">
-        <div class="Prices-others-image">
-          <img src="./images/campaign/extrachansen.png" alt=""/>
-        </div>
-        <h4>Digital fotoram</h4>
-        <a class="Prices-others-readmore" href="#">Läs mer</a>
-        <a class="Prices-others-choose" href="#">Välj</a>
-      </div>
-
-
-
-
-
-
+    <h4>Gå direkt till vinstnivå:</h4>
+    <div class="Prices-lottery-links">
+      <a href="#level-1">1.000.000</a>
+      <a href="#level-2">300.000</a>
+      <a href="#level-3">30.000</a>
+      <a href="#">10.000</a>
+      <a href="#">5.000</a>
+      <a href="#">500</a>
+      <a href="#">200</a>
     </div>
 
 
+    <!-- //////////// 1.000.000  ////////////// -->
+    <div id="level-1" class="Prices-price-level">
+      <h2 class="Heading-2">Vinstnivå: 1.000.000 kr</h2>
+      <div class="Prices-price-inner">
+        <div class="Prices-price-image">
+          <img src="./images/campaign/miljon.png" alt="En miljon kronor"/>
+        </div>
+        <p>
+          En miljon kronor, att spendera på precis vad du vill
+        </p>
+      </div>
+      <a href="#" class="Prices-buy-link">Köp en kombilott</a>
+    </div>
+    <!-- //////////// 300.000 //////////// -->
+    <div id="level-2" class="Prices-price-level">
+      <h2 class="Heading-2">Vinstnivå: 300.000 kr</h2>
+      <!-- Pris -->
+      <div class="Prices-price-inner">
+        <div class="Prices-price-image">
+          <span class="Prices-number">1</span>
+          <img src="./images/campaign/volvo.png" alt="volvo"/>
+        </div>
+        <p>
+          En helt ny Volvo Milöbil
+        </p>
+      </div>
+      <!-- PRICE PROMO -->
+      <div class="Prices-promo Prices-promo--motor">
+        <div class="Prices-promo-left">
+        </div>
+        <div class="Prices-promo-right">
+          <p>
+            Intresserad av bilar? <br/>
+            Spana in vårt Motorlotteri
+          </p>
+        </div>
+      </div>
+      <!-- END PRICE PROMO -->
+      <!-- Pris -->
+      <div class="Prices-price-inner">
+        <div class="Prices-price-image">
+          <span class="Prices-number">2</span>
+          <img src="./images/campaign/train.png" alt="Husvagn"/>
+        </div>
+        <p>
+          Strömlinjeformade Caravisio husvagn
+        </p>
+      </div>
+      <!-- Pris -->
+      <div class="Prices-price-inner">
+        <div class="Prices-price-image">
+          <span class="Prices-number">3</span>
+          <img src="./images/campaign/boat.png" alt="båt"/>
+        </div>
+        <p>
+          Bayliner sportbåt
+        </p>
+      </div>
+      <a href="#" class="Prices-buy-link">Köp en kombilott</a>
+    </div>
+
+    <!-- //////////// 50.000 Stor bild + 2 kolumner //////////// -->
+    <div id="level-3" class="Prices-price-level Prices-price-level--cols">
+      <h2 class="Heading-2">Vinstnivå: 50.000 kr</h2>
+      <!-- Pris -->
+      <div class="Prices-price-inner">
+        <div class="Prices-price-image">
+          <span class="Prices-number">1</span>
+          <img src="./images/campaign/kanna.png" alt="volvo"/>
+        </div>
+        <span class="Prices-ord-price">Ordinarie vinst</span>
+        <p>
+          Mon Amie kanna + handdukar
+        </p>
+      </div>
+      <!-- 2 Columns -->
+      <div class="Prices-cols-container">
+        <div class="Prices-col">
+          <div class="Prices-price-image">
+            <span class="Prices-number">1</span>
+            <img src="./images/campaign/hygien.png" alt="Husvagn"/>
+          </div>
+          <p>
+            Mon Amie kanna + handdukar
+          </p>
+        </div>
+        <div class="Prices-col">
+          <div class="Prices-price-image">
+            <span class="Prices-number">2</span>
+            <img src="./images/campaign/fotoram.png" alt="Husvagn"/>
+          </div>
+          <p>
+            Strömlinjeformade Caravisio husvagn
+          </p>
+        </div>
+        <div class="Prices-col">
+          <div class="Prices-price-image">
+            <span class="Prices-number">3</span>
+            <img src="./images/campaign/foundue.png" alt="Husvagn"/>
+          </div>
+          <p>
+            Strömlinjeformade Caravisio husvagn
+          </p>
+        </div>
+        <div class="Prices-col">
+          <div class="Prices-price-image">
+            <span class="Prices-number">4</span>
+            <img src="./images/campaign/killingdvd.png" alt="Husvagn"/>
+          </div>
+          <p>
+            Strömlinjeformade Caravisio husvagn
+          </p>
+        </div>
+      </div>
+      <!-- END 2 Columns -->
+      <a href="#" class="Prices-buy-link">Köp en kombilott</a>
+
+    </div>
+    <!-- END Prices-level -->
   </div>
 </section>
 

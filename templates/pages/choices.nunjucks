@@ -1,0 +1,5 @@
+{% set pageName = "Välj din vinst" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Choices/choices.nunjucks" %}
+{% endblock %}

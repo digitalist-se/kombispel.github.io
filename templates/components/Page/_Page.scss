@@ -15,6 +15,34 @@ h1,h2,h3,h4,h5,h6,p,ul {
   margin-left: auto;
   margin-right: auto;
 }
+blockquote {
+  &:before {
+    background: none; // Get rid of the inital
+  }
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  position: relative;
+  span {
+    position: relative;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    &:before {
+      background: url("../images/svg/quote.svg");
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      left: -45px;
+      top: 5px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
+
 }
 .Page-inner {
   background-color: white;
@@ -99,7 +127,7 @@ li {
 
 
 .Page-video {
-  max-width: 680px;
+  max-width: $max-inner;
   width: 100%;
   margin: 0 auto;
 }

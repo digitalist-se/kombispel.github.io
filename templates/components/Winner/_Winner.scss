@@ -36,34 +36,7 @@
   width: 100%;
   margin-bottom: -25px;
 }
-/////////////////////////////////////////////
-// THE BLOCKQUOTE
-/////////////////////////////////////////////
-.Winner-quote {
-  &:before {
-    background: none; // Get rid of the inital
-  }
-  text-align: center;
-  padding-top: 45px;
-  padding-bottom: 45px;
-  position: relative;
-  span {
-    position: relative;
-    text-align: left;
-    display: inline-block;
-    margin: 0 auto;
-    &:before {
-      background: url("../images/svg/quote.svg");
-      content: '';
-      position: absolute;
-      height: 30px;
-      width: 30px;
-      left: -45px;
-      top: 5px;
-      background-repeat: no-repeat;
-    }
-  }
-}
+
 /////////////////////////////////////////////
 // CONTENT
 /////////////////////////////////////////////
@@ -77,11 +50,6 @@
     @include page-inner();
   }
 }
-
-
-
-
-
 
 /////////////////////////////////////////////
 // WINNER DETAIL LIST

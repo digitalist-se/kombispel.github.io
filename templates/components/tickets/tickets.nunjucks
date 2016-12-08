@@ -47,7 +47,7 @@
       <!-- Drömreselott Extralott -->
       <div class="Tickets-ticket-col">
         <div class="Tickets-ticket Tickets-ticket--dream Tickets-ticket--dream-extra">
-          <div class="Tickets-ticket-ribbon"></div> 
+          <div class="Tickets-ticket-ribbon"></div>
           <h4 class="Tickets-ticket-title">Drömreselott</h4>
               <h5 class="Tickets-ticket-number">024680</h5>
             <a class="Tickets-ticket-link" href="#">Rätta lott</a>
@@ -150,6 +150,11 @@
         </div>
       </div>
     </div>
+
+
+
+      </div>
+
     <a class="MyPages-show-list-link" href="#">Visa tidigare dragningslistor</a>
   </div>
 

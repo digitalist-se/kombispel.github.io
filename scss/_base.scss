@@ -42,24 +42,36 @@ a {
   }
 }
 blockquote {
-  background-color: #949d9e;
-  color: #fff;
+  color: white;
   font-family: $gill-bookItalic;
   font-size: 25px;
   margin: $base-margin 0;
+  background-color: $dark-grey;
+  text-align: center;
   padding: 30px 30px 30px 60px;
   position: relative;
-  &:before {
-    background: url("../images/svg/quote.svg");
-    content: '';
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    left: 20px;
-    top: 35px;
-    background-repeat: no-repeat;
+  font-size: 25px;
+
+  span {
+    position: relative;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    &:before {
+      background: url("../images/svg/quote.svg");
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      left: -45px;
+      top: 5px;
+      background-repeat: no-repeat;
+    }
   }
 }
+
+
+
 img {
   max-width: 100%;
   height: auto;
