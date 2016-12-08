@@ -219,7 +219,7 @@ $(".js-Login-form-submit-btn").click(function(e) {
 /////////////////////////////////////////////
 // Check if Cookie is set
 /////////////////////////////////////////////
-if (document.cookie.indexOf("_ga") >= 0) {
+if (document.cookie.indexOf("_ga") == -1) {
    $(".Cookie-container").show();
 }
 
