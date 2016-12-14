@@ -14,7 +14,7 @@
         Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
       </p>
       <div class="Page-image">
-        <img class="Page-image-image" src="../images/content/beach.jpg" alt="Strand" />
+        <img class="Page-image-image" src="./images/content/beach.jpg" alt="Strand" />
         <span class="Page-image-caption">Foto: Jacob Henriksson</span>
       </div>
       <div class="Page-lead">Ända sedan starten 1956 har vår målsättning varit densamma – spännande underhållning för alla. Nu har vi samlat alla våra varumärken på ett ställe och fortsätter vår vision att roa och ge spänning.</div>
@@ -81,7 +81,7 @@
           Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
         </span>
       </blockquote>
-      <img class="Page-image" src="../images/content/beach.jpg" alt="Strand" />
+      <img class="Page-image" src="./images/content/beach.jpg" alt="Strand" />
     </article>
   </div>
 </section>
@@ -96,7 +96,7 @@
       <h1 class="Heading-1">Rubrik till sidan som bara har en kolumn.</h1>
       <h2 class="Heading-2">Det här är en H2 rubrik. Allt text förrutom blockquotes på den här sidan är max 760px brett och centrerat</h2>
       <div class="Page-image">
-        <img class="Page-image-image" src="../images/content/beach.jpg" alt="Strand" />
+        <img class="Page-image-image" src="./images/content/beach.jpg" alt="Strand" />
         <span class="Page-image-caption">Foto: Jacob Henriksson</span>
       </div>
       <h2 class="Heading-2">Det här är en H2 rubrik. Allt text förrutom blockquotes på den här sidan är max 760px brett och centrerat</h2>
