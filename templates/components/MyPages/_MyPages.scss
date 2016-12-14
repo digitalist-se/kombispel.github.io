@@ -1,8 +1,8 @@
-.MyPages {
+.MyPages-container {
   background-color: $lighter-grey;
   padding-bottom: 100px;
 }
-.MyPages-container {
+.MyPages-inner-container {
   @extend .Inner-container;
 }
 /////////////////////////////////////////////
@@ -39,7 +39,6 @@
 .MyPages-block {
   background-color: #fff;
   padding: 20px;
-
   button {
     padding: 10px 40px;
     font-family: $gill-regular;
@@ -56,50 +55,15 @@
   }
 }
 
-.MyPages-settingsForm {
-  margin: 0 auto;
-  input[type="text"],
-  input[type="number"],
-  input[type="email"] {
-    // margin-bottom: 10px;
-  }
-}
-
-.MyPages-input-section {
-  margin-bottom: 30px;
-
-  &:first-child {
-    border-bottom: 1px solid $dark-grey;
-    padding-bottom: 30px;
-  }
-  .MyPages-input-row {
-    @include flex-row();
-  }
-
-  input {
-    flex-basis: calc(100% - #{4*$base-margin});
-  }
-  .MyPages-toggle-helpbox {
-    position: relative;
-    height: 40px;
-    flex-basis: 50px; //  IE FIX
-    @include flex-position(center);
-    .Icon {
-      // position: static;
-    }
-  }
-}
 .MyPages-block-title {
   display: inline-block;
   border-bottom: 1px solid $dark-grey;
   padding-bottom: 10px;
 }
-
 .MyPages-block-section {
   &:first-child {
     margin-bottom: 30px;
   }
-
   label {
     display: block;
     margin-bottom: 10px;
@@ -122,39 +86,9 @@
   margin: 40px auto;
   width: 210px;
   @extend .Arrow-link;
+}
 
-}
-/////////////////////////////////////////////
-// HELP BOXES
-/////////////////////////////////////////////
-.js-MyPages-toggle-mail,.js-MyPages-toggle-phone {
-  top: 8px !important;
-  right: 9px !important;
-}
-.js-MyPages-help-box--mail, .js-MyPages-help-box--phone {
-  display: none;
-}
-/////////////////////////////////////////////
-//  SELECT BOXES
-/////////////////////////////////////////////
-.MyPages-select-heading {
-  color: $label-grey;
-  margin: 2*$base-margin 0 10px 0;
-}
-.MyPages-select {
-  cursor: pointer;
-  border-radius: 0;
-  outline: $orange;
-  height: 45px;
-  padding-left: $base-margin;
-  appearance: none;
-  border-radius: 0px;
-  width: calc(100% - #{3*$base-margin});
-  background-image: url("../images/svg/orange-arrow.svg");
-  background-position: calc(100% - #{$base-margin});
-  background-repeat: no-repeat;
-  background-size: 20px 30px;
-}
+
 /////////////////////////////////////////////
 // CHANGE PASSWORD MODAL
 /////////////////////////////////////////////

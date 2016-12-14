@@ -1,7 +1,7 @@
 .Prices-container {
   background-color: $content-grey;
+  padding-bottom: 2*$base-margin;
 }
-
 .Prices-inner-container {
   @extend .Inner-container;
   h4 {
@@ -11,60 +11,54 @@
   }
 }
 .Prices-header {
-  padding-top: $base-margin;
-}
-
-
-@mixin prices-col($color) {
-  transition: all .2s ease;
-  background-color: $color;
-  &:hover {
-    background-color: darken($color, 15%);
+  max-width: $max-inner;
+  margin: 0 auto;
+  padding: $base-margin;
+  @include respond-to(medium) {
+    padding: $base-margin 0 0 0;
   }
 }
-
-
 .Prices-lottery-row {
   @include flex-row();
   max-width: $max-inner;
   margin: 0 auto;
 }
 .Prices-lottery-col {
-  @include flex-col(1,3);
+  @include flex-gtr-col(3,1px);
   @include prices-col(rgb(230,230,230));
-  height: 150px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 120px;
   cursor: pointer;
+  background-size: 80px;
+  height: 100px;
+  @include breakpoint(400px) {
+    background-size: 100px;
+    height: 130px;
+  }
+  @include breakpoint($medium) {
+    background-size: 120px;
+    height: 140px;
+  }
 }
 /////////////////////////////////////////////
-// VARIANTS "Välj lotteri här"
+// VARIANTS
 /////////////////////////////////////////////
-.Prices-lottery-row--kombi-active {
-  border-bottom: 10px solid $orange;
-  .Prices-lottery-col--kombi  {
-    @include prices-col($orange);
-  }
+//  KOMBI
+.Prices-container--kombi {
+  @include prices-variants($orange,#{Prices-lottery-col--kombi});
 }
-.Prices-lottery-row--dream-active {
-  border-bottom: 10px solid $green;
-  .Prices-lottery-col--dream  {
-    @include prices-col($green);
-  }
+// DRÖMRESE
+.Prices-container--dream {
+  @include prices-variants($green,#{Prices-lottery-col--dream});
 }
-.Prices-lottery-row--motor-active {
-  border-bottom: 10px solid $red;
-  .Prices-lottery-col--motor  {
-    @include prices-col($red);
-  }
+//  MOTOR
+.Prices-container--motor {
+  @include prices-variants($red,#{Prices-lottery-col--motor});
 }
 .Prices-lottery-col--kombi {
   background-image: url("../images/svg/logos/kombi.svg");
 }
 .Prices-lottery-col--dream {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
   background-image: url("../images/svg/logos/dromrese.svg");
 }
 .Prices-lottery-col--motor {
@@ -80,7 +74,7 @@
   a {
     text-align: center;
     color: $label-grey;
-    padding: $base-margin;
+    padding: $base-margin 0;
     background-color: white;
     text-decoration: none;
     @include breakpoint(1px, 599px) {
@@ -102,9 +96,6 @@
   }
 }
 
-
-
-
 /////////////////////////////////////////////
 // PRICES PRICE LEVELS
 /////////////////////////////////////////////
@@ -112,32 +103,29 @@
   max-width: $max-inner;
   margin: 0 auto;
   text-align: center;
-  // border-top: 4px solid red;
-  &:first-of-type {
-    border-top: 4px solid green;
-  }
-
   img {
     width: 100%;
   }
   p {
     text-align: center;
     color: $dark-grey;
-    margin-top: 5px;
-    margin-bottom: 0;
-    padding-bottom: 2*$base-margin;
-  }
-  a {
-    @include gradient-btn($orange);
+
+    margin: 0;
+    padding: 10px 0 $base-margin 0;
   }
 }
-
+.Prices-buy-link {
+  background-color: white;
+  text-align: center;
+  padding: $base-margin 0 20px 0; // Compensate for shadow
+  a {
+    display: inline-block;
+  }
+}
 .Prices-price-inner {
   background-color: white;
   margin-bottom: 2*$base-margin;
 }
-
-
 .Prices-price-image {
   position: relative;
 }
@@ -150,7 +138,6 @@
   color: white;
   font-size: 24px;
   @include flex-position(center);
-  background-color: $orange;
   border-radius: 50%;
 }
 /////////////////////////////////////////////
@@ -161,8 +148,6 @@
     margin-bottom: 0;
   }
 }
-
-
 .Prices-ord-price {
   margin-top: $base-margin;
   display: inline-block;
@@ -172,9 +157,6 @@
   text-transform: uppercase;
   padding: 5px $base-margin;
 }
-
-
-
 .Prices-cols-container {
   @include flex-row();
   background-color: $content-grey;
@@ -182,10 +164,15 @@
 }
 .Prices-col {
   background-color: white;
-  padding: $base-margin;
-
   @include flex-gtr-col(2,2*$base-margin);
-  .Prices-image {
+  .Prices-col-inner {
+    padding: $base-margin;
+  }
+  .Prices-price-image {
+    img {
+      max-height: 200px;
+      width: auto;
+    }
   }
 }
 /////////////////////////////////////////////
@@ -194,7 +181,6 @@
 .Prices-promo {
   margin-bottom: 2*$base-margin;
   @include flex-row();
-
 }
 .Prices-promo-left {
   flex-basis: 100px;
@@ -203,22 +189,33 @@
     position: absolute;
     content: "";
     left: $base-margin;
-    top: -10px;
+    top: 0;
+    bottom: 0;
     background-repeat: no-repeat;
-    background-size: 100px;
-    height: 100px;
-    width: 100px;
+    background-position: center left;
+    background-size: 70px;
+    height: 100%;
+    width: 100%;
+    @include breakpoint(600px) {
+      background-size: 100px;
+      height: 100px;
+      width: 100px;
+      top: -15px;
+    }
   }
 }
 .Prices-promo-right {
-  flex-basis: calc(100% - 100px);
+  flex-basis: calc(100% - 150px);
   @include flex-position(center);
   p {
     margin: 0;
     padding: $base-margin/3 0;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     text-align: left;
+    @include breakpoint(600px) {
+    font-size: 20px;
+    }
   }
 }
 // VARIANTS

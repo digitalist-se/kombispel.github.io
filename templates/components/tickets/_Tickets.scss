@@ -15,6 +15,12 @@
   padding: 2*$base-margin 0;
   position: relative;
 }
+.Tickets-ticket-col--single {
+  @include flex-gtr-col (1, 10px);
+  background-color: none;
+}
+
+
 .Tickets-ticket-container {
   .Tickets-ticket-col {
     background-color: white;
@@ -29,7 +35,9 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: url("../images/svg/starburst.svg") no-repeat center center;
+        right: 0;
+        bottom: 0;
+        background: url("../images/svg/starburst.svg");
         background-size: cover;
       }
     }
@@ -174,12 +182,20 @@
     width: 200px;
   }
 }
-.Tickets-ticket--kombi-extra, .Tickets-ticket--dream-extra  {
+.Tickets-ticket--kombi,
+.Tickets-ticket--dream,
+.Tickets-ticket--kombi-win,
+.Tickets-ticket--dream-win,
+.Tickets-ticket--kombi-lose,
+.Tickets-ticket--dream-lose
+{
   .Tickets-ticket-ribbon {
     background-image: url("../images/svg/tickets/ribbon-blue.svg");
   }
 }
-.Tickets-ticket--motor-extra {
+.Tickets-ticket--motor,
+.Tickets-ticket--motor-win,
+.Tickets-ticket--motor-lose {
   .Tickets-ticket-ribbon {
     background-image: url("../images/svg/tickets/ribbon-black.svg");
   }

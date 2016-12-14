@@ -13,11 +13,7 @@ body {
 h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
   font-family: $gill-bold, "sans-serif";
 }
-h1,h2,h3,h4,h5,h6,p {
-  // max-width: $max-inner;
-  // margin-left: auto;
-  // margin-right: auto;
-}
+
 main {
   transition: all .2s ease;
 }
@@ -85,23 +81,35 @@ img {
   padding: 1*$base-margin 0;
   font-family: $gill-regular;
   text-align: center;
+  span {
+    display: block;
+  }
 }
 
 .Heading-2 {
   font-size: 26px;
   font-family: $gill-regular;
   text-align: center;
+  span {
+    display: block;
+  }
 }
 .Heading-2--red {
   font-size: 26px;
   font-family: $gill-regular;
   text-align: center;
   color: $red;
+  span {
+    display: block;
+  }
 }
 .Heading-3 {
   font-size: 24px;
   font-family: $gill-regular;
   text-align: center;
+  span {
+    display: block;
+  }
 }
 /////////////////////////////////////////////
 // FULLWIDTH BUY LINK

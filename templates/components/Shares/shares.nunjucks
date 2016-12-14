@@ -1,8 +1,6 @@
 {% include "components/submenu/submenu.nunjucks" %}
-
-<section class="MyPages">
-  <div class="MyPages-container">
-
+<section class="MyPages-container">
+  <div class="MyPages-inner-container">
     <div class="MyPages-header">
       <h1 class="Heading-1">Hej Tommy</h1>
       <h3 class="Heading-3">Du har vunnit i veckans vinstregn!</h3>
@@ -11,7 +9,7 @@
     <div class="List">
       <div class="List-item">
         <div class="List-item-inner">
-          <img class="List-item-image" src="./images/list/ps4.jpg" alt="PS4" />
+          <img class="List-item-image" src="images/list/ps4.jpg" alt="PS4" />
           <p class="List-item-p u-uppercase">PLAYSTATION 4 PRO</p>
           <p class="List-item-p">Kombilott - 025785</p>
           <p class="List-item-p">Speldragning vecka 7</p>
@@ -19,7 +17,7 @@
       </div>
       <div class="List-item">
         <div class="List-item-inner">
-          <img class="List-item-image" src="./images/list/candles.jpg" alt="Candles" />
+          <img class="List-item-image" src="images/list/candles.jpg" alt="Candles" />
           <p class="List-item-p u-uppercase">Ljusstake Nordic Light</p>
           <p class="List-item-p">Kombilott - 025785</p>
           <p class="List-item-p">Speldragning vecka 2</p>
@@ -85,7 +83,7 @@
   </div>
 
   <div class="Fullwidth-buy-link-container">
-    <a class="Fullwidth-buy-link" href="./campaign.html">
+    <a class="Fullwidth-buy-link" href="#">
       <span>Öka dina vinstchanser</span>
       <span>Köp en lott till</span>
     </a>

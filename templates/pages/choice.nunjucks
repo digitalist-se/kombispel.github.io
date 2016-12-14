@@ -1,0 +1,5 @@
+{% set pageName = "Bra val Tommy!" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+{% include "components/Choice/choice.nunjucks" %}
+{% endblock %}

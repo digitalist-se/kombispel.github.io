@@ -1,10 +1,13 @@
 .Footer-inner {
-  @include page-inner();
   @extend .Inner-container;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  @include breakpoint(1px, 767px) {
+    padding-left: $base-margin;
+    padding-right: $base-margin;
+  }
+  padding-top: $base-margin;
 }
 .Footer-box {
   @include flex-gtr-col(1,15px);
@@ -86,22 +89,6 @@
 /////////////////////////////////////////////
 // FOOTER THIRD
 /////////////////////////////////////////////
-@mixin media-btn($image,$color) {
-  background-color: $color ;
-  span:before {
-    background-image:  url($image);
-    background-position: center center;
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 25px;
-    background-repeat: no-repeat;
-  }
-  &:hover {
-    background-color: darken($color,10%);
-  }
-}
 .Footer-box--third {
   order: 2;
   .Footer-follow {
@@ -110,18 +97,13 @@
   .Footer-follow-item {
     @include flex-gtr-col(2,$base-margin);
     margin-top: 5px !important;
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: all .2s ease;
+
     span {
-      position: relative;
-      text-align: right;
-      display: inline-block;
-      padding-left: 2*$base-margin;
-      margin: 0 auto;
+      // position: relative;
+      // text-align: right;
+      // display: inline-block;
+      // padding-left: 2*$base-margin;
+      // margin: 0 auto;
     }
   }
   .Footer-follow-item--facebook {

@@ -1,6 +1,6 @@
 <header class="Header-container">
 {# <header class="Header-container Header-container--tight">  #}
-{# <header class="Header-container Header-container--MyPages"> #}
+{# <header class="Header-container Header-container--MyPages">  #}
     <div class="Header-inner-container">
       <!-- MENU -->
       <div class="js-Header-menu-container Header-flex--one">
@@ -29,7 +29,7 @@
         <div class="Header-inner-grid">
           <div class="Header-profile-image"></div>
           <div class="Header-title">
-            <h4><a href="./tickets.html">min sida</a></h4>
+            <h4>min sida</h4>
           </div>
         </div>
       </div>

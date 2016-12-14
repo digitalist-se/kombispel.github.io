@@ -20,15 +20,17 @@
   </div>
 </section>
 <!-- SIDA -->
-<section class="MyPages">
-  <div class="MyPages-container">
+<section class="MyPages-container">
+  <div class="MyPages-inner-container">
 
     <div class="MyPages-information">
-      <div class="MyPages-info-col-main">
+      <section class="MyPages-info-col-main">
         <div class="MyPages-header">
           <h1 class="Heading-1">Mina uppgifter</h1>
         </div>
-
+        <!-- ////////////////////////////////////////////////////////
+        BLOCK 1 (Grunduppgifter)
+        //////////////////////////////////////////////////////////-->
         <div class="MyPages-block MyPages-block--basic">
           <p><span class="MyPages-block-title u-uppercase">Grunduppgifter</span></p>
           <p><span>Namn: </span><span class="u-bold">Tommy Nilsson</span></p>
@@ -37,21 +39,35 @@
           <button class="js-MyPages-password-btn" type="button">Ändra ditt lösenord</button>
         </div>
 
-        <div class="MyPages-block MyPages-block--settings">
-          <h3 class="Heading-3">Dessa uppgifter kan du ändra:</h3>
+        <form name="" class="Information-form">
+        <!-- ////////////////////////////////////////////////////////
+        BLOCK 2 (Kontaktuppgifter)
+        //////////////////////////////////////////////////////////-->
+        <div class="Information-form-block">
+          <div class="Information-form-block-inner">
+          <h3 class="Heading-3">Kontaktuppgifter:</h3>
 
-          <form name="MyPages-settingsForm" class="MyPages-settingsForm">
-            <div class="MyPages-input-section">
-                <label class="u-block" for="phone">Mobiltelefon:</label>
+            <div class="Information-input-section">
+              <label for="adress">Adress:</label>
+              <input type="text" name="adress" class="js-Information-input" placeholder="Gatuadress" value="Storgatan 23" required />
+              <div class="Information-input-row Information-input-row--adress">
+                <input type="number" class="Information-input-inline js-Information-input" name="post-number" placeholder="Postnummer" value="12345" required/>
+                <input type="text" class="Information-input-inline js-Information-input" name="city" placeholder="Ort" value="Storstad" required/>
+              </div>
+            </div>
 
-                <div class="MyPages-input-row">
-                  <input class="" type="text" name="phone" required/>
-                  <div class="MyPages-toggle-helpbox">
-                    <span class="Icon Icon--question js-MyPages-toggle-phone"></span>
+
+            <div class="Information-input-section">
+                <label for="phone">Mobiltelefon:</label>
+
+                <div class="Information-input-row">
+                  <input class="js-Information-input Information-input--has-helpbox" type="text" name="phone" placeholder="Telefonnumer" value="08615656151" required/>
+                  <div class="Information-toggle-helpbox">
+                    <span class="Icon Icon--question js-Information-toggle-phone"></span>
                   </div>
                 </div>
               <!-- HELP BOX -->
-              <div class="js-MyPages-help-box--phone">
+              <div class="js-Information-help-box--phone">
               <div class="Help-box">
                 <div class="Help-box-inner">
                   <p>
@@ -70,17 +86,17 @@
               </div>
               <!-- END HELP BOX -->
             </div>
-            <div class="MyPages-input-section">
-              <label class="u-block" for="email">E-postadress:</label>
+            <div class="Information-input-section">
+              <label for="email">E-postadress:</label>
 
-              <div class="MyPages-input-row">
-                <input class="" type="email" name="email" required/>
-                <div class="MyPages-toggle-helpbox">
-                  <span class="Icon Icon--question js-MyPages-toggle-mail"></span>
+              <div class="Information-input-row">
+                <input class="js-Information-input Information-input--has-helpbox" type="email" name="email" placeholder="E-postadress" value="test@test.se" required/>
+                <div class="Information-toggle-helpbox">
+                  <span class="Icon Icon--question js-Information-toggle-mail"></span>
                 </div>
               </div>
               <!-- HELP BOX -->
-              <div class="js-MyPages-help-box--mail">
+              <div class="js-Information-help-box--mail">
               <div class="Help-box">
                 <div class="Help-box-inner">
                   <p>
@@ -99,41 +115,85 @@
               </div>
               <!-- END HELP BOX -->
             </div>
-            <div class="MyPages-input-section">
-            <h3 class="Heading-3">Välj standardvinst</h3>
-            <p>
-              Förklaringstext lorem ipsum doler sit amet Quisque tincidunt malesuada commodo.
-              Vestibulum accumsan sodales accumsan. Sed et interdum magna. Aenean vitae ipsum nibh. Sed egestas felis.
-            </p>
-            <h4 class="MyPages-select-heading">Vinstnivå 500 kr</h4>
-            <select class="MyPages-select" name="">
-                <option value="">Vinstnivå 1</option>
-                <option value="">Vinstnivå 2</option>
-                <option value="">Vinstnivå 3</option>
-                <option value="">Vinstnivå 4</option>
-            </select>
-            <h4 class="MyPages-select-heading">Vinstnivå 200 kr</h4>
-            <select class="MyPages-select" name="">
-                <option value="">Vinstnivå 1</option>
-                <option value="">Vinstnivå 2</option>
-                <option value="">Vinstnivå 3</option>
-                <option value="">Vinstnivå 4</option>
-            </select>
-
-
             </div>
-            <div class="u-center">
-              <button class="" type="submit">Spara dina ändringar</button>
             </div>
+            <!-- ////////////////////////////////////////////////////////
+            BLOCK 3 (Välj kontaktväg)
+            //////////////////////////////////////////////////////////-->
+            <div class="Information-form-block">
+              <div class="Information-form-block-inner">
+              <h3 class="Heading-3">Välj kontaktväg</h3>
+              <p>
+                Förklaringstext lorem ipsum doler sit amet Quisque tincidunt malesuada commodo.
+                Vestibulum accumsan sodales accumsan. Sed et interdum magna. Aenean vitae ipsum nibh. Sed egestas felis.
+              </p>
+              <div class="Form-checkbox">
+                <div>
+                  <span><input type="checkbox" name="signup-check" checked/></span>
+                  <span><label for="signup-check">Ja tack, jag vill ha mitt lottoutskick via e-post</label></span>
+                </div>
+              </div>
+              <h4>Det här ingår:</h4>
+              <ul class="Information-contact-list">
+                <li>Papperstidningen Kombi</li>
+                <li>PDF-tidningen Kombi via E-post</li>
+                <li>Lottnummer/bevis hittar du här på Mina sidor</li>
+              </ul>
+              <div class="Form-checkbox">
+                <div>
+                  <span><input type="checkbox" name="signup-check" checked/></span>
+                  <span><label for="signup-check">Ja tack, jag vill ha mitt lottoutskick via brev</label></span>
+                </div>
+              </div>
+              <h4>Det här ingår:</h4>
+              <ul class="Information-contact-list">
+                <li>Papperstidningen Kombi</li>
+                <li>PDF-tidningen Kombi via E-post</li>
+                <li>Lottnummer/bevis hittar du här på Mina sidor</li>
+              </ul>
+              </div>
+            </div>
+            <!-- ////////////////////////////////////////////////////////
+            BLOCK 4 (Standardvinst)
+            //////////////////////////////////////////////////////////-->
+            <div class="Information-form-block">
+              <div class="Information-form-block-inner">
+
+              <div class="Information-input-section">
+                <h3 class="Heading-3">Välj standardvinst</h3>
+                <p>
+                  Förklaringstext lorem ipsum doler sit amet Quisque tincidunt malesuada commodo.
+                  Vestibulum accumsan sodales accumsan. Sed et interdum magna. Aenean vitae ipsum nibh. Sed egestas felis.
+                </p>
+                <label >Vinstnivå 500 kr</label>
+                <select class="Information-select" name="">
+                    <option value="">Vinstnivå 1</option>
+                    <option value="">Vinstnivå 2</option>
+                    <option value="">Vinstnivå 3</option>
+                    <option value="">Vinstnivå 4</option>
+                </select>
+                <label >Vinstnivå 200 kr</label>
+                <select class="Information-select" name="">
+                    <option value="">Vinstnivå 1</option>
+                    <option value="">Vinstnivå 2</option>
+                    <option value="">Vinstnivå 3</option>
+                    <option value="">Vinstnivå 4</option>
+                </select>
+              </div>
+              </div>
+            </div>
+            <div class="js-Information-save-container">
+              <h4>Du har gjort en ändring i dina uppgifter</h4>
+              <button class="Information-save-btn" type="submit">Spara dina ändringar</button>
+              <button class="js-Information-regret-btn" type="button">Ångra</button>
+            </div>
+            <!-- END BLOCKS & FORM  -->
           </form>
-        </div>
-      </div>
-
-      <div class="MyPages-info-col-side">
+      </section>
+      <section class="MyPages-info-col-side">
         <div class="MyPages-header">
           <h1 class="Heading-1">Betalningar</h1>
         </div>
-
         <div class="MyPages-block MyPages-block--payments">
           <div class="MyPages-block-section">
             <label>Obetalda fakturor</label>
@@ -164,10 +224,7 @@
             </div>
           </div>
         </div>
-      </div>
-
+      </section>
     </div>
-
-
   </div>
 </section>

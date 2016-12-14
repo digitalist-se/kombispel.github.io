@@ -93,7 +93,7 @@ background-position: center center;
   }
 }
 .Menu-icon--lock {
-  background-image: url("../images/svg/lock.svg");
+  background-image: url("../images/svg/menu/lock.svg");
   width: 25px;
   height: 25px;
   margin-top: 3px;
@@ -122,8 +122,6 @@ background-position: center center;
     background-color: $light-grey;
   }
 }
-
-
 /////////////////////////////////////////////
 // MENU ITEMS WITH CHILDREN
 /////////////////////////////////////////////
@@ -150,7 +148,7 @@ background-position: center center;
   }
 }
 .Menu-icon--arrow {
-  background-image: url("../images/svg/menu-arrow.svg");
+  background-image: url("../images/svg/menu/menu-arrow.svg");
   width: 20px;
   height: 20px;
   margin-top: 2px;

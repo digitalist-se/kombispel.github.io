@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Välj din vinst</title>
-  <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -54,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- END CHECK FOR OLD IE -->
 
-  <section class="Cookie-container">
+  <section class="js-Cookie-container">
   <div class="Cookie-inner">
     <div class="Cookie-left">
       <p>Den här sidan använder sig av cookies. Genom att fortsätta använda den här sidan godkänner du att vi lagrar en cookie i din
@@ -98,6 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <ul class="Menu-level-two">
               <li><a href="index.html">Startsida</a></li>
+              <li><a href="choice.html">Vinstbekräftelse</a></li>
               <li><a href="tickets.html">Mina lotter</a></li>
               <li><a href="prices.html">Det här kan du vinna</a></li>
               <li><a href="choices.html">Vinstval</a></li>
@@ -296,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="Header-inner-grid">
           <div class="Header-profile-image"></div>
           <div class="Header-title">
-            <h4><a href="./tickets.html">min sida</a></h4>
+            <h4>min sida</h4>
           </div>
         </div>
       </div>
@@ -312,13 +313,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="Choices-container">
   <div class="Choices-inner-container">
     <div class="Choices-header">
-      <h1 class="Heading-1">Stort grattis till vinsten Ann-Charlotte!</h1>
-      <h3 class="Heading-3">Vinstnivå: 300 kr</h3>
+      <h1 class="Heading-1">Stort grattis till vinsten Tommy!</h1>
+      <h3 class="Heading-3">Vinstnivå: 500 kr</h3>
     </div>
     <!-- ########## INHERIT FROM TICKETS VIEW ########## -->
     <div class="Tickets-ticket-col">
       <div class="Tickets-ticket Tickets-ticket--dream-win">
-        
+        <div class="Tickets-ticket-ribbon"></div>
           <h4 class="Tickets-ticket-title">Drömreselott</h4>
           <h5 class="Tickets-ticket-number">205563</h5>
           <div class="js-Lottery-status"></div>
@@ -328,7 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="Choices-chosen-container">
       <div class="Choices-chosen-ribbon"><span>Veckans vinst</span></div>
-      <img src="./images/campaign/foundue.png" alt="Fonduegryta Deluxe"/>
+      <img src="images/campaign/foundue.png" alt="Fonduegryta Deluxe"/>
       <h3 class="Heading-3">Fonduegryta Deluxe</h3>
       <a class="" href="#">Läs mer</a>
       <p>
@@ -340,52 +341,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="Choices-others-container">
       <div class="Choices-others-col">
         <div class="Choices-others-image">
-          <img src="./images/campaign/bestick.png" alt=""/>
+          <img src="images/campaign/bestick.png" alt=""/>
         </div>
         <h4>Bestick</h4>
-        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <span class="js-Choices-others-readmore">Läs mer</span>
+        <div class="js-Choices-others-info">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
         <a class="Choices-others-choose" href="#">Välj</a>
       </div>
       <div class="Choices-others-col">
         <div class="Choices-others-image">
-          <img src="./images/campaign/hygien.png" alt=""/>
+          <img src="images/campaign/hygien.png" alt=""/>
         </div>
         <h4>Nessesär</h4>
-        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <span class="js-Choices-others-readmore" >Läs mer</span>
+        <div class="js-Choices-others-info">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
         <a class="Choices-others-choose" href="#">Välj</a>
       </div>
       <div class="Choices-others-col">
         <div class="Choices-others-image">
-          <img src="./images/campaign/killingdvd.png" alt=""/>
+          <img src="images/campaign/killingdvd.png" alt=""/>
         </div>
         <h4>Killing DVD-box</h4>
-        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <span class="js-Choices-others-readmore" >Läs mer</span>
+        <div class="js-Choices-others-info">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
         <a class="Choices-others-choose" href="#">Välj</a>
       </div>
       <div class="Choices-others-col">
         <div class="Choices-others-image">
-          <img src="./images/campaign/fotoram.png" alt=""/>
+          <img src="images/campaign/fotoram.png" alt=""/>
         </div>
         <h4>Digital fotoram</h4>
-        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <span class="js-Choices-others-readmore" >Läs mer</span>
+
+
+        <div class="js-Choices-others-info">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
+
         <a class="Choices-others-choose" href="#">Välj</a>
       </div>
       <div class="Choices-others-col">
         <div class="Choices-others-image">
-            <img src="./images/campaign/kampanjbild.png" alt=""/>
+            <img src="images/campaign/kampanjbild.png" alt=""/>
         </div>
 
         <h4>Digital fotoram</h4>
-        <a class="Choices-others-readmore" href="#">Läs mer</a>
+        <span class="js-Choices-others-readmore">Läs mer</span>
+        <div class="js-Choices-others-info">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
         <a class="Choices-others-choose" href="#">Välj</a>
       </div>
       <div class="Choices-others-col">
         <div class="Choices-others-image">
-          <img src="./images/campaign/extrachansen.png" alt=""/>
+          <img src="images/campaign/mobler-vinst.png" alt="Mysigt överkast från Mio"/>
         </div>
-        <h4>Digital fotoram</h4>
-        <a class="Choices-others-readmore" href="#">Läs mer</a>
-        <a class="Choices-others-choose" href="#">Välj</a>
+        <h4>Mysigt överkast</h4>
+        <span class="js-Choices-others-readmore">Läs mer</span>
+        <div class="js-Choices-others-info">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
+        <a class="Choices-others-choose" href="choice.html">Välj</a>
       </div>
 
 

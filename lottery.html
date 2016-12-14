@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Lotteri</title>
-  <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -54,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- END CHECK FOR OLD IE -->
 
-  <section class="Cookie-container">
+  <section class="js-Cookie-container">
   <div class="Cookie-inner">
     <div class="Cookie-left">
       <p>Den här sidan använder sig av cookies. Genom att fortsätta använda den här sidan godkänner du att vi lagrar en cookie i din
@@ -98,6 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <ul class="Menu-level-two">
               <li><a href="index.html">Startsida</a></li>
+              <li><a href="choice.html">Vinstbekräftelse</a></li>
               <li><a href="tickets.html">Mina lotter</a></li>
               <li><a href="prices.html">Det här kan du vinna</a></li>
               <li><a href="choices.html">Vinstval</a></li>
@@ -296,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="Header-inner-grid">
           <div class="Header-profile-image"></div>
           <div class="Header-title">
-            <h4><a href="./tickets.html">min sida</a></h4>
+            <h4>min sida</h4>
           </div>
         </div>
       </div>
@@ -359,6 +360,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
+
+
+
     <div class="Lottery-message-container">
       <p class="js-Lottery-message"></p>
 
@@ -371,20 +375,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     Kan renderas från backenden men visas via JS först när dragningen är klar.
     -->
     <div class="js-Lottery-winnings-links">
-      <div class="Lottery-winnings-row">
-        <h4>Vinst på nivå 300 000 kr!</h4>
-        <a href="#" class="">Välj din vinst</a>
-      </div>
+      
       <div class="Lottery-winnings-row">
         <h4>Vinst på nivå 500kr!</h4>
-        <a href="#" class="">Välj din vinst</a>
+        <a href="choices.html" class="">Välj din vinst</a>
       </div>
     </div>
     <!-- Extra chansen -->
     <div class="js-Lottery-extrachance-container">
       <div class="Lottery-extrachance-inner">
         <div class="Lottery-extrachance-left">
-          <img src="./images/campaign/extrachansen.png" alt="Tina Nordströms mat" />
+          <img src="../images/campaign/extrachansen.png" alt="Tina Nordströms mat" />
         </div>
         <div class="Lottery-extrachance-right">
             <h3>Var med i extrachansen</h3>
@@ -392,7 +393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Tävla om en kokbok med Tina Nordström genom
               att svara rätt på 3 frågor om mat
             </p>
-            <a class="Lottery-extrachance-link" href="./pahe.html">Till extrachansen</a>
+            <a class="Lottery-extrachance-link" href="#">Till extrachansen</a>
         </div>
       </div>
 

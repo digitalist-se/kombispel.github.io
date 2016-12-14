@@ -1,17 +1,17 @@
 form {
   margin: 0 auto;
-  // width: 90%;
   max-width: 560px;
+  *  {
+    box-sizing: border-box !important;
+  }
 }
-
 label {
   margin-bottom: 7.5px;
   font-size: 16px;
-  @include breakpoint(768px) {
+  @include breakpoint(1024px) {
     font-size: 20px;
   }
 }
-
 /////////////////////////////////////////////
 // Input
 /////////////////////////////////////////////
@@ -43,12 +43,15 @@ select {
 select::-ms-expand {
     display: none;
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .person-number:focus {
   height: 40px !important;
 }
-
-
-
 /////////////////////////////////////////////
 // Checkbox
 /////////////////////////////////////////////
@@ -116,5 +119,34 @@ input[type="checkbox"] {
     margin-top: $base-margin;
     width: 100%;
     border-radius: 4px;
+  }
+}
+/////////////////////////////////////////////
+// Checkboxes
+/////////////////////////////////////////////
+.Form-checkbox {
+  padding-top: $base-margin;
+  span {
+    display: inline-block;
+    width: 25px;
+    vertical-align: top;
+    &:last-of-type {
+      width: calc(100% - 30px)
+    }
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+.Form-checkbox--center {
+  text-align: center;
+  max-width: 360px;
+  margin: 0 auto;
+  > div {
+    display: inline-block;
+  }
+  span {
+    text-align: left;
   }
 }

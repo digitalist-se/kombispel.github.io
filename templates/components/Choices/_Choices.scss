@@ -110,16 +110,23 @@ padding-bottom: 4*$base-margin;
     margin: 0;
   }
 }
-.Choices-others-readmore  {
+.js-Choices-others-readmore  {
   @extend .Arrow-link;
-  margin-bottom: $base-margin;
-  padding-bottom: 75px;
+  color: $red;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.js-Choices-others-info {
+  display: none;
+  padding: 0 $base-margin 1px $base-margin;
+  p {
+    text-align: left;
+  }
 }
 .Choices-others-choose {
   @include gradient-btn($orange);
   width: auto;
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
+  margin: $base-margin;
 }

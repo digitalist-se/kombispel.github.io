@@ -1,0 +1,14 @@
+<h2 class="Heading-2">Fyll i dina uppgifter</h2>
+<form class="Campaign-form" action="" method="">
+  <label for="person-number" class="Campaign-label">Personnummer:</label>
+  <input type="text" name="person-number"   placeholder="YYMMDD-XXXX">
+  <label for="email" class="Campaign-label">E-postadress:</label>
+  <input type="text" name="email"  placeholder="">
+  <div class="Form-checkbox">
+    <div>
+      <span><input type="checkbox" name="signup-check" checked/></span>
+      <span><label for="signup-check">Ja, jag vill beställa en lott, är över 18 år och godkänner <a href="#">villkoren.</a></label></span>
+    </div>
+  </div>
+  <button type="" class="Campaign-form-submit" name="button">Nästa steg</button>
+</form>

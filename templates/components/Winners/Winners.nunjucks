@@ -5,7 +5,7 @@
     <!--
     // WINNER-ROW
     -->
-    <div class="Winners-row">
+    <section class="Winners-row">
       <!-- DRÖMVINNARE -->
       <div class="Winners-winner Winners-winner--dream">
         <div class="Winners-winner-inner">
@@ -48,13 +48,13 @@
           </div>
         </div>
       </div>
-      </div>
+      </section>
       <!-- END WINNER-ROW -->
       </div>
       <!-- END Inner-container -->
 
       <div class="Fullwidth-buy-link-container">
-        <a class="Fullwidth-buy-link" href="./campaign.html">
+        <a class="Fullwidth-buy-link" href="#">
           <span>Bli en vinnare du med!</span>
           <span>Köp en kombilott!</span>
         </a>
@@ -65,7 +65,7 @@
       <!--
       // WINNER-ROW
       -->
-      <div class="Winners-row">
+      <section class="Winners-row">
       <!-- DRÖMVINNARE -->
       <div class="Winners-winner Winners-winner--dream">
         <div class="Winners-winner-inner">
@@ -108,6 +108,6 @@
           </div>
         </div>
       </div>
-  </div>
+  </section>
   <!-- END WINNER-ROW -->
 </section>

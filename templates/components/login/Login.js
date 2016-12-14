@@ -112,6 +112,7 @@ $(".js-Login-input-password").on('input', function() {
 
   if(passWord == "kombi" || passWord== "lotter" || passWord == "spel") {
     state.passWord = true
+    window.location.href = "localhost:3000/tickets.html";
   } else {
     state.passWord = false
   }

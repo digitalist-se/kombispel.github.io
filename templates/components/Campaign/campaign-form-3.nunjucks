@@ -1,0 +1,31 @@
+<form class="Campaign-form" action="" method="">
+  <!-- INFOBLOCK -->
+  <div class="Campaign-form-info-block">
+    <div>
+      <h5>Adressuppgifter</h5>
+      <p>
+        <span>Tommy Nilsson</span>
+        <span>Kungsgatan 14B</span>
+        <span>123 45 Storstad</span>
+      </p>
+    </div>
+  </div>
+  <!-- INFOBLOCK -->
+  <div class="Campaign-form-info-block">
+    <div>
+      <h5>E-postadress</h5>
+      <p>
+        <span>jattelang.epostadresstillmig@hejsansvejsanhejsan.se</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="Form-checkbox Form-checkbox--center">
+    <div>
+      <span><input type="checkbox" name="signup-check" checked/></span>
+      <span><label for="signup-check">Ja, jag vill beställa en lott, är över 18 år och godkänner <a href="#">villkoren.</a></label></span>
+    </div>
+  </div>
+
+  <button type="" class="Campaign-form-submit" name="button">Beställ</button>
+</form>

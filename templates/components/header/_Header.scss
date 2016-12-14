@@ -44,6 +44,20 @@ border-bottom: 15px solid $orange;
     flex-basis: 100%;
     order: 4;
   }
+@include breakpoint(1px, 340px) {
+  .Header-flex--one {
+    flex-basis: 60px;
+  }
+  .Header-flex--two {
+    flex-basis: calc(100%  - 130px);
+  }
+  .Header-flex--three {
+    flex-basis: 70px;
+  }
+}
+
+
+
 // TABLET AND LARGER
 @include respond-to(large) {
     //  MENU
@@ -235,7 +249,7 @@ $burger-radius: 4px;
 // LOGO
 /////////////////////////////////////////////
 .Header-kombo-logo {
-  background: url("../images/svg/logos/logo.svg") no-repeat center center;
+  background: url("../images/svg/header/logo.svg") no-repeat center center;
   height: 45px;
   width: 95%;
   margin: 0 auto;
@@ -255,7 +269,7 @@ $burger-radius: 4px;
 .Header-profile-image {
 margin: 0 auto;
 margin-top: 0px;
-background: url("../images/svg/profile-icon-red.svg") no-repeat center center;
+background: url("../images/svg/header/profile-icon-red.svg") no-repeat center center;
 height: $menuSize+3px; //  Compensate for the menus 3+3px border
 width: 22px;
 }
@@ -294,7 +308,7 @@ width: 22px;
     background-color: $darker-red;
     @include headerBorders($darker-red, null);
     .Header-profile-image {
-      background-image: url("../images/svg/profile-icon-white.svg");
+      background-image: url("../images/svg/header/profile-icon-white.svg");
     }
     .Header-title  {
       h4 {

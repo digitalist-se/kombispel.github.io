@@ -54,6 +54,9 @@
         </div>
       </div>
     </div>
+
+
+
     <div class="Lottery-message-container">
       <p class="js-Lottery-message"></p>
 
@@ -66,20 +69,20 @@
     Kan renderas från backenden men visas via JS först när dragningen är klar.
     -->
     <div class="js-Lottery-winnings-links">
-      <div class="Lottery-winnings-row">
+      {# <div class="Lottery-winnings-row">
         <h4>Vinst på nivå 300 000 kr!</h4>
         <a href="#" class="">Välj din vinst</a>
-      </div>
+      </div> #}
       <div class="Lottery-winnings-row">
         <h4>Vinst på nivå 500kr!</h4>
-        <a href="#" class="">Välj din vinst</a>
+        <a href="choices.html" class="">Välj din vinst</a>
       </div>
     </div>
     <!-- Extra chansen -->
     <div class="js-Lottery-extrachance-container">
       <div class="Lottery-extrachance-inner">
         <div class="Lottery-extrachance-left">
-          <img src="./images/campaign/extrachansen.png" alt="Tina Nordströms mat" />
+          <img src="../images/campaign/extrachansen.png" alt="Tina Nordströms mat" />
         </div>
         <div class="Lottery-extrachance-right">
             <h3>Var med i extrachansen</h3>
@@ -87,7 +90,7 @@
               Tävla om en kokbok med Tina Nordström genom
               att svara rätt på 3 frågor om mat
             </p>
-            <a class="Lottery-extrachance-link" href="./pahe.html">Till extrachansen</a>
+            <a class="Lottery-extrachance-link" href="#">Till extrachansen</a>
         </div>
       </div>
 

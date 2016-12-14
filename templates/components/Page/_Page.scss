@@ -89,26 +89,28 @@ blockquote {
     margin: $base-margin auto;
     font-size: 18px;
   }
-  ul {
-    padding-left: 2*$base-margin;
-    list-style-type: none;
- }
-
-li {
-  position: relative;
-  padding-bottom: $base-margin;
-  &:before {
-    content: "";
-    background-color: $red;
-    height: $base-margin;
-    width: $base-margin;
-    border-radius: 50%;
-    position: absolute;
-    left: -30px;
-    top: 3.5px;
+}
+.Page-list {
+  padding-left: 2*$base-margin;
+  list-style-type: none;
+  li {
+    position: relative;
+    padding-bottom: $base-margin;
+    &:before {
+      content: "";
+      background-color: $red;
+      height: $base-margin;
+      width: $base-margin;
+      border-radius: 50%;
+      position: absolute;
+      left: -30px;
+      top: 3.5px;
+    }
   }
 }
-}
+
+
+
 .Page-image {
   margin-bottom: 2*$base-margin;
   img {

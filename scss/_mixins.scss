@@ -1,7 +1,7 @@
 ////////////////////////////////
 // BUTTONS
 ///////////////////////////////
-@mixin rounded-btn($background,$color,$width) {
+@mixin rounded-btn($background,$color,$width:null) {
   text-transform: uppercase;
   cursor: pointer;
   background-color: $background;
@@ -52,19 +52,49 @@
     background: url("../images/svg/shadow-border.svg") no-repeat;
     background-size: contain;
     position: absolute;
-    height: 10px;
-    bottom: -15px;
+    height: 7px;
+    bottom: -10px;
     content: "";
     left:0;
     width: 100%;
     right: 0;
   }
-
+}
+@mixin media-btn($image,$color) {
+  background-color: $color;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all .2s ease;
+  span {
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    padding-left: 2*$base-margin;
+    margin: 0 auto;
+  }
+  span:before {
+    background-image:  url($image);
+    background-position: center center;
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 25px;
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    background-color: darken($color,10%);
+  }
 }
 
-//-----------------------------------------
+
+////////////////////////////////////////////////////
 // Calculate percentage - in honor of Vesslan
-//-----------------------------------------
+///////////////////////////////////////////////////
 @mixin vesslan($span, $col, $margin: 0) {
   $percentage: percentage($span/$col);
   width: calc(#{$percentage} - #{$margin});
@@ -94,4 +124,35 @@
 /////////////////////////////////////////////
  @mixin gradient-bg($color) {
    background: radial-gradient(lighten($color,20%) 10%,lighten($color,15%) 25%, $color 80%);
+}
+/////////////////////////////////////////////
+// Mixins for page prices or "Det här kan du vinna"
+/////////////////////////////////////////////
+@mixin prices-variants($color,$lottery-col) {
+  .Prices-lottery-row {
+    border-bottom: 10px solid $color;
+    transition: all .2s ease;
+    .#{$lottery-col} {
+      @include prices-col($color);
+    }
+    &:hover {
+      border-bottom: 10px solid darken($color, 15%);
+    }
+  }
+  .Prices-number {
+    background-color: $color;
+  }
+  .Prices-buy-link {
+    a {
+      @include gradient-btn($color);
+    }
+  }
+}
+
+@mixin prices-col($color) {
+  transition: all .2s ease;
+  background-color: $color;
+  &:hover {
+    background-color: darken($color, 15%);
+  }
 }

@@ -20,7 +20,7 @@ border-bottom: 8px solid $green;
     position: relative;
     padding: 20px 0;
     margin: 15px 0;
-    flex-basis: 50%;
+    flex-basis: calc(50% - 2px);
     [class*="Logo-row-logo--"] {
       width: 80px;
     }

@@ -1,0 +1,27 @@
+<h2 class="Heading-2">
+  <span>Hej Tommy</span>
+  <span>Fyll i din epostadress:</span>
+</h2>
+
+<form class="Campaign-form" action="" method="">
+  <!-- INFOBLOCK -->
+  <div class="Campaign-form-info-block">
+    <div>
+      <h5>Kundnummer</h5>
+      <p>
+        <span>AB12773247</span>
+      </p>
+    </div>
+  </div>
+  <!-- INFOBLOCK -->
+  <div class="Campaign-form-info-block">
+    <div>
+      <h5>E-postadress</h5>
+      <p>
+        <span>Tommy.nilsson@opendoor.se</span>
+      </p>
+    </div>
+  </div>
+
+  <button type="" class="Campaign-form-submit" name="button">Nästa steg</button>
+</form>
