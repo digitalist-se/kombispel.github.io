@@ -20,20 +20,21 @@ xmlhttp.onreadystatechange = function() {
 /////////////////////////////////////////////
 // SET INITIAL STATE OF APPLICATION
 /////////////////////////////////////////////
+// Get single element by classname
+function getClass(className) {
+  return document.getElementsByClassName(className)[0];
+}
 // Set My Lottery-number
-var myLotteryNumber = document.getElementsByClassName("Lottery-mynumber--js")[0];
+var myLotteryNumber = getClass("Lottery-mynumber--js")
 myLotteryNumber.innerHTML = myNumbers.toString().replace(/^[,]$|[,]+/g,"");
-
 // Lottery status
-var lotteryStatus = document.getElementsByClassName("js-Lottery-status")[0];
-
-var lotteryRow = document.getElementsByClassName("js-Lottery-row")[0];
-
+var lotteryStatus = getClass("js-Lottery-status")
+var lotteryRow = getClass("js-Lottery-row");
 // Set Lottery-row
 var lotteryNumbers = document.getElementsByClassName('js-Lottery-number');
-var lotteryHeader = document.getElementsByClassName("js-Lottery-price-header")[0];
+var lotteryHeader = getClass("js-Lottery-price-header");
 // Backgrounds
-var rotateBG = document.getElementsByClassName("js-Lottery-starburst-bg")[0];
+var rotateBG = getClass("js-Lottery-starburst-bg");
 
 function startLottery () {
   lotteryStatus.innerHTML = "<span class='js-Lottery-ongoing'>Dragning pågår</span><span class='js-Lottery-spinner--small'></span>";
@@ -63,7 +64,7 @@ correctAmount = [];
 // Function to push the value to the array
 function checkArray(winningNumbers) {
   // console.log(winningNumbers);
-  let correct = 0;
+  var correct = 0;
 
   if(objectCounter == (correctNumbers.length-1)) {
     for (var i = 0; i < winningNumbers.length; i++) {
@@ -185,7 +186,7 @@ setTimeout( function(){ correct(); }, spinnTime+ratio);
 /////////////////////////////////////////////
 // END STARTLOTTERY FUNCTION
 /////////////////////////////////////////////
-var lotteryBtn = document.getElementsByClassName("js-Start-lottery-btn")[0];
+var lotteryBtn = getClass("js-Start-lottery-btn");
 lotteryBtn.addEventListener("click",function() {
   startLottery();
   this.className += " Hide-element";
@@ -194,18 +195,12 @@ lotteryBtn.addEventListener("click",function() {
 /////////////////////////////////////////////
 // GET DOM
 /////////////////////////////////////////////
-var messageContainer = document.getElementsByClassName("Lottery-message-container")[0];
-var lotteryMessage = document.getElementsByClassName("js-Lottery-message")[0];
-var winningLinks = document.getElementsByClassName("js-Lottery-winnings-links")[0];
-var extraChance = document.getElementsByClassName("js-Lottery-extrachance-container")[0];
-// if (extraChance) {
-// } else {
-//   extraChance = true
-//   console.log("finns inte i dom");
-// }
+var messageContainer = getClass("Lottery-message-container");
+var lotteryMessage = getClass("js-Lottery-message");
+var winningLinks = getClass("js-Lottery-winnings-links");
+var extraChance = getClass("js-Lottery-extrachance-container");
 
-
-var ticket = document.getElementsByClassName("Tickets-ticket")[0];
+var ticket = getClass("Tickets-ticket");
 var status = "";
 /////////////////////////////////////////////
 // *
@@ -246,7 +241,7 @@ function drawingDone()  {
 
       lotteryMessage.innerHTML = "Nästa dragning för <span class='u-bold'>"+correctNumbers[objectCounter].header+" kr</span> om:<span class='js-Lottery-countdown-c'><span class='js-Lottery-spinner--big'></span><span class='js-Lottery-countdown'>"+count+"</span></span>";
 
-      if(count < 0) {
+      if(count < 1) {
         startLottery();
         myStopFunction();
       }

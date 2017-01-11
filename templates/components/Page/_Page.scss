@@ -1,5 +1,5 @@
 /////////////////////////////////////////////
-// Page Grid Two columns
+// Page General
 /////////////////////////////////////////////
 .Page {
 background-color: #F2F2F2;
@@ -10,6 +10,42 @@ padding-bottom: 2*$base-margin;
   width: 100%;
   background-color: red;
 }
+.Page-inner {
+  background-color: white;
+  @extend .Inner-container;
+  @include page-inner();
+}
+.Page-content {
+  margin: 0 auto;
+  @include flex-row();
+}
+/////////////////////////////////////////////
+// Page grid
+/////////////////////////////////////////////
+.Page-two-col {
+  @include flex-col(1, 1, 2*$base-margin);
+  @include breakpoint(1024px) {
+    &:nth-of-type(odd) {
+    @include flex-col(2, 3, 2*$base-margin);
+    margin-right: 4*$base-margin;
+    }
+    &:nth-of-type(even) {
+    @include flex-col(1, 3, 2*$base-margin);
+    }
+  }
+}
+.Page-one-col {
+  width: 100%;
+  margin: 0 auto;
+  .Page-lead {
+    max-width: $max-inner;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/////////////////////////////////////////////
+// Text and Stuff
+/////////////////////////////////////////////
 h1,h2,h3,h4,h5,h6,p,ul {
   max-width: $max-inner;
   margin-left: auto;
@@ -40,76 +76,35 @@ blockquote {
     }
   }
 }
-
-
-
-}
-.Page-inner {
-  background-color: white;
-  @include flex-row();
-  @extend .Inner-container;
-  @include page-inner();
-}
-@include respond-to(large) {
-  .Page-two-col-main {
-    @include flex-col(2, 3, 2*$base-margin);
-    margin-right: 2*$base-margin;
-  }
-  .Page-two-col-side {
-    @include flex-col(1, 3, 2*$base-margin);
-    margin-left: 2*$base-margin;
-  }
-}
-/////////////////////////////////////////////
-// Page Grid One column
-/////////////////////////////////////////////
-.Page-one-col {
-  @include flex-col(1, 1, 0);
-  margin: 0 auto;
-  // max-width: 900px;
 }
 .Page {
   h1 {
     font-size: 40px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
+    @extend .Heading-1;
   }
   h2 {
     font-size: 32px;
     margin-bottom: $base-margin;
     @extend .Heading-2;
+    text-align: left;
   }
   h3 {
     font-size: 23px;
     margin-bottom: $base-margin;
     @extend .Heading-3;
+    text-align: left;
+
   }
   p {
     margin: $base-margin auto;
     font-size: 18px;
   }
-}
-.Page-list {
-  padding-left: 2*$base-margin;
-  list-style-type: none;
-  li {
-    position: relative;
-    padding-bottom: $base-margin;
-    &:before {
-      content: "";
-      background-color: $red;
-      height: $base-margin;
-      width: $base-margin;
-      border-radius: 50%;
-      position: absolute;
-      left: -30px;
-      top: 3.5px;
-    }
+  ul {
+    @extend .u-Dots-list;
   }
 }
-
-
 
 .Page-image {
   margin-bottom: 2*$base-margin;
@@ -126,8 +121,6 @@ blockquote {
   font-size: 23px;
   padding: 2*$base-margin;
 }
-
-
 .Page-video {
   max-width: $max-inner;
   width: 100%;
@@ -150,5 +143,4 @@ blockquote {
 .Page-buy-ticket {
   @include gradient-btn($red);
   margin: 2*$base-margin auto;
-
 }

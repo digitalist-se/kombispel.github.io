@@ -1,72 +1,46 @@
-.Winner-container {
-  position: relative;
-  background-color: $content-grey;
-  padding-bottom: 2*$base-margin;
-  h1,h2,h3,h4,h5,h6,p,ul {
-    max-width: $max-inner;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.Winner-inner-container {
-  background-color: white;
-  padding-top: $base-margin;
-  @extend .Inner-container;
-}
-.Winner-back-link {
+.Page-winner-back-link {
   font-size: 14px;
   text-align: center;
   display: block;
-  margin: 0 auto 3*$base-margin auto;
+  margin: $base-margin auto;
   span {
     display: inline-block;
     vertical-align: top;
   }
-
 }
-.Winner-header {
-  width: 90%;
-  max-width: $max-inner;
-  margin: 0 auto 2*$base-margin auto;
-  text-align: center;
-}
-.Winner-hero {
-  height: auto;
-  width: 100%;
-  margin-bottom: -25px;
-}
-
-/////////////////////////////////////////////
-// CONTENT
-/////////////////////////////////////////////
-.Winner-intro {
-  font-family: $gill-bold;
-  font-size: 18px;
-}
-
-.Winner-inner-container {
-  h2,h3,p {
-    @include page-inner();
+.Page-winner-image {
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-bottom: 2*-$base-margin;
   }
 }
-
+.Page-winner {
+  p:first-of-type {
+    margin-top: 2*$base-margin;
+    font-family: $gill-bold;
+  }
+}
 /////////////////////////////////////////////
 // WINNER DETAIL LIST
 /////////////////////////////////////////////
-.Winner-detail-list {
+.Page-winner-detail-list {
   color: white;
   h4 {
     font-size: 23px;
   }
-
   ul {
     list-style-type: none;
     padding: 4*$base-margin;
-    margin-top: 4*$base-margin;
+    margin-top: 2*$base-margin;
+    margin-bottom: 3*$base-margin;
     li {
       font-size: 18px;
       margin-bottom: $base-margin;
+      &:before {
+        position: static;
+      }
     }
     span {
       font-family: $gill-bold;
@@ -76,62 +50,60 @@
 /////////////////////////////////////////////
 // VARIANTS
 /////////////////////////////////////////////
-.Winner-container--dream {
-  .Winner-quote {
-    background-color: $green;
-  }
-  .Fullwidth-buy-link {
-    @include gradient-btn($green);
-  }
-  .Winner-back-link {
-    @include rounded-btn($lottery-blue,white,300px);
-  }
-  .Winner-header,.Winner-subheader {
-    color: $lottery-blue;
-  }
-  .Winner-detail-list {
-    background-color: $lottery-blue;
-  }
-
-
-
-}
-.Winner-container--kombi {
-  .Winner-quote {
+// KOMBI
+.Page-winner--kombi {
+  blockquote {
     background-color: $orange;
   }
-  .Fullwidth-buy-link {
+  h1, h2, h3 {
+    color: $blue;
+  }
+  .Cta-btn {
     @include gradient-btn($orange);
   }
-  .Winner-back-link {
-    @include rounded-btn($lottery-blue,white,300px);
-  }
-  .Winner-header,.Winner-subheader {
-    color: $lottery-blue;
-  }
-  .Winner-detail-list {
-    background-color: $lottery-blue;
+  .Page-winner-back-link {
+    @include rounded-btn($orange,white, 300px);
   }
 
-
+  .Page-winner-detail-list {
+    background-color: $blue;
+  }
 }
-.Winner-container--motor {
-  .Winner-quote {
+// DREAM
+.Page-winner--dream {
+  blockquote {
+    background-color: $green;
+  }
+  h1, h2, h3 {
+    color: $blue;
+  }
+  .Cta-btn {
+    @include gradient-btn($green);
+  }
+
+  .Page-winner-back-link {
+    @include rounded-btn($blue,white, 300px);
+  }
+
+  .Page-winner-detail-list {
+    background-color: $blue;
+  }
+}
+// MOTOR
+.Page-winner--motor {
+  blockquote {
     background-color: $red;
   }
-  .Fullwidth-buy-link {
-    @include gradient-btn($red);
-  }
-
-  .Winner-back-link {
-    @include rounded-btn($red,white,300px);
-  }
-  .Winner-header,.Winner-subheader {
+  h1, h2, h3 {
     color: $red;
   }
-  .Winner-detail-list {
+  .Cta-btn {
+    @include gradient-btn($red);
+  }
+  .Page-winner-back-link {
+    @include rounded-btn($red,white, 300px);
+  }
+  .Page-winner-detail-list {
     background-color: $red;
   }
-
-
 }

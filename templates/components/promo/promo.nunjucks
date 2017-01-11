@@ -1,35 +1,43 @@
 <!-- PUFFAR PÅ LANDNINGSSIDA -->
 <section class="Promo-container">
     <div class="Promo-container-inner">
-        <div class="Promo-item">
-            <div class="Promo-box Promo-box--correct-ticket">
-                <h3 class="Promo-box-title">Är du en vinnare?</h3>
-                <img class="Promo-box-image" src="images/promo/promo1.png"></img>
-                <button class="Promo-box-button">RÄTTA DIN LOTT</button>
+
+        <!-- VARIANT 1 -->
+        <div class="Promo-item Promo-item--correct-ticket">
+            <div class="Promo-box">
+                <h3 >Är du en vinnare?</h3>
+                <img src="images/campaign/volvo.png" alt="Möbler" />
+                <a href="/tickets" class="js-Promo-correct-ticket-btn Promo-box-button">RÄTTA DIN LOTT</a>
                 <div class="Promo-box-product">
                     <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/kombi.svg')">Kombilotteriet</a>
                     <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/dromrese.svg')">Drömreselotteriet</a>
-                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/skrap.svg')">Skraplotten</a>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/motor.svg')">Skraplotten</a>
                 </div>
             </div>
         </div>
-        <div class="Promo-item">
-            <div class="Promo-box Promo-box--campaign">
-                <h3 class="Promo-box-title">Månadens kampanj!</h3>
-                <div class="Promo-box-text">Premie: Vettenkaraff och skraplottpaket på köpet när du skaffar en Kombilott.</div>
-                <img class="Promo-box-image" src="images/promo/promo2.png"></img>
-                <button class="Promo-box-button">KÖP EN KOMBILOTT</button>
+
+        <!-- VARIANT 2 -->
+        <div class="Promo-item Promo-item--campaign-kombi">
+            <div class="Promo-box ">
+                <h3 >Månadens kampanj!</h3>
+                <div class="Promo-box-text">Premie: Vattenkaraff och skraplottpaket på köpet när du skaffar en Kombilott.</div>
+                <img src="images/campaign/mobler-vinst.png" alt="Möbler" />
+                <a href="#" class="Promo-box-button">KÖP EN KOMBILOTT</a>
             </div>
         </div>
-        <div class="Promo-item">
-            <div class="Promo-box Promo-box--winner">
-                <div class="Promo-box-image-big" style="background-image: url('images/promo/promo3.png')"></div>
-                <div class="Promo-box-band">
-                    <div class="Promo-box-band-text">KOMBISPELS TUSENDE MILJONVINNARE</div>
-                    <div class="Promo-box-band-text--big">Maj tog hem storvinsten!</div>
+
+        <!-- VARIANT 3 -->
+        <div class="Promo-item Promo-item--winner-motor">
+            <div class="Promo-box">
+                <img src="images/campaign/mobler-vinst.png" alt="Möbler"/>
+                <div class="Promo-box-caption">
+                    <div class="Promo-box-caption-text">KOMBISPELS TUSENDE MILJONVINNARE</div>
+                    <div class="Promo-box-caption-text--big">Maj tog hem storvinsten i motorlotteriet!</div>
                 </div>
                 <div class="Promo-box-link"><a href="/">Se fler vinnare</a></div>
             </div>
         </div>
+
+
     </div>
 </section>

@@ -177,6 +177,14 @@
         </div>
       </div>
     </div>
+
+  </div>
+  <!-- END MyPages-inner-container -->
+  <div class="Cta-block Tickets-Cta-block">
+    <a class="Cta-btn Cta-btn--red" href="#">Rätta alla lotter</a>
+  </div>
+  <!-- NY MyPages-inner-container för att demonstrera hur det ser ut om man bara har en lott -->
+  <div class="MyPages-inner-container">
     <!-- END Tickets-ticket-container -->
     <h2 class="Heading-2">Såhär ser det ut om man bara har en lott</h2>
     <h3 class="Heading-3">(Det ligger centrerat)</h3>
@@ -192,17 +200,15 @@
         </div>
       </div>
     </div>
-
-    <a class="MyPages-show-list-link" href="#">Visa tidigare dragningslistor</a>
   </div>
-  <!-- END MyPages-container -->
+  <!-- END MyPages-inner-container -->
 
-  <div class="Fullwidth-buy-link-container">
-    <a class="Fullwidth-buy-link" href="#">
+  <a class="MyPages-show-list-link" href="#">Visa tidigare dragningslistor</a>
+  <div class="Cta-block">
+    <a class="Cta-btn Cta-btn--red" href="#">
       <span>Öka dina vinstchanser</span>
       <span>Köp en lott till</span>
     </a>
   </div>
-
 
 </section>

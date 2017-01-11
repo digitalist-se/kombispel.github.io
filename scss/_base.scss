@@ -8,14 +8,9 @@ body {
   font-family: $gill-regular, "sans-serif";
   overflow-x: hidden;
   color: $text;
-  // letter-spacing: 1px
 }
 h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
   font-family: $gill-bold, "sans-serif";
-}
-
-main {
-  transition: all .2s ease;
 }
 *,
 *:before,
@@ -26,7 +21,6 @@ main {
   width: 100%;
   &.locked {
     position: fixed;
-
   }
 }
 a {
@@ -41,13 +35,12 @@ blockquote {
   color: white;
   font-family: $gill-bookItalic;
   font-size: 25px;
-  margin: $base-margin 0;
+  margin: 2*$base-margin 0;
   background-color: $dark-grey;
   text-align: center;
   padding: 30px 30px 30px 60px;
   position: relative;
   font-size: 25px;
-
   span {
     position: relative;
     text-align: left;
@@ -65,14 +58,10 @@ blockquote {
     }
   }
 }
-
-
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 /////////////////////////////////////////////
 //  Headings
 /////////////////////////////////////////////
@@ -112,16 +101,25 @@ img {
   }
 }
 /////////////////////////////////////////////
-// FULLWIDTH BUY LINK
+// CTA block
 /////////////////////////////////////////////
- .Fullwidth-buy-link-container {
+ .Cta-block {
    background-color: white;
    padding: 30px 0;
  }
-
- .Fullwidth-buy-link {
-   @include gradient-btn($red);
-   color: white;
+ .Cta-btn {
+   &.Cta-btn--red {
+     @include gradient-btn($red);
+   }
+   &.Cta-btn--green {
+     @include gradient-btn($green);
+   }
+   &.Cta-btn--orange {
+     @include gradient-btn($orange);
+   }
+   &.Cta-btn--blue {
+     @include gradient-btn($blue);
+   }
    span {
      display: block;
      text-align: center;

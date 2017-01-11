@@ -39,7 +39,6 @@
   margin: 0 auto;
   display: block;
   background: linear-gradient($color 45%, $color2 54%);
-  outline: 0;
   cursor: pointer;
   color: white;
   text-align: center;
@@ -73,7 +72,7 @@
     position: relative;
     text-align: right;
     display: inline-block;
-    padding-left: 2*$base-margin;
+    padding-left: 35px;
     margin: 0 auto;
   }
   span:before {
@@ -90,8 +89,6 @@
     background-color: darken($color,10%);
   }
 }
-
-
 ////////////////////////////////////////////////////
 // Calculate percentage - in honor of Vesslan
 ///////////////////////////////////////////////////
@@ -99,7 +96,6 @@
   $percentage: percentage($span/$col);
   width: calc(#{$percentage} - #{$margin});
 }
-
 ////////////////////////////////
 // Margin
 ///////////////////////////////
@@ -129,6 +125,21 @@
 // Mixins for page prices or "Det här kan du vinna"
 /////////////////////////////////////////////
 @mixin prices-variants($color,$lottery-col) {
+  @if ($color == $orange ) {
+    .Heading-1 {
+      color: $blue;
+    }
+  }
+  @else if ($color == $green) {
+    .Heading-1 {
+      color: $blue;
+    }
+  }
+  @else if ($color == $red) {
+    .Heading-1 {
+      color: $red;
+    }
+  }
   .Prices-lottery-row {
     border-bottom: 10px solid $color;
     transition: all .2s ease;

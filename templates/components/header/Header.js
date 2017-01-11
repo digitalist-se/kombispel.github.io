@@ -32,10 +32,6 @@
 
 
 
-
-
-
-
 $(".js-Header-correct-btn").click(function() {
   $(".js-Login-header").html("Logga in för att rätta din lott")
   $(".js-Site-container").toggleClass("locked");

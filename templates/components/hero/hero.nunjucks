@@ -1,6 +1,4 @@
-<section class="Hero js-Hero-landing-page" style="background-image: url('images/heroes/start_hero.png')">
-{# <section class="Hero" style="background-image: url('images/heroes/start-hero-hotspot.png')"> #}
-{# <section class="Hero" style="background-image: url('images/heroes/start_hero2.jpg')"> #}
+<section class="Hero" style="background-image: url('images/heroes/autumn_winners.jpg')">
   <div class="Hero-inner">
         <div class="Hero-box Hero-box--dream">
           <!-- CAN HAVE VARIANTS
@@ -10,10 +8,10 @@
           -->
             <div class="Hero-box-title"><span>VECKANS VINNARE<span></div>
             <div class="Hero-box-quote">Vi har alltid drömt om att åka till karibien. Nu blir det av!</div>
-            <button class="Hero-box-button">
-                <div class="Hero-box-button-title">BLI EN VINNARE DU MED!</div>
-                <div class="Hero-box-button-text">KÖP EN DRÖMRESEOTT</div>
-            </button>
+            <a class="Hero-box-link" href="">
+                <span class="Hero-box-link-title">BLI EN VINNARE DU MED!</span>
+                <span class="Hero-box-link-text">KÖP EN DRÖMRESEOTT</span>
+            </a>
         </div>
     </div>
     <div class="Hero-caption">Det svenska lotteriet med störst chans att bli miljonär!</div>

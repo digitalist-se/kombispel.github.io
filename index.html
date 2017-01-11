@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hem</title>
-  <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/4bcec19c-38b0-4aad-80ee-edf74d86feee.css"/>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="icon" href="images/favicon/kombi.ico" type="image/icon">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -266,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
   <div class="js-Site-container">
-  <header class="Header-container">
+  <header class="Header-container" id="top">
 
 
     <div class="Header-inner-container">
@@ -310,9 +310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main>
   
-<section class="Hero js-Hero-landing-page" style="background-image: url('images/heroes/start_hero.png')">
-
-
+<section class="Hero" style="background-image: url('images/heroes/autumn_winners.jpg')">
   <div class="Hero-inner">
         <div class="Hero-box Hero-box--dream">
           <!-- CAN HAVE VARIANTS
@@ -322,10 +320,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           -->
             <div class="Hero-box-title"><span>VECKANS VINNARE<span></div>
             <div class="Hero-box-quote">Vi har alltid drömt om att åka till karibien. Nu blir det av!</div>
-            <button class="Hero-box-button">
-                <div class="Hero-box-button-title">BLI EN VINNARE DU MED!</div>
-                <div class="Hero-box-button-text">KÖP EN DRÖMRESEOTT</div>
-            </button>
+            <a class="Hero-box-link" href="">
+                <span class="Hero-box-link-title">BLI EN VINNARE DU MED!</span>
+                <span class="Hero-box-link-text">KÖP EN DRÖMRESEOTT</span>
+            </a>
         </div>
     </div>
     <div class="Hero-caption">Det svenska lotteriet med störst chans att bli miljonär!</div>
@@ -392,42 +390,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- PUFFAR PÅ LANDNINGSSIDA -->
 <section class="Promo-container">
     <div class="Promo-container-inner">
-        <div class="Promo-item">
-            <div class="Promo-box Promo-box--correct-ticket">
-                <h3 class="Promo-box-title">Är du en vinnare?</h3>
-                <img class="Promo-box-image" src="images/promo/promo1.png"></img>
-                <button class="Promo-box-button">RÄTTA DIN LOTT</button>
+
+        <!-- VARIANT 1 -->
+        <div class="Promo-item Promo-item--correct-ticket">
+            <div class="Promo-box">
+                <h3 >Är du en vinnare?</h3>
+                <img src="images/campaign/volvo.png" alt="Möbler" />
+                <a href="/tickets" class="js-Promo-correct-ticket-btn Promo-box-button">RÄTTA DIN LOTT</a>
                 <div class="Promo-box-product">
                     <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/kombi.svg')">Kombilotteriet</a>
                     <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/dromrese.svg')">Drömreselotteriet</a>
-                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/skrap.svg')">Skraplotten</a>
+                    <a href="#" class="Promo-box-product-item" style="background-image: url('images/svg/logos/motor.svg')">Skraplotten</a>
                 </div>
             </div>
         </div>
-        <div class="Promo-item">
-            <div class="Promo-box Promo-box--campaign">
-                <h3 class="Promo-box-title">Månadens kampanj!</h3>
-                <div class="Promo-box-text">Premie: Vettenkaraff och skraplottpaket på köpet när du skaffar en Kombilott.</div>
-                <img class="Promo-box-image" src="images/promo/promo2.png"></img>
-                <button class="Promo-box-button">KÖP EN KOMBILOTT</button>
+
+        <!-- VARIANT 2 -->
+        <div class="Promo-item Promo-item--campaign-kombi">
+            <div class="Promo-box ">
+                <h3 >Månadens kampanj!</h3>
+                <div class="Promo-box-text">Premie: Vattenkaraff och skraplottpaket på köpet när du skaffar en Kombilott.</div>
+                <img src="images/campaign/mobler-vinst.png" alt="Möbler" />
+                <a href="#" class="Promo-box-button">KÖP EN KOMBILOTT</a>
             </div>
         </div>
-        <div class="Promo-item">
-            <div class="Promo-box Promo-box--winner">
-                <div class="Promo-box-image-big" style="background-image: url('images/promo/promo3.png')"></div>
-                <div class="Promo-box-band">
-                    <div class="Promo-box-band-text">KOMBISPELS TUSENDE MILJONVINNARE</div>
-                    <div class="Promo-box-band-text--big">Maj tog hem storvinsten!</div>
+
+        <!-- VARIANT 3 -->
+        <div class="Promo-item Promo-item--winner-motor">
+            <div class="Promo-box">
+                <img src="images/campaign/mobler-vinst.png" alt="Möbler"/>
+                <div class="Promo-box-caption">
+                    <div class="Promo-box-caption-text">KOMBISPELS TUSENDE MILJONVINNARE</div>
+                    <div class="Promo-box-caption-text--big">Maj tog hem storvinsten i motorlotteriet!</div>
                 </div>
                 <div class="Promo-box-link"><a href="/">Se fler vinnare</a></div>
             </div>
         </div>
+
+
     </div>
 </section>
 
 
   </main>
   <footer class="Footer">
+  <a href="#top" class="js-Footer-totop">Tillbaka till toppen</a>
   <div class="Footer-inner">
     <div class="Footer-box Footer-box--first">
       <div class="Footer-box-col-container">

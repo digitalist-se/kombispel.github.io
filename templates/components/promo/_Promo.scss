@@ -3,7 +3,14 @@
 }
 .Promo-container-inner {
   @extend .Inner-container;
-  @include flex-row();
+  @include breakpoint(1px,999px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  @include breakpoint(1000px) {
+    @include flex-row();
+  }
 }
 .Promo-item {
   background-color: white;
@@ -12,8 +19,7 @@
   box-shadow: 0px 5px 1px rgba(51, 51, 51, 0.08);
   position: relative;
   margin-bottom: 30px;
-
-
+  display: flex;
   @include breakpoint(1px, 999px) {
     @include flex-gtr-col(1, 10px);
     margin-top: 0;
@@ -22,47 +28,57 @@
     }
   }
   @include breakpoint(1000px) {
-    @include flex-gtr-col(3, 15px);
+    @include flex-gtr-col(3, $base-margin);
     margin-top: 30px ;
+    min-height: 450px;
   }
+ h3 {
+   font-size: 32px;
+   font-family: $gill-regular;
+ }
 }
-.Promo-box {
-  position: relative;
-  height: 100%;
-}
-.Promo-box-title {
-  color: $red;
-  font-size: 32px;
-}
-.Promo-box--correct-ticket, .Promo-box--campaign {
-  padding: 25px 15px;
-}
-.Promo-box-button {
-  color: white;
+
+.Promo-item--correct-ticket, [class*="Promo-item--campaign"]  {
+  .Promo-box {
+    padding: 25px $base-margin;
+  }
+  img {
+    padding: $base-margin;
+    width: 100%;
+  }
 }
 /////////////////////////////////////////////
 // PROMO CORRECT TICKET
 /////////////////////////////////////////////
-.Promo-box--correct-ticket {
-  .Promo-box-title {
+.Promo-item--correct-ticket {
+  h3 {
+    color: $red;
     margin-bottom: 25px;
+
+  }
+  .Promo-box {
+    margin: 0 auto;
+    width: 100%;
   }
   .Promo-box-button {
     @include gradient-btn($red);
-  }
-  .Promo-box-image {
-    margin-bottom: 20px;
-    max-width: 100%;
-    max-height:100%;
+    @include breakpoint(1000px) {
+      margin-bottom: 10*$base-margin;
+    }
   }
   .Promo-box-product {
-    margin: 2*$base-margin auto;
-    @include breakpoint(1000px) {
-      position: absolute;
+    @include breakpoint(1px,999px) {
+      margin: 30px auto $base-margin auto;
     }
-    right: 0;
-    left: 0;
-    bottom: 2*$base-margin;
+
+    @include breakpoint(1000px) {
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 2*$base-margin;
+    }
+
     @include flex-row();
   }
   .Promo-box-product-item {
@@ -77,55 +93,71 @@
 /////////////////////////////////////////////
 // PROMO CAMPAIGN
 /////////////////////////////////////////////
-.Promo-box--campaign {
-  background: url("../images/promo/promo_background.png") no-repeat center center;
-  background-color: white;
-  .Promo-box-title {
-    margin-bottom: $base-margin/3;
+[class*="Promo-item--campaign"] {
+  background: white url("../images/promo/promo_background.png") no-repeat center center;
+  background-size: cover;
+  .Promo-box {
+    padding-bottom: 2 * $base-margin;
+    .Promo-box-title {
+      margin-bottom: $base-margin/3;
+    }
+    .Promo-box-text {
+      margin-bottom: $base-margin;
+      font-size: 20px;
+    }
   }
-  .Promo-box-text {
-    margin-bottom: $base-margin;
-    font-size: 20px;
+}
+.Promo-item--campaign-kombi {
+  h3 {
+    color: $blue;
   }
   .Promo-box-button {
     @include gradient-btn($orange);
   }
-  .Promo-box-image {
-    max-width:100%;
-    max-height:100%;
+}
+.Promo-item--campaign-dream {
+  h3 {
+    color: $blue;
+  }
+  .Promo-box-button {
+    @include gradient-btn($green);
   }
 }
-
+.Promo-item--campaign-motor {
+  h3 {
+    color: $red;
+  }
+  .Promo-box-button {
+    @include gradient-btn($red);
+  }
+}
 /////////////////////////////////////////////
 // PROMO WINNER
 /////////////////////////////////////////////
-.Promo-box--winner {
-  .Promo-box-image-big {
-    background: no-repeat center center;
-    background-size: cover;
-    height: 280px;
+[class*="Promo-item--winner"] {
+  @include breakpoint(1px,999px) {
+    padding-bottom: 80px;
   }
-  .Promo-box-band {
-    background-color: $orange;
+  img {
+    width: 100%;
+  }
+  .Promo-box-caption {
     padding: $base-margin;
     color: white;
   }
-  .Promo-box-band-text {
+  .Promo-box-caption-text {
     font-size: 18px;
   }
-  .Promo-box-band-text--big {
+  .Promo-box-caption-text--big {
     font-size: 32px;
   }
   .Promo-box-link {
-    padding: $base-margin;
-
-    @include breakpoint(1000px) {
-      position: absolute;
-      padding: 0;
-    }
+    padding: $base-margin 0;
+    background-color: white;
+    position: absolute;
     left: 0;
     right: 0;
-    bottom: 2*$base-margin;
+    bottom: 0;
     a {
       font-size: 18px;
       @extend .Arrow-link;
@@ -134,4 +166,14 @@
       }
     }
   }
+}
+//  Variants
+.Promo-item--winner-kombi {
+  background-color: $orange;
+}
+.Promo-item--winner-dream {
+  background-color: $green;
+}
+.Promo-item--winner-motor {
+  background-color: $red;
 }

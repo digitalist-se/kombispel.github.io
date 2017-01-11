@@ -66,7 +66,6 @@ $('.js-Login-input-username').focusout(function() {
     $(".js-Login-username-message").show().html(userNameMessage)
 
   } else {
-    // $(".js-Login-username-toggle").removeClass("js-Login-question-icon").removeClass("js-Login-error-icon").addClass("js-Login-check-icon")
     $(".js-Login-username-toggle").addClass("js-Login-question-icon").removeClass("js-Login-error-icon");
     $(this).removeClass("js-Login-input-error")
     $(".js-Login-username-message").hide().html("")
@@ -82,7 +81,6 @@ $('.js-Login-input-username').focusout(function() {
 })
 
 $(".js-Login-reset-password-btn").click(function(e) {
-   e.preventDefault();
   passwordBox("sent")
 })
 
@@ -104,6 +102,7 @@ function passwordBox(box) {
 
 /////////////////////////////////////////////
 // PASSWORD INPUT FIELD
+// *** REMOVE IN PROD or atleast configure after API
 /////////////////////////////////////////////
 
 $(".js-Login-input-password").on('input', function() {
@@ -127,6 +126,7 @@ $(".js-Login-input-password").on('input', function() {
 
 ///////////////////////////////////////////////////////
 // CHECK IF LOGIN PASSED (JUST FOR PROTOTYPE TESTING)
+// ***  REMOVE IN PROD
 //////////////////////////////////////////////////////
 $(".js-Login-form-submit-btn").click(function(e) {
   e.preventDefault(e)

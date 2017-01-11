@@ -124,6 +124,7 @@
     text-align: center;
     text-decoration: none;
     @include gradient-btn($red);
+    // outline: blue;
     color: white;
     margin-bottom: 3*$base-margin;
   }

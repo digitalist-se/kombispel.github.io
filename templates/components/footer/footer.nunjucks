@@ -1,4 +1,5 @@
 <footer class="Footer">
+  <a href="#top" class="js-Footer-totop">Tillbaka till toppen</a>
   <div class="Footer-inner">
     <div class="Footer-box Footer-box--first">
       <div class="Footer-box-col-container">

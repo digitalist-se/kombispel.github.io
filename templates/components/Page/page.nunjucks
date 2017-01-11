@@ -4,139 +4,121 @@
 ####  Varje kolumn ska wrappas innanför en article tag
 ##############################################################
 -->
-<section class="Page">
-      <div class="Page-inner">
-      <h1 class="Heading-1">Här är en rubrik utanför kolumnerna.</h1>
-      <!-- KOLUMN NUMMER 1 -->
-      <article class="Page-two-col-main">
-      <h2>Här är en H2 rubrik innanför första kolumnen</h2>
-      <p>
-        Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
-      </p>
-      <div class="Page-image">
-        <img class="Page-image-image" src="./images/content/beach.jpg" alt="Strand" />
-        <span class="Page-image-caption">Foto: Jacob Henriksson</span>
-      </div>
-      <div class="Page-lead">Ända sedan starten 1956 har vår målsättning varit densamma – spännande underhållning för alla. Nu har vi samlat alla våra varumärken på ett ställe och fortsätter vår vision att roa och ge spänning.</div>
-      <h2>En underrubrik</h2>
-      <p>
-        Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
-      </p>
-      <blockquote>
-        <span>
-          Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
-        </span>
-      </blockquote>
-      <p>
-        Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
-      </p>
-      <a class="Page-buy-ticket" href="#">Köp en lott!</a>
-      <h2>Se på en video!</h2>
-      <!-- VIDEO -->
-      <div class="Page-video">
-        <div class="Page-video-inner">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
+<article class="Page">
+    <div class="Page-inner">
+      <!-- Fast innehåll, bara rubrik är obligatoriskt -->
+      <h1>Här är en rubrik utanför kolumnerna.</h1>
+        <div class="Page-content"> <!-- Här kommer innehåll från Grid. Här sker kolumnindelningen -->
+          <section class="Page-two-col"> <!-- KOLUMN 1 av 2. Kolumner wrappas i section taggar för semantik och läslighet -->
+          <h2>Här är en H2 rubrik innanför första kolumnen</h2>
+          <p>
+            Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
+          </p>
+          <div class="Page-image">
+            <img class="Page-image-image" src="./images/content/beach.jpg" alt="Strand" />
+            <span class="Page-image-caption">Foto: Jacob Henriksson</span>
+          </div>
+          <div class="Page-lead">Ända sedan starten 1956 har vår målsättning varit densamma – spännande underhållning för alla. Nu har vi samlat alla våra varumärken på ett ställe och fortsätter vår vision att roa och ge spänning.</div>
+          <h2>En underrubrik</h2>
+          <p>
+            Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
+          </p>
+          <blockquote>
+            <span>
+              Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
+            </span>
+          </blockquote>
+          <p>
+            Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
+          </p>
+          <a class="Page-buy-ticket" href="#">Köp en lott!</a>
+          <h2>Se på en video!</h2>
+          <!-- VIDEO -->
+          <div class="Page-video">
+            <div class="Page-video-inner">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
 
-      <h2>Glöm aldrig dessa tre punkter.</h2>
+          <h2>Glöm aldrig dessa tre punkter.</h2>
 
-      <p>Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam:</p>
-      <ul class="Page-list">
-        <li>Aliquam varius odio a</li>
-        <li>Condimentum lobortis.</li>
-        <li>Duis id sem a neque viverra</li>
-      </ul>
-      <p>
-        Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
-      </p>
-      </article>
-      <!-- KOLUMN NUMMER 2 -->
-      <article class="Page-two-col-side">
-      <form class="Standard-form">
-        <h3>Kontakta oss</h3>
-        <label for="name">Ditt namn</label>
-        <input type="text" name="name" required />
-        <label for="email">Din epostadress</label>
-        <input type="email" name="email" required/>
-        <label for="phone">Ditt telefonnummer</label>
-        <input type="tel" name="phone" required/>
+          <p>Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam:</p>
+          <ul>
+            <li>Aliquam varius odio a</li>
+            <li>Condimentum lobortis.</li>
+            <li>Duis id sem a neque viverra</li>
+          </ul>
+          <p>
+            Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
+          </p>
+        </section> <!-- END KOLUMN 1 av 2.  -->
+        <section class="Page-two-col"> <!-- START KOLUMN 2 av 2.  -->
 
-        <!-- PERSON-NUMMER -->
-        <label for="person-number" >Ditt personnummer</label>
-        <input type="text" data-id="person-number" class="person-number" name="person-number" value="ÅÅMMDD-XXXX" required/>
-        <!-- END PERSON-NUMMER -->
-
-
-        <label for="">Meddelande:</label>
-        <textarea name="message"></textarea>
-        <button type="submit" name="button">Skicka</button>
-      </form>
-      <p>
-        Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
-      </p>
-
-      <blockquote>
-        <span>
-          Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
-        </span>
-      </blockquote>
-      <img class="Page-image" src="./images/content/beach.jpg" alt="Strand" />
-    </article>
-  </div>
-</section>
-<!--
-###############################################################
-####  SIDA MED EN KOLUMN!
-##############################################################
--->
-<section class="Page">
-  <div class="Page-inner">
-    <article class="Page-one-col">
-      <h1 class="Heading-1">Rubrik till sidan som bara har en kolumn.</h1>
-      <h2 class="Heading-2">Det här är en H2 rubrik. Allt text förrutom blockquotes på den här sidan är max 760px brett och centrerat</h2>
-      <div class="Page-image">
-        <img class="Page-image-image" src="./images/content/beach.jpg" alt="Strand" />
-        <span class="Page-image-caption">Foto: Jacob Henriksson</span>
-      </div>
-      <h2 class="Heading-2">Det här är en H2 rubrik. Allt text förrutom blockquotes på den här sidan är max 760px brett och centrerat</h2>
-      <p>
-        Morbi sit amet rhoncus orci, vitae rhoncus ex.
-        Mauris pretium lorem consectetur lacus interdum interdum. Pellentesque eget orci finibus,
-        suscipit felis sed, tincidunt diam. Quisque eu diam eget lorem gravida semper. Nam tristique odio porta posuere tempor.
-        Proin nec suscipit augue, porttitor tristique dui. Proin eleifend ante eget maximus dapibus. Class aptent taciti sociosqu
-        ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas accumsan condimentum ligula. Nam tincidunt
-        ex nec mi maximus, sit amet malesuada lacus tristique. Nam iaculis aliquam nisi posuere tincidunt.
-        Fusce dignissim sit amet justo nec ullamcorper. Nam eu sem sodales, condimentum diam eu, posuere dui.
-        Duis faucibus turpis erat, quis tincidunt lorem cursus in. Ut at molestie justo, vitae rhoncus nunc.
-      </p>
-      <blockquote>
-        <span>
-          Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
-        </span>
-      </blockquote>
-      <p>
-        Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
-        Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
-      </p>
-      <a class="Page-buy-ticket" href="#">Köp en lott!</a>
-      <h2>Se på en video!</h2>
-      <!-- VIDEO -->
-      <div class="Page-video">
-        <div class="Page-video-inner">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/L79kwZSLjwA" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <h2>Glöm aldrig dessa tre punkter.</h2>
-
-      <p>Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam:</p>
-
-      <ul class="Page-list">
-        <li>Aliquam varius odio a</li>
-        <li>Condimentum lobortis.</li>
-        <li>Duis id sem a neque viverra</li>
-      </ul>
-    </article>
-    </div>
-</section>
+          <form class="Standard-form">
+            <h3>Kontakta oss</h3>
+            <label for="name">Ditt namn</label>
+            <input type="text" name="name" required />
+            <label for="email">Din epostadress</label>
+            <input type="email" name="email" required/>
+            <label for="phone">Ditt telefonnummer</label>
+            <input type="tel" name="phone" required/>
+      
+            <label for="">Meddelande:</label>
+            <textarea name="message"></textarea>
+            <button type="submit" name="button">Skicka</button>
+          </form>
+          <p>
+            Mauris vitae ex non massa venenatis semper eu at odio. Vivamus eu sem ipsum. Vivamus eget tellus placerat, efficitur sapien sit amet, bibendum tortor. Phasellus ut arcu convallis, fermentum lorem et, aliquet nisl. Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis.
+          </p>
+          <blockquote>
+            <span>
+              Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
+            </span>
+          </blockquote>
+          <img class="Page-image" src="./images/content/beach.jpg" alt="Strand" />
+        </section> <!-- END KOLUMN 2 av 2.  -->
+        <!--
+        ###############################################################
+        ####  End Page-two-col
+        ####  Start Page-one-col
+        ###############################################################
+        -->
+        <section class="Page-one-col"> <!-- START  KOLUMN 1 av 1 -->
+          <h1>Rubrik till sidan som bara har en kolumn!</h1>
+          <h2>Det här är en H2 rubrik. Allt förrutom bilden är max 760 px brett</h2>
+          <div class="Page-image">
+            <img class="Page-image-image" src="./images/content/beach.jpg" alt="Strand" />
+            <span class="Page-image-caption">Foto: Jacob Henriksson</span>
+          </div>
+          <div class="Page-lead">Ända sedan starten 1956 har vår målsättning varit densamma – spännande underhållning för alla. Nu har vi samlat alla våra varumärken på ett ställe och fortsätter vår vision att roa och ge spänning.</div>
+          <h2>En till H2 rubrik. Köp en lott och bli vår nästa vinnare!</h2>
+          <p>
+            Morbi sit amet rhoncus orci, vitae rhoncus ex.
+            Mauris pretium lorem consectetur lacus interdum interdum. Pellentesque eget orci finibus,
+            suscipit felis sed, tincidunt diam. Quisque eu diam eget lorem gravida semper. Nam tristique odio porta posuere tempor.
+            Proin nec suscipit augue, porttitor tristique dui. Proin eleifend ante eget maximus dapibus. Class aptent taciti sociosqu
+            ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas accumsan condimentum ligula. Nam tincidunt
+            ex nec mi maximus, sit amet malesuada lacus tristique. Nam iaculis aliquam nisi posuere tincidunt.
+            Fusce dignissim sit amet justo nec ullamcorper. Nam eu sem sodales, condimentum diam eu, posuere dui.
+            Duis faucibus turpis erat, quis tincidunt lorem cursus in. Ut at molestie justo, vitae rhoncus nunc.
+          </p>
+          <blockquote>
+            <span>
+              Jag vinner varje vecka. Har slutat jobba. Livnär mig helt på att köpa Kombilotter.
+            </span>
+          </blockquote>
+          <p>
+            Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
+            Maecenas eu condimentum diam. Aliquam varius odio a condimentum lobortis. In dictum feugiat nisi. Duis id sem a neque viverra pulvinar a finibus justo. Pellentesque in orci vitae ligula dapibus fermentum. Nunc sed consectetur orci, vel maximus dolor.
+          </p>
+          <a class="Page-buy-ticket" href="#">Köp en lott!</a>
+          <h2>Glöm aldrig dessa tre punkter.</h2>
+          <ul>
+            <li>Aliquam varius odio a</li>
+            <li>Condimentum lobortis.</li>
+            <li>Duis id sem a neque viverra</li>
+          </ul>
+        </section> <!-- END KOLUMN 1 av 1 -->
+    </div> <!-- END Page-content -->
+  </div> <!-- END Page-inner -->
+</article> <!-- END Page -->

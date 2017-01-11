@@ -27,8 +27,8 @@
     </div>
     <a class="MyPages-show-list-link" href="#">Visa tidigare dragningslistor</a>
   </div>
-  <div class="Fullwidth-buy-link-container">
-    <a class="Fullwidth-buy-link" href="#">
+  <div class="Cta-block">
+    <a class="Cta-btn Cta-btn--red" href="#">
       <span>Öka dina vinstchanser</span>
       <span>Köp en lott till</span>
     </a>

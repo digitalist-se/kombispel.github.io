@@ -4,6 +4,9 @@ $(".js-Information-toggle-mail").click(function() {
 $(".js-Information-toggle-phone").click(function() {
   $(".js-Information-help-box--phone").slideToggle()
 })
+$(".js-Information-toggle-mobile").click(function() {
+  $(".js-Information-help-box--mobile").slideToggle()
+})
 /////////////////////////////////////////////
 // On input
 /////////////////////////////////////////////

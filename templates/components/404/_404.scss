@@ -5,7 +5,7 @@ $notFound-height: 150px;
 
 .NotFound-inner-container {
   @extend .Inner-container;
-  padding: 4*$base-margin 0;
+  padding: 4*$base-margin $base-margin;
 }
 .NotFound-lottery-container {
   padding: 4*$base-margin 0 2*$base-margin 0;

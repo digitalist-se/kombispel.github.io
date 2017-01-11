@@ -136,10 +136,10 @@
 .Tickets-ticket--kombi {
   background-image: url("../images/svg/tickets/ticket-kombi.svg");
   .Tickets-ticket-number {
-    color: $lottery-blue;
+    color: $blue;
   }
   .Tickets-ticket-link {
-    @include lottery-btn($lottery-blue);
+    @include lottery-btn($blue);
   }
 }
 .Tickets-ticket--motor {
@@ -154,10 +154,10 @@
 .Tickets-ticket--dream {
   background-image: url("../images/svg/tickets/ticket-dream.svg");
   .Tickets-ticket-number {
-    color: $lottery-blue;
+    color: $blue;
   }
   .Tickets-ticket-link {
-    @include lottery-btn($lottery-blue);
+    @include lottery-btn($blue);
   }
 }
 /////////////////////////////////////////////
@@ -170,8 +170,8 @@
   height: 95px;
   width: 150px;
   @include breakpoint(375px) {
-    top: 5px;
-    left: -10px;
+    top: -11px;
+    left: -7px;
     height: 120px;
     width: 170px;
   }
@@ -206,13 +206,13 @@
 .Tickets-ticket--kombi-win {
   background-image: url("../images/svg/tickets/winning-ticket-kombi.svg");
   .Tickets-ticket-number {
-    color: $lottery-blue;
+    color: $blue;
   }
 }
 .Tickets-ticket--dream-win {
   background-image: url("../images/svg/tickets/winning-ticket-dream.svg");
   .Tickets-ticket-number {
-    color: $lottery-blue;
+    color: $blue;
   }
 }
 .Tickets-ticket--motor-win {
@@ -237,10 +237,6 @@
   @include gradient-btn($green);
 }
 
-
-
-
-
 /////////////////////////////////////////////
 // NITLOTTER
 /////////////////////////////////////////////
@@ -261,4 +257,10 @@
   .Tickets-ticket-number {
     color: white;
   }
+}
+/////////////////////////////////////////////
+// LINK/BUTTON TO CORRECT ALL TICKETS
+/////////////////////////////////////////////
+.Tickets-Cta-block {
+  margin-top: $base-margin;
 }

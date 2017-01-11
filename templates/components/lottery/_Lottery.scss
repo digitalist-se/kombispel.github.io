@@ -134,7 +134,7 @@ $mynumber-size: 80px;
     font-size: 40px;
     @extend .Flex-center;
     h4 {
-      color: $lottery-blue;
+      color: $blue;
       margin: 0;
     }
   }
@@ -315,10 +315,10 @@ position: relative;
   display: none;
   h4 {
     font-size: 28px;
-    margin: 35px 0 0 0;
+    margin: 2*$base-margin 0 5px 0;
   }
   a {
-    margin: 15px auto;
+    margin: $base-margin auto;
   }
 }
 /////////////////////////////////////////////
@@ -381,19 +381,19 @@ position: relative;
  .Lottery-container--kombi-win, .Lottery-container--kombi {
   @include gradient-bg($orange);
   .js-Start-lottery-btn {
-   @include gradient-btn($lottery-blue);
+   @include gradient-btn($blue);
   }
   .js-Lottery-winnings-links a {
-    @include gradient-btn($lottery-blue);
+    @include gradient-btn($blue);
   }
  }
  .Lottery-container--dream, .Lottery-container--dream-win  {
   @include gradient-bg($green);
   .js-Start-lottery-btn {
-   @include gradient-btn($lottery-blue);
+   @include gradient-btn($blue);
   }
   .js-Lottery-winnings-links a {
-    @include gradient-btn($lottery-blue);
+    @include gradient-btn($blue);
   }
  }
  .Lottery-container--motor, .Lottery-container--motor-win {

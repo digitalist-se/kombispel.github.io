@@ -1,3 +1,9 @@
+.js-Footer-totop {
+  padding: $base-margin;
+  display: block;
+  text-align: center;
+}
+
 .Footer-inner {
   @extend .Inner-container;
   display: flex;

@@ -58,7 +58,7 @@
 
 
             <div class="Information-input-section">
-                <label for="phone">Mobiltelefon:</label>
+                <label for="phone">Telefon:</label>
 
                 <div class="Information-input-row">
                   <input class="js-Information-input Information-input--has-helpbox" type="text" name="phone" placeholder="Telefonnumer" value="08615656151" required/>
@@ -68,6 +68,35 @@
                 </div>
               <!-- HELP BOX -->
               <div class="js-Information-help-box--phone">
+              <div class="Help-box">
+                <div class="Help-box-inner">
+                  <p>
+                    Nam non purus volutpat, semper augue eget, sodales nisl.
+                    Fusce quis sagittis elit, sit amet commodo mi. Duis venenatis vitae ligula nec pellentesque.
+                    Vivamus at ligula aliquam sapien dapibus tempus a eget dui. Donec sed feugiat justo.
+                  </p>
+                  <h4>Behöver du hjälp?</h4>
+                  <p>Kontakta kundtjänst så hjälper vi dig igång</p>
+                  <ul class="Help-box-list">
+                    <li class="Help-box-contact-phone"> <a href="tel:+46822244455 ">08-222 444 55</a> </li>
+                    <li class="Help-box-contact-mail"><a href="mailto:kundtjanst@kombispel.se">kundtjanst@kombispel.se</a> </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <!-- END HELP BOX -->
+            </div>
+            <div class="Information-input-section">
+                <label for="mobile">Mobiltelefon:</label>
+
+                <div class="Information-input-row">
+                  <input class="js-Information-input Information-input--has-helpbox" type="text" name="mobile" placeholder="Telefonnumer" value="0708123456" required/>
+                  <div class="Information-toggle-helpbox">
+                    <span class="Icon Icon--question js-Information-toggle-mobile"></span>
+                  </div>
+                </div>
+              <!-- HELP BOX -->
+              <div class="js-Information-help-box--mobile">
               <div class="Help-box">
                 <div class="Help-box-inner">
                   <p>

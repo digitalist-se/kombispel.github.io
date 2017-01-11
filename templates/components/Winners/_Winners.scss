@@ -2,30 +2,55 @@ $winners-gtr-small: 15px;
 $winners-gtr-medium: 30px;
 $winners-gtr-large: 30px;
 
-.Winners-container {
-  padding: 2*$base-margin 0;
-  background-color: #F2F2F2;
+// .Winners-container {
+//   padding: 2*$base-margin 0;
+//   background-color: #F2F2F2;
+// }
+// .Winners-inner-container {
+//   @extend .Inner-container;
+// }
+// .Winners-header {
+//   text-align: center;
+//   color: $red;
+// }
+// .Winners-intro {
+//   width: 90%;
+//   max-width: 700px;
+//   font-size: 24px;
+//   margin: 0 auto;
+//   padding-bottom: 4*$base-margin;
+// }
+
+
+.Page-winners {
+
+  &.Page {
+    background-color: $content-grey ;
+  }
+  .Page-content {
+    display: block;
+  }
+
+  .Page-inner {
+    background-color: $content-grey ;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    > h1, > h2, > h3, > p, > ul {
+      padding-left: $base-margin;
+      padding-right: $base-margin;
+    }
+  }
+  section { //  Row wrapper
+    margin: 0 auto 2*$base-margin auto;
+    @include flex-row();
+    @extend .Inner-container;
+  }
 }
-.Winners-inner-container {
-  @extend .Inner-container;
-}
-.Winners-header {
-  text-align: center;
-  color: $red;
-}
-.Winners-intro {
-  width: 90%;
-  max-width: 700px;
-  font-size: 24px;
-  margin: 0 auto;
-  padding-bottom: 4*$base-margin;
-}
-.Winners-row {
-  @include flex-row();
-}
+
 .Winners-winner {
   @include flex-gtr-col(1,$winners-gtr-small);
-
   @include breakpoint(1px,899px) {
     margin-left: 0;
     margin-right: 0;
@@ -41,7 +66,6 @@ $winners-gtr-large: 30px;
 .Winners-winner-inner {
   @include flex-row();
 }
-
 .Winners-winner-image {
   order: 1;
   height: 400px;
@@ -119,7 +143,7 @@ $winners-gtr-large: 30px;
   }
   .Winners-winner-content-inner {
     a {
-      @include rounded-btn($lottery-blue,white,100%);
+      @include rounded-btn($blue,white,100%);
       font-size: 14px;
     }
   }
@@ -131,7 +155,7 @@ $winners-gtr-large: 30px;
   }
   .Winners-winner-content-inner {
     a {
-      @include rounded-btn($lottery-blue,white,100%);
+      @include rounded-btn($blue,white,100%);
       font-size: 14px;
     }
   }
@@ -151,14 +175,14 @@ $winners-gtr-large: 30px;
 /////////////////////////////////////////////
 // Fullwidth-buy-link-container
 /////////////////////////////////////////////
-.Winners-container {
-  .Fullwidth-buy-link-container {
-    margin-top: $winners-gtr-small;
-    @include breakpoint(900px, 1199px) {
-      margin-top: $winners-gtr-medium;
-    }
-    @include breakpoint(1200px) {
-      margin-top: $winners-gtr-large;
-    }
-  }
-}
+// .Winners-container {
+//   .Fullwidth-buy-link-container {
+//     margin-top: $winners-gtr-small;
+//     @include breakpoint(900px, 1199px) {
+//       margin-top: $winners-gtr-medium;
+//     }
+//     @include breakpoint(1200px) {
+//       margin-top: $winners-gtr-large;
+//     }
+//   }
+// }

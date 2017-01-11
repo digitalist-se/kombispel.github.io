@@ -2,48 +2,31 @@
 // HERO FROM INDEX PAGE
 /////////////////////////////////////////////
 .Hero {
-  background: no-repeat center center;
-  background-size: cover;
+  @include breakpoint(768px) {
+    background-position: center center;
+    background-size: cover;
+  }
+  background-repeat: no-repeat;
   width: 100%;
 }
+/////////////////////////////////////////////
+// INNER WRAPPER
+/////////////////////////////////////////////
 .Hero-inner {
   @extend .Inner-container;
   display: flex;
-
-  @include breakpoint(1px,1023px) {
-    height: 600px;
-    justify-content:center;
-    align-items: flex-start;
-  }
-  @include breakpoint(1024px) {
-    height: 650px;
-    justify-content:flex-end;
-    align-items: flex-start;
-  }
-  @include breakpoint(1300px) {
-    height: 750px;
-    justify-content:flex-end;
-    align-items: center;
-  }
 }
+/////////////////////////////////////////////
+// THE BOX
+/////////////////////////////////////////////
 .Hero-box {
-  // max-height: 245px;
-  max-width: 400px;
   width: 90%;
   background-color: white;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
   margin-top: 15px;
-
-  @include breakpoint(950px) {
-    margin-top: 50px;
-  }
-  @include respond-to(large) {
-    // margin-top: 200px;
-  }
 }
-
 .Hero-box-title {
   margin-bottom: 15px;
   span {
@@ -51,44 +34,12 @@
     padding-bottom: 3px;
   }
 }
-
 /////////////////////////////////////////////
-// Hero-box variants
+// THE QUOTE
 /////////////////////////////////////////////
-.Hero-box--kombi {
-  .Hero-box-title {
-    color: $orange;
-  }
-  .Hero-box-button {
-    @include gradient-btn($orange);
-  }
-}
-.Hero-box--dream {
-  .Hero-box-title {
-    color: $green;
-  }
-  .Hero-box-button {
-    @include gradient-btn($green);
-  }
-}
-.Hero-box--motor {
-  .Hero-box-title {
-    color: $red;
-  }
-  .Hero-box-button {
-    @include gradient-btn($red);
-  }
-}
-
-
-
 .Hero-box-quote {
   font-size: 18px;
-  @include breakpoint(1024px) {
-    font-size: 25px;
-  }
   line-height: 28px;
-  margin-bottom: 25px;
   &:before {
     content: "“";
   }
@@ -96,9 +47,12 @@
     content: "”";
   }
 }
-
-
-.Hero-box-button-text {
+.Hero-box-link {
+  span {
+    display: block;
+  }
+}
+.Hero-box-link-text {
   font-size: 20px;
 }
 
@@ -107,9 +61,133 @@
   color: white;
   text-align: center;
   padding: 15px 0 15px 0;
-  font-size: 25px;
-
+  font-size: 18px;
   @include breakpoint(1px, 767px) {
     padding: 15px 50px 15px 50px;
+  }
+  @include breakpoint(768px) {
+    font-size: 25px;
+  }
+}
+/////////////////////////////////////////////
+// RESPONSIVE VARIANTS
+/////////////////////////////////////////////
+@include breakpoint(1px,375px) {
+  .Hero {
+    background-size: 260%;
+    background-position-y: -70px;
+  }
+  .Hero-inner {
+    height: 550px;
+  }
+}
+@include breakpoint(376px,480px) {
+  .Hero {
+    background-size: 240%;
+    background-position-y: -100px;
+  }
+  .Hero-inner {
+    height: 580px;
+  }
+}
+@include breakpoint(481px, 600px) {
+  .Hero {
+    background-size: 190%;
+    background-position-y: -60px;
+  }
+  .Hero-inner {
+    height: 600px;
+  }
+}
+@include breakpoint(601px, 767px) {
+  .Hero {
+    background-size: 150%;
+    background-position-y: -40px;
+  }
+  .Hero-inner {
+    height: 600px;
+  }
+}
+@include breakpoint(1px,767px) {
+  .Hero {
+    background-position-x: 33%;
+  }
+  .Hero-inner {
+    justify-content:center;
+    align-items: flex-end;
+  }
+  .Hero-box {
+    width: 100%;
+    border-radius: 0;
+  }
+  .Hero-box-quote {
+    margin-bottom: 5px;
+  }
+  .Hero-box-link span {
+    font-size: 16px !important;
+  }
+}
+@include breakpoint(768px,1023px) {
+  .Hero-inner {
+    height: 600px;
+    justify-content:flex-end;
+    align-items: center;
+  }
+  .Hero-box {
+    max-width: 300px;
+  }
+  .Hero-box-quote {
+    margin-bottom: 5px;
+  }
+  .Hero-box-link span {
+    font-size: 16px !important;
+  }
+}
+@include breakpoint(1024px) {
+  .Hero-inner {
+    // height: 600px;
+    height: 520px;
+    justify-content:flex-end;
+    align-items: center;
+  }
+  .Hero-box {
+    max-width: 400px;
+  }
+  .Hero-box-quote {
+    font-size: 25px;
+    margin-bottom: $base-margin;
+  }
+}
+@include breakpoint(1300px) {
+  .Hero-inner {
+    height: 700px;
+  }
+}
+
+/////////////////////////////////////////////
+// HERO VARIANTS
+/////////////////////////////////////////////
+.Hero-box--kombi {
+  .Hero-box-title {
+    color: $orange;
+  }
+  .Hero-box-link {
+    @include gradient-btn($orange);
+  }
+}
+.Hero-box--dream {
+  .Hero-box-title {
+    color: $green;
+  }
+  .Hero-box-link {
+    @include gradient-btn($green);
+  }
+}
+.Hero-box--motor {
+  .Hero-box-title {
+    color: $red;
+  }
+  .Hero-box-link {
+    @include gradient-btn($red);
   }
 }
