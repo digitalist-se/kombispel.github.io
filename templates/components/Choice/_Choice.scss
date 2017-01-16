@@ -1,19 +1,22 @@
 .Choice-price-container {
   background-color: white;
-  // h2, p {
-  //   margin: $base-margin auto;
-  //   max-width: 560px;
-  //   width: 90%;
-  //   text-align: center;
-  // }
+  @include flex-row();
+
 }
-.Choice-inner {
-  max-width: 380px;
-  margin: 0 auto;
-  padding: $base-margin;
-  text-align: center;
-  h2, p {
-    margin: 0 0 $base-margin 0;
+.Choice-prices-col {
+  @include breakpoint(1px, 560px) {
+    @include flex-col(1,1);
+  }
+  @include breakpoint(561px) {
+    @include flex-col(1,2);
+    @include flex-position(center);
+  }
+  margin-top: 0;
+}
+.Choice-prices-col-inner {
+  margin: $base-margin;
+  h2 {
+    margin-top: 0;
   }
 }
 .Choice-share-container {

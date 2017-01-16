@@ -253,6 +253,24 @@
             </div>
           </div>
         </div>
+        <!-- NYTT BLOCK -->
+        <div class="MyPages-header">
+          <h1 class="Heading-1">Mina lotter</h1>
+        </div>
+        <div class="MyPages-block MyPages-block--subscription">
+          <div class="MyPages-block-section">
+            <label>Lottonummer</label>
+            <div class="MyPages-block-row">
+              <span>125448</span>
+              <span>2016-01-25</span>
+
+            </div>
+            <div class="MyPages-block-row">
+              <span>124838</span>
+              <span>2016-01-25</span>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>

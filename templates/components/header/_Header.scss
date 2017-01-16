@@ -6,7 +6,7 @@ background-color: white;
 border-top: 10px solid $red;
 border-bottom: 15px solid $orange;
 @include respond-to(large) {
-  border-top: 20px solid $red;
+  border-top: 10px solid $red;
   border-bottom: 5px solid $orange;
 }
 }

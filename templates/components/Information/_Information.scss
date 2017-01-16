@@ -74,8 +74,8 @@
 // KONTAKTVÄG BLOCK
 /////////////////////////////////////////////
 .Information-contact-list {
-  @extend .u-Dots-list;
-} 
+  @extend .u-Dots-list--grey;
+}
 .Form-checkbox {
   label {
     color: $text;

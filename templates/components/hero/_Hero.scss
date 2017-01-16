@@ -78,7 +78,7 @@
     background-position-y: -70px;
   }
   .Hero-inner {
-    height: 550px;
+    height: 500px;
   }
 }
 @include breakpoint(376px,480px) {
@@ -129,7 +129,7 @@
 }
 @include breakpoint(768px,1023px) {
   .Hero-inner {
-    height: 600px;
+    height: 450px;
     justify-content:flex-end;
     align-items: center;
   }
@@ -146,7 +146,7 @@
 @include breakpoint(1024px) {
   .Hero-inner {
     // height: 600px;
-    height: 520px;
+    height: 450px;
     justify-content:flex-end;
     align-items: center;
   }
@@ -160,7 +160,7 @@
 }
 @include breakpoint(1300px) {
   .Hero-inner {
-    height: 700px;
+    height: 550px;
   }
 }
 

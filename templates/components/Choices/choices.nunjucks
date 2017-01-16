@@ -1,3 +1,4 @@
+{% include "components/submenu/submenu.nunjucks" %}
 <section class="Choices-container">
   <div class="Choices-inner-container">
     <div class="Choices-header">
@@ -19,7 +20,7 @@
       <div class="Choices-chosen-ribbon"><span>Veckans vinst</span></div>
       <img src="images/campaign/foundue.png" alt="Fonduegryta Deluxe"/>
       <h3 class="Heading-3">Fonduegryta Deluxe</h3>
-      <a class="" href="#">Läs mer</a>
+      <a href="#">Ja tack!</a>
       <p>
         Detta är din utvalda vinst som du får om du inte väljer en annan vinst.
       </p>

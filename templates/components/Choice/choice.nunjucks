@@ -1,16 +1,30 @@
+{% include "components/submenu/submenu.nunjucks" %}
 <section class="MyPages-container">
   <div class="MyPages-inner-container">
   <div class="MyPages-header">
     <h1 class="Heading-1">Bra val Tommy!</h1>
   </div>
   <div class="Choice-price-container">
-    <img src="images/campaign/mobler-vinst.png" alt="En fin säng"  />
-    <div class="Choice-inner">
+    <!-- NY TVÅ GRID LAYOUT -->
+    <!-- BILD -->
+    <div class="Choice-prices-col">
+      <div class="Choice-prices-col-inner">
+        <img src="images/campaign/mobler-vinst.png" alt="En fin säng"  />
+      </div>
+    </div>
+    <!-- TEXTBESKRIVNING -->
+    <div class="Choice-prices-col">
+      <div class="Choice-prices-col-inner">
       <h2>Mysigt överkast från Mio värt 500 kr!</h2>
       <p>
         Din vinst kommer skickas hem till din postadress inom 14 dagar.
+        Din vinst kommer skickas hem till din postadress inom 14 dagar.
+        Din vinst kommer skickas hem till din postadress inom 14 dagar.
+        Din vinst kommer skickas hem till din postadress inom 14 dagar.
       </p>
     </div>
+  </div>
+
   </div>
   <div class="Choice-share-container">
     <div class="Choice-inner">

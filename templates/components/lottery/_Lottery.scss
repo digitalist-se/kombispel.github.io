@@ -20,6 +20,12 @@ $lotteryRowWidth:  480px;
 .Lottery-inner-container {
   padding: 20px 0 40px 0;
   @extend .Inner-container;
+  .Tickets-ticket-col {
+    // margin-top: 0;
+  }
+  h3 {
+    margin: 0;
+  }
 }
 /////////////////////////////////////////////
 // DRAGNING PÅGÅR
@@ -139,10 +145,13 @@ $mynumber-size: 80px;
     }
   }
 }
+
+
+
 .js-Lottery-price-header {
   transition: all 1s ease;
   font-family: $gill-bold;
-  margin: 20px 0;
+  // margin: 20px 0;
   text-align: center;
   font-size: 40px;
   color: white;
@@ -154,7 +163,7 @@ $mynumber-size: 80px;
 /////////////////////////////////////////////
 .js-Lottery-row {
   max-width: $lotteryRowWidth;
-  margin: 30px auto 0 auto;
+  margin: $base-margin auto 0 auto;
   position: relative;
   &:after {
     content: "";
@@ -231,7 +240,6 @@ $mynumber-size: 80px;
     transform: translateY(-800px);
   }
 }
-
 .js-Lottery-number {
   .Lottery-correct {
     color: rgb(6,171,40);
@@ -252,6 +260,7 @@ position: relative;
   color: white;
 }
 .js-Lottery-message {
+  margin-top: $base-margin;
   text-align: center;
   font-size: 26px;
   color: white;
@@ -272,9 +281,17 @@ position: relative;
   opacity: 1;
 }
 /////////////////////////////////////////////
+// Start-lottery-btn-container
+/////////////////////////////////////////////
+.Start-lottery-btn-container {
+  a {
+    text-decoration: none;
+  }
+}
+
+/////////////////////////////////////////////
 // CINEMA COUNTDOWN BETWEEN
 /////////////////////////////////////////////
-
 .js-Lottery-countdown-c {
   display: block;
   width: 100%;
@@ -292,7 +309,6 @@ position: relative;
   right: 0;
   top: 0;
 }
-
 .js-Lottery-spinner--big {
   position: absolute;
   animation: lottery-spinner 1s linear infinite;
@@ -315,7 +331,7 @@ position: relative;
   display: none;
   h4 {
     font-size: 28px;
-    margin: 2*$base-margin 0 5px 0;
+    margin: $base-margin 0;
   }
   a {
     margin: $base-margin auto;
@@ -371,10 +387,7 @@ position: relative;
       margin: 0;
     }
   }
-
-
 }
-
 /////////////////////////////////////////////
 // VARIANTS
 /////////////////////////////////////////////

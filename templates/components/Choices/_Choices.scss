@@ -35,8 +35,9 @@
     text-align: center;
   }
   a {
-    display: inline-block;
-    @extend .Arrow-link;
+    @include gradient-btn($purple);
+    // display: inline-block;
+    // @extend .Arrow-link;
   }
 }
 
